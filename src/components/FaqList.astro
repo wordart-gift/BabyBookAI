@@ -1,0 +1,33 @@
+---
+import type { Faq } from '../lib/schema';
+
+/**
+ * <details> needs no JS and keeps every answer in the HTML, which is what
+ * search engines and AI answers read. The first one starts open so the
+ * section never looks like a wall of closed rows.
+ */
+export interface Props {
+  faqs: Faq[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<div class="divide-y divide-hair rounded-card border border-hair bg-surface">
+  {
+    faqs.map((faq, i) => (
+      <details class="group px-6 py-5" open={i === 0}>
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-extrabold text-ink [&::-webkit-details-marker]:hidden">
+          <h3 class="font-sans text-lg font-extrabold">{faq.question}</h3>
+          <span
+            class="grid size-8 shrink-0 place-items-center rounded-full bg-teal-wash text-teal transition-transform group-open:rotate-45"
+            aria-hidden="true"
+          >
+            +
+          </span>
+        </summary>
+        <p class="mt-3 text-ink-soft">{faq.answer}</p>
+      </details>
+    ))
+  }
+</div>
