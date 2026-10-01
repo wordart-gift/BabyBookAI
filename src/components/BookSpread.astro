@@ -19,15 +19,18 @@ export interface Props {
   class?: string;
   /** The first spread on the page is the LCP candidate: load it eagerly. */
   eager?: boolean;
+  /** The book's three paper tones (librofotos BookPaper.of). */
+  tone?: 'neutral' | 'pink' | 'blue';
 }
 
-const { month, dates, photos = [], class: className, eager = false } = Astro.props;
+const { month, dates, photos = [], class: className, eager = false, tone = 'neutral' } = Astro.props;
+const paper = { neutral: '#fbf8f3', pink: '#fbf2f4', blue: '#f1f5fa' }[tone];
 const tones = ['#a9b0bb', '#b2b8ae', '#bdaaae', '#cbbfa8', '#aeb5ab', '#c9bea7', '#c4b7a2'];
 const slots = Array.from({ length: 7 }, (_, i) => ({ photo: photos[i], tone: tones[i] }));
 const [hero, ...grid] = slots;
 ---
 
-<figure class:list={['book', className]}>
+<figure class:list={['book', className]} style={`--paper:${paper}`}>
   <div class="book-spread">
     <div class="book-page book-left">
       <p class="book-month">{month}</p>
@@ -81,7 +84,7 @@ const [hero, ...grid] = slots;
        row, or the spread stops being two square pages. */
     grid-template-rows: minmax(0, 1fr);
     aspect-ratio: 2 / 1;
-    background: #fbf8f3;
+    background: var(--paper);
     border-radius: 6px;
     box-shadow:
       0 1px 2px rgb(14 42 49 / 0.08),

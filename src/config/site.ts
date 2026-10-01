@@ -35,8 +35,15 @@ export const BOOK = {
   shipsTo: 'United States',
 } as const;
 
-/** The apps are not out yet; links go live by filling these in. */
+/**
+ * The store listings. The site goes live with the apps, so every download
+ * button and the /get/ smart link read these.
+ * TODO: fill in both before the first deploy to babybookai.com.
+ */
 export const STORES = {
   appStore: null as string | null,
   googlePlay: null as string | null,
 } as const;
+
+/** One link for both stores (functions/get/[[path]].ts sends each phone to its own). */
+export const SMART_LINK = `${SITE.url}/get/`;

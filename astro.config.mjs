@@ -4,9 +4,6 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
-// Pages that exist for people who just acted, not for search.
-const NOT_IN_SITEMAP = ['/waitlist/thanks/'];
-
 // https://astro.build/config
 export default defineConfig({
   // The apex is canonical; www is redirected to it at Cloudflare.
@@ -24,8 +21,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [
-    sitemap({
-      filter: (page) => !NOT_IN_SITEMAP.some((path) => page.endsWith(path)),
-    }),
+    sitemap(),
   ],
 });

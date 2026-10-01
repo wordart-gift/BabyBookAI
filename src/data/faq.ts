@@ -39,11 +39,70 @@ export const HOME_FAQ: Faq[] = [
   {
     question: 'How much does it cost?',
     answer:
-      'The app is free. You only pay for the printed book, and the price will be announced at launch. Join the waitlist and you will be the first to know.',
+      'The app is free, and so is making the book and looking through it. You only pay when you order the printed hardcover, and you see the price before you do.',
   },
   {
-    question: 'When can I get it?',
+    question: 'Is it on iPhone and Android?',
     answer:
-      'BabyBookAI is coming to iPhone first, then Android. Books are printed and shipped in the United States. Join the waitlist and we will email you once, the day it is out.',
+      'Yes. BabyBookAI is free on the App Store and on Google Play. Books are printed and shipped in the United States.',
+  },
+];
+
+export const PHOTO_BOOK_FAQ: Faq[] = [
+  {
+    question: 'What size is the baby photo book?',
+    answer: `It is a square ${BOOK.sizeIn} (${BOOK.sizeCm}) hardcover. Square is the one shape where upright and wide phone photos both fit without one of them being cropped badly.`,
+  },
+  {
+    question: 'How many pages does it have?',
+    answer: `Between ${BOOK.pagesMin} and ${BOOK.pagesMax}. BabyBookAI suggests ${BOOK.pagesMin} to ${BOOK.pagesSuggestedMax} for a first year, a spread for each month, and you can add pages up to ${BOOK.pagesMax}.`,
+  },
+  {
+    question: 'Will my phone photos print sharply?',
+    answer:
+      'Each photo is only placed where it has enough pixels to print well. A small copy, like one saved from a chat, goes in a smaller spot on the page instead of filling a whole page or the cover.',
+  },
+  {
+    question: 'Can I personalize the book?',
+    answer:
+      'Yes. Your baby’s name goes on the cover, you choose the dates, and you can pick a soft pink, soft blue or classic cream paper. Each page comes with short lines you can rewrite, and you can add a note of your own anywhere.',
+  },
+  {
+    question: 'Will a face end up in the middle fold?',
+    answer:
+      'No. The layouts keep photos out of the center fold. The only photo that crosses it is one placed across both pages on purpose, and those are chosen for it.',
+  },
+  {
+    question: 'How long does it take to make?',
+    answer:
+      'A few minutes. Most of that is your phone reading the camera roll; then you flip through the book, swap anything you want and order.',
+  },
+];
+
+export const FIRST_YEAR_FAQ: Faq[] = [
+  {
+    question: 'When should I make the first year photo book?',
+    answer:
+      'Any time after the first birthday, or before it if you want the book for the party: you choose the dates the book covers. Because BabyBookAI reads the photos you already have, there is nothing to keep up with during the year.',
+  },
+  {
+    question: 'What if I have only a few photos of some months?',
+    answer:
+      'The layout follows the photos. A month with dozens of good ones gets a full spread; a month with one great photo gets a page made for one photo. On iPhone, BabyBookAI also checks iCloud Photos for months with few photos on the phone.',
+  },
+  {
+    question: 'Can the book start later than birth, or cover more than a year?',
+    answer:
+      'Yes. Most books run from birth to the first birthday, but you choose the start and the end, up to 18 months, with a spread for each month.',
+  },
+  {
+    question: 'What goes on the first and last pages?',
+    answer:
+      'The first page has the day your baby was born, with a little drawing of a stork carrying a bundle. The last page closes the year with a first birthday cake.',
+  },
+  {
+    question: 'Do I need to add photos every week?',
+    answer:
+      'No. That is the point of BabyBookAI: it works from the photos already on your phone, so there is no weekly upload and nothing to fall behind on.',
   },
 ];

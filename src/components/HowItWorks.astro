@@ -1,0 +1,49 @@
+---
+/**
+ * The three steps, shared by every page that explains the product. Heading
+ * level and wording of the title are the page's, so each page keeps its own
+ * keyword in its own H2.
+ */
+export interface Props {
+  title?: string;
+  eyebrow?: string;
+}
+
+const { title = 'Three steps, and you only do the easy one', eyebrow = 'How it works' } = Astro.props;
+
+const steps = [
+  {
+    title: 'Tell it the name and the dates',
+    body: 'Your baby’s name goes on the cover. Most books start on the day they were born and end on the first birthday.',
+  },
+  {
+    title: 'It reads your camera roll',
+    body: 'On your phone, it finds that year’s photos, drops the blurry ones and the near-duplicates, keeps the best of every moment and sorts them month by month.',
+  },
+  {
+    title: 'Flip through, swap, order',
+    body: 'The book is laid out for you. Swap any photo you don’t love, change the words if you like, and the hardcover is printed and shipped to your door.',
+  },
+];
+---
+
+<section class="mx-auto max-w-6xl px-5 py-20" aria-labelledby="how">
+  <p class="font-extrabold uppercase tracking-wider text-teal-light">{eyebrow}</p>
+  <h2 id="how" class="mt-3 max-w-3xl text-4xl text-teal sm:text-5xl">{title}</h2>
+  <ol class="mt-12 grid gap-8 md:grid-cols-3">
+    {
+      steps.map((step, i) => (
+        <li class="relative rounded-card bg-surface p-7 shadow-[0_1px_0_var(--color-hair)]">
+          <span
+            class="grid size-11 place-items-center rounded-full bg-amber-wash font-display text-xl font-bold text-amber-deep"
+            aria-hidden="true"
+          >
+            {i + 1}
+          </span>
+          <h3 class="mt-5 text-2xl text-ink">{step.title}</h3>
+          <p class="mt-3 text-ink-soft">{step.body}</p>
+        </li>
+      ))
+    }
+  </ol>
+</section>

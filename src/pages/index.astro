@@ -3,9 +3,9 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
 import BookSpread from '../components/BookSpread.astro';
-import WaitlistForm from '../components/WaitlistForm.astro';
-import StoreBadges from '../components/StoreBadges.astro';
+import DownloadCta from '../components/DownloadCta.astro';
 import FaqList from '../components/FaqList.astro';
+import HowItWorks from '../components/HowItWorks.astro';
 import { faqPage, mobileApplication, organization, website } from '../lib/schema';
 import { HOME_FAQ } from '../data/faq';
 import { FIRST_BIRTHDAY, MONTH_ONE, MONTH_SEVEN } from '../lib/photos';
@@ -37,21 +37,6 @@ const ways = [
   },
 ];
 
-const steps = [
-  {
-    title: 'Tell it the name and the dates',
-    body: 'Your baby’s name goes on the cover. Most books start on the day they were born and end on the first birthday.',
-  },
-  {
-    title: 'It reads your camera roll',
-    body: 'On your phone, it finds that year’s photos, drops the blurry ones and the near-duplicates, keeps the best of every moment and sorts them month by month.',
-  },
-  {
-    title: 'Flip through, swap, order',
-    body: 'The book is laid out for you. Swap any photo you don’t love, change the words if you like, and the hardcover is printed and shipped to your door.',
-  },
-];
-
 const specs = [
   { label: 'Size', value: `${BOOK.sizeIn} square` },
   { label: 'Cover', value: 'Hardcover, matte' },
@@ -66,6 +51,7 @@ const specs = [
   title="BabyBookAI — The Baby Memory Book That Makes Itself"
   description="Your baby's first year as a printed hardcover photo book, made from the photos already on your phone. BabyBookAI picks, sorts and lays them out for you."
   schema={[organization(), website(), mobileApplication(), faqPage(HOME_FAQ)]}
+  cta="home"
 >
   <!-- Hero -->
   <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-[1.05fr_1fr] lg:pt-16">
@@ -76,8 +62,7 @@ const specs = [
         It reads your camera roll, picks the best photos of every month and lays out a hardcover book. You flip
         through, swap what you don’t love, and it’s on its way.
       </p>
-      <WaitlistForm source="home-hero" class="mt-8" />
-      <StoreBadges class="mt-6" />
+      <DownloadCta source="home-hero" class="mt-8" />
     </div>
     <div class="relative sm:mt-24 lg:mt-0">
       <BookSpread month="01 Month" dates="Mar 3 – Apr 2" photos={MONTH_ONE} eager />
@@ -119,27 +104,7 @@ const specs = [
     </div>
   </section>
 
-  <!-- How it works -->
-  <section class="mx-auto max-w-6xl px-5 py-20" aria-labelledby="how">
-    <p class="font-extrabold uppercase tracking-wider text-teal-light">How it works</p>
-    <h2 id="how" class="mt-3 max-w-3xl text-4xl text-teal sm:text-5xl">Three steps, and you only do the easy one</h2>
-    <ol class="mt-12 grid gap-8 md:grid-cols-3">
-      {
-        steps.map((step, i) => (
-          <li class="relative rounded-card bg-surface p-7 shadow-[0_1px_0_var(--color-hair)]">
-            <span
-              class="grid size-11 place-items-center rounded-full bg-amber-wash font-display text-xl font-bold text-amber-deep"
-              aria-hidden="true"
-            >
-              {i + 1}
-            </span>
-            <h3 class="mt-5 text-2xl text-ink">{step.title}</h3>
-            <p class="mt-3 text-ink-soft">{step.body}</p>
-          </li>
-        ))
-      }
-    </ol>
-  </section>
+  <HowItWorks />
 
   <!-- The book -->
   <section class="bg-surface py-20" aria-labelledby="book">
@@ -220,15 +185,4 @@ const specs = [
     </div>
   </section>
 
-  <!-- Waitlist -->
-  <section id="waitlist" class="mx-auto max-w-6xl scroll-mt-6 px-5" aria-labelledby="join">
-    <div class="flex flex-col items-center rounded-card bg-amber-wash px-6 py-14 text-center">
-      <Stork size={110} stage={false} />
-      <h2 id="join" class="mt-4 text-4xl text-teal sm:text-5xl">Be the first to make one</h2>
-      <p class="mt-4 max-w-xl text-lg text-ink-soft">
-        BabyBookAI is coming to iPhone first. Leave your email and we’ll write once, the day it’s out.
-      </p>
-      <WaitlistForm source="home-footer" id="waitlist-email-footer" class="mt-8" />
-    </div>
-  </section>
 </BaseLayout>

@@ -1,0 +1,32 @@
+---
+/**
+ * The visible trail. Its BreadcrumbList JSON-LD comes from the same items,
+ * built by the page with breadcrumbs() in lib/schema.ts.
+ */
+export interface Props {
+  items: { name: string; path: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="mx-auto max-w-6xl px-5 pt-4 text-sm font-semibold text-ink-soft">
+  <ol class="flex flex-wrap items-center gap-2">
+    {
+      items.map((item, i) => (
+        <li class="flex items-center gap-2">
+          {i > 0 && <span aria-hidden="true">/</span>}
+          {i === items.length - 1 ? (
+            <span aria-current="page" class="text-ink">
+              {item.name}
+            </span>
+          ) : (
+            <a href={item.path} class="hover:text-teal">
+              {item.name}
+            </a>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

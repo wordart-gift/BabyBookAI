@@ -1,0 +1,32 @@
+---
+import StoreBadges from './StoreBadges.astro';
+import QrCode from './QrCode.astro';
+
+/**
+ * Badges everywhere; the QR code from md up only, where the visitor is on a
+ * computer and the phone is the device the app goes on.
+ */
+export interface Props {
+  source: string;
+  class?: string;
+  /** Centre the block (the closing call to action) instead of left-aligning it. */
+  center?: boolean;
+}
+
+const { source, class: className, center = false } = Astro.props;
+---
+
+{/* In a hero column the QR goes under the badges; centred, beside them. */}
+<div
+  class:list={[
+    'flex flex-col gap-6',
+    center && 'items-center md:flex-row md:justify-center md:gap-10',
+    className,
+  ]}
+>
+  <div class:list={['flex flex-col gap-3', center && 'items-center']}>
+    <StoreBadges source={source} class={center ? 'justify-center' : undefined} />
+    <p class="text-sm text-ink-soft">Free to download. You only pay for the printed book.</p>
+  </div>
+  <QrCode source={source} class="hidden md:flex" />
+</div>

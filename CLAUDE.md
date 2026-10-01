@@ -30,6 +30,10 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Face recognition is never a selling point | Opt-in, on-device, forgotten after the scan, not offered in IL/TX/WA; wording needs a lawyer's review (BIPA) |
 | Amber is only for the next action (buttons); teal, ink and paper for the rest | Same rule as the app's theme |
 | Trailing slash on every URL | One canonical URL per page on Cloudflare Pages |
+| **No waitlist.** The site goes live the day the apps do, so it is written as if they are out; store URLs live in `src/config/site.ts` (`STORES`) | Carlos, Oct 2026 |
+| Official store badges, unaltered, same height; one QR code (desktop only) to the `/get/` smart link, which `functions/get/[[path]].ts` sends to the right store by User-Agent | Two QR codes make the visitor pick; one works for both phones |
+| Every page ends with the download section (`#download`, from the layout) | The header's "Get the app" must work on every page |
+| Photos are Unsplash stand-ins (`src/assets/photos/CREDITS.md`) until the real book can be photographed | No model releases: not for paid ads |
 
 ## Performance budget
 
@@ -43,4 +47,5 @@ cannot work without it (the waitlist form works without JS too). Images through
 npm run dev       # or: npx astro dev --background
 npm run build
 npm run preview
+npm run deploy    # build + direct upload to Cloudflare Pages (wrangler)
 ```

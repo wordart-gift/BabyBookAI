@@ -1,45 +1,41 @@
 ---
-import { STORES } from '../config/site';
+import { Image } from 'astro:assets';
+import appStoreBadge from '../assets/badges/app-store.svg';
+import googlePlayBadge from '../assets/badges/google-play.png';
+import { SMART_LINK, STORES } from '../config/site';
 
 /**
- * Until the apps are out these are plain status pills, not the stores'
- * official badges: Apple and Google only license those for apps that are
- * live. iPhone comes first (Google Play's photo permission needs its own
- * review); when a store URL is set in site.ts the pill becomes a link.
+ * The stores' official badges, unaltered, as their guidelines require
+ * (Apple: developer.apple.com/app-store/marketing/guidelines; Google:
+ * partnermarketinghub.withgoogle.com). Both at the same height. Until a
+ * store URL is set in site.ts the badge points at the smart link, which
+ * falls back to the download section.
  */
 export interface Props {
   class?: string;
+  /** Where on the site the click came from, for the store's campaign stats. */
+  source: string;
 }
 
-const stores = [
-  { label: 'iPhone', status: 'Coming soon', href: STORES.appStore },
-  { label: 'Android', status: 'Coming later', href: STORES.googlePlay },
-];
+const { class: className, source } = Astro.props;
+const withSource = (url: string | null) => url ?? `${SMART_LINK}?src=${source}`;
 ---
 
-<ul class:list={['flex flex-wrap gap-3', Astro.props.class]} aria-label="Where to get the app">
-  {
-    stores.map((store) => (
-      <li>
-        {store.href ? (
-          <a
-            href={store.href}
-            class="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-sm font-bold text-surface"
-          >
-            Get it for {store.label}
-          </a>
-        ) : (
-          <span class="inline-flex items-center gap-2 rounded-full border border-hair bg-surface px-4 py-2 text-sm font-bold text-ink-soft">
-            <svg width="14" height="20" viewBox="0 0 14 20" aria-hidden="true">
-              <rect x="1" y="1" width="12" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2" />
-              <circle cx="7" cy="15.5" r="1.2" fill="currentColor" />
-            </svg>
-            <span>
-              <span class="text-ink">{store.label}</span> · {store.status}
-            </span>
-          </span>
-        )}
-      </li>
-    ))
-  }
+<ul class:list={['flex flex-wrap items-center gap-3', className]} aria-label="Download BabyBookAI">
+  <li>
+    <a href={withSource(STORES.appStore)} class="block">
+      <Image src={appStoreBadge} alt="Download on the App Store" height={52} class="h-[52px] w-auto" />
+    </a>
+  </li>
+  <li>
+    <a href={withSource(STORES.googlePlay)} class="block">
+      <Image
+        src={googlePlayBadge}
+        alt="Get it on Google Play"
+        height={52}
+        densities={[1, 2]}
+        class="h-[52px] w-auto"
+      />
+    </a>
+  </li>
 </ul>

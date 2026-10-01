@@ -5,7 +5,7 @@ import { BOOK, PUBLISHER, SITE, STORES } from '../config/site';
  * them as one @graph.
  *
  * Nothing here may claim what is not true yet: no aggregateRating until the
- * stores have real reviews, no offers until the price is set. Google drops
+ * stores have real reviews, and no price for the book until it is set. Google drops
  * the rich result without them, and that is the honest outcome.
  */
 export type SchemaNode = Record<string, unknown>;
@@ -54,6 +54,8 @@ export function mobileApplication(): SchemaNode {
     inLanguage: SITE.lang,
     publisher: { '@id': ORG_ID },
     ...(downloadUrl.length ? { downloadUrl } : {}),
+    // The app itself is free; the printed book is bought inside it.
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     featureList: [
       'Picks the photos on the phone: only the finished book is sent to print',
       'Picks the sharpest photo of every moment and drops duplicates and bursts',
