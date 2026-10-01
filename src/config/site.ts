@@ -29,7 +29,10 @@ export const BOOK = {
   sizeCm: '28 × 28 cm',
   pagesMin: 30,
   pagesSuggestedMax: 36,
+  /** Pages past pagesSuggestedMax cost extra. */
   pagesMax: 40,
+  /** The setup offers these lengths; the start date is the parent's. */
+  monthsOptions: [6, 12, 18],
   paper: '170 gsm silk-coated paper',
   cover: 'Matte-laminated hardcover',
   shipsTo: 'United States',

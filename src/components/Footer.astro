@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import publisherLogo from '../assets/brand/photo-to-text.png';
 import { PUBLISHER, SITE } from '../config/site';
 
 const groups = [
@@ -30,7 +32,11 @@ const year = new Date().getFullYear();
     <div>
       <p class="font-display text-xl font-bold text-teal">{SITE.name}</p>
       <p class="mt-2 text-sm text-ink-soft">
-        Your baby’s first year, made into a book for you. A {PUBLISHER.name} product.
+        Your baby’s first year, made into a book for you.
+      </p>
+      <p class="mt-5 flex items-center gap-2 text-sm text-ink-soft">
+        A product of
+        <Image src={publisherLogo} alt={PUBLISHER.name} width={120} densities={[1, 2]} class="h-auto w-[120px]" />
       </p>
     </div>
     {

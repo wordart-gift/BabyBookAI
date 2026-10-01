@@ -34,7 +34,7 @@ export const HOME_FAQ: Faq[] = [
   {
     question: 'Does it only work for the first twelve months?',
     answer:
-      'Most parents make the first year, from birth to the first birthday. You choose the dates, and a book can cover up to 18 months: one spread for each.',
+      'Most parents make the first year, from birth to the first birthday. You pick the day it starts and how long it runs: 6, 12 or 18 months, with a spread for each month.',
   },
   {
     question: 'How much does it cost?',
@@ -55,7 +55,7 @@ export const PHOTO_BOOK_FAQ: Faq[] = [
   },
   {
     question: 'How many pages does it have?',
-    answer: `Between ${BOOK.pagesMin} and ${BOOK.pagesMax}. BabyBookAI suggests ${BOOK.pagesMin} to ${BOOK.pagesSuggestedMax} for a first year, a spread for each month, and you can add pages up to ${BOOK.pagesMax}.`,
+    answer: `Between ${BOOK.pagesMin} and ${BOOK.pagesMax}. BabyBookAI suggests ${BOOK.pagesMin} to ${BOOK.pagesSuggestedMax} for a first year, a spread for each month, and you can add pages up to ${BOOK.pagesMax} at an extra cost.`,
   },
   {
     question: 'Will my phone photos print sharply?',
@@ -93,7 +93,7 @@ export const FIRST_YEAR_FAQ: Faq[] = [
   {
     question: 'Can the book start later than birth, or cover more than a year?',
     answer:
-      'Yes. Most books run from birth to the first birthday, but you choose the start and the end, up to 18 months, with a spread for each month.',
+      'Yes. Most books run from birth to the first birthday, but you pick the day it starts and how long it runs: 6, 12 or 18 months, with a spread for each month.',
   },
   {
     question: 'What goes on the first and last pages?',
