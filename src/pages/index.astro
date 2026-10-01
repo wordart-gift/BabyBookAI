@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { mobileApplication, organization, website } from '../lib/schema';
+
+// Placeholder until step 3 (the real home page). The SEO frame is final.
+---
+
+<BaseLayout
+  title="BabyBookAI — The Baby Memory Book That Makes Itself"
+  description="Your baby's first year as a printed hardcover photo book, made from the photos already on your phone. BabyBookAI picks, sorts and lays them out for you."
+  schema={[organization(), website(), mobileApplication()]}
+>
+  <section class="mx-auto max-w-3xl px-5 py-20 text-center">
+    <h1 class="text-4xl text-teal sm:text-6xl">The baby memory book that makes itself</h1>
+    <p class="mt-6 text-lg text-ink-soft">Coming soon.</p>
+  </section>
+</BaseLayout>

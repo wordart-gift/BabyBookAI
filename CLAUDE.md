@@ -1,0 +1,46 @@
+# BabyBookAI — website (babybookai.com)
+
+Marketing site for the BabyBookAI app: a Flutter app (iOS first, then
+Android) that builds a printed hardcover photo book of a baby's first year from
+the phone's camera roll. A Photo-to-Text product. US market, **American
+English**. Carlos, the owner, works in Spanish: reply to him in Spanish; code,
+comments, commit messages and site copy in English.
+
+Stack: Astro (static output, no JS by default), Tailwind CSS v4, Cloudflare
+Pages, GitHub (`wordart-gift/BabyBookAI`).
+
+## Sources of truth
+
+- **Product facts** (printer, format, pages, how photos are picked, privacy):
+  the app's `CLAUDE.md` in `C:\Users\X421\proyectos\librofotos`. Read only.
+  `src/config/site.ts` mirrors what the site states; keep it in step.
+- **Keyword strategy**: `docs/` (Carlos's research, Sept–Oct 2026).
+
+## Settled decisions
+
+| Decision | Why |
+|---|---|
+| Brand is **BabyBookAI** everywhere | Carlos, Oct 2026 |
+| Rank on the **"photo book"** family; "memory book" only for naming (H1 on home, App Store, ads) | "memory book" SERPs are Amazon, Etsy and media; "photo book" SERPs are small printers |
+| Pages: `/`, `/baby-photo-book/`, `/first-year-photo-book/`, `/baby-boy-photo-album/`, `/baby-girl-photo-album/`, `/baby-photo-book-ideas/` + support, about, legal | One search intent per page. Do not add pages without checking the real SERP |
+| Titles, H1s and meta: `[searched keyword] + [what is different]` | Speed and "zero work" are not searched, but they win the click |
+| SEO is a complement; App Store + Meta are the channels | Measured on competitors; build once, keep it small |
+| **No fake social proof**: no ratings, reviews or `aggregateRating` until real ones exist | |
+| Never say **"layflat"** | The Gelato binding is glued |
+| Face recognition is never a selling point | Opt-in, on-device, forgotten after the scan, not offered in IL/TX/WA; wording needs a lawyer's review (BIPA) |
+| Amber is only for the next action (buttons); teal, ink and paper for the rest | Same rule as the app's theme |
+| Trailing slash on every URL | One canonical URL per page on Cloudflare Pages |
+
+## Performance budget
+
+Lighthouse 100 in every category. LCP < 1.5 s, CLS 0. JS only where a page
+cannot work without it (the waitlist form works without JS too). Images through
+`astro:assets` with explicit sizes.
+
+## Commands
+
+```
+npm run dev       # or: npx astro dev --background
+npm run build
+npm run preview
+```

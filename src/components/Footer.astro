@@ -1,0 +1,56 @@
+---
+import { PUBLISHER, SITE } from '../config/site';
+
+const groups = [
+  {
+    title: 'The book',
+    links: [
+      { href: '/baby-photo-book/', label: 'Baby photo book' },
+      { href: '/first-year-photo-book/', label: 'First year photo book' },
+      { href: '/baby-boy-photo-album/', label: 'Baby boy photo album' },
+      { href: '/baby-girl-photo-album/', label: 'Baby girl photo album' },
+      { href: '/baby-photo-book-ideas/', label: 'Baby photo book ideas' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { href: '/about/', label: 'About' },
+      { href: '/support/', label: 'Support & FAQ' },
+      { href: '/privacy-policy/', label: 'Privacy policy' },
+      { href: '/terms/', label: 'Terms' },
+    ],
+  },
+];
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-hair bg-surface">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:grid-cols-3">
+    <div>
+      <p class="font-display text-xl font-bold text-teal">{SITE.name}</p>
+      <p class="mt-2 text-sm text-ink-soft">
+        Your baby’s first year, made into a book for you. A {PUBLISHER.name} product.
+      </p>
+    </div>
+    {
+      groups.map((group) => (
+        <nav aria-label={group.title}>
+          <p class="text-sm font-extrabold uppercase tracking-wide text-ink-soft">{group.title}</p>
+          <ul class="mt-3 space-y-2">
+            {group.links.map((link) => (
+              <li>
+                <a href={link.href} class="hover:text-teal">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))
+    }
+  </div>
+  <p class="border-t border-hair px-5 py-5 text-center text-sm text-ink-soft">
+    © {year} {PUBLISHER.name}. All rights reserved.
+  </p>
+</footer>

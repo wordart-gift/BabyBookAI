@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/nunito';
+@import '@fontsource-variable/baloo-2';
+
+/*
+ * The app's palette (librofotos/lib/theme/app_theme.dart), so the site and
+ * the app read as one brand. Amber has one job, as in the app: the next step.
+ * Everything else is teal, ink and paper; a warm colour spread across the page
+ * reads as urgency and discount, and what this product must earn first is
+ * trust with a baby's photos.
+ */
+@theme {
+  --color-amber: #e8a33f;
+  --color-amber-deep: #b5721c;
+  --color-amber-wash: #fbebcf;
+
+  --color-teal: #1d5a66;
+  --color-teal-light: #4e97a5;
+  --color-teal-wash: #dceaec;
+
+  --color-ink: #0e2a31;
+  --color-ink-soft: #557078;
+
+  --color-paper: #eaf1f2;
+  --color-surface: #ffffff;
+  --color-hair: #cbdcdf;
+
+  --font-display: 'Baloo 2 Variable', ui-rounded, system-ui, sans-serif;
+  --font-sans: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 20px;
+  --radius-control: 16px;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-weight: 500;
+    line-height: 1.55;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-balance;
+    font-weight: 700;
+    line-height: 1.12;
+  }
+
+  :focus-visible {
+    @apply outline-3 outline-offset-2 outline-teal-light;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
