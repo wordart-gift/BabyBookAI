@@ -1,0 +1,33 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+/**
+ * Amber means "the next step" and nothing else, as in the app: one primary
+ * button per screenful. Everything else is the quiet variant.
+ */
+type Props = (HTMLAttributes<'a'> | HTMLAttributes<'button'>) & {
+  variant?: 'primary' | 'quiet';
+  href?: string;
+};
+
+const { variant = 'primary', href, class: className, ...rest } = Astro.props;
+const classes = [
+  'inline-flex items-center justify-center gap-2 rounded-control px-6 py-3.5 text-lg font-extrabold transition-colors',
+  variant === 'primary'
+    ? 'bg-amber text-ink shadow-[0_3px_0_var(--color-amber-deep)] hover:bg-amber-deep hover:text-surface active:translate-y-px active:shadow-none'
+    : 'border-2 border-teal/25 bg-surface text-teal hover:border-teal',
+  className,
+];
+---
+
+{
+  href ? (
+    <a href={href} class:list={classes} {...(rest as HTMLAttributes<'a'>)}>
+      <slot />
+    </a>
+  ) : (
+    <button class:list={classes} {...(rest as HTMLAttributes<'button'>)}>
+      <slot />
+    </button>
+  )
+}

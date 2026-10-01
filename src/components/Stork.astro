@@ -1,0 +1,97 @@
+---
+/**
+ * The app's guide, drawn from the same geometry: librofotos/assets/stork/
+ * (body, bundle) plus the parts the app paints in code (dark wing, bill, eye)
+ * from lib/widgets/stork.dart, all in its 200 x 230 viewBox. Inline, so it
+ * costs no request; the swing of the bundle is CSS and stops for anyone who
+ * asks for reduced motion.
+ */
+export interface Props {
+  /** Rendered width in px; the height follows the 200:230 artwork. */
+  size?: number;
+  class?: string;
+  swing?: boolean;
+  /** Draw the disc the bird stands on, as in the app. */
+  stage?: boolean;
+}
+
+const { size = 200, class: className, swing = true, stage = true } = Astro.props;
+// Each instance needs its own clip id, or a second stork clips to the first.
+const clip = `stork-body-${Math.random().toString(36).slice(2, 8)}`;
+const bodyPath =
+  'M100,84 C130,84 142,117 142,134 C142,163 126,176 100,176 C74,176 58,163 58,134 C58,117 70,84 100,84 Z';
+---
+
+<svg
+  class:list={['stork', className]}
+  width={size}
+  height={Math.round((size * 230) / 200)}
+  viewBox="0 0 200 230"
+  role="img"
+  aria-label="A stork carrying a bundle"
+>
+  <defs>
+    <clipPath id={clip}><path d={bodyPath}></path></clipPath>
+  </defs>
+  {stage && <ellipse cx="100" cy="212" rx="70" ry="11" fill="#d8e8ea" />}
+  <g stroke="#b5721c" stroke-width="5" stroke-linecap="round" fill="none">
+    <path d="M90,172 L85,208 M85,208 L74,213 M85,208 L73,208 M85,208 L92,212"></path>
+    <path d="M110,172 L115,208 M115,208 L104,213 M115,208 L103,208 M115,208 L122,212"></path>
+  </g>
+  <path d={bodyPath} fill="#fffcf6"></path>
+  <g clip-path={`url(#${clip})`}>
+    <path d="M148,107 C156,148 138,173 116,166 C122,142 128,119 148,107 Z" fill="#4e97a5"></path>
+    <path d="M52,107 C44,148 62,173 84,166 C78,142 72,119 52,107 Z" fill="#1d5a66"></path>
+  </g>
+  <path
+    d="M100,96 C99,76 104,64 106,50"
+    stroke="#fffcf6"
+    stroke-width="18"
+    stroke-linecap="round"
+    fill="none"></path>
+  <circle cx="108" cy="42" r="21" fill="#fffcf6"></circle>
+  <path d="M127,41 L183,46 L127,46.5 Z M127,35.5 L183,46 L127,41 Z" fill="#e8a33f"></path>
+  <circle cx="116" cy="35" r="3.3" fill="#0e2a31"></circle>
+  <g class:list={['stork-bundle', { 'stork-swing': swing }]}>
+    <line x1="172" y1="46" x2="172" y2="62" stroke="#9aaab0" stroke-width="2.6" stroke-linecap="round"
+    ></line>
+    <path
+      d="M172,70 C195,74 196,109 172,115 C148,109 149,74 172,70 Z"
+      fill="#fbebcf"
+      stroke="#e8a33f"
+      stroke-width="3"
+      stroke-linejoin="round"></path>
+    <path d="M169,69 C158,60 153,55 151,58 C154,65 162,69 169,71 Z" fill="#e8a33f"></path>
+    <path d="M175,69 C186,60 191,55 193,58 C190,65 182,69 175,71 Z" fill="#e8a33f"></path>
+    <circle cx="172" cy="68" r="5.5" fill="#b5721c"></circle>
+  </g>
+</svg>
+
+<style>
+  .stork {
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  /* The string meets the bill at (172, 46): that is the pivot, as in the app. */
+  .stork-bundle {
+    transform-box: view-box;
+    transform-origin: 172px 46px;
+  }
+  .stork-swing {
+    animation: stork-swing 3.6s ease-in-out infinite alternate;
+  }
+  @keyframes stork-swing {
+    from {
+      transform: rotate(-5deg);
+    }
+    to {
+      transform: rotate(5deg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .stork-swing {
+      animation: none;
+    }
+  }
+</style>

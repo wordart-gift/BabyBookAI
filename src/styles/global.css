@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/nunito';
 @import '@fontsource-variable/baloo-2';
+/* The book's serif, for the spreads drawn on the page. Not preloaded: it is
+   never above the fold's headline. */
+@import '@fontsource-variable/lora';
+@import '@fontsource-variable/lora/wght-italic.css';
 
 /*
  * The app's palette (librofotos/lib/theme/app_theme.dart), so the site and
