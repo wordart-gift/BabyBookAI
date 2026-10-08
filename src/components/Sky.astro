@@ -17,8 +17,8 @@
 const clouds = [
   // Above the perch's band: small enough to fit between the top of the screen
   // and y 105px.
-  { top: '0px', w: '20vw', lap: 360, at: 0.1, alpha: 0.8 },
-  { top: '4px', w: '22vw', lap: 180, at: 0.8, alpha: 0.95 },
+  { top: '8px', w: '20vw', lap: 360, at: 0.1, alpha: 0.8 },
+  { top: '14px', w: '19vw', lap: 180, at: 0.8, alpha: 0.95 },
   // Below it: from y 300px down.
   { top: 'calc(300px + 2%)', w: '24vw', lap: 360, at: 0.62, alpha: 0.8 },
   { top: 'calc(300px + 24%)', w: '28vw', lap: 360, at: 0.35, alpha: 0.8 },
@@ -75,6 +75,8 @@ const birds = [
     top: var(--y);
     width: var(--w);
     height: auto;
+    /* The tallest puff rises a little above the 100 x 34 artwork. */
+    overflow: visible;
     fill: #fff;
     opacity: var(--alpha);
     /* At rest (reduced motion) the clouds are spread across the sky, not
