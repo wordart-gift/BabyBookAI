@@ -1,0 +1,144 @@
+---
+/**
+ * The app's sky (librofotos/lib/widgets/sky.dart): a pale blue gradient, lighter
+ * towards the ground, with flat white clouds drifting across it and a small
+ * flock of birds. Fixed behind the whole page, so it is the screen the cards
+ * sit on, as in the app. CSS only: no JS, and it is still when the visitor asks
+ * for reduced motion.
+ *
+ * Same cloud as the app: a flat base and three round puffs, the middle one
+ * tallest, on a 100 x 34 artwork. Bigger clouds are nearer and cross faster.
+ * `top` is the lane, `w` the width (share of the screen's width), `lap` the
+ * seconds for one crossing, `at` where along it the cloud rests at first. The
+ * app's lanes are shares of the screen; here they keep clear of the stork's
+ * band (Perch.astro, y 105-295px): none above 100px is taller than the gap, and
+ * the rest start under it.
+ */
+const clouds = [
+  // Above the perch's band: small enough to fit between the top of the screen
+  // and y 105px.
+  { top: '0px', w: '20vw', lap: 360, at: 0.1, alpha: 0.8 },
+  { top: '4px', w: '22vw', lap: 180, at: 0.8, alpha: 0.95 },
+  // Below it: from y 300px down.
+  { top: 'calc(300px + 2%)', w: '24vw', lap: 360, at: 0.62, alpha: 0.8 },
+  { top: 'calc(300px + 24%)', w: '28vw', lap: 360, at: 0.35, alpha: 0.8 },
+  { top: 'calc(300px + 12%)', w: '42vw', lap: 180, at: 0.2, alpha: 0.95 },
+  { top: 'calc(300px + 38%)', w: '46vw', lap: 180, at: 0.55, alpha: 0.95 },
+];
+const birds = [
+  { x: 0, y: 6, scale: 1 },
+  { x: 38, y: 0, scale: 0.85 },
+  { x: 70, y: 12, scale: 0.7 },
+];
+---
+
+<div class="sky" aria-hidden="true">
+  {
+    clouds.map((c) => (
+      <svg
+        class="cloud"
+        viewBox="0 0 100 34"
+        style={`--y:${c.top};--w:${c.w};--lap:${c.lap}s;--at:${c.at};--alpha:${c.alpha}`}
+      >
+        <rect x="0" y="15.3" width="100" height="18.7" rx="9.5"></rect>
+        <circle cx="28" cy="18.7" r="11.6"></circle>
+        <circle cx="52" cy="13.6" r="15"></circle>
+        <circle cx="75" cy="19.7" r="10.2"></circle>
+      </svg>
+    ))
+  }
+  <svg class="flock" viewBox="0 0 100 20">
+    {
+      birds.map((b) => (
+        <path
+          class="bird"
+          style={`animation-delay:${-b.x / 20}s`}
+          d={`M${b.x},${b.y + 6} Q${b.x + 4 * b.scale},${b.y + 1} ${b.x + 8 * b.scale},${b.y + 6} Q${b.x + 12 * b.scale},${b.y + 1} ${b.x + 16 * b.scale},${b.y + 6}`}
+        ></path>
+      ))
+    }
+  </svg>
+</div>
+
+<style>
+  .sky {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(to bottom, var(--color-sky-top), var(--color-sky-bottom));
+  }
+  .cloud {
+    position: absolute;
+    left: 0;
+    top: var(--y);
+    width: var(--w);
+    height: auto;
+    fill: #fff;
+    opacity: var(--alpha);
+    /* At rest (reduced motion) the clouds are spread across the sky, not
+       stacked at its left edge. */
+    transform: translate3d(calc((100vw + var(--w)) * var(--at) - var(--w)), 0, 0);
+    animation: drift var(--lap) linear infinite;
+    animation-delay: calc(var(--lap) * var(--at) * -1);
+    will-change: transform;
+  }
+  /* Birds cross the other way from the clouds, so the sky does not all slide
+     one way. They fly in the stretch between the header and the first line. */
+  .flock {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 11vw;
+    min-width: 70px;
+    height: auto;
+    fill: none;
+    stroke: #3f6e7a;
+    stroke-opacity: 0.7;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: fly 40s linear infinite;
+    animation-delay: -12s;
+    will-change: transform;
+  }
+  .bird {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: beat 0.9s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from {
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      transform: translate3d(100vw, 0, 0);
+    }
+  }
+  @keyframes fly {
+    from {
+      transform: translate3d(100vw, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  @keyframes beat {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0.45);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cloud,
+    .bird {
+      animation: none;
+    }
+    .flock {
+      display: none;
+    }
+  }
+</style>

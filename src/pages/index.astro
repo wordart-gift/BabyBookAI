@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
+import Perch from '../components/Perch.astro';
 import BookSpread from '../components/BookSpread.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import FaqList from '../components/FaqList.astro';
@@ -54,11 +55,13 @@ const specs = [
   cta="home"
 >
   <!-- Hero -->
+  <div class="relative overflow-x-clip">
+  <Perch />
   <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-[1.05fr_1fr] lg:pt-16">
     <div>
-      <p class="font-extrabold uppercase tracking-wider text-teal-light">Baby’s first year photo book</p>
+      <p class="font-extrabold uppercase tracking-wider text-teal">Baby’s first year photo book</p>
       <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">The baby memory book that makes itself</h1>
-      <p class="mt-6 max-w-xl text-xl text-ink-soft">
+      <p class="mt-6 max-w-xl text-xl text-ink">
         It reads your camera roll, picks the best photos of every month and lays out a hardcover book. You flip
         through, swap what you don’t love, and it’s on its way.
       </p>
@@ -66,12 +69,13 @@ const specs = [
     </div>
     <div class="relative sm:mt-24 lg:mt-0">
       <BookSpread month="01 Month" dates="Mar 3 – Apr 2" photos={MONTH_ONE} eager />
-      <Stork size={120} stage={false} class="absolute -top-[118px] right-[8%] hidden sm:block" />
+      <Stork size={120} stage={false} class="absolute -top-[118px] right-[8%] hidden drop-shadow-[0_2px_3px_rgb(14_42_49/0.18)] sm:block lg:hidden" />
     </div>
   </section>
+  </div>
 
   <!-- The problem: the homework -->
-  <section class="bg-surface py-20" aria-labelledby="homework">
+  <section class="band" aria-labelledby="homework">
     <div class="mx-auto max-w-6xl px-5">
       <h2 id="homework" class="max-w-3xl text-4xl text-teal sm:text-5xl">
         Every baby book is homework. Except this one.
@@ -107,11 +111,11 @@ const specs = [
   <HowItWorks />
 
   <!-- The book -->
-  <section class="bg-surface py-20" aria-labelledby="book">
+  <section class="band" aria-labelledby="book">
     <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.2fr_1fr]">
       <BookSpread month="07 Months" dates="Sep 3 – Oct 2" photos={MONTH_SEVEN} />
       <div>
-        <p class="font-extrabold uppercase tracking-wider text-teal-light">The book</p>
+        <p class="font-extrabold uppercase tracking-wider text-teal">The book</p>
         <h2 id="book" class="mt-3 text-4xl text-teal sm:text-5xl">A real hardcover, made to be kept</h2>
         <p class="mt-5 text-lg text-ink-soft">
           Your baby’s name and best photo on the cover. The day they were born on the first page. Then a
@@ -153,7 +157,7 @@ const specs = [
   </section>
 
   <!-- First year, gift -->
-  <section class="bg-surface py-20" aria-labelledby="first-year">
+  <section class="band" aria-labelledby="first-year">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
       <Image
         src={FIRST_BIRTHDAY.src}

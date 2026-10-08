@@ -4,6 +4,7 @@ import nunitoLatin from '@fontsource-variable/nunito/files/nunito-latin-wght-nor
 import balooLatin from '@fontsource-variable/baloo-2/files/baloo-2-latin-wght-normal.woff2?url';
 import SEO, { type Props as SeoProps } from '../components/SEO.astro';
 import Header from '../components/Header.astro';
+import Sky from '../components/Sky.astro';
 import Footer from '../components/Footer.astro';
 import ClosingCta from '../components/ClosingCta.astro';
 import { SITE } from '../config/site';
@@ -21,7 +22,7 @@ const { cta = 'page', ...seo } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#eaf1f2" />
+    <meta name="theme-color" content="#bfe2f2" />
     {/* Both faces are on the first screen: fetching them with the HTML keeps
         the headline from reflowing when they arrive. Latin only; the other
         subsets load by unicode-range if ever needed. */}
@@ -39,6 +40,7 @@ const { cta = 'page', ...seo } = Astro.props;
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-control focus:bg-surface focus:px-4 focus:py-2"
       >Skip to content</a
     >
+    <Sky />
     <Header />
     <main id="main" class="flex-1">
       <slot />

@@ -29,6 +29,10 @@
   --color-surface: #ffffff;
   --color-hair: #cbdcdf;
 
+  /* The app's sky (sky.dart): pale blue, lighter towards the ground. */
+  --color-sky-top: #bfe2f2;
+  --color-sky-bottom: #eff8fb;
+
   --font-display: 'Baloo 2 Variable', ui-rounded, system-ui, sans-serif;
   --font-sans: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif;
 
@@ -43,7 +47,10 @@
   }
 
   body {
-    @apply bg-paper font-sans text-ink antialiased;
+    /* The sky itself is fixed behind the page (Sky.astro); this is what shows
+       before it paints. */
+    @apply font-sans text-ink antialiased;
+    background-color: var(--color-sky-bottom);
     font-weight: 500;
     line-height: 1.55;
   }
@@ -67,6 +74,19 @@
       animation-duration: 0.01ms !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* A white card on the sky, as in the app, instead of a full-width band. */
+  .band {
+    @apply mx-3 my-6 rounded-card bg-surface py-20 sm:mx-5;
+  }
+  @media (min-width: 90rem) {
+    .band {
+      margin-inline: auto;
+      max-width: 84rem;
     }
   }
 }
