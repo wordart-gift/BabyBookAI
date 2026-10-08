@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { breadcrumbs } from '../lib/schema';
+
+/**
+ * Written from what the app and the order server do today (the app's
+ * docs/play-store/data-safety.md). The privacy lawyer reviews it before the
+ * apps go to production: the face-recognition paragraph, the retention of paid
+ * orders and the rights sections are the points to check. Change it in the
+ * same commit as anything the app starts or stops sending.
+ */
+const UPDATED = 'October 7, 2026';
+const EMAIL = 'info@photo-to-text.com';
+
+const trail = [
+  { name: 'Home', path: '/' },
+  { name: 'Privacy policy', path: '/privacy-policy/' },
+];
+---
+
+<BaseLayout
+  title="Privacy Policy | BabyBookAI"
+  description="What BabyBookAI does with your photos and your order details: your library is read on your phone, and only the finished book is sent to be printed."
+  schema={[breadcrumbs(trail)]}
+  cta={false}
+>
+  <Breadcrumbs items={trail} />
+
+  <article class="mx-auto max-w-3xl px-5 pb-20 pt-8">
+    <p class="font-extrabold uppercase tracking-wider text-teal">Privacy</p>
+    <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">Your baby’s photos stay on your phone</h1>
+    <p class="mt-4 text-ink-soft">Privacy policy · Last updated: {UPDATED}</p>
+
+    <div class="mt-10 rounded-card border-2 border-hair bg-surface p-6 sm:p-10">
+
+    <p class="text-lg">
+      BabyBookAI (“we”) is an app that makes a printed photo book of your baby’s first year from the
+      photos on your phone. It is a Photo-to-Text product. Contact{' '}
+      <a class="text-teal underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+    </p>
+
+    <h2 class="mt-12 text-2xl text-teal">The short version</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-6">
+      <li>Your photo library is read <strong>on your phone</strong>. We never see it.</li>
+      <li>
+        When you order a book, the finished book file (the photos you chose, your words, your baby’s
+        name) is sent to us and to our printer.
+      </li>
+      <li>
+        To deliver it we need your name, email and address. Payment is handled by Stripe; we never
+        see your card.
+      </li>
+      <li>No advertising, no analytics, no tracking, no account.</li>
+    </ul>
+
+    <h2 class="mt-12 text-2xl text-teal">What the app does on your phone</h2>
+    <p class="mt-4">
+      To choose the photos, the app reads the photos in your library from the months you pick: their
+      dates, sizes, sharpness and duplicates. This happens only on your phone, and nothing about your
+      library is sent anywhere.
+    </p>
+    <p class="mt-4">
+      <strong>Recognizing your baby (optional).</strong> If you turn on the recognition switch before
+      the scan, the app learns your baby’s face from photos you tap, on your phone, to keep other
+      people’s children out of the book. The face data exists only in the phone’s memory during the
+      scan and is deleted when the scan ends; it is never saved or sent. The switch is off by default
+      and is not offered in Illinois, Texas or Washington.
+    </p>
+    <p class="mt-4">
+      The book you are working on is saved on your phone so you can come back to it. It holds which
+      photos are in it, your words, and where faces are in those photos (to frame them), never face
+      data. Starting a new book deletes it, as does uninstalling the app.
+    </p>
+
+    <h2 class="mt-12 text-2xl text-teal">What we receive, and why</h2>
+    <div class="mt-4 overflow-x-auto">
+      <table class="w-full border-collapse text-left text-base">
+        <thead>
+          <tr class="border-b border-hair text-ink-soft">
+            <th class="py-2 pr-4 font-semibold">What</th>
+            <th class="py-2 pr-4 font-semibold">Why</th>
+            <th class="py-2 font-semibold">Shared with</th>
+          </tr>
+        </thead>
+        <tbody class="align-top">
+          <tr class="border-b border-hair">
+            <td class="py-3 pr-4">
+              The book file: the photos in your book, your words, your baby’s name and birth year
+            </td>
+            <td class="py-3 pr-4">To print your book</td>
+            <td class="py-3">Gelato (our printer)</td>
+          </tr>
+          <tr class="border-b border-hair">
+            <td class="py-3 pr-4">Number of pages, currency</td>
+            <td class="py-3 pr-4">To price the order</td>
+            <td class="py-3">—</td>
+          </tr>
+          <tr class="border-b border-hair">
+            <td class="py-3 pr-4">Your name, email, shipping address, phone (optional)</td>
+            <td class="py-3 pr-4">To deliver the book and send the receipt</td>
+            <td class="py-3">Gelato (delivery), Stripe (receipt)</td>
+          </tr>
+          <tr>
+            <td class="py-3 pr-4">Payment details</td>
+            <td class="py-3 pr-4">To take payment</td>
+            <td class="py-3">Stripe only; we never receive them</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4">
+      We use this information only to make, ship and support your order. We do not sell it, use it for
+      advertising, or use your photos for anything other than printing your book.
+    </p>
+
+    <h2 class="mt-12 text-2xl text-teal">Who else handles it</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-6">
+      <li>
+        <strong>Stripe</strong> processes payments
+        (<a class="text-teal underline" href="https://stripe.com/privacy">stripe.com/privacy</a>).
+      </li>
+      <li>
+        <strong>Gelato</strong> prints and ships the book
+        (<a class="text-teal underline" href="https://www.gelato.com/privacy-policy"
+          >gelato.com/privacy-policy</a
+        >).
+      </li>
+      <li>Our order server, where the book file waits until it reaches the printer.</li>
+    </ul>
+
+    <h2 class="mt-12 text-2xl text-teal">How long we keep it</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-6">
+      <li>Orders that are never paid are deleted, with their book file, after 7 days.</li>
+      <li>
+        For paid orders we keep the order details and the book file for as long as we need to deliver
+        the order, support you, and meet tax and accounting rules. You can ask us to delete them at
+        any time (see below).
+      </li>
+    </ul>
+
+    <h2 class="mt-12 text-2xl text-teal">Your rights, and how to delete your data</h2>
+    <p class="mt-4">
+      You can ask us for a copy of your data, to correct it, or to delete it, by writing to
+      <a class="text-teal underline" href={`mailto:${EMAIL}`}>{EMAIL}</a> from the email address you
+      ordered with, naming BabyBookAI. We will answer within 30 days. To delete your data, tell us
+      “delete my data”: we then delete your order details and your book file, except what the law
+      obliges us to keep, and ask Gelato and Stripe to delete theirs.
+    </p>
+    <p class="mt-4">
+      If you live in the European Union or the United Kingdom, you can also complain to your data
+      protection authority. We handle your order details because you asked us to make and ship your
+      book, and, if you use it, face recognition only with your consent, which you can withdraw by
+      turning the switch off.
+    </p>
+
+    <h2 class="mt-12 text-2xl text-teal">Children</h2>
+    <p class="mt-4">
+      BabyBookAI is for parents. It is not directed at children, and we do not knowingly collect
+      information from children. The photos of your baby are used only to print your book.
+    </p>
+
+    <h2 class="mt-12 text-2xl text-teal">Security</h2>
+    <p class="mt-4">
+      Everything sent from the app travels encrypted (HTTPS). Book files are stored in a private
+      folder on our server and reach the printer only through a signed, expiring link.
+    </p>
+
+    <h2 class="mt-12 text-2xl text-teal">Changes</h2>
+    <p class="mt-4">We will post any changes here and update the date above.</p>
+    </div>
+  </article>
+</BaseLayout>
