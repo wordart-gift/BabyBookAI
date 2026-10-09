@@ -28,6 +28,8 @@ const paper = { neutral: '#fbf8f3', pink: '#fbf2f4', blue: '#f1f5fa' }[tone];
 const tones = ['#a9b0bb', '#b2b8ae', '#bdaaae', '#cbbfa8', '#aeb5ab', '#c9bea7', '#c4b7a2'];
 const slots = Array.from({ length: 7 }, (_, i) => ({ photo: photos[i], tone: tones[i] }));
 const [hero, ...grid] = slots;
+/** Two photos only: the second fills the right page, as a one-photo page does in the book. */
+const pair = photos.length === 2;
 ---
 
 <figure class:list={['book', className]} style={`--paper:${paper}`}>
@@ -52,9 +54,17 @@ const [hero, ...grid] = slots;
         }
       </div>
     </div>
-    <div class="book-page book-right">
+    <div class:list={['book-page book-right', pair && 'book-pair']}>
       {
-        grid.map((slot) =>
+        pair ? (
+          <Image
+            src={photos[1].src}
+            alt={photos[1].alt}
+            widths={[240, 400, 640]}
+            sizes="(min-width: 1024px) 300px, 40vw"
+            loading={eager ? 'eager' : 'lazy'}
+          />
+        ) : grid.map((slot) =>
           slot.photo ? (
             <Image
               src={slot.photo.src}
@@ -146,6 +156,9 @@ const [hero, ...grid] = slots;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, minmax(0, 1fr));
     gap: 3%;
+  }
+  .book-pair {
+    display: block;
   }
   .book-slot,
   .book-page :global(img) {

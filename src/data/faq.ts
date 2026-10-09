@@ -44,7 +44,7 @@ export const HOME_FAQ: Faq[] = [
   {
     question: 'Is it on iPhone and Android?',
     answer:
-      'Yes. BabyBookAI is free on the App Store and on Google Play. Books are printed and shipped in the United States.',
+      'BabyBookAI is free on Google Play now, for Android. The iPhone app is coming soon. Books are printed and shipped in the United States.',
   },
 ];
 

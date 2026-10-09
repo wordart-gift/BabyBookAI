@@ -7,9 +7,9 @@ import { SMART_LINK, STORES } from '../config/site';
 /**
  * The stores' official badges, unaltered, as their guidelines require
  * (Apple: developer.apple.com/app-store/marketing/guidelines; Google:
- * partnermarketinghub.withgoogle.com). Both at the same height. Until a
- * store URL is set in site.ts the badge points at the smart link, which
- * falls back to the download section.
+ * partnermarketinghub.withgoogle.com). Both at the same height. A store with
+ * no URL in site.ts yet gets no badge (Apple's rules cover only live apps):
+ * a "coming soon" label of the same height stands in.
  */
 export interface Props {
   class?: string;
@@ -18,17 +18,29 @@ export interface Props {
 }
 
 const { class: className, source } = Astro.props;
-const withSource = (url: string | null) => url ?? `${SMART_LINK}?src=${source}`;
+// Google Play passes `referrer` through to the install, for campaign stats.
+const playUrl = STORES.googlePlay
+  ? `${STORES.googlePlay}&referrer=${encodeURIComponent(`utm_source=site&utm_medium=${source}`)}`
+  : `${SMART_LINK}?src=${source}`;
 ---
 
 <ul class:list={['flex flex-wrap items-center gap-3', className]} aria-label="Download BabyBookAI">
   <li>
-    <a href={withSource(STORES.appStore)} class="block">
-      <Image src={appStoreBadge} alt="Download on the App Store" height={52} class="h-[52px] w-auto" />
-    </a>
+    {
+      STORES.appStore ? (
+        <a href={`${STORES.appStore}?ct=${source}`} class="block">
+          <Image src={appStoreBadge} alt="Download on the App Store" height={52} class="h-[52px] w-auto" />
+        </a>
+      ) : (
+        <p class="flex h-[52px] flex-col justify-center rounded-control border border-hair bg-paper px-5 leading-tight text-ink-soft">
+          <span class="text-xs font-semibold">iPhone</span>
+          <span class="font-extrabold text-ink">App Store: coming soon</span>
+        </p>
+      )
+    }
   </li>
   <li>
-    <a href={withSource(STORES.googlePlay)} class="block">
+    <a href={playUrl} class="block">
       <Image
         src={googlePlayBadge}
         alt="Get it on Google Play"

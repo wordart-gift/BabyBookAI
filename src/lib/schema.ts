@@ -49,7 +49,8 @@ export function mobileApplication(): SchemaNode {
     name: SITE.name,
     url: `${SITE.url}/`,
     description: SITE.defaultDescription,
-    operatingSystem: 'iOS, Android',
+    // Add iOS when the App Store listing is live (STORES.appStore).
+    operatingSystem: STORES.appStore ? 'iOS, Android' : 'Android',
     applicationCategory: 'LifestyleApplication',
     inLanguage: SITE.lang,
     publisher: { '@id': ORG_ID },

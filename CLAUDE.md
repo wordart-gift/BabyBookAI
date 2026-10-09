@@ -1,7 +1,7 @@
 # BabyBookAI — website (babybookai.com)
 
-Marketing site for the BabyBookAI app: a Flutter app (iOS first, then
-Android) that builds a printed hardcover photo book of a baby's first year from
+Marketing site for the BabyBookAI app: a Flutter app (Android is live
+on Google Play since Oct 2026; iPhone is coming) that builds a printed hardcover photo book of a baby's first year from
 the phone's camera roll. A Photo-to-Text product. US market, **American
 English**. Carlos, the owner, works in Spanish: reply to him in Spanish; code,
 comments, commit messages and site copy in English.
@@ -33,7 +33,8 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | **No waitlist.** The site goes live the day the apps do, so it is written as if they are out; store URLs live in `src/config/site.ts` (`STORES`) | Carlos, Oct 2026 |
 | Official store badges, unaltered, same height; one QR code (desktop only) to the `/get/` smart link, which `functions/get/[[path]].ts` sends to the right store by User-Agent | Two QR codes make the visitor pick; one works for both phones |
 | Every page ends with the download section (`#download`, from the layout) | The header's "Get the app" must work on every page |
-| Photos are Unsplash stand-ins (`src/assets/photos/CREDITS.md`) until the real book can be photographed | No model releases: not for paid ads |
+| **Android first, iPhone coming.** Google Play badge is live; while `STORES.appStore` is null the site shows an "App Store: coming soon" label (no Apple badge: Apple's rules cover live apps only). Set `STORES.appStore` and the badge, QR redirect and schema follow | Carlos, Oct 2026 |
+| Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). **Only photos where Noa is alone**; never the ones with family. Unsplash stand-ins are gone | The site and paid ads are public; family members have not agreed |
 
 ## Performance budget
 

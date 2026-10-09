@@ -1,49 +1,27 @@
 import type { ImageMetadata } from 'astro';
 
-import newbornDad from '../assets/photos/newborn-dad.jpg';
-import newbornFeet from '../assets/photos/newborn-feet.jpg';
-import newbornHands from '../assets/photos/newborn-hands.jpg';
-import newbornSleeping from '../assets/photos/newborn-sleeping.jpg';
-import newbornDad2 from '../assets/photos/newborn-dad-2.jpg';
-import newbornAsleepHand from '../assets/photos/newborn-asleep-hand.jpg';
-import momSofa from '../assets/photos/mom-sofa.jpg';
-import babyCurious from '../assets/photos/baby-curious.jpg';
-import babyLaughing from '../assets/photos/baby-laughing.jpg';
-import babyGrass from '../assets/photos/baby-grass.jpg';
-import babyCrawling from '../assets/photos/baby-crawling.jpg';
-import momLaughing from '../assets/photos/mom-laughing.jpg';
-import dadSunlight from '../assets/photos/dad-sunlight.jpg';
-import babySwing from '../assets/photos/baby-swing.jpg';
-import firstBirthday from '../assets/photos/first-birthday.jpg';
+import noaPortrait from '../assets/app/noa-portrait.png';
+import noaPacifier from '../assets/app/noa-pacifier.png';
+import screenSetup from '../assets/app/screen-setup.png';
+import screenSelection from '../assets/app/screen-selection.png';
+import screenOrder from '../assets/app/screen-order.png';
 
 /**
- * Stand-in photographs (Unsplash; see src/assets/photos/CREDITS.md) until the
- * real printed book can be photographed. Grouped as the book would group
- * them: one spread per month, the large photo first.
+ * Real material from the app (the store screenshots in librofotos
+ * tool/out/store_noa), cropped. Only photos in which Noa appears alone: the
+ * ones with family in them stay out of the site, which paid ads also use.
  */
 export type Photo = { src: ImageMetadata; alt: string };
 
-export const MONTH_ONE: Photo[] = [
-  { src: newbornDad, alt: 'A father holding his sleeping newborn in the hospital' },
-  { src: newbornFeet, alt: 'A newborn’s tiny feet on a white blanket' },
-  { src: newbornHands, alt: 'A parent’s hands cradling a newborn’s feet' },
-  { src: newbornSleeping, alt: 'A newborn asleep, wrapped in a blanket' },
-  { src: momSofa, alt: 'A mother resting on the sofa with her baby' },
-  { src: newbornDad2, alt: 'A father looking down at his newborn daughter' },
-  { src: newbornAsleepHand, alt: 'A newborn sleeping in a parent’s hand' },
+/** A month spread with two photos: the large one left, the other right. */
+export const NOA_SPREAD: Photo[] = [
+  { src: noaPortrait, alt: 'A baby girl lying on her tummy, looking at the camera' },
+  { src: noaPacifier, alt: 'A baby with a pacifier on a green sofa, next to a plush dog' },
 ];
 
-export const MONTH_SEVEN: Photo[] = [
-  { src: babyCurious, alt: 'A baby looking up, curious' },
-  { src: babyLaughing, alt: 'A baby laughing on a white bed' },
-  { src: babyGrass, alt: 'A baby laughing outdoors at sunset' },
-  { src: babyCrawling, alt: 'A baby crawling across a wooden floor' },
-  { src: momLaughing, alt: 'A mother and her baby laughing together' },
-  { src: dadSunlight, alt: 'A father holding his baby in the sunlight' },
-  { src: babySwing, alt: 'A baby laughing on a swing' },
-];
-
-export const FIRST_BIRTHDAY: Photo = {
-  src: firstBirthday,
-  alt: 'A baby girl at her first birthday, sitting by the cake',
-};
+/** App screens, cropped to the phone's display. No people in any of them. */
+export const SCREENS = {
+  setup: { src: screenSetup, alt: 'BabyBookAI setup screen: a name and a birthday, then the book length and price' },
+  selection: { src: screenSelection, alt: 'BabyBookAI results screen: 157 photos kept, shown by month' },
+  order: { src: screenOrder, alt: 'BabyBookAI order screen: 30 pages, 11 × 11 in hardcover, $49.99, shipping included' },
+} satisfies Record<string, Photo>;

@@ -40,12 +40,12 @@ export const BOOK = {
 
 /**
  * The store listings. The site goes live with the apps, so every download
- * button and the /get/ smart link read these.
- * TODO: fill in both before the first deploy to babybookai.com.
+ * button and the /get/ smart link read these. Google Play is live (Oct 2026);
+ * the iPhone app is not yet: while appStore is null the site says "coming soon".
  */
 export const STORES = {
   appStore: null as string | null,
-  googlePlay: null as string | null,
+  googlePlay: 'https://play.google.com/store/apps/details?id=com.babybookai.app' as string | null,
 } as const;
 
 /** One link for both stores (functions/get/[[path]].ts sends each phone to its own). */

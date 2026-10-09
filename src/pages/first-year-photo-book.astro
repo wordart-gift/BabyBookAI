@@ -1,14 +1,14 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BookSpread from '../components/BookSpread.astro';
+import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import FaqList from '../components/FaqList.astro';
 import { breadcrumbs, faqPage, mobileApplication } from '../lib/schema';
 import { FIRST_YEAR_FAQ } from '../data/faq';
-import { FIRST_BIRTHDAY, MONTH_SEVEN } from '../lib/photos';
+import { NOA_SPREAD, SCREENS } from '../lib/photos';
 
 /*
  * Target: "baby's first year photo book" (1,100/mo) and family: baby first
@@ -61,7 +61,7 @@ const months = [
       </p>
       <DownloadCta source="first-year-hero" class="mt-8" />
     </div>
-    <BookSpread month="07 Months" dates="Sep 3 – Oct 2" photos={MONTH_SEVEN} eager />
+    <BookSpread month="05 Months" dates="Sep 9 – Oct 8" photos={NOA_SPREAD} eager />
   </section>
 
   <section class="band" aria-labelledby="month-by-month">
@@ -130,13 +130,7 @@ const months = [
 
   <section class="band" aria-labelledby="birthday">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-      <Image
-        src={FIRST_BIRTHDAY.src}
-        alt={FIRST_BIRTHDAY.alt}
-        widths={[400, 640, 900]}
-        sizes="(min-width: 768px) 560px, 100vw"
-        class="aspect-[4/3] w-full rounded-card object-cover"
-      />
+      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem] self-end" />
       <div>
         <h2 id="birthday" class="text-4xl text-teal sm:text-5xl">In time for the first birthday</h2>
         <p class="mt-5 text-lg text-ink-soft">

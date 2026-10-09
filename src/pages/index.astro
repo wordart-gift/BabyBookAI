@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
 import Perch from '../components/Perch.astro';
 import BookSpread from '../components/BookSpread.astro';
+import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import FaqList from '../components/FaqList.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import { faqPage, mobileApplication, organization, website } from '../lib/schema';
 import { HOME_FAQ } from '../data/faq';
-import { FIRST_BIRTHDAY, MONTH_ONE, MONTH_SEVEN } from '../lib/photos';
+import { NOA_SPREAD, SCREENS } from '../lib/photos';
 import { BOOK } from '../config/site';
 
 /*
@@ -68,7 +68,7 @@ const specs = [
       <DownloadCta source="home-hero" class="mt-8" />
     </div>
     <div class="relative sm:mt-24 lg:mt-0">
-      <BookSpread month="01 Month" dates="Mar 3 – Apr 2" photos={MONTH_ONE} eager />
+      <BookSpread month="05 Months" dates="Sep 9 – Oct 8" photos={NOA_SPREAD} eager />
       <Stork size={120} stage={false} class="absolute -top-[118px] right-[8%] hidden drop-shadow-[0_2px_3px_rgb(14_42_49/0.18)] sm:block lg:hidden" />
     </div>
   </section>
@@ -113,7 +113,10 @@ const specs = [
   <!-- The book -->
   <section class="band" aria-labelledby="book">
     <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.2fr_1fr]">
-      <BookSpread month="07 Months" dates="Sep 3 – Oct 2" photos={MONTH_SEVEN} />
+      <div class="mx-auto flex max-w-[34rem] items-end justify-center gap-5 self-end">
+        <PhoneShot src={SCREENS.selection.src} alt={SCREENS.selection.alt} class="w-[46%]" />
+        <PhoneShot src={SCREENS.order.src} alt={SCREENS.order.alt} class="w-[46%]" />
+      </div>
       <div>
         <p class="font-extrabold uppercase tracking-wider text-teal">The book</p>
         <h2 id="book" class="mt-3 text-4xl text-teal sm:text-5xl">A real hardcover, made to be kept</h2>
@@ -159,13 +162,7 @@ const specs = [
   <!-- First year, gift -->
   <section class="band" aria-labelledby="first-year">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-      <Image
-        src={FIRST_BIRTHDAY.src}
-        alt={FIRST_BIRTHDAY.alt}
-        widths={[400, 640, 900]}
-        sizes="(min-width: 768px) 560px, 100vw"
-        class="aspect-[4/3] w-full rounded-card object-cover"
-      />
+      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem] self-end" />
       <div>
         <h2 id="first-year" class="text-4xl text-teal sm:text-5xl">Ready for the first birthday</h2>
         <p class="mt-5 text-lg text-ink-soft">
