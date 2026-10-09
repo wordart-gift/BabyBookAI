@@ -9,7 +9,7 @@ import FaqList from '../components/FaqList.astro';
 import ToneSwatches from '../components/ToneSwatches.astro';
 import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
 import { GIRL_FAQ } from '../data/faq';
-import { NOA_SPREAD, SCREENS } from '../lib/photos';
+import { MONTH_SIX, SCREENS } from '../lib/photos';
 import { BOOK } from '../config/site';
 
 /*
@@ -53,7 +53,7 @@ const inside = [
       </p>
       <DownloadCta source="baby-girl-hero" class="mt-8" />
     </div>
-    <BookSpread month="05 Months" dates="Sep 9 – Oct 8" photos={NOA_SPREAD} tone="pink" eager />
+    <BookSpread month="Sixth month" dates="Oct 9 – Nov 8" photos={MONTH_SIX} tone="pink" eager />
   </section>
 
   <section class="band" aria-labelledby="empty-album">

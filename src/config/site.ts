@@ -12,8 +12,11 @@ export const SITE = {
   defaultDescription:
     'BabyBookAI turns the photos already on your phone into a printed hardcover book of your baby’s first year. It picks, sorts and lays out the photos for you.',
   defaultOgImage: '/og/default.png',
-  /** The store listings' contact, and the privacy policy's. */
-  supportEmail: 'info@photo-to-text.com',
+  /**
+   * Where visitors write. Cloudflare Email Routing forwards it to
+   * info@photo-to-text.com, the address the store listings were set up with.
+   */
+  supportEmail: 'info@babybookai.com',
 } as const;
 
 /**

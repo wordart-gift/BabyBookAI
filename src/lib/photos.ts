@@ -1,27 +1,42 @@
 import type { ImageMetadata } from 'astro';
 
-import noaPortrait from '../assets/app/noa-portrait.png';
-import noaPacifier from '../assets/app/noa-pacifier.png';
+import m6Hero from '../assets/app/month6-hero.png';
+import m6Playmat from '../assets/app/month6-playmat.png';
+import m6Dad from '../assets/app/month6-dad.png';
+import m6Grandparents from '../assets/app/month6-grandparents.png';
+import noaStroller from '../assets/app/noa-stroller.png';
+import noaHat from '../assets/app/noa-hat.png';
+import noaCrib from '../assets/app/noa-crib.png';
 import screenSetup from '../assets/app/screen-setup.png';
 import screenSelection from '../assets/app/screen-selection.png';
 import screenOrder from '../assets/app/screen-order.png';
 
 /**
  * Real material from the app (the store screenshots in librofotos
- * tool/out/store_noa), cropped. Only photos in which Noa appears alone: the
- * ones with family in them stay out of the site, which paid ads also use.
+ * tool/out/store_noa), cropped. Carlos (Oct 2026): photos with the family in
+ * them may be used too, not only those of Noa alone.
  */
 export type Photo = { src: ImageMetadata; alt: string };
 
-/** A month spread with two photos: the large one left, the other right. */
-export const NOA_SPREAD: Photo[] = [
-  { src: noaPortrait, alt: 'A baby girl lying on her tummy, looking at the camera' },
-  { src: noaPacifier, alt: 'A baby with a pacifier on a green sofa, next to a plush dog' },
+/**
+ * A month spread: the large photo on the left page (Noa's sixth month in
+ * store screenshot 3), then the right page's grid, row by row: the best
+ * framed of screenshots 3 and 5. They are small (about 200 px), which is
+ * what a grid cell needs.
+ */
+export const MONTH_SIX: Photo[] = [
+  { src: m6Hero, alt: 'A baby sitting on her mother’s lap, playing with building blocks' },
+  { src: noaStroller, alt: 'A baby laughing in her stroller' },
+  { src: m6Playmat, alt: 'A baby on her tummy on a colorful play mat' },
+  { src: m6Dad, alt: 'A baby next to her smiling father on the sofa' },
+  { src: noaHat, alt: 'A baby in a pink knitted hat with pompoms, smiling' },
+  { src: noaCrib, alt: 'A baby in a flowered dress smiling in her crib' },
+  { src: m6Grandparents, alt: 'Grandparents holding the baby and her cousin' },
 ];
 
-/** App screens, cropped to the phone's display. No people in any of them. */
+/** App screens, cut where a phone's display ends. No people in any of them. */
 export const SCREENS = {
   setup: { src: screenSetup, alt: 'BabyBookAI setup screen: a name and a birthday, then the book length and price' },
   selection: { src: screenSelection, alt: 'BabyBookAI results screen: 157 photos kept, shown by month' },
-  order: { src: screenOrder, alt: 'BabyBookAI order screen: 30 pages, 11 × 11 in hardcover, $49.99, shipping included' },
+  order: { src: screenOrder, alt: 'BabyBookAI order screen: 30 pages, 11 × 11 in hardcover, shipping included' },
 } satisfies Record<string, Photo>;

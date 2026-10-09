@@ -8,7 +8,7 @@ import HowItWorks from '../components/HowItWorks.astro';
 import FaqList from '../components/FaqList.astro';
 import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
 import { FIRST_YEAR_FAQ } from '../data/faq';
-import { NOA_SPREAD, SCREENS } from '../lib/photos';
+import { MONTH_SIX, SCREENS } from '../lib/photos';
 
 /*
  * Target: "baby's first year photo book" (1,100/mo) and family: baby first
@@ -62,7 +62,7 @@ const months = [
       </p>
       <DownloadCta source="first-year-hero" class="mt-8" />
     </div>
-    <BookSpread month="05 Months" dates="Sep 9 – Oct 8" photos={NOA_SPREAD} eager />
+    <BookSpread month="Sixth month" dates="Oct 9 – Nov 8" photos={MONTH_SIX} eager />
   </section>
 
   <section class="band" aria-labelledby="month-by-month">
@@ -131,7 +131,7 @@ const months = [
 
   <section class="band" aria-labelledby="birthday">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem] self-end" />
+      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem]" />
       <div>
         <h2 id="birthday" class="text-4xl text-teal sm:text-5xl">In time for the first birthday</h2>
         <p class="mt-5 text-lg text-ink-soft">

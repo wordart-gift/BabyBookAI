@@ -34,7 +34,9 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Official store badges, unaltered, same height; one QR code (desktop only) to the `/get/` smart link, which `functions/get/[[path]].ts` sends to the right store by User-Agent | Two QR codes make the visitor pick; one works for both phones |
 | Every page ends with the download section (`#download`, from the layout) | The header's "Get the app" must work on every page |
 | **Android first, iPhone coming.** Google Play badge is live; while `STORES.appStore` is null the site shows an "App Store: coming soon" label (no Apple badge: Apple's rules cover live apps only). Set `STORES.appStore` and the badge, QR redirect and schema follow | Carlos, Oct 2026 |
-| Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). **Only photos where Noa is alone**; never the ones with family. Unsplash stand-ins are gone | The site and paid ads are public; family members have not agreed |
+| Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). Photos with the family may be used too; pick the best framed. Unsplash stand-ins are gone | Carlos, Oct 2026 (he first allowed only Noa alone) |
+| App screens sit in a whole phone (`PhoneShot`): the screenshots are cut just under the last button, where a display would end | A frame open at the bottom read as a cropped image |
+| Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to info@photo-to-text.com by Cloudflare Email Routing | Carlos, Oct 2026 |
 
 ## Performance budget
 

@@ -9,7 +9,7 @@ import FaqList from '../components/FaqList.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import { APP_ID, BOOK_ID, faqPage, mobileApplication, photoBook } from '../lib/schema';
 import { HOME_FAQ } from '../data/faq';
-import { NOA_SPREAD, SCREENS } from '../lib/photos';
+import { MONTH_SIX, SCREENS } from '../lib/photos';
 import { BOOK } from '../config/site';
 
 /*
@@ -69,7 +69,7 @@ const specs = [
       <DownloadCta source="home-hero" class="mt-8" />
     </div>
     <div class="relative sm:mt-24 lg:mt-0">
-      <BookSpread month="05 Months" dates="Sep 9 – Oct 8" photos={NOA_SPREAD} eager />
+      <BookSpread month="Sixth month" dates="Oct 9 – Nov 8" photos={MONTH_SIX} eager />
       <Stork size={120} stage={false} class="absolute -top-[118px] right-[8%] hidden drop-shadow-[0_2px_3px_rgb(14_42_49/0.18)] sm:block lg:hidden" />
     </div>
   </section>
@@ -114,7 +114,7 @@ const specs = [
   <!-- The book -->
   <section class="band" aria-labelledby="book">
     <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.2fr_1fr]">
-      <div class="mx-auto flex max-w-[34rem] items-end justify-center gap-5 self-end">
+      <div class="mx-auto flex max-w-[34rem] items-center justify-center gap-5">
         <PhoneShot src={SCREENS.selection.src} alt={SCREENS.selection.alt} class="w-[46%]" />
         <PhoneShot src={SCREENS.order.src} alt={SCREENS.order.alt} class="w-[46%]" />
       </div>
@@ -163,7 +163,7 @@ const specs = [
   <!-- First year, gift -->
   <section class="band" aria-labelledby="first-year">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem] self-end" />
+      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem]" />
       <div>
         <h2 id="first-year" class="text-4xl text-teal sm:text-5xl">Ready for the first birthday</h2>
         <p class="mt-5 text-lg text-ink-soft">

@@ -3,9 +3,10 @@ import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
 /**
- * A real screen from the app in a phone's bezel, rising from the bottom of
- * its section: the display is cropped at the same place the store screenshots
- * crop it, so the frame is open at the bottom.
+ * A real screen from the app in a whole phone. The store screenshots run off
+ * their bottom edge, so the screens in src/assets/app are cut just under the
+ * last button, where a phone's display would end, and the bezel closes round
+ * them: the phone reads as complete, never as cropped.
  */
 export interface Props {
   src: ImageMetadata;
@@ -19,7 +20,7 @@ const { src, alt, class: className, eager = false } = Astro.props;
 
 <div
   class:list={[
-    'overflow-hidden rounded-t-[2.4rem] border-x-[7px] border-t-[7px] border-ink shadow-[0_18px_40px_-12px_rgb(14_42_49/0.35)]',
+    'overflow-hidden rounded-[2.4rem] border-[7px] border-ink bg-ink shadow-[0_18px_40px_-12px_rgb(14_42_49/0.35)]',
     className,
   ]}
 >
@@ -29,6 +30,6 @@ const { src, alt, class: className, eager = false } = Astro.props;
     widths={[240, 360, 480]}
     sizes="(min-width: 1024px) 240px, 45vw"
     loading={eager ? 'eager' : 'lazy'}
-    class="block h-auto w-full"
+    class="block h-auto w-full rounded-[1.95rem]"
   />
 </div>
