@@ -6,11 +6,6 @@
 export const SITE = {
   name: 'BabyBookAI',
   url: 'https://babybookai.com',
-  locale: 'en_US',
-  lang: 'en-US',
-  /** Used when a page does not bring its own. */
-  defaultDescription:
-    'BabyBookAI turns the photos already on your phone into a printed hardcover book of your baby’s first year. It picks, sorts and lays out the photos for you.',
   defaultOgImage: '/og/default.png',
   /**
    * Where visitors write. Cloudflare Email Routing forwards it to
@@ -36,22 +31,17 @@ export const PUBLISHER = {
   url: 'https://photo-to-text.com',
 } as const;
 
-/** The printed book, as Gelato makes it. Never say "layflat": it is glued. */
+/**
+ * The printed book, as Gelato makes it. Never say "layflat": it is glued.
+ * Its size and price depend on the visitor's country: src/config/pricing.ts.
+ */
 export const BOOK = {
-  format: 'Hardcover',
-  sizeIn: '11 × 11 in',
-  sizeCm: '28 × 28 cm',
   pagesMin: 30,
   pagesSuggestedMax: 36,
   /** Pages past pagesSuggestedMax cost extra. */
   pagesMax: 40,
   /** The setup offers these lengths; the start date is the parent's. */
   monthsOptions: [6, 12, 18],
-  paper: '170 gsm silk-coated paper',
-  cover: 'Matte-laminated hardcover',
-  shipsTo: 'United States',
-  /** What the parent pays for pagesMin pages, shipping included (the app's order screen). */
-  priceUsd: '49.99',
 } as const;
 
 /**

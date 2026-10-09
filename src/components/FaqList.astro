@@ -1,5 +1,7 @@
 ---
 import type { Faq } from '../lib/schema';
+import { rich } from '../i18n/format';
+import type { Lang } from '../i18n/locales';
 
 /**
  * <details> needs no JS and keeps every answer in the HTML, which is what
@@ -8,9 +10,10 @@ import type { Faq } from '../lib/schema';
  */
 export interface Props {
   faqs: Faq[];
+  lang: Lang;
 }
 
-const { faqs } = Astro.props;
+const { faqs, lang } = Astro.props;
 ---
 
 <div class="divide-y divide-hair rounded-card border border-hair bg-surface">
@@ -26,7 +29,7 @@ const { faqs } = Astro.props;
             +
           </span>
         </summary>
-        <p class="mt-3 text-ink-soft">{faq.answer}</p>
+        <p class="mt-3 text-ink-soft" set:html={rich(faq.answer, lang)} />
       </details>
     ))
   }

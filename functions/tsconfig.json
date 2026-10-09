@@ -8,5 +8,5 @@
     "strict": true,
     "noEmit": true
   },
-  "include": ["./**/*.ts", "../src/config/site.ts"]
+  "include": ["./**/*.ts", "../src/config/site.ts", "../src/config/pricing.ts", "../src/i18n/locales.ts", "../src/i18n/routes.ts"]
 }

@@ -1,18 +1,23 @@
 ---
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
+
 /**
  * The book's three paper tones (librofotos BookPaper.of, the same values as
  * BookSpread), drawn as little closed books. Pure CSS: nothing to load.
  */
 export interface Props {
   selected?: 'neutral' | 'pink' | 'blue';
+  lang: Lang;
   class?: string;
 }
 
-const { selected, class: className } = Astro.props;
+const { selected, lang, class: className } = Astro.props;
+const names = COPY[lang].ui.tones;
 const tones = [
-  { id: 'pink', name: 'Soft pink', paper: '#fbf2f4', edge: '#e9c9d1' },
-  { id: 'blue', name: 'Soft blue', paper: '#f1f5fa', edge: '#c6d5e6' },
-  { id: 'neutral', name: 'Classic cream', paper: '#fbf8f3', edge: '#e3d8c6' },
+  { id: 'pink', name: names.pink, paper: '#fbf2f4', edge: '#e9c9d1' },
+  { id: 'blue', name: names.blue, paper: '#f1f5fa', edge: '#c6d5e6' },
+  { id: 'neutral', name: names.neutral, paper: '#fbf8f3', edge: '#e3d8c6' },
 ] as const;
 ---
 
@@ -33,5 +38,5 @@ const tones = [
       ))
     }
   </ul>
-  <figcaption class="mt-6 text-center text-sm text-ink-soft">The three paper tones. The whole page takes the tone.</figcaption>
+  <figcaption class="mt-6 text-center text-sm text-ink-soft">{names.caption}</figcaption>
 </figure>

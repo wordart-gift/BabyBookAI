@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { breadcrumbs } from '../lib/schema';
+import { GOOGLE } from '../config/site';
+import { COPY } from '../i18n/copy';
+import { plain, rich } from '../i18n/format';
+import type { Lang } from '../i18n/locales';
+import { path } from '../i18n/routes';
+
+/**
+ * Written from what the app and the order server do today (the app's
+ * docs/play-store/data-safety.md). The privacy lawyer reviews it before the
+ * apps go to production: the face-recognition paragraph, the retention of paid
+ * orders and the rights sections are the points to check. Change it in the
+ * same commit as anything the app starts or stops sending, in every language.
+ * The English text is the one that applies (ui.translationNote).
+ */
+const { lang } = Astro.props as { lang: Lang };
+const { ui, privacy: t } = COPY[lang];
+const trail = [
+  { name: ui.home, path: path('home', lang) },
+  { name: t.crumb, path: path('privacy', lang) },
+];
+const r = (s: string) => rich(s, lang);
+---
+
+<BaseLayout
+  lang={lang}
+  page="privacy"
+  title={t.title}
+  description={plain(t.description, lang)}
+  schema={[breadcrumbs(trail)]}
+  cta="privacy-policy"
+>
+  <Breadcrumbs items={trail} lang={lang} />
+
+  <article class="legal mx-auto max-w-3xl px-5 pb-20 pt-8">
+    <p class="font-extrabold uppercase tracking-wider text-teal">{t.eyebrow}</p>
+    <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">{t.h1}</h1>
+    <p class="mt-4 text-ink-soft">{t.updatedLabel} {t.updated}</p>
+    {ui.translationNote && <p class="mt-4 text-sm text-ink-soft" set:html={r(ui.translationNote)} />}
+
+    <div class="mt-10 rounded-card border-2 border-hair bg-surface p-6 sm:p-10">
+      <p class="text-lg" set:html={r(t.intro)} />
+
+      <h2 class="mt-12 text-2xl text-teal">{t.shortTitle}</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        {t.short.map((item) => <li set:html={r(item)} />)}
+      </ul>
+
+      <h2 class="mt-12 text-2xl text-teal">{t.phoneTitle}</h2>
+      {t.phone.map((p) => <p class="mt-4" set:html={r(p)} />)}
+
+      <h2 class="mt-12 text-2xl text-teal">{t.receiveTitle}</h2>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full border-collapse text-left text-base">
+          <thead>
+            <tr class="border-b border-hair text-ink-soft">
+              {t.table.head.map((h, i) => <th class:list={['py-2 font-semibold', i < 2 && 'pr-4']}>{h}</th>)}
+            </tr>
+          </thead>
+          <tbody class="align-top">
+            {
+              t.table.rows.map((row, ri) => (
+                <tr class:list={[ri < t.table.rows.length - 1 && 'border-b border-hair']}>
+                  {row.map((cell, i) => (
+                    <td class:list={['py-3', i < 2 && 'pr-4']}>{cell}</td>
+                  ))}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4">{t.receiveNote}</p>
+
+      <h2 class="mt-12 text-2xl text-teal">{t.othersTitle}</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        {t.others.map((item) => <li set:html={r(item)} />)}
+      </ul>
+
+      <h2 class="mt-12 text-2xl text-teal">{t.keepTitle}</h2>
+      <ul class="mt-4 list-disc space-y-2 pl-6">
+        {t.keep.map((item) => <li set:html={r(item)} />)}
+      </ul>
+
+      <h2 class="mt-12 text-2xl text-teal">{t.rightsTitle}</h2>
+      {t.rights.map((p) => <p class="mt-4" set:html={r(p)} />)}
+
+      <h2 class="mt-12 text-2xl text-teal">{t.websiteTitle}</h2>
+      <p class="mt-4">{t.websiteLanguage}</p>
+      <p class="mt-4" set:html={r(GOOGLE.analyticsId ? t.websiteAnalytics : t.websiteNoAnalytics)} />
+
+      <h2 class="mt-12 text-2xl text-teal">{t.childrenTitle}</h2>
+      <p class="mt-4">{t.children}</p>
+
+      <h2 class="mt-12 text-2xl text-teal">{t.securityTitle}</h2>
+      <p class="mt-4">{t.security}</p>
+
+      <h2 class="mt-12 text-2xl text-teal">{t.changesTitle}</h2>
+      <p class="mt-4">{t.changes}</p>
+    </div>
+  </article>
+</BaseLayout>

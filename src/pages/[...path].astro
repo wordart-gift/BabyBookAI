@@ -1,0 +1,44 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Home from '../views/Home.astro';
+import BabyPhotoBook from '../views/BabyPhotoBook.astro';
+import FirstYear from '../views/FirstYear.astro';
+import Boy from '../views/Boy.astro';
+import Girl from '../views/Girl.astro';
+import Ideas from '../views/Ideas.astro';
+import About from '../views/About.astro';
+import Support from '../views/Support.astro';
+import Privacy from '../views/Privacy.astro';
+import Terms from '../views/Terms.astro';
+import { routes, type PageId } from '../i18n/routes';
+import type { Lang } from '../i18n/locales';
+
+/**
+ * Every page in every language, from the route table (src/i18n/routes.ts):
+ * one view per page, its words from src/i18n/copy/<lang>.ts.
+ */
+export const getStaticPaths = (() =>
+  routes().map((r) => ({
+    // The rest parameter takes the path without its slashes; undefined is "/".
+    params: { path: r.path.replace(/^\/|\/$/g, '') || undefined },
+    props: { page: r.page, lang: r.lang },
+  }))) satisfies GetStaticPaths;
+
+const VIEWS: Record<PageId, typeof Home> = {
+  home: Home,
+  babyPhotoBook: BabyPhotoBook,
+  firstYear: FirstYear,
+  boy: Boy,
+  girl: Girl,
+  ideas: Ideas,
+  about: About,
+  support: Support,
+  privacy: Privacy,
+  terms: Terms,
+};
+
+const { page, lang } = Astro.props as { page: PageId; lang: Lang };
+const View = VIEWS[page];
+---
+
+<View lang={lang} />

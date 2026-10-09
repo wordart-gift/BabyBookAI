@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BookSpread from '../components/BookSpread.astro';
+import FaqList from '../components/FaqList.astro';
+import { article, breadcrumbs, faqPage } from '../lib/schema';
+import { monthSix } from '../lib/photos';
+import { COPY } from '../i18n/copy';
+import { plain, rich, spreadDates } from '../i18n/format';
+import type { Lang } from '../i18n/locales';
+import { path } from '../i18n/routes';
+
+/*
+ * Target: "baby photo book ideas" (traffic potential ~1,100: baby photo
+ * album ideas, first year photo book ideas, baby book captions). The one
+ * article in the plan. Informational intent, so it has to be useful on its
+ * own; the product comes in where it honestly fits (choosing the photos)
+ * and at the end. Nothing here may promise what the app does not do.
+ *
+ * The ideas are numbered straight through the sections, 1 to 25.
+ */
+const PUBLISHED = '2026-10-09';
+const { lang } = Astro.props as { lang: Lang };
+const { ui, ideas: t } = COPY[lang];
+const trail = [
+  { name: ui.home, path: path('home', lang) },
+  { name: COPY[lang].babyPhotoBook.crumb, path: path('babyPhotoBook', lang) },
+  { name: t.crumb, path: path('ideas', lang) },
+];
+const toc = (['organize', 'photograph', 'layout', 'captions', 'choosing', 'gifts'] as const).map((id) => ({
+  id,
+  label: t.toc[id],
+}));
+const n1 = t.organize.items.length;
+const n2 = n1 + t.photograph.items.length;
+const n3 = n2 + t.layout.items.length;
+---
+
+<BaseLayout
+  lang={lang}
+  page="ideas"
+  title={t.title}
+  description={plain(t.description, lang)}
+  type="article"
+  schema={[
+    breadcrumbs(trail),
+    article({ path: path('ideas', lang), headline: t.headline, description: t.description, datePublished: PUBLISHED, lang }),
+    faqPage(t.faq.map((f) => ({ ...f, answer: plain(f.answer, lang) }))),
+  ]}
+  cta="baby-photo-book-ideas"
+>
+  <Breadcrumbs items={trail} lang={lang} />
+
+  <article class="mx-auto max-w-3xl px-5 pb-10 pt-8">
+    <p class="font-extrabold uppercase tracking-wider text-teal">{t.eyebrow}</p>
+    <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">{t.h1}</h1>
+    <p class="mt-4 text-sm text-ink-soft">
+      {t.byline} · <time datetime={PUBLISHED}>{t.date}</time>
+    </p>
+    <p class="mt-6 text-xl text-ink">{t.lead}</p>
+
+    <nav aria-labelledby="toc-title" class="mt-10 rounded-card bg-surface p-6">
+      <p id="toc-title" class="font-extrabold text-ink">{t.tocTitle}</p>
+      <ol class="mt-3 list-decimal space-y-1 pl-6">
+        {toc.map((item) => <li><a href={`#${item.id}`} class="text-teal underline underline-offset-4">{item.label}</a></li>)}
+      </ol>
+    </nav>
+
+    <h2 id="organize" class="mt-16 scroll-mt-6 text-4xl text-teal">{t.organize.title}</h2>
+    <p class="mt-4 text-lg text-ink-soft">{t.organize.body}</p>
+    <ol class="mt-8 space-y-6">
+      {
+        t.organize.items.map((idea, i) => (
+          <li class="border-l-4 border-teal-light pl-5">
+            <h3 class="text-2xl text-ink">
+              {i + 1}. {idea.title}
+            </h3>
+            <p class="mt-2 text-lg text-ink-soft">{idea.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <h2 id="photograph" class="mt-16 scroll-mt-6 text-4xl text-teal">{t.photograph.title}</h2>
+    <p class="mt-4 text-lg text-ink-soft">{t.photograph.body}</p>
+    <ul class="mt-6 space-y-3 text-lg">
+      {
+        t.photograph.items.map((idea, i) => (
+          <li class="flex gap-3">
+            <span class="font-display font-bold text-teal">{n1 + i + 1}.</span>
+            <span>{idea}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+
+  <section class="band" aria-labelledby="layout">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 id="layout" class="max-w-3xl scroll-mt-6 text-4xl text-teal">{t.layout.title}</h2>
+      <p class="mt-4 max-w-2xl text-lg text-ink-soft">{t.layout.body}</p>
+      <div class="mt-10 grid items-start gap-12 lg:grid-cols-[1fr_1.1fr]">
+        <ol class="space-y-6">
+          {
+            t.layout.items.map((idea, i) => (
+              <li>
+                <h3 class="text-2xl text-ink">
+                  {n2 + i + 1}. {idea.title}
+                </h3>
+                <p class="mt-2 text-ink-soft">{idea.body}</p>
+              </li>
+            ))
+          }
+        </ol>
+        <BookSpread month={ui.spreadMonth} dates={spreadDates(lang)} photos={monthSix(lang)} tone="pink">
+          <figcaption class="mt-4 text-center text-sm text-ink-soft">{t.layout.figcaption}</figcaption>
+        </BookSpread>
+      </div>
+    </div>
+  </section>
+
+  <article class="mx-auto max-w-3xl px-5 py-10">
+    <h2 id="captions" class="scroll-mt-6 text-4xl text-teal">{t.captions.title}</h2>
+    <p class="mt-4 text-lg text-ink-soft">{n3 + 1}. {t.captions.body}</p>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+      {
+        t.captions.items.map((line) => (
+          <li class="rounded-control bg-surface px-5 py-4 font-serif text-lg italic text-ink">“{line}”</li>
+        ))
+      }
+    </ul>
+
+    <h2 id="choosing" class="mt-16 scroll-mt-6 text-4xl text-teal">{t.choosing.title}</h2>
+    <div class="mt-4 space-y-4 text-lg text-ink-soft">
+      {
+        t.choosing.tips.map((tip, i) => (
+          <p>
+            {n3 + 2 + i}. <strong class="text-ink">{tip.lead}</strong> {tip.body}
+          </p>
+        ))
+      }
+      <p set:html={rich(t.choosing.product, lang)} />
+    </div>
+
+    <h2 id="gifts" class="mt-16 scroll-mt-6 text-4xl text-teal">{t.gifts.title}</h2>
+    <ul class="mt-4 space-y-3 text-lg text-ink-soft">
+      {
+        t.gifts.items.map((gift, i) => (
+          <li>
+            <strong class="text-ink">
+              {n3 + 2 + t.choosing.tips.length + i}. {gift.lead}
+            </strong>{' '}
+            <span set:html={rich(gift.body, lang)} />
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="mt-12 rounded-card bg-teal p-8 text-surface">
+      <p class="font-display text-3xl font-bold">{t.box.title}</p>
+      <p class="mt-3 text-teal-wash">{t.box.body}</p>
+      <a
+        href="#download"
+        class="mt-6 inline-block rounded-control bg-amber px-6 py-3 font-extrabold text-ink shadow-[0_4px_0_var(--color-amber-deep)] hover:brightness-105"
+        >{ui.getApp}</a
+      >
+    </div>
+  </article>
+
+  <section class="mx-auto max-w-3xl px-5 pb-20" aria-labelledby="faq">
+    <h2 id="faq" class="text-center text-4xl text-teal sm:text-5xl">{t.faqTitle}</h2>
+    <div class="mt-10">
+      <FaqList faqs={t.faq} lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

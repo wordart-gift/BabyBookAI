@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BookSpread from '../components/BookSpread.astro';
+import PhoneShot from '../components/PhoneShot.astro';
+import DownloadCta from '../components/DownloadCta.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import FaqList from '../components/FaqList.astro';
+import ToneSwatches from '../components/ToneSwatches.astro';
+import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
+import { monthSix, screens } from '../lib/photos';
+import { COPY } from '../i18n/copy';
+import { plain, rich, spreadDates } from '../i18n/format';
+import type { Lang } from '../i18n/locales';
+import { path } from '../i18n/routes';
+
+/*
+ * Target: "baby girl photo album" (KD 0) and family: baby girl photo book,
+ * baby girl first year album, personalized baby girl photo album. The SERP is
+ * small printers and shops selling empty pink albums; our angle is the one
+ * that fills itself. Distinct from the boy page in copy, not only in color,
+ * so neither reads as a duplicate of the other.
+ */
+const { lang } = Astro.props as { lang: Lang };
+const { ui, girl: t } = COPY[lang];
+const SCREENS = screens(lang);
+const trail = [
+  { name: ui.home, path: path('home', lang) },
+  { name: COPY[lang].babyPhotoBook.crumb, path: path('babyPhotoBook', lang) },
+  { name: t.crumb, path: path('girl', lang) },
+];
+---
+
+<BaseLayout
+  lang={lang}
+  page="girl"
+  title={t.title}
+  description={plain(t.description, lang)}
+  schema={[
+    breadcrumbs(trail),
+    mobileApplication(lang),
+    photoBook(lang),
+    faqPage(t.faq.map((f) => ({ ...f, answer: plain(f.answer, lang) }))),
+  ]}
+  about={[BOOK_ID, APP_ID]}
+  cta="baby-girl-photo-album"
+>
+  <Breadcrumbs items={trail} lang={lang} />
+
+  <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-[1fr_1.05fr] lg:pt-12">
+    <div>
+      <p class="font-extrabold uppercase tracking-wider text-teal">{t.eyebrow}</p>
+      <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">{t.h1}</h1>
+      <p class="mt-6 max-w-xl text-xl text-ink">{t.lead}</p>
+      <DownloadCta source="baby-girl-hero" lang={lang} class="mt-8" />
+    </div>
+    <BookSpread month={ui.spreadMonth} dates={spreadDates(lang)} photos={monthSix(lang)} tone="pink" eager />
+  </section>
+
+  <section class="band" aria-labelledby="empty-album">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+      <div>
+        <h2 id="empty-album" class="text-4xl text-teal sm:text-5xl">{t.empty.title}</h2>
+        <div class="mt-5 space-y-4 text-lg text-ink-soft">
+          {t.empty.paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+      <ToneSwatches selected="pink" lang={lang} />
+    </div>
+  </section>
+
+  <HowItWorks lang={lang} title={t.howTitle} />
+
+  <section class="band" aria-labelledby="inside">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="font-extrabold uppercase tracking-wider text-teal">{t.inside.eyebrow}</p>
+      <h2 id="inside" class="mt-3 max-w-3xl text-4xl text-teal sm:text-5xl">{t.inside.title}</h2>
+      <div class="mt-12 grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
+        <ul class="grid gap-5 sm:grid-cols-2">
+          {
+            t.inside.items.map((item) => (
+              <li class="rounded-card bg-paper p-6">
+                <h3 class="text-xl text-ink">{item.title}</h3>
+                <p class="mt-2 text-ink-soft">{item.body}</p>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="mx-auto flex max-w-[34rem] items-center justify-center gap-5">
+          <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="w-[46%]" />
+          <PhoneShot src={SCREENS.order.src} alt={SCREENS.order.alt} class="w-[46%]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 py-20" aria-labelledby="details">
+    <h2 id="details" class="text-4xl text-teal sm:text-5xl">{t.details.title}</h2>
+    <p class="mt-5 text-lg text-ink-soft" set:html={rich(t.details.body, lang)} />
+    <p class="mt-6 text-ink-soft" set:html={rich(t.details.more, lang)} />
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 pb-20" aria-labelledby="faq">
+    <h2 id="faq" class="text-center text-4xl text-teal sm:text-5xl">{t.faqTitle}</h2>
+    <div class="mt-10">
+      <FaqList faqs={t.faq} lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

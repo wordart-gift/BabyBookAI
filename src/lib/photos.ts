@@ -1,4 +1,6 @@
 import type { ImageMetadata } from 'astro';
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
 
 import m6Hero from '../assets/app/month6-hero.png';
 import m6Playmat from '../assets/app/month6-playmat.png';
@@ -22,21 +24,20 @@ export type Photo = { src: ImageMetadata; alt: string };
  * A month spread: the large photo on the left page (Noa's sixth month in
  * store screenshot 3), then the right page's grid, row by row: the best
  * framed of screenshots 3 and 5. They are small (about 200 px), which is
- * what a grid cell needs.
+ * what a grid cell needs. The alt texts are the language's (ui.photos), in
+ * this order.
  */
-export const MONTH_SIX: Photo[] = [
-  { src: m6Hero, alt: 'A baby sitting on her mother’s lap, playing with building blocks' },
-  { src: noaStroller, alt: 'A baby laughing in her stroller' },
-  { src: m6Playmat, alt: 'A baby on her tummy on a colorful play mat' },
-  { src: m6Dad, alt: 'A baby next to her smiling father on the sofa' },
-  { src: noaHat, alt: 'A baby in a pink knitted hat with pompoms, smiling' },
-  { src: noaCrib, alt: 'A baby in a flowered dress smiling in her crib' },
-  { src: m6Grandparents, alt: 'Grandparents holding the baby and her cousin' },
-];
+const SPREAD = [m6Hero, noaStroller, m6Playmat, m6Dad, noaHat, noaCrib, m6Grandparents];
+
+export const monthSix = (lang: Lang): Photo[] =>
+  SPREAD.map((src, i) => ({ src, alt: COPY[lang].ui.photos[i] }));
 
 /** App screens, cut where a phone's display ends. No people in any of them. */
-export const SCREENS = {
-  setup: { src: screenSetup, alt: 'BabyBookAI setup screen: a name and a birthday, then the book length and price' },
-  selection: { src: screenSelection, alt: 'BabyBookAI results screen: 157 photos kept, shown by month' },
-  order: { src: screenOrder, alt: 'BabyBookAI order screen: 30 pages, 11 × 11 in hardcover, shipping included' },
-} satisfies Record<string, Photo>;
+export const screens = (lang: Lang) => {
+  const alt = COPY[lang].ui.screens;
+  return {
+    setup: { src: screenSetup, alt: alt.setup },
+    selection: { src: screenSelection, alt: alt.selection },
+    order: { src: screenOrder, alt: alt.order },
+  } satisfies Record<string, Photo>;
+};

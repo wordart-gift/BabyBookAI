@@ -1,6 +1,8 @@
 ---
 import QRCode from 'qrcode';
 import { SMART_LINK } from '../config/site';
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
 
 /**
  * One QR code for both stores: it opens the /get/ smart link, which sends an
@@ -10,11 +12,13 @@ import { SMART_LINK } from '../config/site';
  */
 export interface Props {
   source: string;
+  lang: Lang;
   size?: number;
   class?: string;
 }
 
-const { source, size = 132, class: className } = Astro.props;
+const { source, lang, size = 132, class: className } = Astro.props;
+const qr = COPY[lang].ui.qr;
 const svg = await QRCode.toString(`${SMART_LINK}?src=qr-${source}`, {
   type: 'svg',
   margin: 0,
@@ -28,11 +32,11 @@ const svg = await QRCode.toString(`${SMART_LINK}?src=qr-${source}`, {
     class="shrink-0 rounded-control bg-surface p-3 shadow-[0_0_0_1px_var(--color-hair)]"
     style={`width:${size}px`}
     role="img"
-    aria-label="QR code to download BabyBookAI"
+    aria-label={qr.aria}
     set:html={svg}
   />
   <figcaption class="w-44 text-sm font-semibold text-ink-soft">
-    <span class="block font-extrabold text-ink">On your computer?</span>
-    Scan with your phone’s camera to get the app.
+    <span class="block font-extrabold text-ink">{qr.title}</span>
+    {qr.body}
   </figcaption>
 </figure>

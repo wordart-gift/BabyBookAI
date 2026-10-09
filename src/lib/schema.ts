@@ -1,4 +1,8 @@
 import { BOOK, PUBLISHER, SITE, STORES } from '../config/site';
+import { allPrices } from '../config/pricing';
+import { COPY } from '../i18n/copy';
+import { LANGS, LOCALES, type Lang } from '../i18n/locales';
+import { path } from '../i18n/routes';
 
 /**
  * JSON-LD builders. Every page gets WebSite, Organization and its own WebPage
@@ -18,7 +22,7 @@ export const BOOK_ID = `${SITE.url}/#book`;
 
 const abs = (path: string) => new URL(path, SITE.url).href;
 
-export function organization(): SchemaNode {
+export function organization(lang: Lang): SchemaNode {
   return {
     '@type': 'Organization',
     '@id': ORG_ID,
@@ -36,20 +40,21 @@ export function organization(): SchemaNode {
       '@type': 'ContactPoint',
       contactType: 'customer support',
       email: SITE.supportEmail,
-      availableLanguage: 'English',
-      url: abs('/support/'),
+      // Support answers in English and Spanish.
+      availableLanguage: ['en', 'es'],
+      url: abs(path('support', lang)),
     },
   };
 }
 
-export function website(): SchemaNode {
+export function website(lang: Lang): SchemaNode {
   return {
     '@type': 'WebSite',
     '@id': WEBSITE_ID,
     url: `${SITE.url}/`,
     name: SITE.name,
-    description: SITE.defaultDescription,
-    inLanguage: SITE.lang,
+    description: COPY[lang].ui.defaultDescription,
+    inLanguage: LANGS.map((l) => LOCALES[l].tag),
     publisher: { '@id': ORG_ID },
   };
 }
@@ -65,6 +70,7 @@ export function webPage(opts: {
   type?: PageType;
   hasBreadcrumb?: boolean;
   about?: string[];
+  lang: Lang;
 }): SchemaNode {
   return {
     '@type': opts.type ?? 'WebPage',
@@ -72,7 +78,7 @@ export function webPage(opts: {
     url: opts.url,
     name: opts.name,
     description: opts.description,
-    inLanguage: SITE.lang,
+    inLanguage: LOCALES[opts.lang].tag,
     isPartOf: { '@id': WEBSITE_ID },
     publisher: { '@id': ORG_ID },
     primaryImageOfPage: { '@type': 'ImageObject', url: opts.image },
@@ -81,68 +87,64 @@ export function webPage(opts: {
   };
 }
 
-export function mobileApplication(): SchemaNode {
+export function mobileApplication(lang: Lang): SchemaNode {
   const downloadUrl = [STORES.appStore, STORES.googlePlay].filter(Boolean) as string[];
   return {
     '@type': 'MobileApplication',
     '@id': APP_ID,
     name: SITE.name,
-    url: `${SITE.url}/`,
-    description: SITE.defaultDescription,
+    url: abs(path('home', lang)),
+    description: COPY[lang].ui.defaultDescription,
     image: abs('/brand/babybookai-icon.png'),
     // Add iOS when the App Store listing is live (STORES.appStore).
     operatingSystem: STORES.appStore ? 'iOS, Android' : 'Android',
     applicationCategory: 'PhotographyApplication',
-    inLanguage: SITE.lang,
+    inLanguage: LANGS.map((l) => LOCALES[l].tag),
     publisher: { '@id': ORG_ID },
     ...(downloadUrl.length ? { downloadUrl, installUrl: downloadUrl[0], sameAs: downloadUrl } : {}),
     // The app itself is free; the printed book is bought inside it.
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    featureList: [
-      'Picks the photos on the phone: only the finished book is sent to print',
-      'Picks the sharpest photo of every moment and drops duplicates and bursts',
-      'Sorts the photos month by month from the date each was taken',
-      `Lays out a ${BOOK.sizeIn} hardcover book of ${BOOK.pagesMin}–${BOOK.pagesMax} pages`,
-      'Sends the book to print and ships it',
-    ],
+    featureList: COPY[lang].ui.schema.appFeatures,
   };
 }
 
 /**
- * The printed book, the thing a parent pays for. Its price is the app's
- * order screen: pagesMin pages, US shipping included. Bought in the app,
- * which the offer's url leads to through the download section.
+ * The printed book, the thing a parent pays for. Its prices are the app's
+ * order screen: pagesMin pages, shipping included, one offer per currency
+ * for the countries that pay in it. Bought in the app, which the offer's url
+ * leads to through the download section.
  */
-export function photoBook(): SchemaNode {
+export function photoBook(lang: Lang): SchemaNode {
+  const t = COPY[lang].ui.schema;
   return {
     '@type': 'Product',
     '@id': BOOK_ID,
-    name: `${SITE.name} baby photo book`,
-    description: `A square ${BOOK.sizeIn} hardcover photo book of a baby’s first year, ${BOOK.pagesMin}–${BOOK.pagesMax} pages on ${BOOK.paper}, made by the ${SITE.name} app from the photos on your phone.`,
+    name: t.bookName,
+    description: t.bookDescription,
     image: [abs(SITE.defaultOgImage)],
     brand: { '@type': 'Brand', name: SITE.name },
     category: 'Photo books',
-    material: BOOK.paper,
-    width: { '@type': 'QuantitativeValue', value: 11, unitCode: 'INH' },
-    height: { '@type': 'QuantitativeValue', value: 11, unitCode: 'INH' },
+    width: { '@type': 'QuantitativeValue', value: 28, unitCode: 'CMT' },
+    height: { '@type': 'QuantitativeValue', value: 28, unitCode: 'CMT' },
     additionalProperty: [
-      { '@type': 'PropertyValue', name: 'Pages', value: `${BOOK.pagesMin}–${BOOK.pagesMax}` },
-      { '@type': 'PropertyValue', name: 'Binding', value: BOOK.format },
+      { '@type': 'PropertyValue', name: t.pages, value: `${BOOK.pagesMin}–${BOOK.pagesMax}` },
+      { '@type': 'PropertyValue', name: t.binding, value: t.bindingValue },
     ],
-    offers: {
+    offers: allPrices().map((offer) => ({
       '@type': 'Offer',
-      price: BOOK.priceUsd,
-      priceCurrency: 'USD',
+      price: offer.price,
+      priceCurrency: offer.currency,
+      eligibleRegion: offer.countries.map((c) => ({ '@type': 'Country', name: c })),
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
-      url: abs('/baby-photo-book/'),
+      url: abs(path('babyPhotoBook', lang)),
       seller: { '@id': ORG_ID },
-      shippingDetails: {
+      shippingDetails: offer.countries.map((c) => ({
         '@type': 'OfferShippingDetails',
-        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'USD' },
-        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'US' },
-      },
-    },
+        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: offer.currency },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: c },
+      })),
+    })),
   };
 }
 
@@ -185,6 +187,7 @@ export function article(opts: {
   datePublished: string;
   dateModified?: string;
   image?: string;
+  lang: Lang;
 }): SchemaNode {
   const url = abs(opts.path);
   return {
@@ -197,7 +200,7 @@ export function article(opts: {
     image: [abs(opts.image ?? SITE.defaultOgImage)],
     datePublished: opts.datePublished,
     dateModified: opts.dateModified ?? opts.datePublished,
-    inLanguage: SITE.lang,
+    inLanguage: LOCALES[opts.lang].tag,
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
   };

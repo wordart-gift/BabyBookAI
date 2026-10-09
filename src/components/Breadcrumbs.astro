@@ -3,14 +3,18 @@
  * The visible trail. Its BreadcrumbList JSON-LD comes from the same items,
  * built by the page with breadcrumbs() in lib/schema.ts.
  */
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
+
 export interface Props {
   items: { name: string; path: string }[];
+  lang: Lang;
 }
 
-const { items } = Astro.props;
+const { items, lang } = Astro.props;
 ---
 
-<nav aria-label="Breadcrumb" class="mx-auto max-w-6xl px-5 pt-4 text-sm font-semibold text-ink-soft">
+<nav aria-label={COPY[lang].ui.breadcrumb} class="mx-auto max-w-6xl px-5 pt-4 text-sm font-semibold text-ink-soft">
   <ol class="flex flex-wrap items-center gap-2">
     {
       items.map((item, i) => (

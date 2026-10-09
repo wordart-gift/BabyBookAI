@@ -1,20 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { COPY } from '../i18n/copy';
+import { LANGS, LOCALES } from '../i18n/locales';
+import { path } from '../i18n/routes';
+
+/*
+ * One 404 for every language (Cloudflare Pages serves this file for any
+ * missing path): English, with the way home in each language.
+ */
+const t = COPY.en.notFound;
+const ui = COPY.en.ui;
 ---
 
-<BaseLayout
-  title="Page not found | BabyBookAI"
-  description="This page does not exist. Find the BabyBookAI baby photo book from here."
-  noindex
-  cta="404"
->
+<BaseLayout lang="en" page={null} title={t.title} description={t.description} noindex cta="404">
   <section class="mx-auto max-w-2xl px-5 py-24 text-center">
-    <h1 class="text-4xl text-teal">This page wandered off</h1>
-    <p class="mt-4 text-lg text-ink-soft">The link may be old. These are good places to start:</p>
+    <h1 class="text-4xl text-teal">{t.h1}</h1>
+    <p class="mt-4 text-lg text-ink-soft">{t.body}</p>
     <ul class="mt-8 flex flex-col items-center gap-3 font-semibold">
-      <li><a class="text-teal underline" href="/">Home</a></li>
-      <li><a class="text-teal underline" href="/baby-photo-book/">Baby photo book</a></li>
-      <li><a class="text-teal underline" href="/first-year-photo-book/">First year photo book</a></li>
+      <li><a class="text-teal underline" href={path('babyPhotoBook', 'en')}>{ui.footer.links.babyPhotoBook}</a></li>
+      <li><a class="text-teal underline" href={path('firstYear', 'en')}>{ui.footer.links.firstYear}</a></li>
+    </ul>
+    <ul class="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-2 font-semibold">
+      {
+        LANGS.map((l) => (
+          <li>
+            <a class="text-teal underline" href={path('home', l)} hreflang={LOCALES[l].tag} lang={LOCALES[l].tag}>
+              {LOCALES[l].name}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </section>
 </BaseLayout>

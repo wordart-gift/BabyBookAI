@@ -1,14 +1,19 @@
 ---
 import { GOOGLE, SITE } from '../config/site';
+import { COPY } from '../i18n/copy';
+import { LANGS, LOCALES, type Lang } from '../i18n/locales';
+import { alternates, path, type PageId } from '../i18n/routes';
 import { graph, organization, webPage, website, type PageType, type SchemaNode } from '../lib/schema';
 
 export interface Props {
   /**
-   * The full <title>, written per page: [searched keyword] + [what is
-   * different]. Not templated, because the keyword has to lead.
+   * The full <title>, written per page and language: [searched keyword] +
+   * [what is different]. Not templated, because the keyword has to lead.
    */
   title: string;
   description: string;
+  lang: Lang;
+  page: PageId | null;
   image?: string;
   imageAlt?: string;
   type?: 'website' | 'article';
@@ -24,8 +29,10 @@ export interface Props {
 const {
   title,
   description,
+  lang,
+  page,
   image = SITE.defaultOgImage,
-  imageAlt = `${SITE.name}: a printed photo book of a baby's first year`,
+  imageAlt = COPY[lang].ui.ogImageAlt,
   type = 'website',
   noindex = false,
   schema = [],
@@ -33,15 +40,23 @@ const {
   about,
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const canonical = new URL(page ? path(page, lang) : Astro.url.pathname, SITE.url).href;
 const imageUrl = new URL(image, SITE.url).href;
+// The same page in every language, and English for anyone else (x-default).
+const hreflang =
+  page && !noindex
+    ? [
+        ...alternates(page).map((alt) => ({ hreflang: LOCALES[alt.lang].tag, href: new URL(alt.path, SITE.url).href })),
+        { hreflang: 'x-default', href: new URL(path(page, 'en'), SITE.url).href },
+      ]
+    : [];
 const hasBreadcrumb = schema.some((node) => node['@type'] === 'BreadcrumbList');
 const nodes = noindex
   ? []
   : [
-      website(),
-      organization(),
-      webPage({ url: canonical, name: title, description, image: imageUrl, type: pageType, hasBreadcrumb, about }),
+      website(lang),
+      organization(lang),
+      webPage({ url: canonical, name: title, description, image: imageUrl, type: pageType, hasBreadcrumb, about, lang }),
       ...schema,
     ];
 ---
@@ -49,13 +64,18 @@ const nodes = noindex
 <title>{title}</title>
 <meta name="description" content={description} />
 {!noindex && <link rel="canonical" href={canonical} />}
+{hreflang.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
 {noindex && <meta name="robots" content="noindex, follow" />}
 {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
 {GOOGLE.siteVerification && <meta name="google-site-verification" content={GOOGLE.siteVerification} />}
 
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content={SITE.name} />
-<meta property="og:locale" content={SITE.locale} />
+<meta property="og:locale" content={LOCALES[lang].og} />
+{
+  page &&
+    LANGS.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={LOCALES[l].og} />)
+}
 <meta property="og:url" content={canonical} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

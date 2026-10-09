@@ -1,6 +1,8 @@
 ---
 import StoreBadges from './StoreBadges.astro';
 import QrCode from './QrCode.astro';
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
 
 /**
  * Badges everywhere; the QR code from md up only, where the visitor is on a
@@ -8,12 +10,13 @@ import QrCode from './QrCode.astro';
  */
 export interface Props {
   source: string;
+  lang: Lang;
   class?: string;
   /** Centre the block (the closing call to action) instead of left-aligning it. */
   center?: boolean;
 }
 
-const { source, class: className, center = false } = Astro.props;
+const { source, lang, class: className, center = false } = Astro.props;
 ---
 
 {/* In a hero column the QR goes under the badges; centred, beside them. */}
@@ -25,8 +28,8 @@ const { source, class: className, center = false } = Astro.props;
   ]}
 >
   <div class:list={['flex flex-col gap-3', center && 'items-center']}>
-    <StoreBadges source={source} class={center ? 'justify-center' : undefined} />
-    <p class="text-sm text-ink-soft">Free to download. You only pay for the printed book.</p>
+    <StoreBadges source={source} lang={lang} class={center ? 'justify-center' : undefined} />
+    <p class="text-sm text-ink-soft">{COPY[lang].ui.free}</p>
   </div>
-  <QrCode source={source} class="hidden md:flex" />
+  <QrCode source={source} lang={lang} class="hidden md:flex" />
 </div>

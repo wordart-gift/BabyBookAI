@@ -1,4 +1,7 @@
 ---
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
+
 /**
  * The app's guide, drawn from the same geometry: librofotos/assets/stork/
  * (body, bundle) plus the parts the app paints in code (dark wing, bill, eye)
@@ -13,9 +16,10 @@ export interface Props {
   swing?: boolean;
   /** Draw the disc the bird stands on, as in the app. */
   stage?: boolean;
+  lang?: Lang;
 }
 
-const { size = 200, class: className, swing = true, stage = true } = Astro.props;
+const { size = 200, class: className, swing = true, stage = true, lang = 'en' } = Astro.props;
 // Each instance needs its own clip id, or a second stork clips to the first.
 const clip = `stork-body-${Math.random().toString(36).slice(2, 8)}`;
 const bodyPath =
@@ -28,7 +32,7 @@ const bodyPath =
   height={Math.round((size * 230) / 200)}
   viewBox="0 0 200 230"
   role="img"
-  aria-label="A stork carrying a bundle"
+  aria-label={COPY[lang].ui.stork}
 >
   <defs>
     <clipPath id={clip}><path d={bodyPath}></path></clipPath>

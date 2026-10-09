@@ -63,6 +63,26 @@
     line-height: 1.12;
   }
 
+  /* Long compound words (German, Dutch...) break at a hyphen instead of
+     running out of a narrow column. */
+  :lang(de) :is(h1, h2, h3),
+  :lang(nl) :is(h1, h2, h3),
+  :lang(fr) :is(h1, h2, h3),
+  :lang(it) :is(h1, h2, h3),
+  :lang(es) :is(h1, h2, h3),
+  :lang(pt) :is(h1, h2, h3) {
+    hyphens: auto;
+  }
+  /* Japanese and Chinese break between phrases, Korean between words, not
+     in the middle of one. Their glyphs come from the system's fonts (no web
+     font to download or swap), which the browser picks by <html lang>. */
+  :lang(ja) :is(h1, h2, h3) {
+    word-break: auto-phrase;
+  }
+  :lang(ko) {
+    word-break: keep-all;
+  }
+
   :focus-visible {
     @apply outline-3 outline-offset-2 outline-teal-light;
   }
@@ -79,6 +99,15 @@
 }
 
 @layer components {
+  /* A link inside a sentence of copy (src/i18n/format.ts linker). */
+  .lnk {
+    @apply font-bold text-teal underline underline-offset-4;
+  }
+  /* The same on teal. */
+  .lnk-light {
+    @apply font-bold text-surface underline underline-offset-4;
+  }
+
   /* A white card on the sky, as in the app, instead of a full-width band. */
   .band {
     @apply mx-3 my-6 rounded-card bg-surface py-20 sm:mx-5;
