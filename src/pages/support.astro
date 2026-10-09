@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqList from '../components/FaqList.astro';
+import { breadcrumbs, faqPage } from '../lib/schema';
+import { HOME_FAQ, PHOTO_BOOK_FAQ, SUPPORT_FAQ } from '../data/faq';
+import { SITE } from '../config/site';
+
+/*
+ * Help for people who already have the app, and every question the site
+ * answers elsewhere in one place. Only SUPPORT_FAQ goes in this page's
+ * FAQPage markup: the others already mark up their own pages.
+ */
+
+const trail = [
+  { name: 'Home', path: '/' },
+  { name: 'Support & FAQ', path: '/support/' },
+];
+
+const productFaq = [...HOME_FAQ, ...PHOTO_BOOK_FAQ.filter((q) => !HOME_FAQ.some((h) => h.question === q.question))];
+---
+
+<BaseLayout
+  title="BabyBookAI Support & FAQ | Help With Your Baby Photo Book"
+  description="Help with the BabyBookAI app and your order: finding photos, WhatsApp pictures, saving your book, price and shipping, and how to reach us."
+  schema={[breadcrumbs(trail), faqPage(SUPPORT_FAQ)]}
+  pageType="ContactPage"
+  cta="support"
+>
+  <Breadcrumbs items={trail} />
+
+  <section class="mx-auto max-w-3xl px-5 pb-12 pt-8">
+    <p class="font-extrabold uppercase tracking-wider text-teal">Support</p>
+    <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">How can we help?</h1>
+    <p class="mt-6 text-xl text-ink">
+      Most answers are below. For anything else, about the app or an order, write to us and a person will reply.
+    </p>
+    <div class="mt-8 rounded-card border-2 border-hair bg-surface p-6 sm:p-8">
+      <p class="text-sm font-extrabold uppercase tracking-wide text-ink-soft">Email</p>
+      <p class="mt-1 text-2xl font-bold">
+        <a href={`mailto:${SITE.supportEmail}`} class="text-teal underline underline-offset-4">{SITE.supportEmail}</a>
+      </p>
+      <p class="mt-3 text-ink-soft">
+        About an order? Write from the email address you ordered with, so we can find it.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 pb-16" aria-labelledby="app-help">
+    <h2 id="app-help" class="text-4xl text-teal sm:text-5xl">The app and your order</h2>
+    <div class="mt-8">
+      <FaqList faqs={SUPPORT_FAQ} />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 pb-16" aria-labelledby="book-help">
+    <h2 id="book-help" class="text-4xl text-teal sm:text-5xl">The book and how it is made</h2>
+    <div class="mt-8">
+      <FaqList faqs={productFaq} />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 pb-10">
+    <p class="text-lg text-ink-soft">
+      More: the <a href="/privacy-policy/" class="font-bold text-teal underline underline-offset-4">privacy policy</a>,
+      the <a href="/terms/" class="font-bold text-teal underline underline-offset-4">terms</a>, and
+      <a href="/about/" class="font-bold text-teal underline underline-offset-4">who we are</a>.
+    </p>
+  </section>
+</BaseLayout>

@@ -12,14 +12,25 @@ export const SITE = {
   defaultDescription:
     'BabyBookAI turns the photos already on your phone into a printed hardcover book of your baby’s first year. It picks, sorts and lays out the photos for you.',
   defaultOgImage: '/og/default.png',
-  // TODO: confirm the mailbox exists before launch.
-  supportEmail: 'hello@babybookai.com',
+  /** The store listings' contact, and the privacy policy's. */
+  supportEmail: 'info@photo-to-text.com',
+} as const;
+
+/**
+ * Google. Both are null until Carlos creates them: with a null ID nothing is
+ * loaded or printed. The GA4 tag runs off the main thread (Partytown), so it
+ * does not cost the performance budget.
+ */
+export const GOOGLE = {
+  /** GA4 measurement ID, "G-XXXXXXXXXX". */
+  analyticsId: null as string | null,
+  /** Search Console's HTML-tag token, if the property is not verified by DNS. */
+  siteVerification: null as string | null,
 } as const;
 
 export const PUBLISHER = {
   name: 'Photo-to-Text',
-  // TODO: Photo-to-Text's own site, if it has one, for Organization.sameAs.
-  url: 'https://babybookai.com',
+  url: 'https://photo-to-text.com',
 } as const;
 
 /** The printed book, as Gelato makes it. Never say "layflat": it is glued. */
@@ -36,6 +47,8 @@ export const BOOK = {
   paper: '170 gsm silk-coated paper',
   cover: 'Matte-laminated hardcover',
   shipsTo: 'United States',
+  /** What the parent pays for pagesMin pages, shipping included (the app's order screen). */
+  priceUsd: '49.99',
 } as const;
 
 /**

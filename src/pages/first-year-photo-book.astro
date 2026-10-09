@@ -6,7 +6,7 @@ import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import FaqList from '../components/FaqList.astro';
-import { breadcrumbs, faqPage, mobileApplication } from '../lib/schema';
+import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
 import { FIRST_YEAR_FAQ } from '../data/faq';
 import { NOA_SPREAD, SCREENS } from '../lib/photos';
 
@@ -46,7 +46,8 @@ const months = [
 <BaseLayout
   title="Baby's First Year Photo Book You Don't Have to Make | BabyBookAI"
   description="A baby's first year photo book, month by month, made from the photos already on your phone. No weekly uploads: BabyBookAI picks, sorts and lays out the whole year."
-  schema={[breadcrumbs(trail), mobileApplication(), faqPage(FIRST_YEAR_FAQ)]}
+  schema={[breadcrumbs(trail), mobileApplication(), photoBook(), faqPage(FIRST_YEAR_FAQ)]}
+  about={[BOOK_ID, APP_ID]}
   cta="first-year-photo-book"
 >
   <Breadcrumbs items={trail} />
@@ -83,7 +84,7 @@ const months = [
                 i === 0 || i === months.length - 1 ? 'bg-amber-wash' : 'bg-paper',
               ]}
             >
-              <p class="text-xs font-extrabold uppercase tracking-wider text-amber-deep">{m.n}</p>
+              <p class="text-xs font-extrabold uppercase tracking-wider text-teal">{m.n}</p>
               <p class="mt-1 font-bold leading-snug">{m.moment}</p>
             </li>
           ))

@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BookSpread from '../components/BookSpread.astro';
+import PhoneShot from '../components/PhoneShot.astro';
+import DownloadCta from '../components/DownloadCta.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import FaqList from '../components/FaqList.astro';
+import ToneSwatches from '../components/ToneSwatches.astro';
+import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
+import { GIRL_FAQ } from '../data/faq';
+import { NOA_SPREAD, SCREENS } from '../lib/photos';
+import { BOOK } from '../config/site';
+
+/*
+ * Target: "baby girl photo album" (KD 0) and family: baby girl photo book,
+ * baby girl first year album, personalized baby girl photo album. The SERP is
+ * small printers and shops selling empty pink albums; our angle is the one
+ * that fills itself. Distinct from the boy page in copy, not only in color,
+ * so neither reads as a duplicate of the other.
+ */
+
+const trail = [
+  { name: 'Home', path: '/' },
+  { name: 'Baby photo book', path: '/baby-photo-book/' },
+  { name: 'Baby girl photo album', path: '/baby-girl-photo-album/' },
+];
+
+const inside = [
+  { title: 'Her name on the cover', body: 'With the best photo of her year, picked from the ones you favorited and shared most.' },
+  { title: 'The day she was born', body: 'Page one, with a little pen drawing of a stork carrying a bundle.' },
+  { title: 'A spread for every month', body: 'Her first smile, first bath, first food, each in the month it happened.' },
+  { title: 'A cake to close the year', body: 'The last page ends the book with her first birthday.' },
+];
+---
+
+<BaseLayout
+  title="Baby Girl Photo Album That Fills Itself | BabyBookAI"
+  description="A pink baby girl photo album made from the photos on your phone. BabyBookAI picks her best photos, sorts them month by month and lays out a hardcover book."
+  schema={[breadcrumbs(trail), mobileApplication(), photoBook(), faqPage(GIRL_FAQ)]}
+  about={[BOOK_ID, APP_ID]}
+  cta="baby-girl-photo-album"
+>
+  <Breadcrumbs items={trail} />
+
+  <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-[1fr_1.05fr] lg:pt-12">
+    <div>
+      <p class="font-extrabold uppercase tracking-wider text-teal">Baby girl photo album</p>
+      <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">The baby girl photo album that fills itself</h1>
+      <p class="mt-6 max-w-xl text-xl text-ink">
+        Her first year is already on your phone, in hundreds of photos. BabyBookAI picks the best of them, puts each
+        in its month and lays out a hardcover album in soft pink, with her name on the cover.
+      </p>
+      <DownloadCta source="baby-girl-hero" class="mt-8" />
+    </div>
+    <BookSpread month="05 Months" dates="Sep 9 – Oct 8" photos={NOA_SPREAD} tone="pink" eager />
+  </section>
+
+  <section class="band" aria-labelledby="empty-album">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2">
+      <div>
+        <h2 id="empty-album" class="text-4xl text-teal sm:text-5xl">Most baby girl albums arrive empty</h2>
+        <div class="mt-5 space-y-4 text-lg text-ink-soft">
+          <p>
+            A pink album with sleeves, a fill-in memory book, a template in a photo editor: each one waits for you to
+            print, choose and place a year of photos. With a baby in the house, that evening rarely comes.
+          </p>
+          <p>
+            This one starts full. It reads the dates on your photos, keeps the sharpest of every moment, leaves out
+            the blurry shots and the twelve near-copies of the same smile, and gives every month its own spread. You
+            flip through it and swap anything you would rather not keep.
+          </p>
+        </div>
+      </div>
+      <ToneSwatches selected="pink" />
+    </div>
+  </section>
+
+  <HowItWorks title="How to make a baby girl photo album in minutes" />
+
+  <section class="band" aria-labelledby="inside">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="font-extrabold uppercase tracking-wider text-teal">Inside her album</p>
+      <h2 id="inside" class="mt-3 max-w-3xl text-4xl text-teal sm:text-5xl">From the day she was born to her first birthday</h2>
+      <div class="mt-12 grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
+        <ul class="grid gap-5 sm:grid-cols-2">
+          {
+            inside.map((item) => (
+              <li class="rounded-card bg-paper p-6">
+                <h3 class="text-xl text-ink">{item.title}</h3>
+                <p class="mt-2 text-ink-soft">{item.body}</p>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="mx-auto flex max-w-[34rem] items-end justify-center gap-5">
+          <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="w-[46%]" />
+          <PhoneShot src={SCREENS.order.src} alt={SCREENS.order.alt} class="w-[46%]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 py-20" aria-labelledby="details">
+    <h2 id="details" class="text-4xl text-teal sm:text-5xl">A keepsake made to be handled</h2>
+    <p class="mt-5 text-lg text-ink-soft">
+      A square {BOOK.sizeIn} ({BOOK.sizeCm}) hardcover with a matte cover and {BOOK.pagesMin} to {BOOK.pagesMax} pages
+      on {BOOK.paper}, ${BOOK.priceUsd} with shipping included. Square, because her upright and wide photos both fit
+      without one of them being cropped badly.
+    </p>
+    <p class="mt-6 text-ink-soft">
+      Prefer blue or cream? See the <a href="/baby-boy-photo-album/" class="font-bold text-teal underline underline-offset-4">baby boy photo album</a>,
+      or everything about the <a href="/baby-photo-book/" class="font-bold text-teal underline underline-offset-4">baby photo book</a>.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-5 pb-20" aria-labelledby="faq">
+    <h2 id="faq" class="text-center text-4xl text-teal sm:text-5xl">Baby girl photo album questions</h2>
+    <div class="mt-10">
+      <FaqList faqs={GIRL_FAQ} />
+    </div>
+  </section>
+</BaseLayout>

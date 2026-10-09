@@ -1,0 +1,37 @@
+---
+/**
+ * The book's three paper tones (librofotos BookPaper.of, the same values as
+ * BookSpread), drawn as little closed books. Pure CSS: nothing to load.
+ */
+export interface Props {
+  selected?: 'neutral' | 'pink' | 'blue';
+  class?: string;
+}
+
+const { selected, class: className } = Astro.props;
+const tones = [
+  { id: 'pink', name: 'Soft pink', paper: '#fbf2f4', edge: '#e9c9d1' },
+  { id: 'blue', name: 'Soft blue', paper: '#f1f5fa', edge: '#c6d5e6' },
+  { id: 'neutral', name: 'Classic cream', paper: '#fbf8f3', edge: '#e3d8c6' },
+] as const;
+---
+
+<figure class:list={['m-0', className]}>
+  <ul class="grid grid-cols-3 gap-4 sm:gap-6">
+    {
+      tones.map((tone) => (
+        <li class="text-center">
+          <span
+            class:list={[
+              'mx-auto block aspect-square w-full max-w-40 rounded-md border-l-[10px] shadow-[0_1px_2px_rgb(14_42_49/0.08),0_14px_30px_-12px_rgb(14_42_49/0.3)]',
+              tone.id === selected && 'ring-4 ring-teal ring-offset-4',
+            ]}
+            style={`background:${tone.paper};border-color:${tone.edge}`}
+          />
+          <span class="mt-4 block font-bold text-ink">{tone.name}</span>
+        </li>
+      ))
+    }
+  </ul>
+  <figcaption class="mt-6 text-center text-sm text-ink-soft">The three paper tones. The whole page takes the tone.</figcaption>
+</figure>

@@ -1,10 +1,6 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/nunito';
-@import '@fontsource-variable/baloo-2';
-/* The book's serif, for the spreads drawn on the page. Not preloaded: it is
-   never above the fold's headline. */
-@import '@fontsource-variable/lora';
-@import '@fontsource-variable/lora/wght-italic.css';
+/* The faces themselves are declared by Astro's fonts API (astro.config.mjs)
+   and printed by <Font> in the layout. */
 
 /*
  * The app's palette (librofotos/lib/theme/app_theme.dart), so the site and
@@ -23,7 +19,9 @@
   --color-teal-wash: #dceaec;
 
   --color-ink: #0e2a31;
-  --color-ink-soft: #557078;
+  /* Darker than the app's #557078: that one fell just under 4.5:1 on the
+     amber wash and the top of the sky. */
+  --color-ink-soft: #486169;
 
   --color-paper: #eaf1f2;
   --color-surface: #ffffff;
@@ -33,8 +31,10 @@
   --color-sky-top: #bfe2f2;
   --color-sky-bottom: #eff8fb;
 
-  --font-display: 'Baloo 2 Variable', ui-rounded, system-ui, sans-serif;
-  --font-sans: 'Nunito Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-baloo);
+  --font-sans: var(--font-nunito);
+  /* The book's serif, for the spreads drawn on the page. Not preloaded. */
+  --font-serif: var(--font-lora);
 
   --radius-card: 20px;
   --radius-control: 16px;

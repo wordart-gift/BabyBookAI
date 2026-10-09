@@ -7,7 +7,7 @@ import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import FaqList from '../components/FaqList.astro';
 import HowItWorks from '../components/HowItWorks.astro';
-import { faqPage, mobileApplication, organization, website } from '../lib/schema';
+import { APP_ID, BOOK_ID, faqPage, mobileApplication, photoBook } from '../lib/schema';
 import { HOME_FAQ } from '../data/faq';
 import { NOA_SPREAD, SCREENS } from '../lib/photos';
 import { BOOK } from '../config/site';
@@ -51,7 +51,8 @@ const specs = [
 <BaseLayout
   title="BabyBookAI — The Baby Memory Book That Makes Itself"
   description="Your baby's first year as a printed hardcover photo book, made from the photos already on your phone. BabyBookAI picks, sorts and lays them out for you."
-  schema={[organization(), website(), mobileApplication(), faqPage(HOME_FAQ)]}
+  schema={[mobileApplication(), photoBook(), faqPage(HOME_FAQ)]}
+  about={[APP_ID, BOOK_ID]}
   cta="home"
 >
   <!-- Hero -->

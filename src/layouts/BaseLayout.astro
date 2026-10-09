@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
-import nunitoLatin from '@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2?url';
-import balooLatin from '@fontsource-variable/baloo-2/files/baloo-2-latin-wght-normal.woff2?url';
+import { Font } from 'astro:assets';
 import SEO, { type Props as SeoProps } from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Sky from '../components/Sky.astro';
@@ -23,11 +22,11 @@ const { cta = 'page', ...seo } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#bfe2f2" />
-    {/* Both faces are on the first screen: fetching them with the HTML keeps
-        the headline from reflowing when they arrive. Latin only; the other
-        subsets load by unicode-range if ever needed. */}
-    <link rel="preload" href={balooLatin} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={nunitoLatin} as="font" type="font/woff2" crossorigin />
+    {/* Both faces are on the first screen: preloaded with the HTML. Lora is
+        only in the book spreads, so it waits until a page uses it. */}
+    <Font cssVariable="--font-baloo" preload />
+    <Font cssVariable="--font-nunito" preload />
+    <Font cssVariable="--font-lora" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

@@ -6,7 +6,7 @@ import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import FaqList from '../components/FaqList.astro';
-import { breadcrumbs, faqPage, mobileApplication } from '../lib/schema';
+import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
 import { PHOTO_BOOK_FAQ } from '../data/faq';
 import { NOA_SPREAD, SCREENS } from '../lib/photos';
 import { BOOK } from '../config/site';
@@ -73,7 +73,8 @@ const specs = [
 <BaseLayout
   title="Baby Photo Book Made From Your Camera Roll | BabyBookAI"
   description="A hardcover baby photo book made for you: BabyBookAI picks the best photos on your phone, sorts them by month and lays out every page. 11×11 in, 30–40 pages."
-  schema={[breadcrumbs(trail), mobileApplication(), faqPage(PHOTO_BOOK_FAQ)]}
+  schema={[breadcrumbs(trail), mobileApplication(), photoBook(), faqPage(PHOTO_BOOK_FAQ)]}
+  about={[BOOK_ID, APP_ID]}
   cta="baby-photo-book"
 >
   <Breadcrumbs items={trail} />

@@ -1,5 +1,5 @@
 import type { Faq } from '../lib/schema';
-import { BOOK } from '../config/site';
+import { BOOK, SITE } from '../config/site';
 
 /**
  * One source for the questions, so the page and its FAQPage JSON-LD can never
@@ -39,7 +39,7 @@ export const HOME_FAQ: Faq[] = [
   {
     question: 'How much does it cost?',
     answer:
-      'The app is free, and so is making the book and looking through it. You only pay when you order the printed hardcover, and you see the price before you do.',
+      `The app is free, and so is making the book and looking through it. You only pay when you order the printed hardcover: $${BOOK.priceUsd} for ${BOOK.pagesMin} pages, shipping included, with extra pages up to ${BOOK.pagesMax} at an extra cost. You see the final price before you pay.`,
   },
   {
     question: 'Is it on iPhone and Android?',
@@ -104,5 +104,112 @@ export const FIRST_YEAR_FAQ: Faq[] = [
     question: 'Do I need to add photos every week?',
     answer:
       'No. That is the point of BabyBookAI: it works from the photos already on your phone, so there is no weekly upload and nothing to fall behind on.',
+  },
+];
+
+export const GIRL_FAQ: Faq[] = [
+  {
+    question: 'Can I make her photo album pink?',
+    answer:
+      'Yes. The book comes in three paper tones: soft pink, soft blue and classic cream. Pink tints every page, not just the trim, and the light patterns on each month take the same tone. You can change it as many times as you like before ordering.',
+  },
+  {
+    question: 'Does her name go on the cover?',
+    answer:
+      'Yes. Her name and the best photo of her year go on the cover, chosen from the photos you favorited and shared most. Page one has the day she was born.',
+  },
+  {
+    question: 'Can I change the words on the pages?',
+    answer:
+      'Yes. Each page comes with short lines like “Our little sunshine”. Keep them, rewrite them, or add your own note anywhere on the page.',
+  },
+  {
+    question: 'What if she is not one yet?',
+    answer:
+      'You pick the dates. A book can cover 6, 12 or 18 months from the day you choose, so you can make one at six months and another for her first birthday.',
+  },
+];
+
+export const BOY_FAQ: Faq[] = [
+  {
+    question: 'Can I make his photo album blue?',
+    answer:
+      'Yes. Pick soft blue, soft pink or classic cream. The tone colors every page, and the light patterns on each month take it too. You can switch before ordering.',
+  },
+  {
+    question: 'Does his name go on the cover?',
+    answer:
+      'Yes. His name and the best photo of his year go on the cover. The first page has the day he was born, and the last one closes the year with a first birthday cake.',
+  },
+  {
+    question: 'Will it pick photos of him, not of everyone else?',
+    answer:
+      'It picks from the photos of the dates you choose, keeps the sharpest of every moment and drops duplicates. Then you flip through the book and swap or remove any photo you don’t want in it.',
+  },
+  {
+    question: 'Is it a good gift for grandparents?',
+    answer:
+      'It is the one they ask for. A phone full of photos is hard to pass around the table; a hardcover book of his first year is not.',
+  },
+];
+
+export const SUPPORT_FAQ: Faq[] = [
+  {
+    question: 'The app found few photos. Why?',
+    answer:
+      'BabyBookAI can only see the photos it is allowed to. When your phone asks, choose “Allow all”: with “Select photos” it sees only the ones you picked. On Android it reads the photos stored on the phone, so photos kept only in Google Photos online are not found.',
+  },
+  {
+    question: 'Where are my WhatsApp photos?',
+    answer:
+      'Photos you saved from WhatsApp are in your phone’s gallery, so the scan finds them. They are used to fill months with few camera photos, and if the same photo is on your phone twice, the sharper, larger copy is kept.',
+  },
+  {
+    question: 'Is my book saved if I close the app?',
+    answer:
+      'Yes. Your book is saved on your phone as you work, with your photos, words and colors, and it opens where you left it. Starting a new book replaces it.',
+  },
+  {
+    question: 'How much is the book and what does shipping cost?',
+    answer: `$${BOOK.priceUsd} for ${BOOK.pagesMin} pages, shipping included. Extra pages, up to ${BOOK.pagesMax}, cost extra. The final price is shown before you pay.`,
+  },
+  {
+    question: 'How do I pay?',
+    answer: 'By card, through Stripe. We never see your card details.',
+  },
+  {
+    question: 'Something is wrong with my order. What do I do?',
+    answer: `Write to ${SITE.supportEmail} from the email you ordered with, and include a photo if the book arrived damaged.`,
+  },
+  {
+    question: 'Is there an iPhone app?',
+    answer: 'Not yet. BabyBookAI is on Google Play for Android now, and the iPhone app is coming soon.',
+  },
+  {
+    question: 'How do I delete my data?',
+    answer: `Your photos never leave your phone to make the book, and deleting the app deletes the saved book. For an order you placed, write to ${SITE.supportEmail} and we delete what we hold that the law does not require us to keep. The privacy policy has the details.`,
+  },
+];
+
+export const IDEAS_FAQ: Faq[] = [
+  {
+    question: 'How many photos should a baby photo book have?',
+    answer:
+      'For a first year, about 10 to 15 photos a month works well: 120 to 180 in all. A 30-page book holds around 150 without feeling crowded, with room for one large photo on most spreads.',
+  },
+  {
+    question: 'What should be in a baby’s first year photo book?',
+    answer:
+      'The day they were born, a spread for each month in order, the firsts you caught on camera (smile, bath, food, steps), the people who held them, and a first birthday to close the year. Short captions with dates help more than long text.',
+  },
+  {
+    question: 'What do you write in a baby photo book?',
+    answer:
+      'Short lines: a date, a place, a nickname, a weight, or the thing you will forget in five years (the song that stopped the crying, the word they said first). One line per page is enough.',
+  },
+  {
+    question: 'Can phone photos be printed in a photo book?',
+    answer:
+      'Yes. Photos straight from a phone camera print sharply even across a full page. Copies saved from chat apps are smaller; they print well in a small spot on the page, not as a full page or the cover.',
   },
 ];

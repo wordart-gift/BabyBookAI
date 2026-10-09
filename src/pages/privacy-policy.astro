@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { breadcrumbs } from '../lib/schema';
+import { GOOGLE } from '../config/site';
 
 /**
  * Written from what the app and the order server do today (the app's
@@ -10,7 +11,7 @@ import { breadcrumbs } from '../lib/schema';
  * orders and the rights sections are the points to check. Change it in the
  * same commit as anything the app starts or stops sending.
  */
-const UPDATED = 'October 7, 2026';
+const UPDATED = 'October 9, 2026';
 const EMAIL = 'info@photo-to-text.com';
 
 const trail = [
@@ -23,7 +24,7 @@ const trail = [
   title="Privacy Policy | BabyBookAI"
   description="What BabyBookAI does with your photos and your order details: your library is read on your phone, and only the finished book is sent to be printed."
   schema={[breadcrumbs(trail)]}
-  cta={false}
+  cta="privacy-policy"
 >
   <Breadcrumbs items={trail} />
 
@@ -51,7 +52,7 @@ const trail = [
         To deliver it we need your name, email and address. Payment is handled by Stripe; we never
         see your card.
       </li>
-      <li>No advertising, no analytics, no tracking, no account.</li>
+      <li>The app has no advertising, no analytics, no tracking and no account.</li>
     </ul>
 
     <h2 class="mt-12 text-2xl text-teal">What the app does on your phone</h2>
@@ -122,8 +123,8 @@ const trail = [
       </li>
       <li>
         <strong>Gelato</strong> prints and ships the book
-        (<a class="text-teal underline" href="https://www.gelato.com/privacy-policy"
-          >gelato.com/privacy-policy</a
+        (<a class="text-teal underline" href="https://www.gelato.com/legal/privacy"
+          >gelato.com/legal/privacy</a
         >).
       </li>
       <li>Our order server, where the book file waits until it reaches the printer.</li>
@@ -153,6 +154,21 @@ const trail = [
       book, and, if you use it, face recognition only with your consent, which you can withdraw by
       turning the switch off.
     </p>
+
+    <h2 class="mt-12 text-2xl text-teal">This website</h2>
+    {
+      GOOGLE.analyticsId ? (
+        <p class="mt-4">
+          babybookai.com uses Google Analytics to count visits and see which pages are read, through
+          cookies set by Google. It receives your IP address, browser and the pages you visit, never
+          anything from the app. You can block it with your browser’s settings or Google’s opt-out
+          add-on (<a class="text-teal underline" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>).
+          Google’s policy: <a class="text-teal underline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </p>
+      ) : (
+        <p class="mt-4">babybookai.com sets no cookies and runs no analytics or advertising scripts.</p>
+      )
+    }
 
     <h2 class="mt-12 text-2xl text-teal">Children</h2>
     <p class="mt-4">

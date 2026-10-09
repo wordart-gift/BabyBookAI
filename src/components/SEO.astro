@@ -1,6 +1,6 @@
 ---
-import { SITE } from '../config/site';
-import { graph, type SchemaNode } from '../lib/schema';
+import { GOOGLE, SITE } from '../config/site';
+import { graph, organization, webPage, website, type PageType, type SchemaNode } from '../lib/schema';
 
 export interface Props {
   /**
@@ -13,7 +13,12 @@ export interface Props {
   imageAlt?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  /** The page's own nodes; WebSite, Organization and WebPage are added here. */
   schema?: SchemaNode[];
+  /** schema.org type of the page itself. */
+  pageType?: PageType;
+  /** @ids of what the page is about (the app, the book). */
+  about?: string[];
 }
 
 const {
@@ -24,16 +29,29 @@ const {
   type = 'website',
   noindex = false,
   schema = [],
+  pageType,
+  about,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const imageUrl = new URL(image, SITE.url).href;
+const hasBreadcrumb = schema.some((node) => node['@type'] === 'BreadcrumbList');
+const nodes = noindex
+  ? []
+  : [
+      website(),
+      organization(),
+      webPage({ url: canonical, name: title, description, image: imageUrl, type: pageType, hasBreadcrumb, about }),
+      ...schema,
+    ];
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonical} />
+{!noindex && <link rel="canonical" href={canonical} />}
 {noindex && <meta name="robots" content="noindex, follow" />}
+{!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+{GOOGLE.siteVerification && <meta name="google-site-verification" content={GOOGLE.siteVerification} />}
 
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content={SITE.name} />
@@ -52,4 +70,17 @@ const imageUrl = new URL(image, SITE.url).href;
 <meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:image:alt" content={imageAlt} />
 
-{schema.length > 0 && <script is:inline type="application/ld+json" set:html={graph(schema)} />}
+{nodes.length > 0 && <script is:inline type="application/ld+json" set:html={graph(nodes)} />}
+
+{
+  GOOGLE.analyticsId && (
+    <>
+      <script is:inline type="text/partytown" src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE.analyticsId}`} />
+      <script
+        is:inline
+        type="text/partytown"
+        set:html={`window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','${GOOGLE.analyticsId}');`}
+      />
+    </>
+  )
+}
