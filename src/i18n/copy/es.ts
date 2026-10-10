@@ -89,7 +89,7 @@ export const es: Copy = {
       'Una doble página de BabyBookAI, «Primer mes»: siete fotos de una bebé con su familia y sus abuelos',
     screens: {
       setup: 'Pantalla de inicio de BabyBookAI: un nombre y una fecha de nacimiento, luego la duración del libro y el precio',
-      selection: 'Pantalla de resultados de BabyBookAI: 157 fotos elegidas, por meses',
+      selection: 'Pantalla de resultados de BabyBookAI: 225 fotos elegidas, por meses',
       order: 'Pantalla del pedido de BabyBookAI: 30 páginas, tapa dura, envío incluido',
     },
     translationNote:

@@ -87,7 +87,7 @@ export const zh: Copy = {
       'BabyBookAI 的跨页“第一个月”：宝宝与家人、祖父母的七张照片',
     screens: {
       setup: 'BabyBookAI 设置界面:名字和生日,然后是相册书的页数和价格',
-      selection: 'BabyBookAI 结果界面:已挑出 157 张照片,按月份显示',
+      selection: 'BabyBookAI 结果界面:已挑出 225 张照片,按月份显示',
       order: 'BabyBookAI 订单界面:30 页,精装,含运费',
     },
     translationNote: '本页是英文原文的翻译。两者如有差异,以英文版为准。',

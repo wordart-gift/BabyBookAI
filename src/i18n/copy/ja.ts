@@ -88,7 +88,7 @@ export const ja: Copy = {
       'BabyBookAIの見開きページ「1か月目」：赤ちゃんと家族、祖父母の写真7枚',
     screens: {
       setup: 'BabyBookAIの設定画面:名前と誕生日、そしてブックの長さと価格',
-      selection: 'BabyBookAIの結果画面:157枚を選別、月ごとに表示',
+      selection: 'BabyBookAIの結果画面:225枚を選別、月ごとに表示',
       order: 'BabyBookAIの注文画面:30ページ、ハードカバー、送料込み',
     },
     translationNote: 'これは英語版の翻訳です。両者に違いがある場合は、英語版が優先されます。',

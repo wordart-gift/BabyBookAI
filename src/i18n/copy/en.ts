@@ -87,7 +87,7 @@ export const en = {
     /** The app's screens, as their store screenshots show them (in English). */
     screens: {
       setup: 'BabyBookAI setup screen: a name and a birthday, then the book length and price',
-      selection: 'BabyBookAI results screen: 157 photos kept, shown by month',
+      selection: 'BabyBookAI results screen: 225 photos kept, shown by month',
       order: 'BabyBookAI order screen: 30 pages, hardcover, shipping included',
     },
     /** The app's own words for the month (librofotos BookWords.monthNames). */

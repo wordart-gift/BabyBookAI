@@ -89,7 +89,7 @@ export const de: Copy = {
       'Eine BabyBookAI-Doppelseite, „Erster Monat“: sieben Fotos eines Babys mit Familie und Großeltern',
     screens: {
       setup: 'Start-Bildschirm von BabyBookAI: ein Name und ein Geburtstag, dann die Länge des Buches und der Preis',
-      selection: 'Ergebnis-Bildschirm von BabyBookAI: 157 Fotos behalten, nach Monaten',
+      selection: 'Ergebnis-Bildschirm von BabyBookAI: 225 Fotos behalten, nach Monaten',
       order: 'Bestell-Bildschirm von BabyBookAI: 30 Seiten, Hardcover, Versand inklusive',
     },
     translationNote:

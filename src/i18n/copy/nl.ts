@@ -88,7 +88,7 @@ export const nl: Copy = {
       'Een BabyBookAI-spread, “Eerste maand”: zeven foto’s van een baby met haar gezin en grootouders',
     screens: {
       setup: 'Startscherm van BabyBookAI: een naam en een geboortedatum, daarna de lengte van het boek en de prijs',
-      selection: 'Resultaatscherm van BabyBookAI: 157 foto’s bewaard, per maand',
+      selection: 'Resultaatscherm van BabyBookAI: 225 foto’s bewaard, per maand',
       order: 'Bestelscherm van BabyBookAI: 30 pagina’s, hardcover, verzending inbegrepen',
     },
     translationNote:

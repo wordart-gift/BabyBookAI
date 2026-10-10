@@ -88,7 +88,7 @@ export const ko: Copy = {
       'BabyBookAI 펼침면 “첫째 달”: 아기와 가족, 조부모님이 함께한 사진 7장',
     screens: {
       setup: 'BabyBookAI 설정 화면: 이름과 생일, 그리고 책 분량과 가격',
-      selection: 'BabyBookAI 결과 화면: 사진 157장 선택, 달별로 표시',
+      selection: 'BabyBookAI 결과 화면: 사진 225장 선택, 달별로 표시',
       order: 'BabyBookAI 주문 화면: 30페이지, 하드커버, 배송비 포함',
     },
     translationNote: '이 내용은 영어 원문의 번역이에요. 두 내용이 다를 때는 영어 원문이 적용돼요.',
