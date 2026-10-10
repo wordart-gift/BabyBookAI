@@ -9,7 +9,8 @@ export const SITE = {
   defaultOgImage: '/og/default.png',
   /**
    * Where visitors write. Cloudflare Email Routing forwards it to
-   * info@photo-to-text.com, the address the store listings were set up with.
+   * cargarm3@gmail.com (Carlos, Oct 2026). The store listings were set up with
+   * info@photo-to-text.com.
    */
   supportEmail: 'info@babybookai.com',
 } as const;

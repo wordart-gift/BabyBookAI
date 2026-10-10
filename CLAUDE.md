@@ -39,7 +39,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | **Android first, iPhone coming.** Google Play badge is live; while `STORES.appStore` is null the site shows an "App Store: coming soon" label (no Apple badge: Apple's rules cover live apps only). Set `STORES.appStore` and the badge, QR redirect and schema follow | Carlos, Oct 2026 |
 | Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). Photos with the family may be used too; pick the best framed. Unsplash stand-ins are gone | Carlos, Oct 2026 (he first allowed only Noa alone) |
 | App screens sit in a whole phone (`PhoneShot`): the screenshots are cut just under the last button, where a display would end | A frame open at the bottom read as a cropped image |
-| Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to info@photo-to-text.com by Cloudflare Email Routing | Carlos, Oct 2026 |
+| Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to Carlos's Gmail (cargarm3@gmail.com) by Cloudflare Email Routing | Carlos, Oct 2026 |
 
 ## Languages
 
