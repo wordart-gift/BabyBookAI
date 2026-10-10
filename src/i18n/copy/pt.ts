@@ -451,8 +451,8 @@ export const pt: Copy = {
       title: 'De milhares de fotografias a um só álbum',
       body: 'A parte difícil de um álbum de bebé nunca foi imprimir. É escolher. O BabyBookAI escolhe no teu telemóvel, por isso não se carrega nada até encomendares.',
       steps: [
-        { label: '5437 fotografias', body: 'Um ano de galeria: banhos, sestas, o mesmo sorriso quarenta vezes.' },
-        { label: '157 escolhidas', body: 'A mais nítida de cada momento, sem rajadas, sem quase cópias, sem capturas de ecrã.' },
+        { label: '5450 fotografias', body: 'Um ano de galeria: banhos, sestas, o mesmo sorriso quarenta vezes.' },
+        { label: '225 escolhidas', body: 'A mais nítida de cada momento, sem rajadas, sem quase cópias, sem capturas de ecrã.' },
         { label: 'Um livro', body: 'Uma página dupla por mês, por ordem, pronta a folhear e encomendar.' },
       ],
       note: 'Os números são de um ano real, o do ecrã acima. Os teus serão diferentes.',
@@ -611,7 +611,7 @@ export const pt: Copy = {
       tips: [
         {
           lead: 'Aponta para 10 a 15 por mês.',
-          body: 'Um fotolivro do primeiro ano de 30 páginas leva cerca de 150 fotografias à vontade. Num ano real que analisámos, ficaram 157 fotografias de 5437.',
+          body: 'Um fotolivro do primeiro ano de 30 páginas leva cerca de 150 fotografias à vontade. Num ano real que analisámos, ficaram 225 fotografias de 5450.',
         },
         { lead: 'Fica com uma de cada momento.', body: 'Os telemóveis tiram rajadas; o livro precisa da imagem mais nítida, não das doze.' },
         {

@@ -451,8 +451,8 @@ export const de: Copy = {
       title: 'Von Tausenden Fotos zu einem Album',
       body: 'Das Schwierige an einem Babyalbum war nie das Drucken. Es ist das Auswählen. BabyBookAI wählt auf deinem Handy aus, also wird nichts hochgeladen, bis du bestellst.',
       steps: [
-        { label: '5.437 Fotos', body: 'Ein Jahr Galerie: Baden, Mittagsschlaf, vierzigmal dasselbe Grinsen.' },
-        { label: '157 behalten', body: 'Das schärfste jedes Moments, keine Serienbilder, keine Fast-Kopien, keine Screenshots.' },
+        { label: '5.450 Fotos', body: 'Ein Jahr Galerie: Baden, Mittagsschlaf, vierzigmal dasselbe Grinsen.' },
+        { label: '225 behalten', body: 'Das schärfste jedes Moments, keine Serienbilder, keine Fast-Kopien, keine Screenshots.' },
         { label: 'Ein Buch', body: 'Eine Doppelseite pro Monat, in Reihenfolge, fertig zum Durchblättern und Bestellen.' },
       ],
       note: 'Die Zahlen stammen aus einem echten Jahr, dem auf dem Bildschirm oben. Deine werden anders sein.',
@@ -611,7 +611,7 @@ export const de: Copy = {
       tips: [
         {
           lead: 'Peil 10 bis 15 pro Monat an.',
-          body: 'Ein Fotobuch vom ersten Jahr mit 30 Seiten fasst bequem etwa 150 Fotos. In einem echten Jahr, das wir uns angesehen haben, blieben von 5.437 Fotos 157 übrig.',
+          body: 'Ein Fotobuch vom ersten Jahr mit 30 Seiten fasst bequem etwa 150 Fotos. In einem echten Jahr, das wir uns angesehen haben, blieben von 5.450 Fotos 225 übrig.',
         },
         { lead: 'Behalte eins pro Moment.', body: 'Handys machen Serienbilder; das Buch braucht das schärfste Bild, nicht alle zwölf.' },
         {

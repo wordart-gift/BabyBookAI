@@ -450,8 +450,8 @@ export const nl: Copy = {
       title: 'Van duizenden foto’s naar één album',
       body: 'Het moeilijke deel van een babyalbum was nooit het drukken. Het is kiezen. BabyBookAI kiest op je telefoon, dus er wordt niets geüpload voordat je bestelt.',
       steps: [
-        { label: '5.437 foto’s', body: 'Een jaar aan galerij: badtijd, dutjes, dezelfde grijns veertig keer.' },
-        { label: '157 bewaard', body: 'De scherpste van elk moment, geen series, geen bijna-kopieën, geen screenshots.' },
+        { label: '5.450 foto’s', body: 'Een jaar aan galerij: badtijd, dutjes, dezelfde grijns veertig keer.' },
+        { label: '225 bewaard', body: 'De scherpste van elk moment, geen series, geen bijna-kopieën, geen screenshots.' },
         { label: 'Eén boek', body: 'Een dubbele pagina per maand, op volgorde, klaar om door te bladeren en te bestellen.' },
       ],
       note: 'De cijfers komen uit één echt jaar, dat op het scherm hierboven. Die van jou zullen anders zijn.',
@@ -610,7 +610,7 @@ export const nl: Copy = {
       tips: [
         {
           lead: 'Mik op 10 tot 15 per maand.',
-          body: 'Een fotoboek van het eerste jaar van 30 pagina’s biedt comfortabel plaats aan zo’n 150 foto’s. In een echt jaar dat we bekeken, bleven 157 van de 5.437 foto’s over.',
+          body: 'Een fotoboek van het eerste jaar van 30 pagina’s biedt comfortabel plaats aan zo’n 150 foto’s. In een echt jaar dat we bekeken, bleven 225 van de 5.450 foto’s over.',
         },
         { lead: 'Houd er één per moment.', body: 'Telefoons maken series; het boek heeft het scherpste beeld nodig, niet alle twaalf.' },
         {

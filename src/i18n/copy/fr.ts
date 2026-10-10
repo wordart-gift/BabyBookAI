@@ -451,8 +451,8 @@ export const fr: Copy = {
       title: 'Des milliers de photos, un seul album',
       body: "Le plus dur dans un album photo de bébé, ça n'a jamais été l'impression. C'est le choix. BabyBookAI fait ce choix sur votre téléphone : rien n'est envoyé avant votre commande.",
       steps: [
-        { label: '5 437 photos', body: 'Une année de galerie : bains, siestes, le même sourire quarante fois.' },
-        { label: '157 gardées', body: "La plus nette de chaque moment, sans rafales, sans quasi-copies, sans captures d'écran." },
+        { label: '5 450 photos', body: 'Une année de galerie : bains, siestes, le même sourire quarante fois.' },
+        { label: '225 gardées', body: "La plus nette de chaque moment, sans rafales, sans quasi-copies, sans captures d'écran." },
         { label: 'Un livre', body: 'Une double page par mois, dans l’ordre, prête à feuilleter et à commander.' },
       ],
       note: "Les chiffres viennent d'une vraie année, celle de l'écran ci-dessus. Les vôtres seront différents.",
@@ -611,7 +611,7 @@ export const fr: Copy = {
       tips: [
         {
           lead: 'Visez 10 à 15 par mois.',
-          body: "Un livre de la première année de 30 pages contient environ 150 photos sans être chargé. Sur une vraie année que nous avons étudiée, 157 photos ont été gardées sur 5 437.",
+          body: "Un livre de la première année de 30 pages contient environ 150 photos sans être chargé. Sur une vraie année que nous avons étudiée, 225 photos ont été gardées sur 5 450.",
         },
         { lead: 'Gardez une photo par moment.', body: "Les téléphones prennent des rafales ; le livre a besoin de l'image la plus nette, pas des douze." },
         {

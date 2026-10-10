@@ -450,8 +450,8 @@ export const it: Copy = {
       title: 'Da migliaia di foto a un solo album',
       body: 'La parte difficile di un album del bebè non è mai stata la stampa. È la scelta. BabyBookAI sceglie sul tuo telefono, quindi non viene caricato nulla finché non ordini.',
       steps: [
-        { label: '5.437 foto', body: 'Un anno di galleria: bagnetti, pisolini, lo stesso sorriso quaranta volte.' },
-        { label: '157 scelte', body: 'La più nitida di ogni momento, niente raffiche, niente quasi copie, niente screenshot.' },
+        { label: '5.450 foto', body: 'Un anno di galleria: bagnetti, pisolini, lo stesso sorriso quaranta volte.' },
+        { label: '225 scelte', body: 'La più nitida di ogni momento, niente raffiche, niente quasi copie, niente screenshot.' },
         { label: 'Un libro', body: 'Una doppia pagina per mese, in ordine, pronta da sfogliare e ordinare.' },
       ],
       note: 'I numeri vengono da un anno reale, quello sullo schermo qui sopra. I tuoi saranno diversi.',
@@ -610,7 +610,7 @@ export const it: Copy = {
       tips: [
         {
           lead: 'Punta a 10-15 al mese.',
-          body: 'Un fotolibro del primo anno da 30 pagine contiene comodamente circa 150 foto. In un anno reale che abbiamo esaminato, ne sono state tenute 157 su 5.437.',
+          body: 'Un fotolibro del primo anno da 30 pagine contiene comodamente circa 150 foto. In un anno reale che abbiamo esaminato, ne sono state tenute 225 su 5.450.',
         },
         { lead: 'Tieni una per ogni momento.', body: 'I telefoni scattano raffiche; il libro ha bisogno del fotogramma più nitido, non di tutti e dodici.' },
         {

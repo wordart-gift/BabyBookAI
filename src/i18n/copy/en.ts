@@ -455,8 +455,8 @@ export const en = {
       title: 'From thousands of photos to one album',
       body: 'The hard part of a baby boy photo album was never the printing. It is choosing. BabyBookAI does the choosing on your phone, so nothing is uploaded until you order.',
       steps: [
-        { label: '5,437 photos', body: 'A year of camera roll: bath time, naps, the same grin forty times.' },
-        { label: '157 kept', body: 'The sharpest of every moment, no bursts, no near-copies, no screenshots.' },
+        { label: '5,450 photos', body: 'A year of camera roll: bath time, naps, the same grin forty times.' },
+        { label: '225 kept', body: 'The sharpest of every moment, no bursts, no near-copies, no screenshots.' },
         { label: 'One book', body: 'A spread for each month, in order, ready to flip through and order.' },
       ],
       note: 'The numbers are from one real year, the one on the screen above. Yours will differ.',
@@ -615,7 +615,7 @@ export const en = {
       tips: [
         {
           lead: 'Aim for 10 to 15 a month.',
-          body: 'A 30-page first year book holds about 150 photos comfortably. In one real year we looked at, 157 photos were kept out of 5,437.',
+          body: 'A 30-page first year book holds about 150 photos comfortably. In one real year we looked at, 225 photos were kept out of 5,450.',
         },
         { lead: 'Keep one of each moment.', body: 'Phones take bursts; the book needs the sharpest frame, not all twelve.' },
         {
