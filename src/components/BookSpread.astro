@@ -134,7 +134,10 @@ const pair = photos.length === 2;
     margin: 0;
     font-family: var(--font-sans);
     font-size: clamp(7px, 1.5cqi, 13px);
-    letter-spacing: 0.32em;
+    /* Tighter than the app's 0.32em: a long month name ("Sechster Monat")
+       has to fit the narrow column beside the large photo. */
+    letter-spacing: 0.16em;
+    overflow-wrap: anywhere;
     color: #b5721c;
     text-transform: uppercase;
   }

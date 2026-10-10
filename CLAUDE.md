@@ -22,7 +22,10 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 |---|---|
 | Brand is **BabyBookAI** everywhere | Carlos, Oct 2026 |
 | Rank on the **"photo book"** family; "memory book" only for naming (H1 on home, App Store, ads) | "memory book" SERPs are Amazon, Etsy and media; "photo book" SERPs are small printers |
-| Pages: `/`, `/baby-photo-book/`, `/first-year-photo-book/`, `/baby-boy-photo-album/`, `/baby-girl-photo-album/`, `/baby-photo-book-ideas/` + support, about, legal | One search intent per page. Do not add pages without checking the real SERP |
+| Pages: `/`, `/baby-photo-book/`, `/first-year-photo-book/`, `/baby-boy-photo-album/`, `/baby-girl-photo-album/`, `/baby-photo-book-ideas/` + support, about, legal. Each exists in the app's ten languages (see "Languages") | One search intent per page. Do not add pages without checking the real SERP |
+| **Ten languages** (en es fr de it pt nl ja ko zh), English at the root, the rest under `/xx/` with their own slugs. The visitor's country picks the language of the home page on a first visit (never a deep page) and, on every page, the **price and size** the app shows there | Carlos, Oct 2026. Same rules as the app: `lib/order/pricing.dart`, `lib/util/dates.dart` |
+| Size in inches only in US, LR, MM, written `11 × 11″`; everywhere else `28 × 28 cm` | Carlos, Oct 2026; the app's `BookSize` |
+| Legal pages are translated, but the English text applies (`ui.translationNote`) | A lawyer reviews the English; a translation must not become a second contract |
 | Titles, H1s and meta: `[searched keyword] + [what is different]` | Speed and "zero work" are not searched, but they win the click |
 | SEO is a complement; App Store + Meta are the channels | Measured on competitors; build once, keep it small |
 | **No fake social proof**: no ratings, reviews or `aggregateRating` until real ones exist | |
@@ -37,6 +40,27 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). Photos with the family may be used too; pick the best framed. Unsplash stand-ins are gone | Carlos, Oct 2026 (he first allowed only Noa alone) |
 | App screens sit in a whole phone (`PhoneShot`): the screenshots are cut just under the last button, where a display would end | A frame open at the bottom read as a cropped image |
 | Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to info@photo-to-text.com by Cloudflare Email Routing | Carlos, Oct 2026 |
+
+## Languages
+
+- Words live in `src/i18n/copy/<lang>.ts`, all shaped like `en.ts` (TypeScript
+  fails the build if a key is missing). One view per page in `src/views/`, one
+  route file (`src/pages/[...path].astro`) builds every page in every language
+  from `src/i18n/routes.ts` (slugs). Change a fact in English, then in all ten.
+- Copy may hold a link (`linker`) and two tokens, `{price}` and `{size}`, which
+  become `<span data-price>` / `<span data-size>` holding the value of the
+  language's own country (`LOCALES[lang].country`).
+- `functions/_middleware.ts` (Cloudflare edge, `request.cf.country`) rewrites
+  those spans for a visitor from another country and redirects `/` by country
+  and Accept-Language. It skips crawlers, same-site referrers and anyone with a
+  `lang` cookie. Without the function the static files still work.
+- `src/config/pricing.ts` mirrors the app's price table and rounding. Keep it
+  in step with `librofotos/lib/order/pricing.dart`; the 16 shipping countries
+  are the order server's `ft_countries`.
+- hreflang between all ten (plus x-default), Google Play badge per language
+  (`src/assets/badges/google-play-<lang>.png`, official, unaltered).
+- Japanese, Korean and Chinese use the system fonts (no web font to load).
+- Changing a slug changes a live URL: add a redirect in `public/_redirects`.
 
 ## Performance budget
 
@@ -56,8 +80,8 @@ not `astro preview` (no compression there). Previews score SEO 69 on purpose:
 
 `src/lib/schema.ts`. The layout adds WebSite, Organization and the page's own
 WebPage (or AboutPage / ContactPage) to every page; pages add BreadcrumbList,
-MobileApplication, Product (the book, $49.99 with US shipping, from the app's
-order screen), FAQPage, Article. All tied by `@id`. Validate with
+MobileApplication, Product (the book, one offer per currency with its
+countries, from the app's order screen), FAQPage, Article. All tied by `@id`. Validate with
 validator.schema.org and Google's Rich Results Test after changing it.
 
 ## Google and indexing
