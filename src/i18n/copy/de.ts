@@ -80,19 +80,13 @@ export const de: Copy = {
       caption: 'Die drei Papiertöne. Die ganze Seite nimmt den Ton an.',
     },
     stork: 'Ein Storch mit einem Bündel',
-    spreadMonth: 'Sechster Monat',
+    spreadMonth: 'Erster Monat',
     defaultDescription:
       'BabyBookAI macht aus den Fotos auf deinem Handy ein gedrucktes Hardcover-Fotobuch vom ersten Lebensjahr deines Babys. Die App wählt, sortiert und gestaltet die Fotos für dich.',
     ogImageAlt: 'BabyBookAI: ein gedrucktes Fotobuch vom ersten Lebensjahr eines Babys',
-    photos: [
-      'Ein Baby auf dem Schoß seiner Mutter, spielt mit Bausteinen',
-      'Ein Baby lacht in seinem Kinderwagen',
-      'Ein Baby in Bauchlage auf einer bunten Spieldecke',
-      'Ein Baby neben seinem lächelnden Vater auf dem Sofa',
-      'Ein lächelndes Baby mit rosa Strickmütze mit Bommeln',
-      'Ein Baby im geblümten Kleid lächelt in seinem Bettchen',
-      'Großeltern halten das Baby und seinen Cousin',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'Eine BabyBookAI-Doppelseite, „Erster Monat“: sieben Fotos eines Babys mit Familie und Großeltern',
     screens: {
       setup: 'Start-Bildschirm von BabyBookAI: ein Name und ein Geburtstag, dann die Länge des Buches und der Preis',
       selection: 'Ergebnis-Bildschirm von BabyBookAI: 157 Fotos behalten, nach Monaten',

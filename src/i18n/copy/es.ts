@@ -80,19 +80,13 @@ export const es: Copy = {
       caption: 'Los tres tonos de papel. Toda la página toma el tono.',
     },
     stork: 'Una cigüeña que lleva un hatillo',
-    spreadMonth: 'Sexto mes',
+    spreadMonth: 'Primer mes',
     defaultDescription:
       'BabyBookAI convierte las fotos que ya tienes en el móvil en un fotolibro de tapa dura del primer año de tu bebé. Elige, ordena y maqueta las fotos por ti.',
     ogImageAlt: 'BabyBookAI: un fotolibro impreso del primer año de un bebé',
-    photos: [
-      'Una bebé sentada en el regazo de su madre, jugando con bloques de construcción',
-      'Una bebé riéndose en su carrito',
-      'Una bebé boca abajo sobre una alfombra de juegos de colores',
-      'Una bebé junto a su padre, sonriente, en el sofá',
-      'Una bebé con un gorro rosa de punto con pompones, sonriendo',
-      'Una bebé con un vestido de flores sonriendo en su cuna',
-      'Los abuelos con la bebé y su primo en brazos',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'Una doble página de BabyBookAI, «Primer mes»: siete fotos de una bebé con su familia y sus abuelos',
     screens: {
       setup: 'Pantalla de inicio de BabyBookAI: un nombre y una fecha de nacimiento, luego la duración del libro y el precio',
       selection: 'Pantalla de resultados de BabyBookAI: 157 fotos elegidas, por meses',

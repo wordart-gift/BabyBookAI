@@ -79,19 +79,13 @@ export const ja: Copy = {
       caption: '3つの紙の色。ページ全体がその色になります。',
     },
     stork: '包みを運ぶコウノトリ',
-    spreadMonth: '6か月目',
+    spreadMonth: '1か月目',
     defaultDescription:
       'BabyBookAIは、スマートフォンの中の写真から、赤ちゃんの最初の1年のハードカバーのフォトブックを作ります。写真の選別、整理、レイアウトまでおまかせ。',
     ogImageAlt: 'BabyBookAI:赤ちゃんの最初の1年を印刷したフォトブック',
-    photos: [
-      'ママのひざの上で積み木で遊ぶ赤ちゃん',
-      'ベビーカーで笑う赤ちゃん',
-      'カラフルなプレイマットでうつぶせになる赤ちゃん',
-      'ソファで笑顔のパパの隣にいる赤ちゃん',
-      'ポンポン付きのピンクのニット帽をかぶって笑う赤ちゃん',
-      '花柄のワンピースを着て、ベッドで笑う赤ちゃん',
-      '赤ちゃんといとこを抱くおじいちゃんとおばあちゃん',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'BabyBookAIの見開きページ「1か月目」：赤ちゃんと家族、祖父母の写真7枚',
     screens: {
       setup: 'BabyBookAIの設定画面:名前と誕生日、そしてブックの長さと価格',
       selection: 'BabyBookAIの結果画面:157枚を選別、月ごとに表示',

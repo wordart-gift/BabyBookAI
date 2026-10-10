@@ -79,19 +79,13 @@ export const ko: Copy = {
       caption: '세 가지 종이 색이에요. 페이지 전체가 그 색이 돼요.',
     },
     stork: '보따리를 나르는 황새',
-    spreadMonth: '여섯째 달',
+    spreadMonth: '첫째 달',
     defaultDescription:
       'BabyBookAI는 휴대폰에 있는 사진으로 아기의 첫 1년을 하드커버 포토북으로 만들어 드려요. 사진을 고르고, 정리하고, 구성까지 대신해요.',
     ogImageAlt: 'BabyBookAI: 아기의 첫 1년을 인쇄한 포토북',
-    photos: [
-      '엄마 무릎에 앉아 블록을 가지고 노는 아기',
-      '유모차에서 웃는 아기',
-      '알록달록한 놀이 매트 위에 엎드린 아기',
-      '소파에서 웃는 아빠 옆에 있는 아기',
-      '방울이 달린 분홍색 털모자를 쓰고 웃는 아기',
-      '꽃무늬 원피스를 입고 침대에서 웃는 아기',
-      '아기와 사촌을 안고 있는 할아버지와 할머니',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'BabyBookAI 펼침면 “첫째 달”: 아기와 가족, 조부모님이 함께한 사진 7장',
     screens: {
       setup: 'BabyBookAI 설정 화면: 이름과 생일, 그리고 책 분량과 가격',
       selection: 'BabyBookAI 결과 화면: 사진 157장 선택, 달별로 표시',

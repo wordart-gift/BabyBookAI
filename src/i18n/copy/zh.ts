@@ -78,19 +78,13 @@ export const zh: Copy = {
       caption: '三种纸张色调,整页都会呈现这种色调。',
     },
     stork: '叼着包袱的送子鹳',
-    spreadMonth: '第六个月',
+    spreadMonth: '第一个月',
     defaultDescription:
       'BabyBookAI 把你手机里已有的照片,做成一本宝宝第一年的精装印刷相册书。照片的挑选、整理和排版,都替你完成。',
     ogImageAlt: 'BabyBookAI:宝宝第一年的印刷相册书',
-    photos: [
-      '坐在妈妈腿上玩积木的宝宝',
-      '在婴儿车里笑的宝宝',
-      '趴在彩色游戏垫上的宝宝',
-      '在沙发上依偎着微笑的爸爸的宝宝',
-      '戴着带绒球的粉色针织帽微笑的宝宝',
-      '穿着碎花裙在小床里微笑的宝宝',
-      '爷爷奶奶抱着宝宝和堂哥',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'BabyBookAI 的跨页“第一个月”：宝宝与家人、祖父母的七张照片',
     screens: {
       setup: 'BabyBookAI 设置界面:名字和生日,然后是相册书的页数和价格',
       selection: 'BabyBookAI 结果界面:已挑出 157 张照片,按月份显示',

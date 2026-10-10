@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import spread from '../assets/app/spread-first-month.png';
+
+/**
+ * A month spread exactly as the app shows it: a capture of the book on the
+ * phone (the app's own screen, buttons left out), with a soft shadow. The
+ * month's name is not in the picture: it was erased and is set here in the
+ * language of the page, in the app's spaced capitals, where the app puts it.
+ */
+export interface Props {
+  month: string;
+  alt: string;
+  class?: string;
+  /** The first spread on the page is the LCP candidate: load it eagerly. */
+  eager?: boolean;
+}
+
+const { month, alt, class: className, eager = false } = Astro.props;
+---
+
+<figure class:list={['spread', className]}>
+  <div class="spread-book">
+    <Image
+      src={spread}
+      alt={alt}
+      widths={[480, 800, 1200, 1600]}
+      sizes="(min-width: 1024px) 640px, 92vw"
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={eager ? 'high' : 'auto'}
+    />
+    <p class="spread-month" aria-hidden="true">{month}</p>
+  </div>
+  <slot />
+</figure>
+
+<style>
+  .spread {
+    margin: 0;
+    container-type: inline-size;
+  }
+  .spread-book {
+    position: relative;
+    aspect-ratio: 2 / 1;
+    border-radius: 6px;
+    background: #fbf8f4;
+    box-shadow:
+      0 1px 2px rgb(14 42 49 / 0.08),
+      0 18px 40px -12px rgb(14 42 49 / 0.28);
+    overflow: hidden;
+  }
+  .spread-book :global(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .spread-month {
+    position: absolute;
+    left: 4.2%;
+    top: 8.2%;
+    margin: 0;
+    transform: translateY(-50%);
+    font-family: var(--font-sans);
+    font-size: clamp(6px, 1.2cqi, 13px);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #6b6761;
+  }
+</style>

@@ -81,16 +81,9 @@ export const en = {
       caption: 'The three paper tones. The whole page takes the tone.',
     },
     stork: 'A stork carrying a bundle',
-    /** The spread's photos, in the order of lib/photos.ts. */
-    photos: [
-      'A baby sitting on her mother’s lap, playing with building blocks',
-      'A baby laughing in her stroller',
-      'A baby on her tummy on a colorful play mat',
-      'A baby next to her smiling father on the sofa',
-      'A baby in a pink knitted hat with pompoms, smiling',
-      'A baby in a flowered dress smiling in her crib',
-      'Grandparents holding the baby and her cousin',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'A BabyBookAI spread, “First month”: seven photos of a baby with her family and grandparents',
     /** The app's screens, as their store screenshots show them (in English). */
     screens: {
       setup: 'BabyBookAI setup screen: a name and a birthday, then the book length and price',
@@ -98,7 +91,7 @@ export const en = {
       order: 'BabyBookAI order screen: 30 pages, hardcover, shipping included',
     },
     /** The app's own words for the month (librofotos BookWords.monthNames). */
-    spreadMonth: 'Sixth month',
+    spreadMonth: 'First month',
     defaultDescription:
       'BabyBookAI turns the photos already on your phone into a printed hardcover book of your baby’s first year. It picks, sorts and lays out the photos for you.',
     ogImageAlt: 'BabyBookAI: a printed photo book of a baby’s first year',

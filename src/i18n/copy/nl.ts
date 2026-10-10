@@ -79,19 +79,13 @@ export const nl: Copy = {
       caption: 'De drie papiertinten. De hele pagina krijgt de tint.',
     },
     stork: 'Een ooievaar met een bundeltje',
-    spreadMonth: 'Zesde maand',
+    spreadMonth: 'Eerste maand',
     defaultDescription:
       'BabyBookAI maakt van de foto’s die al op je telefoon staan een gedrukt hardcover fotoboek van het eerste jaar van je baby. De app kiest, sorteert en maakt de foto’s voor je op.',
     ogImageAlt: 'BabyBookAI: een gedrukt fotoboek van het eerste jaar van een baby',
-    photos: [
-      'Een baby op schoot bij haar moeder, spelend met bouwblokken',
-      'Een baby die lacht in haar kinderwagen',
-      'Een baby op haar buik op een kleurrijk speelkleed',
-      'Een baby naast haar lachende vader op de bank',
-      'Een lachende baby met een roze gebreid mutsje met pompons',
-      'Een baby in een bloemetjesjurk die lacht in haar bedje',
-      'Opa en oma met de baby en haar neefje op schoot',
-    ],
+    /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
+    spreadAlt:
+      'Een BabyBookAI-spread, “Eerste maand”: zeven foto’s van een baby met haar gezin en grootouders',
     screens: {
       setup: 'Startscherm van BabyBookAI: een naam en een geboortedatum, daarna de lengte van het boek en de prijs',
       selection: 'Resultaatscherm van BabyBookAI: 157 foto’s bewaard, per maand',

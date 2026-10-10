@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import BookSpread from '../components/BookSpread.astro';
+import AppSpread from '../components/AppSpread.astro';
 import FaqList from '../components/FaqList.astro';
 import { article, breadcrumbs, faqPage } from '../lib/schema';
-import { monthSix } from '../lib/photos';
 import { COPY } from '../i18n/copy';
-import { plain, rich, spreadDates } from '../i18n/format';
+import { plain, rich } from '../i18n/format';
 import type { Lang } from '../i18n/locales';
 import { path } from '../i18n/routes';
 
@@ -112,9 +111,9 @@ const n3 = n2 + t.layout.items.length;
             ))
           }
         </ol>
-        <BookSpread month={ui.spreadMonth} dates={spreadDates(lang)} photos={monthSix(lang)} tone="pink">
+        <AppSpread month={ui.spreadMonth} alt={ui.spreadAlt}>
           <figcaption class="mt-4 text-center text-sm text-ink-soft">{t.layout.figcaption}</figcaption>
-        </BookSpread>
+        </AppSpread>
       </div>
     </div>
   </section>
