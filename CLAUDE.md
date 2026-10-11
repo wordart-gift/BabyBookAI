@@ -53,7 +53,9 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 - `functions/_middleware.ts` (Cloudflare edge, `request.cf.country`) rewrites
   those spans for a visitor from another country and redirects `/` by country
   and Accept-Language. It skips crawlers, same-site referrers and anyone with a
-  `lang` cookie. Without the function the static files still work.
+  `lang` cookie. Crawlers (search engines and AI assistants, `BOTS`) also get
+  the page's own price and size, never the rewritten ones: they call from the
+  US and would learn the Spanish page in dollars and inches. Without the function the static files still work.
 - `src/config/pricing.ts` mirrors the app's price table and rounding. Keep it
   in step with `librofotos/lib/order/pricing.dart`; the 16 shipping countries
   are the order server's `ft_countries`.
@@ -81,7 +83,7 @@ not `astro preview` (no compression there). Previews score SEO 69 on purpose:
 `src/lib/schema.ts`. The layout adds WebSite, Organization and the page's own
 WebPage (or AboutPage / ContactPage) to every page; pages add BreadcrumbList,
 MobileApplication, Product (the book, one offer per currency with its
-countries, from the app's order screen), FAQPage, Article. All tied by `@id`. Validate with
+countries, from the app's order screen), HowTo (the three steps), FAQPage, Article. All tied by `@id`. Validate with
 validator.schema.org and Google's Rich Results Test after changing it.
 
 ## Google and indexing
@@ -94,6 +96,25 @@ validator.schema.org and Google's Rich Results Test after changing it.
   is preferred; then submit `https://babybookai.com/sitemap-index.xml`.
 - `npm run indexnow` after a deploy tells Bing and Yandex (not Google) to recrawl
   every URL in the sitemap. Key file: `public/<key>.txt`.
+
+## AI assistants (ChatGPT, Claude, Perplexity, Gemini, Copilot)
+
+- `src/lib/llms.ts` writes the site as Markdown at build time, from the same
+  copy and prices the pages use, so it cannot drift: `/llms.txt` and
+  `/xx/llms.txt` (what BabyBookAI is, a link to every page; llmstxt.org),
+  `/llms-full.txt` and `/xx/llms-full.txt` (the product pages' whole text) and
+  `/pricing.md` (every country's price). Its only own text is the English
+  summary in `facts()`: keep it true when the product changes. A new page or
+  a new shape in the copy files: check its section in `dist/llms-full.txt`.
+- These files are `noindex` (`public/_headers`) and outside the edge function
+  (`public/_routes.json`): read by whoever asks, never a search result.
+- `public/robots.txt` names the AI crawlers and allows them all, training
+  included (`Content-Signal`). Carlos wants the brand known to the models.
+- The home FAQ opens with "What is BabyBookAI?" in every language: the
+  one-paragraph definition assistants quote. Keep it first.
+- Google's AI Overviews use none of this, only normal search ranking. What
+  moves the others most is being named elsewhere (store reviews, Reddit,
+  round-ups), which the site cannot do.
 
 ## Commands
 

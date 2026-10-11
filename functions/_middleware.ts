@@ -13,7 +13,10 @@
  * 2. Every page shows the price and the size the visitor's country sees in
  *    the app (src/config/pricing.ts): the static HTML holds the values for the
  *    language's own country, inside [data-price] and [data-size]; they are
- *    rewritten here, streaming, for anyone else.
+ *    rewritten here, streaming, for anyone else. Not for crawlers: they
+ *    mostly call from the United States, and a search engine or an AI
+ *    assistant that read the Spanish page there would learn it in dollars
+ *    and inches. They get the page as it is, in its own country's terms.
  *
  * If the Functions quota ever runs out, Pages serves the static files as
  * they are: English at /, each language's own country's price.
@@ -23,7 +26,10 @@ import { path } from '../src/i18n/routes';
 import { priceFor, sizeFor } from '../src/config/pricing';
 
 const COOKIE = 'lang';
-const BOTS = /bot|crawl|spider|slurp|facebookexternalhit|embedly|pinterest|whatsapp|telegram|lighthouse|pagespeed|headless|preview|validator/i;
+// Search crawlers, link previewers, testing tools, and the AI assistants'
+// crawlers and agents (ChatGPT-User, Claude-User, Perplexity-User... carry no
+// "bot" in their name).
+const BOTS = /bot|crawl|spider|slurp|facebookexternalhit|embedly|pinterest|whatsapp|telegram|lighthouse|pagespeed|headless|preview|validator|chatgpt|gpt-|oai-|claude|anthropic|perplexity|mistral|cohere|externalagent|googleother|google-extended|-user/i;
 
 function cookie(request: Request, name: string): string | null {
   const match = (request.headers.get('cookie') ?? '').match(new RegExp(`(?:^|;\\s*)${name}=([^;]*)`));
@@ -92,7 +98,11 @@ export const onRequest: PagesFunction = async (context) => {
   const lang = langOf(url.pathname);
   const home = LOCALES[lang].country;
   // "XX" and "T1" (unknown, Tor) and no country at all keep the page's own values.
-  const known = /^[A-Z]{2}$/.test(country) && country !== 'XX' && country !== 'T1';
+  const known =
+    /^[A-Z]{2}$/.test(country) &&
+    country !== 'XX' &&
+    country !== 'T1' &&
+    !BOTS.test(request.headers.get('user-agent') ?? '');
   const price = known ? priceFor(country, lang) : null;
   const size = known ? sizeFor(country) : null;
   const rewrite = (price && price !== priceFor(home, lang)) || (size && size !== sizeFor(home));

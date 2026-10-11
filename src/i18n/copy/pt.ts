@@ -82,7 +82,7 @@ export const pt: Copy = {
     stork: 'Uma cegonha a carregar uma trouxa',
     spreadMonth: 'Primeiro mês',
     defaultDescription:
-      'O BabyBookAI transforma as fotografias que já tens no telemóvel num fotolivro impresso de capa dura do primeiro ano do teu bebé. Escolhe, ordena e paginas as fotografias por ti.',
+      'O BabyBookAI transforma as fotografias que já tens no telemóvel num fotolivro impresso de capa dura do primeiro ano do teu bebé. Escolhe, ordena e pagina as fotografias por ti.',
     ogImageAlt: 'BabyBookAI: um fotolivro impresso do primeiro ano de um bebé',
     /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
     spreadAlt:
@@ -152,6 +152,11 @@ export const pt: Copy = {
     },
     faqTitle: 'O que os pais perguntam',
     faq: [
+      {
+        question: 'O que é o BabyBookAI?',
+        answer:
+          'O BabyBookAI é uma app que transforma as fotografias que já tens no telemóvel num fotolivro impresso de capa dura do primeiro ano do teu bebé. Escolhe as fotografias, ordena-as mês a mês e pagina cada página por ti. A app é gratuita: só pagas o livro impresso.',
+      },
       {
         question: 'Como escolhe o BabyBookAI as fotografias?',
         answer:

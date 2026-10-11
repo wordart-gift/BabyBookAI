@@ -152,6 +152,11 @@ export const nl: Copy = {
     faqTitle: 'Vragen van ouders',
     faq: [
       {
+        question: 'Wat is BabyBookAI?',
+        answer:
+          'BabyBookAI is een app die van de foto’s die al op je telefoon staan een gedrukt hardcover fotoboek van het eerste jaar van je baby maakt. De app kiest de foto’s, sorteert ze per maand en maakt elke pagina voor je op. De app is gratis: je betaalt alleen het gedrukte boek.',
+      },
+      {
         question: 'Hoe kiest BabyBookAI de foto’s?',
         answer:
           'De app leest de datum waarop elke foto is genomen en houdt alleen die uit het eerste jaar van je baby. Daarna laat ze wazige foto’s weg, houdt het scherpste beeld van elke serie en herkent dezelfde foto als die twee keer is opgeslagen (een WhatsApp-kopie en het origineel, bijvoorbeeld) om de beste kopie te houden. Foto’s die je als favoriet markeerde en die je het vaakst deelde, krijgen de beste plekken: de kaft en de hele pagina’s.',

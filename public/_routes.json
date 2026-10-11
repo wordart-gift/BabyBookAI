@@ -1,6 +1,8 @@
 {
   "version": 1,
-  "include": ["/*"],
+  "include": [
+    "/*"
+  ],
   "exclude": [
     "/_astro/*",
     "/brand/*",
@@ -11,6 +13,27 @@
     "/robots.txt",
     "/sitemap-index.xml",
     "/sitemap-0.xml",
-    "/af93eb7ac3b2b7262c19ba0935d6b9bf.txt"
+    "/af93eb7ac3b2b7262c19ba0935d6b9bf.txt",
+    "/llms.txt",
+    "/llms-full.txt",
+    "/pricing.md",
+    "/es/llms.txt",
+    "/es/llms-full.txt",
+    "/fr/llms.txt",
+    "/fr/llms-full.txt",
+    "/de/llms.txt",
+    "/de/llms-full.txt",
+    "/it/llms.txt",
+    "/it/llms-full.txt",
+    "/pt/llms.txt",
+    "/pt/llms-full.txt",
+    "/nl/llms.txt",
+    "/nl/llms-full.txt",
+    "/ja/llms.txt",
+    "/ja/llms-full.txt",
+    "/ko/llms.txt",
+    "/ko/llms-full.txt",
+    "/zh/llms.txt",
+    "/zh/llms-full.txt"
   ]
 }

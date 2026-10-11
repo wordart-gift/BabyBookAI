@@ -2,7 +2,7 @@ import { BOOK, PUBLISHER, SITE, STORES } from '../config/site';
 import { allPrices } from '../config/pricing';
 import { COPY } from '../i18n/copy';
 import { LANGS, LOCALES, type Lang } from '../i18n/locales';
-import { path } from '../i18n/routes';
+import { path, type PageId } from '../i18n/routes';
 
 /**
  * JSON-LD builders. Every page gets WebSite, Organization and its own WebPage
@@ -158,6 +158,30 @@ export function breadcrumbs(items: { name: string; path: string }[]): SchemaNode
       position: i + 1,
       name: item.name,
       item: abs(item.path),
+    })),
+  };
+}
+
+/**
+ * The three steps every product page shows (ui.how), under the page's own
+ * heading. Google no longer draws a rich result for HowTo; it is here for
+ * the assistants that read a process as steps.
+ */
+export function howTo(lang: Lang, page: PageId, name?: string): SchemaNode {
+  const how = COPY[lang].ui.how;
+  const url = abs(path(page, lang));
+  return {
+    '@type': 'HowTo',
+    '@id': `${url}#howto`,
+    name: name ?? how.title,
+    inLanguage: LOCALES[lang].tag,
+    tool: { '@type': 'HowToTool', name: SITE.name },
+    step: how.steps.map((step, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: step.title,
+      text: step.body,
+      url: `${url}#how`,
     })),
   };
 }

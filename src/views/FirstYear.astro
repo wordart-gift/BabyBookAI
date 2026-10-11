@@ -6,7 +6,7 @@ import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import FaqList from '../components/FaqList.astro';
-import { APP_ID, BOOK_ID, breadcrumbs, faqPage, mobileApplication, photoBook } from '../lib/schema';
+import { APP_ID, BOOK_ID, breadcrumbs, faqPage, howTo, mobileApplication, photoBook } from '../lib/schema';
 import { screens } from '../lib/photos';
 import { COPY } from '../i18n/copy';
 import { plain } from '../i18n/format';
@@ -39,6 +39,7 @@ const items = t.months.items;
     breadcrumbs(trail),
     mobileApplication(lang),
     photoBook(lang),
+    howTo(lang, 'firstYear', t.howTitle),
     faqPage(t.faq.map((f) => ({ ...f, answer: plain(f.answer, lang) }))),
   ]}
   about={[BOOK_ID, APP_ID]}

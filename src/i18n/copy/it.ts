@@ -152,6 +152,11 @@ export const it: Copy = {
     faqTitle: 'Le domande dei genitori',
     faq: [
       {
+        question: 'Che cos’è BabyBookAI?',
+        answer:
+          'BabyBookAI è un’app che trasforma le foto che hai già sul telefono in un fotolibro stampato con copertina rigida sul primo anno del tuo bebè. Sceglie le foto, le ordina mese per mese e impagina ogni pagina per te. L’app è gratuita: paghi solo il libro stampato.',
+      },
+      {
         question: 'Come sceglie le foto BabyBookAI?',
         answer:
           'Legge la data di ogni foto e tiene solo quelle del primo anno del tuo bebè. Poi scarta le sfocate, tiene il fotogramma più nitido di ogni raffica e riconosce la stessa foto salvata due volte (una copia di WhatsApp e l’originale, per esempio) per tenere la migliore. Le foto che hai segnato come preferite e quelle che hai condiviso di più ottengono i posti migliori: la copertina e le pagine intere.',

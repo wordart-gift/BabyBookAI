@@ -153,6 +153,11 @@ export const de: Copy = {
     faqTitle: 'Was Eltern fragen',
     faq: [
       {
+        question: 'Was ist BabyBookAI?',
+        answer:
+          'BabyBookAI ist eine App, die aus den Fotos auf deinem Handy ein gedrucktes Hardcover-Fotobuch vom ersten Lebensjahr deines Babys macht. Sie wählt die Fotos aus, sortiert sie Monat für Monat und gestaltet jede Seite für dich. Die App ist kostenlos: Du bezahlst nur das gedruckte Buch.',
+      },
+      {
         question: 'Wie wählt BabyBookAI die Fotos aus?',
         answer:
           'Die App liest das Aufnahmedatum jedes Fotos und behält nur die aus dem ersten Lebensjahr deines Babys. Dann sortiert sie unscharfe Bilder aus, behält das schärfste Bild jeder Serie und erkennt dasselbe Foto, wenn es doppelt gespeichert ist (eine WhatsApp-Kopie und das Original zum Beispiel), um die beste Kopie zu behalten. Fotos, die du als Favoriten markiert oder am häufigsten geteilt hast, bekommen die besten Plätze: das Cover und die ganzen Seiten.',
