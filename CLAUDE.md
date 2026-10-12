@@ -16,7 +16,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
   `src/config/site.ts` mirrors what the site states; keep it in step.
 - **Keyword strategy**: Carlos's research (Sept–Oct 2026) for the US; per
   country in `docs/keywords/<lang>/` (Semrush data and what it showed), one
-  language at a time. Spain and France are done; the others still carry the Play listings'
+  language at a time. English (US, UK), Spain and France are done; the others still carry the Play listings'
   product words.
 
 ## Settled decisions
@@ -24,7 +24,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Decision | Why |
 |---|---|
 | Brand is **BabyBookAI** everywhere | Carlos, Oct 2026 |
-| Rank on the **"photo book"** family; "memory book" only for naming (H1 on home, App Store, ads) | "memory book" SERPs are Amazon, Etsy and media; "photo book" SERPs are small printers |
+| Rank on the **"photo book" / "photo album"** family, which Google answers with one first page; "album" is searched twice as much, so it leads the baby photo book page's title and H1 while the URL and body say "photo book". "Memory book" only for naming (H1 on home, App Store, ads); the English home's title says "baby book app", the search that apps like ours answer with their home pages | "memory book" SERPs are fill-in book brands, Amazon and media; checked with Semrush, US and UK, Oct 2026 (`docs/keywords/en/`) |
 | Pages: `/`, `/baby-photo-book/`, `/first-year-photo-book/`, `/baby-boy-photo-album/`, `/baby-girl-photo-album/`, `/baby-photo-book-ideas/` + support, about, legal. Each exists in the app's ten languages (see "Languages") | One search intent per page. Do not add pages without checking the real SERP |
 | **Ten languages** (en es fr de it pt nl ja ko zh), English at the root, the rest under `/xx/` with their own slugs. The visitor's country picks the language of the home page on a first visit (never a deep page) and, on every page, the **price and size** the app shows there | Carlos, Oct 2026. Same rules as the app: `lib/order/pricing.dart`, `lib/util/dates.dart` |
 | Size in inches only in US, LR, MM, written `11 × 11″`; everywhere else `28 × 28 cm` | Carlos, Oct 2026; the app's `BookSize` |

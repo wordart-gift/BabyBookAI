@@ -18,7 +18,10 @@ import { path } from '../i18n/routes';
  * The home page is where paid traffic lands, so it is written to convert
  * first. It names the product the way buyers do ("baby memory book", in the
  * H1 only) and leaves ranking for "baby photo book" and "first year photo
- * book" to their own pages, which it links to with those words.
+ * book" to their own pages, which it links to with those words. In English its
+ * title and first answer say "baby book app" (590/mo in the US): the one
+ * search answered by apps like this one, with their home pages
+ * (docs/keywords/en).
  */
 const { lang } = Astro.props as { lang: Lang };
 const { ui, home: t } = COPY[lang];

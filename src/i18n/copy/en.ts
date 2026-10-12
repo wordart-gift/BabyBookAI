@@ -31,7 +31,7 @@ export const en = {
         firstYear: 'First year photo book',
         boy: 'Baby boy photo album',
         girl: 'Baby girl photo album',
-        ideas: 'Baby photo book ideas',
+        ideas: 'Baby book ideas',
         about: 'About',
         support: 'Support & FAQ',
         privacy: 'Privacy policy',
@@ -114,7 +114,7 @@ export const en = {
   },
 
   home: {
-    title: 'BabyBookAI — The Baby Memory Book That Makes Itself',
+    title: 'BabyBookAI — The Baby Book App That Makes the Book for You',
     description:
       'Your baby’s first year as a printed hardcover photo book, made from the photos already on your phone. BabyBookAI picks, sorts and lays them out for you.',
     eyebrow: 'Baby’s first year photo book',
@@ -158,7 +158,7 @@ export const en = {
       {
         question: 'What is BabyBookAI?',
         answer:
-          'BabyBookAI is a phone app that turns the photos already on your phone into a printed hardcover photo book of your baby’s first year. It picks the photos, sorts them month by month and lays out every page for you. The app is free: you only pay for the printed book.',
+          'BabyBookAI is a baby book app that turns the photos already on your phone into a printed hardcover photo book of your baby’s first year. It picks the photos, sorts them month by month and lays out every page for you. The app is free: you only pay for the printed book.',
       },
       {
         question: 'How does BabyBookAI choose the photos?',
@@ -202,12 +202,12 @@ export const en = {
   },
 
   babyPhotoBook: {
-    title: 'Baby Photo Book Made From Your Camera Roll | BabyBookAI',
-    description: `A hardcover baby photo book made for you: BabyBookAI picks the best photos on your phone, sorts them by month and lays out every page. {size}, ${BOOK.pagesMin}–${BOOK.pagesMax} pages.`,
+    title: 'Baby Photo Album Made From Your Camera Roll | BabyBookAI',
+    description: `A baby photo album that arrives printed: a hardcover photo book made for you. BabyBookAI picks the best photos on your phone, sorts them by month and lays out every page. {size}.`,
     crumb: 'Baby photo book',
     eyebrow: 'Baby photo book',
-    h1: 'Baby photo book, made from your camera roll',
-    lead: 'BabyBookAI finds the best photos of your baby on your phone, sorts them month by month and lays out a square hardcover book. No uploading, no dragging photos into templates. You just look through it.',
+    h1: 'Baby photo album, made from your camera roll',
+    lead: 'BabyBookAI finds the best photos of your baby on your phone, sorts them month by month and lays out a square hardcover photo book, printed and shipped to your door. No sleeves to fill, no uploading, no dragging photos into templates. You just look through it.',
     features: {
       title: 'Everything a baby photo album should be. Minus the work.',
       items: [
@@ -283,6 +283,11 @@ export const en = {
     faqTitle: 'Baby photo book questions',
     faq: [
       {
+        question: 'Is it an album you slip photos into?',
+        answer:
+          'No. It is a printed baby photo album: the photos are printed on the pages, already placed and laid out, like a photo book. There are no sleeves or pockets, and nothing to stick in.',
+      },
+      {
         question: 'What size is the baby photo book?',
         answer:
           'It is a square {size} hardcover. Square is the one shape where upright and wide phone photos both fit without one of them being cropped badly.',
@@ -345,7 +350,7 @@ export const en = {
       ],
     },
     unfinished: {
-      title: 'Why most first year books never get finished',
+      title: 'Why most baby’s first year books never get finished',
       paragraphs: [
         'A fill-in baby book asks you to print, glue and write every month. A weekly baby book app asks for a few minutes every week, fifty-two weeks in a row. Neither sounds like much, until it’s month five, you’re sleeping in two-hour shifts, and the book is three weeks behind.',
         'The photos, though, kept coming. You never stopped taking them. BabyBookAI starts there: when the year is over, it reads your camera roll and makes the book from what you already have. Your part takes minutes, once.',
@@ -364,6 +369,11 @@ export const en = {
     },
     faqTitle: 'First year photo book questions',
     faq: [
+      {
+        question: 'Is it a first year photo album, or a baby book to fill in?',
+        answer:
+          'A first year photo album, and it arrives finished: the photos are printed on the pages, month by month. There is nothing to fill in by hand. You only write if you want to change a line or add a note of your own.',
+      },
       {
         question: 'When should I make the first year photo book?',
         answer:
@@ -506,13 +516,13 @@ export const en = {
   },
 
   ideas: {
-    title: 'Baby Photo Book Ideas: 25 Ways to Tell the First Year | BabyBookAI',
-    headline: 'Baby Photo Book Ideas: 25 Ways to Tell the First Year',
+    title: 'Baby Book Ideas: 25 Ways to Tell the First Year in Photos | BabyBookAI',
+    headline: 'Baby Book Ideas: 25 Ways to Tell the First Year in Photos',
     description:
-      'Baby photo book ideas for the first year: ways to organize it, what to photograph, layouts that work, captions to borrow, and how many photos to pick.',
-    crumb: 'Baby photo book ideas',
+      'Baby book ideas for a first year told in photos: ways to organize a baby photo book, what to photograph, layouts that work, captions to borrow, and how many photos to pick.',
+    crumb: 'Baby book ideas',
     eyebrow: 'Ideas',
-    h1: 'Baby photo book ideas: 25 ways to tell the first year',
+    h1: 'Baby book ideas: 25 ways to tell the first year in photos',
     byline: 'By the BabyBookAI team',
     date: 'October 9, 2026',
     lead: 'By the first birthday most parents have thousands of photos of their baby and no idea where to start. These baby photo book ideas are the ones that work on paper: how to organize the year, what to photograph while there is still time, layouts that look designed, and captions you can borrow.',

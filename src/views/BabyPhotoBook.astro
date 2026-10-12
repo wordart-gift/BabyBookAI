@@ -14,13 +14,15 @@ import type { Lang } from '../i18n/locales';
 import { path } from '../i18n/routes';
 
 /*
- * Target: "baby photo book" (1,500/mo) and its family: baby photo album,
- * photo album for baby, baby album book, personalized / custom baby photo
- * album (a section here, not a page of its own). A full category page, the
+ * Target: "baby photo album" (1,900/mo in the US, 2,400 in the UK) and "baby
+ * photo book" (1,000), which share one first page (Semrush, Oct 2026,
+ * docs/keywords/en): the H1 says album, the URL and the body say photo book.
+ * Family: photo album for baby, baby album book, personalized / custom baby
+ * photo album (a section here, not a page of its own). A full category page, the
  * bar set by PikPerfect at #3: exact keyword in the H1, the process in three
  * steps, the product inside and out, personalization, gift, real copy, FAQ.
- * In other languages, the market's product word leads (fotolibro, Fotobuch,
- * livre photo...). Never say "layflat": the binding is glued.
+ * In other languages, the market's product word leads (álbum, album photo,
+ * Fotobuch...). Never say "layflat": the binding is glued.
  */
 const { lang } = Astro.props as { lang: Lang };
 const { ui, babyPhotoBook: t } = COPY[lang];
