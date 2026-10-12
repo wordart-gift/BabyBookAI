@@ -3,8 +3,9 @@ import { LANGS, type Lang } from './locales';
 /**
  * Every page in every language, with its own slug: the searched words in
  * each language's URL (Fotobuch, livre photo... the product words the Play
- * listings found searched in each market; Spanish since Oct 2026 the ones
- * Semrush found searched on the web, docs/keywords/es: album, not fotolibro). Japanese, Korean and
+ * listings found searched in each market; Spanish and French since Oct 2026 the
+ * ones Semrush found searched on the web, docs/keywords: album, not fotolibro
+ * or livre photo). Japanese, Korean and
  * Chinese keep the English slugs: a URL in their script travels as
  * percent-escapes.
  *
@@ -53,11 +54,11 @@ const SLUGS: Record<Lang, Record<PageId, string>> = {
   },
   fr: {
     home: '',
-    babyPhotoBook: 'livre-photo-bebe',
-    firstYear: 'livre-photo-premiere-annee',
+    babyPhotoBook: 'album-photo-bebe',
+    firstYear: 'album-photo-bebe-premiere-annee',
     boy: 'album-photo-bebe-garcon',
     girl: 'album-photo-bebe-fille',
-    ideas: 'idees-livre-photo-bebe',
+    ideas: 'idees-album-photo-bebe',
     about: 'a-propos',
     support: 'aide',
     privacy: 'confidentialite',

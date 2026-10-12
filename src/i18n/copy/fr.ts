@@ -4,8 +4,12 @@ import type { Copy } from './en';
 
 /**
  * Français de France, avec vous, comme l'app (librofotos lib/l10n/app_fr.arb).
- * Le mot cherché est « livre photo » (Keyword Tool, France, oct. 2026) ;
- * « bébé » vient en second.
+ * Le mot cherché est « album photo » (Semrush, France, oct. 2026 ; les données
+ * sont dans docs/keywords/fr) : « album photo bébé » ouvre les titres et les H1.
+ * « Livre photo », le mot des imprimeurs, se cherche trois fois moins mais mène
+ * aux mêmes résultats : il reste dans les sous-titres et le texte. « Album »
+ * désigne aussi l'album en tissu, à pochettes ou à remplir : chaque page dit
+ * vite que le nôtre arrive imprimé et déjà mis en page.
  */
 const a = linker('fr');
 const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>`;
@@ -15,22 +19,22 @@ export const fr: Copy = {
     skip: 'Aller au contenu',
     homeAria: `${SITE.name}, accueil`,
     mainNav: 'Principal',
-    nav: { babyPhotoBook: 'Livre photo bébé', firstYear: 'Première année' },
+    nav: { babyPhotoBook: 'Album photo bébé', firstYear: 'Première année' },
     getApp: 'Télécharger',
     language: 'Langue',
     breadcrumb: "Fil d'Ariane",
     home: 'Accueil',
     footer: {
-      tagline: 'La première année de votre bébé, transformée en livre pour vous.',
+      tagline: 'La première année de votre bébé, transformée en album photo pour vous.',
       productOf: 'Un produit de',
-      book: 'Le livre',
+      book: "L'album photo",
       company: 'Société',
       links: {
-        babyPhotoBook: 'Livre photo bébé',
-        firstYear: 'Livre photo de la première année',
+        babyPhotoBook: 'Album photo bébé',
+        firstYear: 'Album photo de la première année',
         boy: 'Album photo bébé garçon',
         girl: 'Album photo bébé fille',
-        ideas: 'Idées de livre photo bébé',
+        ideas: "Idées d'album photo bébé",
         about: 'À propos',
         support: 'Aide et questions',
         privacy: 'Confidentialité',
@@ -39,10 +43,10 @@ export const fr: Copy = {
       rights: 'Tous droits réservés.',
     },
     closing: {
-      title: 'Faites le livre en quelques minutes. Gardez-le pour toujours.',
+      title: "Faites l'album en quelques minutes. Gardez-le pour toujours.",
       body: 'Téléchargez BabyBookAI, donnez-lui le prénom de votre bébé et les dates, et voyez sa première année mise en page avant que votre café refroidisse.',
     },
-    free: 'Téléchargement gratuit. Vous ne payez que le livre imprimé.',
+    free: "Téléchargement gratuit. Vous ne payez que l'album imprimé.",
     badges: {
       aria: `Télécharger ${SITE.name}`,
       appStore: "Télécharger dans l'App Store",
@@ -69,7 +73,7 @@ export const fr: Copy = {
         },
         {
           title: 'Feuilletez, remplacez, commandez',
-          body: "Le livre est mis en page pour vous. Remplacez la photo qui ne vous plaît pas, retouchez les textes si vous le souhaitez, et le livre à couverture rigide est imprimé et livré chez vous.",
+          body: "L'album est mis en page pour vous. Remplacez la photo qui ne vous plaît pas, retouchez les textes si vous le souhaitez, et il est imprimé avec une couverture rigide et livré chez vous.",
         },
       ],
     },
@@ -82,8 +86,8 @@ export const fr: Copy = {
     stork: 'Une cigogne portant un balluchon',
     spreadMonth: 'Premier mois',
     defaultDescription:
-      'BabyBookAI transforme les photos déjà dans votre téléphone en un livre photo à couverture rigide de la première année de votre bébé. Il choisit, classe et met en page les photos pour vous.',
-    ogImageAlt: "BabyBookAI : un livre photo imprimé de la première année d'un bébé",
+      'BabyBookAI transforme les photos déjà dans votre téléphone en un album photo imprimé, à couverture rigide, de la première année de votre bébé. Il choisit, classe et met en page les photos pour vous.',
+    ogImageAlt: "BabyBookAI : un album photo imprimé de la première année d'un bébé",
     /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
     spreadAlt:
       'Une double page BabyBookAI, « Premier mois » : sept photos d’une bébé avec sa famille et ses grands-parents',
@@ -99,11 +103,11 @@ export const fr: Copy = {
         "Choisit les photos sur le téléphone : seul le livre terminé est envoyé à l'impression",
         'Garde la photo la plus nette de chaque moment et écarte doublons et rafales',
         'Classe les photos mois par mois selon leur date de prise de vue',
-        `Met en page un livre carré à couverture rigide de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages`,
+        `Met en page un album photo carré à couverture rigide de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages`,
         "Envoie le livre à l'impression et le livre chez vous",
       ],
-      bookName: 'Livre photo bébé BabyBookAI',
-      bookDescription: `Un livre photo carré à couverture rigide de 28 × 28 cm sur la première année d'un bébé, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages sur papier satiné 170 g, réalisé par l'app BabyBookAI à partir des photos de votre téléphone.`,
+      bookName: 'Album photo bébé BabyBookAI',
+      bookDescription: `Un album photo (livre photo) carré à couverture rigide de 28 × 28 cm sur la première année d'un bébé, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages sur papier satiné 170 g, réalisé par l'app BabyBookAI à partir des photos de votre téléphone.`,
       pages: 'Pages',
       binding: 'Reliure',
       bindingValue: 'Couverture rigide',
@@ -111,15 +115,15 @@ export const fr: Copy = {
   },
 
   home: {
-    title: 'BabyBookAI — Le livre photo de bébé qui se fait tout seul',
+    title: "BabyBookAI — L'album photo de bébé qui se fait tout seul",
     description:
-      'La première année de votre bébé en livre photo imprimé à couverture rigide, réalisé avec les photos déjà dans votre téléphone. BabyBookAI les choisit, les classe et les met en page pour vous.',
-    eyebrow: 'Livre photo de la première année de bébé',
-    h1: 'Le livre de bébé qui se fait tout seul',
-    lead: 'Il parcourt la galerie de votre téléphone, choisit les meilleures photos de chaque mois et met en page un livre à couverture rigide. Vous le feuilletez, remplacez ce qui ne vous plaît pas, et il est en route.',
+      'La première année de votre bébé en album photo imprimé, à couverture rigide, réalisé avec les photos déjà dans votre téléphone. BabyBookAI les choisit, les classe et les met en page pour vous.',
+    eyebrow: 'Album photo de la première année de bébé',
+    h1: "L'album photo de votre bébé qui se fait tout seul",
+    lead: 'Il parcourt la galerie de votre téléphone, choisit les meilleures photos de chaque mois et met en page un album photo à couverture rigide. Vous le feuilletez, remplacez ce qui ne vous plaît pas, et il arrive imprimé chez vous.',
     homework: {
-      title: "Chaque livre de naissance est un devoir. Sauf celui-ci.",
-      body: "Les photos, vous les avez déjà prises : des centaines, chaque mois. En faire un livre, c'est la partie pour laquelle personne n'a le temps avec un bébé à la maison.",
+      title: "Chaque album de bébé est un devoir. Sauf celui-ci.",
+      body: "Les photos, vous les avez déjà prises : des centaines, chaque mois. En faire un album, c'est la partie pour laquelle personne n'a le temps avec un bébé à la maison.",
       yourPart: 'Votre part',
       ways: [
         { name: 'Un livre de naissance à remplir', effort: 'Imprimer, découper, coller et écrire, chaque mois', verdict: 'La plupart arrêtent vers le troisième mois.' },
@@ -128,7 +132,7 @@ export const fr: Copy = {
       ],
     },
     book: {
-      eyebrow: 'Le livre',
+      eyebrow: "L'album",
       title: 'Une vraie couverture rigide, faite pour être gardée',
       body: "Le prénom de votre bébé et sa plus belle photo sur la couverture. Le jour de sa naissance en première page. Puis une double page pour chaque mois, dans l'ordre où tout s'est passé, chacune mise en page pour ses photos, jusqu'au premier anniversaire.",
       specs: [
@@ -139,7 +143,7 @@ export const fr: Copy = {
         { label: 'Mise en page', value: 'Une double page par mois' },
         { label: 'Livraison', value: '16 pays' },
       ],
-      more: 'Voir le livre photo bébé en détail',
+      more: "Voir l'album photo bébé en détail",
     },
     privacy: {
       title: 'Les photos de votre bébé restent sur votre téléphone',
@@ -148,14 +152,14 @@ export const fr: Copy = {
     birthday: {
       title: 'Prêt pour le premier anniversaire',
       body: "L'année se termine, le livre est fait. Commandez-le la semaine de la fête, ou faites-en un aussi pour les grands-parents. Leur cadeau préféré, c'est celui où il y a le bébé.",
-      more: 'Comment fonctionne le livre photo de la première année',
+      more: "Comment fonctionne l'album photo de la première année",
     },
     faqTitle: 'Les questions des parents',
     faq: [
       {
         question: 'Qu’est-ce que BabyBookAI ?',
         answer:
-          'BabyBookAI est une app qui transforme les photos déjà dans votre téléphone en un livre photo imprimé à couverture rigide de la première année de votre bébé. Elle choisit les photos, les classe mois par mois et compose chaque page pour vous. L’app est gratuite : vous ne payez que le livre imprimé.',
+          'BabyBookAI est une app qui transforme les photos déjà dans votre téléphone en un album photo imprimé à couverture rigide de la première année de votre bébé. Elle choisit les photos, les classe mois par mois et compose chaque page pour vous. L’app est gratuite : vous ne payez que l’album imprimé.',
       },
       {
         question: 'Comment BabyBookAI choisit-il les photos ?',
@@ -173,8 +177,8 @@ export const fr: Copy = {
           'Oui. Vous feuilletez le livre sur votre téléphone et remplacez toute photo qui ne vous plaît pas. Vous pouvez aussi modifier les textes de chaque page et ajouter un petit mot à vous.',
       },
       {
-        question: 'À quoi ressemble le livre ?',
-        answer: `Un livre carré à couverture rigide de {size}, couverture mate, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages sur papier satiné 170 g. Le prénom de votre bébé et sa plus belle photo vont sur la couverture, la date de naissance ouvre le livre, et chaque mois a sa propre double page.`,
+        question: "À quoi ressemble l'album ?",
+        answer: `Un album carré à couverture rigide de {size}, couverture mate, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages sur papier satiné 170 g. Le prénom de votre bébé et sa plus belle photo vont sur la couverture, la date de naissance ouvre le livre, et chaque mois a sa propre double page.`,
       },
       {
         question: 'Et si certaines photos sont dans WhatsApp ou iCloud ?',
@@ -188,7 +192,7 @@ export const fr: Copy = {
       },
       {
         question: 'Combien ça coûte ?',
-        answer: `L'app est gratuite, tout comme faire le livre et le feuilleter. Vous ne payez qu'au moment de commander le livre imprimé : {price} pour ${BOOK.pagesMin} pages, livraison comprise, avec des pages en plus jusqu'à ${BOOK.pagesMax} moyennant un supplément. Vous voyez le prix final avant de payer.`,
+        answer: `L'app est gratuite, tout comme faire le livre et le feuilleter. Vous ne payez qu'au moment de commander l'album imprimé : {price} pour ${BOOK.pagesMin} pages, livraison comprise, avec des pages en plus jusqu'à ${BOOK.pagesMax} moyennant un supplément. Vous voyez le prix final avant de payer.`,
       },
       {
         question: 'Est-ce disponible sur iPhone et Android ?',
@@ -199,12 +203,12 @@ export const fr: Copy = {
   },
 
   babyPhotoBook: {
-    title: 'Livre photo bébé réalisé avec les photos de votre téléphone | BabyBookAI',
-    description: `Un livre photo bébé à couverture rigide fait pour vous : BabyBookAI choisit les meilleures photos de votre téléphone, les classe par mois et met en page chaque page. {size}, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages.`,
-    crumb: 'Livre photo bébé',
-    eyebrow: 'Livre photo bébé',
-    h1: 'Livre photo bébé, réalisé avec les photos de votre téléphone',
-    lead: "BabyBookAI trouve les meilleures photos de votre bébé sur votre téléphone, les classe mois par mois et met en page un livre carré à couverture rigide. Rien à téléverser, aucune photo à glisser dans un modèle. Vous n'avez qu'à le feuilleter.",
+    title: 'Album photo bébé imprimé, fait avec votre téléphone | BabyBookAI',
+    description: `Un album photo bébé livré imprimé et déjà mis en page : BabyBookAI choisit les meilleures photos de votre téléphone et les classe par mois. Couverture rigide, {size}.`,
+    crumb: 'Album photo bébé',
+    eyebrow: 'Album photo bébé',
+    h1: 'Album photo bébé, fait avec les photos de votre téléphone',
+    lead: "BabyBookAI trouve les meilleures photos de votre bébé sur votre téléphone, les classe mois par mois et met en page un livre photo carré à couverture rigide, livré imprimé chez vous. Aucune photo à coller ni à glisser dans un modèle, et rien à téléverser pour les choisir. Vous n'avez qu'à le feuilleter.",
     features: {
       title: 'Tout ce que doit être un album photo de bébé. Sans le travail.',
       items: [
@@ -226,9 +230,9 @@ export const fr: Copy = {
         },
       ],
     },
-    howTitle: 'Comment faire un livre photo bébé en trois étapes',
+    howTitle: 'Comment faire un album photo bébé en trois étapes',
     inside: {
-      eyebrow: "À l'intérieur du livre",
+      eyebrow: "À l'intérieur de l'album",
       title: 'Du jour de sa naissance à son premier anniversaire',
       tour: [
         { label: 'La couverture', body: "Le prénom de votre bébé et la plus belle photo de l'année, choisie parmi celles que vous avez préférées et le plus partagées." },
@@ -255,9 +259,9 @@ export const fr: Copy = {
       colors: `Vous cherchez des couleurs ? Voyez l'${a('girl', 'album photo bébé fille')} et l'${a('boy', 'album photo bébé garçon')}.`,
     },
     specs: {
-      title: 'Le livre, en détail',
+      title: "L'album, en détail",
       items: [
-        { label: 'Format', value: 'Livre photo carré à couverture rigide' },
+        { label: 'Format', value: 'Album photo imprimé (livre photo), carré, à couverture rigide' },
         { label: 'Taille', value: '{size}' },
         { label: 'Pages', value: `De ${BOOK.pagesMin} à ${BOOK.pagesMax}, une double page par mois` },
         { label: 'Papier', value: 'Papier satiné 170 g, impression en couleur' },
@@ -274,15 +278,30 @@ export const fr: Copy = {
       paragraphs: [
         "Pendant la première année d'un bébé, les parents prennent des centaines de photos par mois. Elles vivent dans la galerie, entre captures d'écran et tickets de caisse, et défilent sans qu'on les regarde. Un album photo de bébé, c'est l'inverse : quelques-unes des meilleures, dans l'ordre, sur papier, dans un livre que tout le monde peut prendre en main.",
         "Le plus dur n'a jamais été l'impression. Ce sont les heures à choisir : laquelle des quarante photos du bain, à quel mois appartient cette photo, comment placer une photo verticale à côté d'une horizontale. C'est là que la plupart des albums de bébé s'arrêtent, quelque part vers le troisième mois.",
-        `BabyBookAI fait cette partie pour vous, sur votre téléphone. Il lit les dates, garde la photo la plus nette de chaque moment, donne à chaque mois sa double page et met en page un album qui semble conçu, pas déversé. Il vous reste la partie agréable : le feuilleter. Pour toute la première année, de la maternité au gâteau, voyez le ${a('firstYear', 'livre photo de la première année de bébé')}.`,
+        `BabyBookAI fait cette partie pour vous, sur votre téléphone. Il lit les dates, garde la photo la plus nette de chaque moment, donne à chaque mois sa double page et met en page un album qui semble conçu, pas déversé. Il vous reste la partie agréable : le feuilleter. Pour toute la première année, de la maternité au gâteau, voyez l'${a('firstYear', 'album photo de la première année de bébé')}.`,
       ],
     },
-    faqTitle: 'Questions sur le livre photo bébé',
+    faqTitle: "Questions sur l'album photo bébé",
     faq: [
       {
-        question: 'Quelle est la taille du livre photo bébé ?',
+        question: 'Est-ce un album où il faut coller les photos ?',
         answer:
-          "C'est un livre carré à couverture rigide de {size}. Le carré est le seul format où les photos verticales et horizontales d'un téléphone tiennent toutes les deux sans qu'aucune ne soit mal recadrée.",
+          "Non. C'est un album photo imprimé : les photos sont imprimées sur les pages, déjà placées et mises en page, comme dans un livre photo. Pas de pochettes, rien à coller ni à remplir.",
+      },
+      {
+        question: 'Est-ce un album photo en tissu pour bébé ?',
+        answer:
+          "Non. C'est un livre à couverture rigide et aux pages en papier, fait pour être gardé et feuilleté en famille, pas un album en tissu que le bébé manipule.",
+      },
+      {
+        question: 'Peut-on en faire un album photo de naissance ?',
+        answer:
+          "Oui. L'album commence le jour que vous choisissez, le plus souvent celui de la naissance : la première page porte la date de naissance, et les photos de la maternité ouvrent le premier mois.",
+      },
+      {
+        question: "Quelle est la taille de l'album photo bébé ?",
+        answer:
+          "C'est un album carré à couverture rigide de {size}. Le carré est le seul format où les photos verticales et horizontales d'un téléphone tiennent toutes les deux sans qu'aucune ne soit mal recadrée.",
       },
       {
         question: 'Combien de pages compte-t-il ?',
@@ -294,7 +313,7 @@ export const fr: Copy = {
           "Chaque photo n'est placée que là où elle a assez de pixels pour bien s'imprimer. Une petite copie, comme une photo enregistrée depuis une messagerie, va dans un emplacement plus petit au lieu d'occuper une pleine page ou la couverture.",
       },
       {
-        question: 'Puis-je personnaliser le livre ?',
+        question: "Puis-je personnaliser l'album ?",
         answer:
           'Oui. Le prénom de votre bébé va sur la couverture, vous choisissez les dates et vous pouvez prendre un papier rose doux, bleu doux ou crème classique. Chaque page arrive avec de courtes phrases à réécrire, et vous pouvez ajouter votre propre mot où vous voulez.',
       },
@@ -312,16 +331,16 @@ export const fr: Copy = {
   },
 
   firstYear: {
-    title: 'Livre photo de la première année de bébé, sans avoir à le faire | BabyBookAI',
+    title: 'Album photo bébé 1ère année, de la naissance à 1 an | BabyBookAI',
     description:
-      "Un livre photo de la première année de bébé, mois par mois, réalisé avec les photos déjà dans votre téléphone. Rien à téléverser chaque semaine : BabyBookAI choisit, classe et met en page toute l'année.",
-    crumb: 'Livre photo de la première année',
-    eyebrow: 'Livre photo de la première année de bébé',
-    h1: "Le livre photo de la première année de bébé que vous n'avez pas à faire",
-    lead: "Douze mois, une double page pour chacun, de la maternité au gâteau. BabyBookAI le construit avec les photos déjà dans votre téléphone : rien à tenir à jour pendant l'année.",
+      "L'album photo de la première année de bébé, mois par mois, de la naissance à 1 an, fait avec les photos de votre téléphone. BabyBookAI choisit, classe et met en page.",
+    crumb: 'Album photo de la première année',
+    eyebrow: 'Album photo bébé 1ère année',
+    h1: "L'album photo de la 1ère année de bébé, mois par mois et déjà fait",
+    lead: "Douze mois, une double page pour chacun, de la maternité au gâteau. BabyBookAI construit l'album avec les photos déjà dans votre téléphone et vous le recevez imprimé : rien à tenir à jour pendant l'année.",
     months: {
       eyebrow: 'Mois par mois',
-      title: 'Un livre photo bébé mois par mois, sans la séance photo de chaque mois',
+      title: 'Un album photo bébé mois par mois, sans la séance photo de chaque mois',
       body: "Pas de cartes étapes, pas la même photo sur la même couverture chaque mois. Le livre suit les photos que vous avez prises de toute façon, dans l'ordre où vous les avez prises. Chaque bébé a son propre calendrier.",
       items: [
         { n: 'Page 1', moment: 'Le jour de sa naissance' },
@@ -341,9 +360,9 @@ export const fr: Copy = {
       ],
     },
     unfinished: {
-      title: "Pourquoi la plupart des livres de la première année ne sont jamais finis",
+      title: "Pourquoi la plupart des albums de la première année ne sont jamais finis",
       paragraphs: [
-        "Un livre de naissance à remplir vous demande d'imprimer, coller et écrire chaque mois. Une app de livre hebdomadaire vous demande quelques minutes chaque semaine, cinquante-deux semaines de suite. Aucun des deux ne semble énorme, jusqu'au cinquième mois, quand vous dormez par tranches de deux heures et que le livre a trois semaines de retard.",
+        "Un album photo à remplir ou un livre de naissance vous demandent d'imprimer, coller et écrire chaque mois. Une app de livre hebdomadaire vous demande quelques minutes chaque semaine, cinquante-deux semaines de suite. Aucun des deux ne semble énorme, jusqu'au cinquième mois, quand vous dormez par tranches de deux heures et que le livre a trois semaines de retard.",
         "Les photos, elles, ont continué d'arriver. Vous n'avez jamais arrêté d'en prendre. BabyBookAI part de là : quand l'année est finie, il parcourt votre galerie et fait le livre avec ce que vous avez déjà. Votre part prend quelques minutes, une seule fois.",
       ],
       compare: [
@@ -352,16 +371,21 @@ export const fr: Copy = {
         { label: 'BabyBookAI', value: 'Une fois, en minutes' },
       ],
     },
-    howTitle: 'Comment se fait le livre photo de la première année',
+    howTitle: "Comment se fait l'album photo de la première année",
     birthday: {
       title: 'À temps pour le premier anniversaire',
       body: "Vous choisissez les dates : le livre peut se terminer la semaine de la fête, ou le lendemain. Les mois avec peu de photos ne posent pas de problème : la mise en page suit les photos, et un mois avec une seule belle photo a une page faite pour une. Envie d'aller au-delà de la première année ? Un livre peut couvrir jusqu'à 18 mois.",
-      more: 'Voir le livre photo bébé en détail',
+      more: "Voir l'album photo bébé en détail",
     },
-    faqTitle: 'Questions sur le livre photo de la première année',
+    faqTitle: "Questions sur l'album photo de la première année",
     faq: [
       {
-        question: 'Quand faire le livre photo de la première année ?',
+        question: 'Est-ce un album à remplir à la main ?',
+        answer:
+          "Non. L'album de la première année BabyBookAI arrive imprimé et terminé : les photos sont déjà placées sur leurs pages, mois par mois. Vous n'écrivez que si vous voulez changer une phrase ou ajouter un mot à vous.",
+      },
+      {
+        question: "Quand faire l'album photo de la première année ?",
         answer:
           "Quand vous voulez après le premier anniversaire, ou avant si vous voulez le livre pour la fête : vous choisissez les dates qu'il couvre. Comme BabyBookAI lit les photos que vous avez déjà, il n'y a rien à tenir à jour pendant l'année.",
       },
@@ -417,7 +441,7 @@ export const fr: Copy = {
     details: {
       title: 'Un souvenir fait pour être manipulé',
       body: `Un livre carré à couverture rigide de {size}, couverture mate, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages sur papier satiné 170 g, à {price} livraison comprise. Carré, parce que ses photos verticales et horizontales y tiennent toutes sans qu'aucune ne soit mal recadrée.`,
-      more: `Vous préférez le bleu ou le crème ? Voyez l'${a('boy', 'album photo bébé garçon')}, ou tout sur le ${a('babyPhotoBook', 'livre photo bébé')}.`,
+      more: `Vous préférez le bleu ou le crème ? Voyez l'${a('boy', 'album photo bébé garçon')}, ou tout sur l'${a('babyPhotoBook', 'album photo bébé')}.`,
     },
     faqTitle: "Questions sur l'album photo bébé fille",
     faq: [
@@ -474,7 +498,7 @@ export const fr: Copy = {
     details: {
       title: "L'album lui-même",
       body: `Un livre carré à couverture rigide de {size}, couverture mate, de ${BOOK.pagesMin} à ${BOOK.pagesMax} pages sur papier satiné 170 g. {price} livraison comprise, imprimé à la demande et livré chez vous. Chaque photo ne va que là où elle a les pixels pour s'imprimer nette : une petite copie venue d'une messagerie ne finit jamais sur la couverture.`,
-      more: `Vous le faites pour une fille ? Voyez l'${a('girl', 'album photo bébé fille')}. Pour toute l'année, mois par mois, voyez le ${a('firstYear', 'livre photo de la première année')}.`,
+      more: `Vous le faites pour une fille ? Voyez l'${a('girl', 'album photo bébé fille')}. Pour toute l'année, mois par mois, voyez l'${a('firstYear', 'album photo de la première année')}.`,
     },
     faqTitle: "Questions sur l'album photo bébé garçon",
     faq: [
@@ -502,32 +526,32 @@ export const fr: Copy = {
   },
 
   ideas: {
-    title: 'Idées de livre photo bébé : 25 façons de raconter la première année | BabyBookAI',
-    headline: 'Idées de livre photo bébé : 25 façons de raconter la première année',
+    title: 'Album photo bébé : 25 idées et exemples de textes | BabyBookAI',
+    headline: 'Album photo bébé : 25 idées et exemples de textes',
     description:
-      "Idées de livre photo bébé pour la première année : comment l'organiser, quoi photographier, des mises en page qui marchent, des légendes à emprunter et combien de photos choisir.",
-    crumb: 'Idées de livre photo bébé',
+      "Idées d'album photo bébé pour la première année : comment l'organiser, quoi photographier, des mises en page qui marchent, des exemples de textes et combien de photos choisir.",
+    crumb: "Idées d'album photo bébé",
     eyebrow: 'Idées',
-    h1: 'Idées de livre photo bébé : 25 façons de raconter la première année',
+    h1: "Idées d'album photo bébé : 25 façons de raconter la première année",
     byline: "Par l'équipe BabyBookAI",
     date: '9 octobre 2026',
-    lead: "Au premier anniversaire, la plupart des parents ont des milliers de photos de leur bébé et aucune idée de par où commencer. Ces idées de livre photo bébé sont celles qui marchent sur papier : comment organiser l'année, quoi photographier tant qu'il est encore temps, des mises en page qui ont l'air conçues et des légendes à emprunter.",
+    lead: "Au premier anniversaire, la plupart des parents ont des milliers de photos de leur bébé et aucune idée de par où commencer. Ces idées d'album photo bébé sont celles qui marchent sur papier : comment organiser l'année, quoi photographier tant qu'il est encore temps, des mises en page qui ont l'air conçues et des légendes à emprunter.",
     tocTitle: 'Dans cet article',
     toc: {
-      organize: 'Façons d’organiser le livre',
+      organize: 'Façons d’organiser l’album',
       photograph: 'Quoi photographier tant qu’il est temps',
       layout: 'Idées de pages et de mise en page',
-      captions: 'Idées de légendes',
+      captions: 'Exemples de textes',
       choosing: 'Combien de photos, et lesquelles',
       gifts: 'Idées cadeaux',
     },
     organize: {
-      title: "Façons d'organiser un livre photo bébé",
+      title: "Façons d'organiser un album photo bébé",
       body: "Choisissez un fil conducteur avant de choisir la moindre photo. C'est lui qui décide de ce qui entre dans le livre et de ce qui reste dans le téléphone.",
       items: [
         {
           title: 'Mois par mois',
-          body: "Le livre photo classique de la première année : une double page par mois, dans l'ordre. En le feuilletant, on le voit grandir. Et il règle la question la plus difficile, où va chaque photo, avec sa seule date.",
+          body: "L'album photo classique de la première année : une double page par mois, dans l'ordre. En le feuilletant, on le voit grandir. Et il règle la question la plus difficile, où va chaque photo, avec sa seule date.",
         },
         {
           title: 'Par premières fois',
@@ -596,7 +620,7 @@ export const fr: Copy = {
       figcaption: 'Une grande photo, une grille à côté, rien sur le pli.',
     },
     captions: {
-      title: 'Idées de légendes pour un livre photo bébé',
+      title: 'Exemples de textes pour un album photo bébé',
       body: "Des légendes courtes : une ligne par page. Des dates, des lieux, des surnoms et les détails que vous oublierez (la chanson qui arrêtait les pleurs, le premier mot) valent mieux que de longs paragraphes. Quelques-unes à emprunter :",
       items: [
         'Rêve en grand, petit trésor',
@@ -624,7 +648,7 @@ export const fr: Copy = {
           body: "Une photo enregistrée depuis une app de messagerie est une copie plus petite. Elle s'imprime bien en petit, mais pas en pleine page ni sur la couverture. Si vous avez l'originale, utilisez-la.",
         },
       ],
-      product: `Cette partie, le choix, c'est là que la plupart des livres de bébé s'arrêtent. C'est la partie que ${a('home', 'BabyBookAI')} fait pour vous : il parcourt votre galerie sur votre téléphone, garde la photo la plus nette de chaque moment, classe l'année mois par mois et met le livre en page ; vous n'avez qu'à le feuilleter. Voyez comment se fait le ${a('firstYear', 'livre photo de la première année')}.`,
+      product: `Cette partie, le choix, c'est là que la plupart des albums de bébé s'arrêtent. C'est la partie que ${a('home', 'BabyBookAI')} fait pour vous : il parcourt votre galerie sur votre téléphone, garde la photo la plus nette de chaque moment, classe l'année mois par mois et met le livre en page ; vous n'avez qu'à le feuilleter. Voyez comment se fait l'${a('firstYear', 'album photo de la première année')}.`,
     },
     gifts: {
       title: 'Idées cadeaux',
@@ -638,22 +662,22 @@ export const fr: Copy = {
     },
     box: {
       title: 'Pas beaucoup de soirées libres ?',
-      body: "BabyBookAI transforme les photos déjà dans votre téléphone en un livre à couverture rigide de la première année, en quelques minutes.",
+      body: "BabyBookAI transforme les photos déjà dans votre téléphone en un album photo à couverture rigide de la première année, en quelques minutes.",
     },
-    faqTitle: 'Questions sur le livre photo bébé',
+    faqTitle: "Questions sur l'album photo bébé",
     faq: [
       {
-        question: 'Combien de photos mettre dans un livre photo bébé ?',
+        question: 'Combien de photos mettre dans un album photo bébé ?',
         answer:
           "Pour une première année, 10 à 15 photos par mois fonctionnent bien : 120 à 180 en tout. Un livre de 30 pages en contient environ 150 sans paraître chargé, avec de la place pour une grande photo sur la plupart des doubles pages.",
       },
       {
-        question: 'Que mettre dans le livre photo de la première année de bébé ?',
+        question: "Que mettre dans l'album photo de la première année de bébé ?",
         answer:
           "Le jour de sa naissance, une double page pour chaque mois dans l'ordre, les premières fois que vous avez photographiées (sourire, bain, repas, pas), les personnes qui l'ont tenu dans leurs bras, et un premier anniversaire pour clore l'année. De courtes légendes avec des dates aident plus que de longs textes.",
       },
       {
-        question: "Qu'écrire dans un livre photo bébé ?",
+        question: "Qu'écrire dans un album photo bébé ?",
         answer:
           "Des phrases courtes : une date, un lieu, un surnom, un poids, ou ce que vous aurez oublié dans cinq ans (la chanson qui arrêtait les pleurs, son premier mot). Une ligne par page suffit.",
       },
@@ -666,14 +690,14 @@ export const fr: Copy = {
   },
 
   about: {
-    title: 'À propos de BabyBookAI | Le livre photo bébé qui se fait tout seul',
+    title: "À propos de BabyBookAI | L'album photo de bébé qui se fait tout seul",
     description:
-      "BabyBookAI est une app de Photo-to-Text qui transforme les photos de votre téléphone en livre photo imprimé de la première année de votre bébé. Qui nous sommes et comment nous le faisons.",
+      "BabyBookAI est une app de Photo-to-Text qui transforme les photos de votre téléphone en album photo imprimé de la première année de votre bébé. Qui nous sommes et comment nous le faisons.",
     crumb: 'À propos',
     eyebrow: 'À propos',
-    h1: "Un livre de bébé pour les parents qui n'ont pas le temps d'en faire un",
+    h1: "Un album de bébé pour les parents qui n'ont pas le temps d'en faire un",
     paragraphs: [
-      "Pendant la première année d'un bébé, les parents prennent des milliers de photos. Très peu finissent dans un livre, parce qu'en faire un demande des heures à choisir, trier et placer, avec un bébé à la maison.",
+      "Pendant la première année d'un bébé, les parents prennent des milliers de photos. Très peu finissent dans un album, parce qu'en faire un demande des heures à choisir, trier et placer, avec un bébé à la maison.",
       `${SITE.name} fait ce travail pour vous. Il lit les photos de votre téléphone, garde le meilleur de chaque moment, les classe mois par mois et met en page un livre à couverture rigide. Vous le feuilletez, changez ce que vous voulez, et il est imprimé et livré chez vous.`,
     ],
     beliefsTitle: 'Ce à quoi nous tenons',
@@ -699,11 +723,11 @@ export const fr: Copy = {
       title: `Un produit ${PUBLISHER.name}`,
       body: `${SITE.name} est fait par <a class="lnk-light" href="${PUBLISHER.url}">${PUBLISHER.name}</a>, une petite entreprise qui crée des cadeaux personnalisés à partir de photos. Son logo figure au dos de chaque livre. Questions, idées ou un livre qui n'est pas réussi : écrivez à <a class="lnk-light" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>.`,
     },
-    more: `Voyez le ${a('babyPhotoBook', 'livre photo bébé')}, lisez la ${a('privacy', 'politique de confidentialité')} ou trouvez de l'aide sur la ${a('support', "page d'aide")}.`,
+    more: `Voyez l'${a('babyPhotoBook', 'album photo bébé')}, lisez la ${a('privacy', 'politique de confidentialité')} ou trouvez de l'aide sur la ${a('support', "page d'aide")}.`,
   },
 
   support: {
-    title: 'Aide BabyBookAI | Questions sur votre livre photo bébé',
+    title: 'Aide BabyBookAI | Questions sur votre album photo bébé',
     description:
       "Aide pour l'app BabyBookAI et votre commande : trouver les photos, les photos WhatsApp, enregistrer votre livre, prix et livraison, et comment nous joindre.",
     crumb: 'Aide et questions',
@@ -890,7 +914,7 @@ export const fr: Copy = {
 
   notFound: {
     title: 'Page introuvable | BabyBookAI',
-    description: "Cette page n'existe pas. Retrouvez le livre photo bébé BabyBookAI à partir d'ici.",
+    description: "Cette page n'existe pas. Retrouvez l'album photo bébé BabyBookAI à partir d'ici.",
     h1: "Cette page s'est égarée",
     body: 'Le lien est peut-être ancien. Voici de bons points de départ :',
   },
