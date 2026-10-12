@@ -247,7 +247,7 @@ export const es: Copy = {
     personal: {
       eyebrow: 'Personalizado',
       title: 'Un álbum de fotos del bebé personalizado, sin la parte pesada',
-      body: 'Un fotolibro personalizado suele significar una tarde entera en un editor. Aquí las fotos ya están colocadas, así que hacerlo tuyo son unos pocos toques.',
+      body: 'Un álbum de bebé personalizado suele significar una tarde entera en un editor. Aquí las fotos ya están colocadas, así que hacerlo tuyo son unos pocos toques.',
       items: [
         { title: 'Su nombre en la portada', body: 'Y las fechas que elijas: desde el día en que nació o desde el día que quieras, para 6, 12 o 18 meses.' },
         { title: 'Tres tonos de papel', body: 'Crema clásico, rosa suave o azul suave. Toda la página toma el tono, no solo el borde.' },
@@ -323,7 +323,7 @@ export const es: Copy = {
   firstYear: {
     title: 'Álbum del primer año del bebé, mes a mes y ya hecho | BabyBookAI',
     description:
-      'El álbum del primer año de tu bebé, mes a mes, hecho con las fotos que ya tienes en el móvil. Sin rellenar nada cada semana: BabyBookAI elige, ordena y maqueta todo el año.',
+      'El álbum del primer año de tu bebé, mes a mes: un libro del primer año hecho con las fotos que ya tienes en el móvil. BabyBookAI las elige, las ordena y las maqueta por ti.',
     crumb: 'Álbum del primer año',
     eyebrow: 'Álbum del primer año del bebé',
     h1: 'Álbum del primer año de tu bebé, mes a mes y ya hecho',
@@ -350,7 +350,7 @@ export const es: Copy = {
       ],
     },
     unfinished: {
-      title: 'Por qué casi ningún álbum del primer año se termina',
+      title: 'Por qué casi ningún libro del primer año del bebé se termina',
       paragraphs: [
         'Un álbum para pegar fotos o un libro del bebé para rellenar te piden imprimir, pegar y escribir cada mes. Una app de libro semanal te pide unos minutos cada semana, cincuenta y dos semanas seguidas. Ninguna de las dos parece mucho, hasta que llega el quinto mes, duermes a turnos de dos horas y el libro va tres semanas atrasado.',
         'Las fotos, en cambio, siguieron llegando. Nunca dejaste de hacerlas. BabyBookAI empieza ahí: cuando acaba el año, revisa tu galería y hace el álbum con lo que ya tienes. Tu parte lleva minutos, una vez.',
