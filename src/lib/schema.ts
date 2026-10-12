@@ -21,6 +21,12 @@ export const APP_ID = `${SITE.url}/#app`;
 export const BOOK_ID = `${SITE.url}/#book`;
 
 const abs = (path: string) => new URL(path, SITE.url).href;
+const days = ([minValue, maxValue]: readonly number[]) => ({
+  '@type': 'QuantitativeValue',
+  minValue,
+  maxValue,
+  unitCode: 'DAY',
+});
 
 export function organization(lang: Lang): SchemaNode {
   return {
@@ -143,7 +149,22 @@ export function photoBook(lang: Lang): SchemaNode {
         '@type': 'OfferShippingDetails',
         shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: offer.currency },
         shippingDestination: { '@type': 'DefinedRegion', addressCountry: c },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: days(BOOK.handlingDays),
+          transitTime: days(BOOK.transitDays),
+        },
       })),
+      // A book made for one family is not taken back for a change of mind
+      // (the terms page). One that arrives damaged or misprinted is reprinted
+      // or refunded on a photo of it: a remedy, not a return, which this
+      // vocabulary has no word for, so the terms page is linked.
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: offer.countries,
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+        merchantReturnLink: abs(path('terms', lang)),
+      },
     })),
   };
 }

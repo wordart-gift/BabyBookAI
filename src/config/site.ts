@@ -43,6 +43,13 @@ export const BOOK = {
   pagesMax: 40,
   /** The setup offers these lengths; the start date is the parent's. */
   monthsOptions: [6, 12, 18],
+  /**
+   * Days from payment to the press handing the book over, and from there to
+   * the door, as [fewest, most] (Carlos, Oct 2026; the same in all 16
+   * countries). Google may show them beside the price: keep them true.
+   */
+  handlingDays: [1, 2],
+  transitDays: [3, 4],
 } as const;
 
 /**
