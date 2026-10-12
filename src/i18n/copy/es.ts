@@ -4,8 +4,12 @@ import type { Copy } from './en';
 
 /**
  * Español de España, con tú, como la app (librofotos lib/l10n/app_es.arb).
- * La palabra que se busca es "fotolibro" (Keyword Tool, España, oct 2026):
- * encabeza títulos y H1; "álbum de fotos" va en el texto.
+ * La palabra que se busca es «álbum» (Semrush, España, oct 2026; los datos
+ * están en docs/keywords/es): «álbum bebé primer año» y «álbum de fotos bebé»
+ * encabezan títulos y H1. «Fotolibro» casi no se busca junto a «bebé»: queda
+ * como sinónimo ocasional, y «libro» como forma corriente de llamar al álbum
+ * dentro del texto. «Álbum» nombra también el álbum vacío de pegar fotos, así
+ * que cada página dice pronto que este llega impreso y ya maquetado.
  */
 const a = linker('es');
 const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>`;
@@ -15,22 +19,22 @@ export const es: Copy = {
     skip: 'Ir al contenido',
     homeAria: `${SITE.name}, inicio`,
     mainNav: 'Principal',
-    nav: { babyPhotoBook: 'Fotolibro del bebé', firstYear: 'Su primer año' },
+    nav: { babyPhotoBook: 'Álbum del bebé', firstYear: 'Su primer año' },
     getApp: 'Descargar',
     language: 'Idioma',
     breadcrumb: 'Ruta de navegación',
     home: 'Inicio',
     footer: {
-      tagline: 'El primer año de tu bebé, convertido en un libro para ti.',
+      tagline: 'El primer año de tu bebé, convertido en un álbum para ti.',
       productOf: 'Un producto de',
-      book: 'El libro',
+      book: 'El álbum',
       company: 'Empresa',
       links: {
-        babyPhotoBook: 'Fotolibro del bebé',
-        firstYear: 'Fotolibro del primer año',
+        babyPhotoBook: 'Álbum de fotos del bebé',
+        firstYear: 'Álbum del primer año',
         boy: 'Álbum de fotos de bebé niño',
         girl: 'Álbum de fotos de bebé niña',
-        ideas: 'Ideas para el fotolibro del bebé',
+        ideas: 'Ideas para el álbum del bebé',
         about: 'Sobre nosotros',
         support: 'Ayuda y preguntas',
         privacy: 'Privacidad',
@@ -39,10 +43,10 @@ export const es: Copy = {
       rights: 'Todos los derechos reservados.',
     },
     closing: {
-      title: 'Haz el libro en minutos. Guárdalo para siempre.',
+      title: 'Haz el álbum en minutos. Guárdalo para siempre.',
       body: 'Descarga BabyBookAI, dale el nombre de tu bebé y las fechas, y verás su primer año maquetado antes de que se te enfríe el café.',
     },
-    free: 'Descarga gratis. Solo pagas el libro impreso.',
+    free: 'Descarga gratis. Solo pagas el álbum impreso.',
     badges: {
       aria: `Descargar ${SITE.name}`,
       appStore: 'Descárgalo en el App Store',
@@ -69,7 +73,7 @@ export const es: Copy = {
         },
         {
           title: 'Hojea, cambia y pide',
-          body: 'El libro sale maquetado. Cambia la foto que no te convenza, retoca los textos si quieres, y el libro de tapa dura se imprime y te llega a casa.',
+          body: 'El álbum sale maquetado. Cambia la foto que no te convenza, retoca los textos si quieres, y se imprime en tapa dura y te llega a casa.',
         },
       ],
     },
@@ -82,8 +86,8 @@ export const es: Copy = {
     stork: 'Una cigüeña que lleva un hatillo',
     spreadMonth: 'Primer mes',
     defaultDescription:
-      'BabyBookAI convierte las fotos que ya tienes en el móvil en un fotolibro de tapa dura del primer año de tu bebé. Elige, ordena y maqueta las fotos por ti.',
-    ogImageAlt: 'BabyBookAI: un fotolibro impreso del primer año de un bebé',
+      'BabyBookAI convierte las fotos que ya tienes en el móvil en un álbum impreso de tapa dura del primer año de tu bebé. Elige, ordena y maqueta las fotos por ti.',
+    ogImageAlt: 'BabyBookAI: un álbum impreso del primer año de un bebé',
     /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
     spreadAlt:
       'Una doble página de BabyBookAI, «Primer mes»: siete fotos de una bebé con su familia y sus abuelos',
@@ -99,11 +103,11 @@ export const es: Copy = {
         'Elige las fotos en el móvil: solo el libro terminado se envía a imprimir',
         'Se queda con la foto más nítida de cada momento y descarta duplicados y ráfagas',
         'Ordena las fotos mes a mes por la fecha en que se hizo cada una',
-        `Maqueta un libro cuadrado de tapa dura de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas`,
+        `Maqueta un álbum cuadrado de tapa dura de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas`,
         'Envía el libro a imprimir y te lo manda a casa',
       ],
-      bookName: 'Fotolibro del bebé BabyBookAI',
-      bookDescription: `Un fotolibro cuadrado de tapa dura de 28 × 28 cm del primer año de un bebé, de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas en papel satinado de 170 g, hecho por la app BabyBookAI con las fotos de tu móvil.`,
+      bookName: 'Álbum de fotos del bebé BabyBookAI',
+      bookDescription: `Un álbum de fotos cuadrado de tapa dura de 28 × 28 cm del primer año de un bebé, de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas en papel satinado de 170 g, hecho por la app BabyBookAI con las fotos de tu móvil.`,
       pages: 'Páginas',
       binding: 'Encuadernación',
       bindingValue: 'Tapa dura',
@@ -111,15 +115,15 @@ export const es: Copy = {
   },
 
   home: {
-    title: 'BabyBookAI — El fotolibro del bebé que se hace solo',
+    title: 'BabyBookAI — El álbum de tu bebé que se hace solo',
     description:
-      'El primer año de tu bebé en un fotolibro impreso de tapa dura, hecho con las fotos que ya tienes en el móvil. BabyBookAI las elige, las ordena y las maqueta por ti.',
-    eyebrow: 'Fotolibro del primer año del bebé',
-    h1: 'El libro del bebé que se hace solo',
-    lead: 'Revisa la galería de tu móvil, elige las mejores fotos de cada mes y maqueta un libro de tapa dura. Tú lo hojeas, cambias lo que no te convenza, y en camino.',
+      'El primer año de tu bebé en un álbum de fotos impreso, de tapa dura, hecho con las fotos que ya tienes en el móvil. BabyBookAI las elige, las ordena y las maqueta por ti.',
+    eyebrow: 'Álbum del primer año del bebé',
+    h1: 'El álbum de tu bebé que se hace solo',
+    lead: 'Revisa la galería de tu móvil, elige las mejores fotos de cada mes y maqueta un álbum de tapa dura. Tú lo hojeas, cambias lo que no te convenza, y te llega impreso a casa.',
     homework: {
-      title: 'Todo libro del bebé es deberes. Menos este.',
-      body: 'Las fotos ya las hiciste: cientos, cada mes. Convertirlas en un libro es la parte para la que nadie tiene tiempo con un bebé en casa.',
+      title: 'Todo álbum del bebé es deberes. Menos este.',
+      body: 'Las fotos ya las hiciste: cientos, cada mes. Convertirlas en un álbum es la parte para la que nadie tiene tiempo con un bebé en casa.',
       yourPart: 'Tu parte',
       ways: [
         { name: 'Un libro del bebé para rellenar', effort: 'Imprimir, recortar, pegar y escribir, cada mes', verdict: 'Casi todos lo dejan hacia el tercer mes.' },
@@ -128,8 +132,8 @@ export const es: Copy = {
       ],
     },
     book: {
-      eyebrow: 'El libro',
-      title: 'Un libro de tapa dura de verdad, hecho para guardarlo',
+      eyebrow: 'El álbum',
+      title: 'Un álbum de tapa dura de verdad, hecho para guardarlo',
       body: 'El nombre de tu bebé y su mejor foto en la portada. El día que nació en la primera página. Después, una doble página para cada mes, en el orden en que pasó, cada una maquetada para las fotos que lleva, hasta su primer cumpleaños.',
       specs: [
         { label: 'Tamaño', value: '{size}, cuadrado' },
@@ -139,7 +143,7 @@ export const es: Copy = {
         { label: 'Maquetación', value: 'Una doble página por mes' },
         { label: 'Envíos a', value: '16 países' },
       ],
-      more: 'Ver el fotolibro del bebé en detalle',
+      more: 'Ver el álbum de fotos del bebé en detalle',
     },
     privacy: {
       title: 'Las fotos de tu bebé no salen de tu móvil',
@@ -148,14 +152,14 @@ export const es: Copy = {
     birthday: {
       title: 'Listo para su primer cumpleaños',
       body: 'Acaba el año y el libro está hecho. Pídelo la semana de la fiesta, o haz otro para los abuelos. Su regalo favorito es el que tiene al bebé dentro.',
-      more: 'Cómo funciona el fotolibro del primer año',
+      more: 'Cómo funciona el álbum del primer año',
     },
     faqTitle: 'Lo que preguntan los padres',
     faq: [
       {
         question: '¿Qué es BabyBookAI?',
         answer:
-          'BabyBookAI es una app que convierte las fotos que ya tienes en el móvil en un fotolibro impreso de tapa dura del primer año de tu bebé. Elige las fotos, las ordena mes a mes y maqueta cada página por ti. La app es gratis: solo pagas el libro impreso.',
+          'BabyBookAI es una app que convierte las fotos que ya tienes en el móvil en un álbum impreso de tapa dura del primer año de tu bebé. Elige las fotos, las ordena mes a mes y maqueta cada página por ti. La app es gratis: solo pagas el álbum impreso.',
       },
       {
         question: '¿Cómo elige BabyBookAI las fotos?',
@@ -173,8 +177,8 @@ export const es: Copy = {
           'Sí. Hojeas el libro en el móvil y cambias cualquier foto que no te convenza. También puedes editar los textos de cada página y añadir una nota tuya.',
       },
       {
-        question: '¿Cómo es el libro?',
-        answer: `Un libro cuadrado de tapa dura de {size}, con cubierta mate y de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas en papel satinado de 170 g. El nombre de tu bebé y su mejor foto van en la portada, la fecha de nacimiento abre el libro y cada mes tiene su propia doble página.`,
+        question: '¿Cómo es el álbum?',
+        answer: `Un álbum cuadrado de tapa dura de {size}, con cubierta mate y de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas en papel satinado de 170 g. El nombre de tu bebé y su mejor foto van en la portada, la fecha de nacimiento abre el libro y cada mes tiene su propia doble página.`,
       },
       {
         question: '¿Y si algunas fotos están en WhatsApp o en iCloud?',
@@ -188,7 +192,7 @@ export const es: Copy = {
       },
       {
         question: '¿Cuánto cuesta?',
-        answer: `La app es gratis, y hacer el libro y hojearlo también. Solo pagas cuando pides el libro impreso de tapa dura: {price} por ${BOOK.pagesMin} páginas, envío incluido, y páginas extra hasta ${BOOK.pagesMax} con un coste adicional. Ves el precio final antes de pagar.`,
+        answer: `La app es gratis, y hacer el libro y hojearlo también. Solo pagas cuando pides el álbum impreso de tapa dura: {price} por ${BOOK.pagesMin} páginas, envío incluido, y páginas extra hasta ${BOOK.pagesMax} con un coste adicional. Ves el precio final antes de pagar.`,
       },
       {
         question: '¿Está para iPhone y para Android?',
@@ -199,12 +203,12 @@ export const es: Copy = {
   },
 
   babyPhotoBook: {
-    title: 'Fotolibro del bebé hecho con las fotos de tu móvil | BabyBookAI',
-    description: `Un fotolibro del bebé de tapa dura hecho para ti: BabyBookAI elige las mejores fotos de tu móvil, las ordena por meses y maqueta cada página. {size}, de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas.`,
-    crumb: 'Fotolibro del bebé',
-    eyebrow: 'Fotolibro del bebé',
-    h1: 'Fotolibro del bebé, hecho con las fotos de tu móvil',
-    lead: 'BabyBookAI encuentra las mejores fotos de tu bebé en tu móvil, las ordena mes a mes y maqueta un libro cuadrado de tapa dura. Sin subir nada, sin arrastrar fotos a plantillas. Tú solo lo hojeas.',
+    title: 'Álbum de fotos del bebé, hecho con tu móvil | BabyBookAI',
+    description: `Un álbum de fotos del bebé que llega impreso y ya maquetado: BabyBookAI elige las mejores fotos de tu móvil y las ordena por meses. Tapa dura, {size}, ${BOOK.pagesMin}–${BOOK.pagesMax} páginas.`,
+    crumb: 'Álbum de fotos del bebé',
+    eyebrow: 'Álbum de fotos del bebé',
+    h1: 'Álbum de fotos del bebé, hecho con las fotos de tu móvil',
+    lead: 'BabyBookAI encuentra las mejores fotos de tu bebé en tu móvil, las ordena mes a mes y maqueta un álbum cuadrado de tapa dura que te llega impreso a casa. No hay que pegar fotos ni arrastrarlas a plantillas, y no se sube nada para elegirlas. Tú solo lo hojeas.',
     features: {
       title: 'Todo lo que debe ser un álbum de fotos del bebé. Sin el trabajo.',
       items: [
@@ -226,9 +230,9 @@ export const es: Copy = {
         },
       ],
     },
-    howTitle: 'Cómo hacer un fotolibro del bebé en tres pasos',
+    howTitle: 'Cómo hacer un álbum de fotos del bebé en tres pasos',
     inside: {
-      eyebrow: 'Dentro del libro',
+      eyebrow: 'Dentro del álbum',
       title: 'Del día en que nació a su primer cumpleaños',
       tour: [
         { label: 'La portada', body: 'El nombre de tu bebé y la mejor foto del año, elegida entre las que más te gustaron y más compartiste.' },
@@ -255,9 +259,9 @@ export const es: Copy = {
       colors: `¿Buscas colores? Mira el ${a('girl', 'álbum de fotos de bebé niña')} y el ${a('boy', 'álbum de fotos de bebé niño')}.`,
     },
     specs: {
-      title: 'El libro, en detalle',
+      title: 'El álbum, en detalle',
       items: [
-        { label: 'Formato', value: 'Fotolibro cuadrado de tapa dura' },
+        { label: 'Formato', value: 'Álbum de fotos impreso (fotolibro), cuadrado y de tapa dura' },
         { label: 'Tamaño', value: '{size}' },
         { label: 'Páginas', value: `De ${BOOK.pagesMin} a ${BOOK.pagesMax}, una doble página por mes` },
         { label: 'Papel', value: 'Papel satinado de 170 g, impreso a todo color' },
@@ -267,22 +271,27 @@ export const es: Copy = {
     },
     gift: {
       title: 'El regalo que piden los abuelos',
-      body: 'Un móvil lleno de fotos no se puede ir pasando por la mesa. Un fotolibro del bebé, sí. Es el regalo para un primer cumpleaños, para el Día de la Madre o del Padre, y el que los abuelos dejan en la mesa del salón.',
+      body: 'Un móvil lleno de fotos no se puede ir pasando por la mesa. Un álbum de fotos del bebé, sí. Es el regalo para un primer cumpleaños, para el Día de la Madre o del Padre, y el que los abuelos dejan en la mesa del salón.',
     },
     why: {
-      title: 'Por qué un fotolibro del bebé, si las fotos ya están en el móvil',
+      title: 'Por qué un álbum de fotos del bebé, si las fotos ya están en el móvil',
       paragraphs: [
         'En el primer año de un bebé, los padres hacen cientos de fotos al mes. Viven en la galería, entre capturas de pantalla y tiques, y pasan de largo al hacer scroll. Un álbum de fotos del bebé es lo contrario: unas pocas de las mejores, en orden, en papel, en un libro que cualquiera puede coger.',
         'Lo difícil nunca ha sido imprimir. Son las horas de elegir: cuál de las cuarenta fotos del baño, a qué mes pertenece esa foto, cómo encajar una foto vertical junto a una horizontal. Ahí es donde se atascan la mayoría de los álbumes del bebé, más o menos en el tercer mes.',
-        `BabyBookAI hace esa parte por ti, en tu móvil. Lee las fechas, se queda con la foto más nítida de cada momento, da a cada mes su doble página y maqueta un álbum del bebé que parece diseñado, no volcado. Lo que te queda a ti es la parte bonita: hojearlo. Si quieres el primer año entero, del hospital a la tarta, mira el ${a('firstYear', 'fotolibro del primer año del bebé')}.`,
+        `BabyBookAI hace esa parte por ti, en tu móvil. Lee las fechas, se queda con la foto más nítida de cada momento, da a cada mes su doble página y maqueta un álbum del bebé que parece diseñado, no volcado. Lo que te queda a ti es la parte bonita: hojearlo. Si quieres el primer año entero, del hospital a la tarta, mira el ${a('firstYear', 'álbum del primer año del bebé')}.`,
       ],
     },
-    faqTitle: 'Preguntas sobre el fotolibro del bebé',
+    faqTitle: 'Preguntas sobre el álbum de fotos del bebé',
     faq: [
       {
-        question: '¿De qué tamaño es el fotolibro del bebé?',
+        question: '¿Es un álbum para pegar las fotos?',
         answer:
-          'Es un libro cuadrado de tapa dura de {size}. El formato cuadrado es el único en el que caben las fotos verticales y las horizontales del móvil sin recortar mal ninguna.',
+          'No. Es un álbum impreso: las fotos van impresas en las páginas, ya colocadas y maquetadas, como en un fotolibro. No hay fundas ni nada que pegar.',
+      },
+      {
+        question: '¿De qué tamaño es el álbum de fotos del bebé?',
+        answer:
+          'Es un álbum cuadrado de tapa dura de {size}. El formato cuadrado es el único en el que caben las fotos verticales y las horizontales del móvil sin recortar mal ninguna.',
       },
       {
         question: '¿Cuántas páginas tiene?',
@@ -294,7 +303,7 @@ export const es: Copy = {
           'Cada foto solo se coloca donde tiene píxeles suficientes para imprimirse bien. Una copia pequeña, como una guardada de un chat, va en un hueco más pequeño de la página en lugar de ocupar una página entera o la portada.',
       },
       {
-        question: '¿Puedo personalizar el libro?',
+        question: '¿Puedo personalizar el álbum?',
         answer:
           'Sí. El nombre de tu bebé va en la portada, tú eliges las fechas y puedes escoger papel rosa suave, azul suave o crema clásico. Cada página trae frases cortas que puedes reescribir, y puedes añadir tu propia nota donde quieras.',
       },
@@ -312,17 +321,17 @@ export const es: Copy = {
   },
 
   firstYear: {
-    title: 'Fotolibro del primer año del bebé que no tienes que hacer | BabyBookAI',
+    title: 'Álbum del primer año del bebé, mes a mes y ya hecho | BabyBookAI',
     description:
-      'Un fotolibro del primer año del bebé, mes a mes, hecho con las fotos que ya tienes en el móvil. Sin subir fotos cada semana: BabyBookAI elige, ordena y maqueta todo el año.',
-    crumb: 'Fotolibro del primer año',
-    eyebrow: 'Fotolibro del primer año del bebé',
-    h1: 'El fotolibro del primer año del bebé que no tienes que hacer',
-    lead: 'Doce meses, una doble página para cada uno, del hospital a la tarta. BabyBookAI lo hace con las fotos que ya tienes en el móvil, así que durante el año no tienes que ir al día con nada.',
+      'El álbum del primer año de tu bebé, mes a mes, hecho con las fotos que ya tienes en el móvil. Sin rellenar nada cada semana: BabyBookAI elige, ordena y maqueta todo el año.',
+    crumb: 'Álbum del primer año',
+    eyebrow: 'Álbum del primer año del bebé',
+    h1: 'Álbum del primer año de tu bebé, mes a mes y ya hecho',
+    lead: 'Doce meses, una doble página para cada uno, del hospital a la tarta. BabyBookAI hace el álbum con las fotos que ya tienes en el móvil y te llega impreso a casa, así que durante el año no tienes que ir al día con nada.',
     months: {
       eyebrow: 'Mes a mes',
-      title: 'Un fotolibro mensual del bebé, sin la sesión de fotos de cada mes',
-      body: 'Sin tarjetas de hitos, sin montar la misma foto en la misma mantita cada mes. El libro sigue las fotos que hiciste igualmente, en el orden en que las hiciste. Cada bebé lleva su propio calendario.',
+      title: 'Un álbum del bebé mes a mes, sin la sesión de fotos de cada mes',
+      body: 'Sin tarjetas de hitos, sin montar la misma foto en la misma mantita cada mes. El álbum sigue las fotos que hiciste igualmente, en el orden en que las hiciste. Cada bebé lleva su propio calendario.',
       items: [
         { n: 'Página 1', moment: 'El día en que nació' },
         { n: 'Mes 1', moment: 'La llegada a casa' },
@@ -341,10 +350,10 @@ export const es: Copy = {
       ],
     },
     unfinished: {
-      title: 'Por qué casi ningún libro del primer año se termina',
+      title: 'Por qué casi ningún álbum del primer año se termina',
       paragraphs: [
-        'Un libro del bebé para rellenar te pide imprimir, pegar y escribir cada mes. Una app de libro semanal te pide unos minutos cada semana, cincuenta y dos semanas seguidas. Ninguna de las dos parece mucho, hasta que llega el quinto mes, duermes a turnos de dos horas y el libro va tres semanas atrasado.',
-        'Las fotos, en cambio, siguieron llegando. Nunca dejaste de hacerlas. BabyBookAI empieza ahí: cuando acaba el año, revisa tu galería y hace el libro con lo que ya tienes. Tu parte lleva minutos, una vez.',
+        'Un álbum para pegar fotos o un libro del bebé para rellenar te piden imprimir, pegar y escribir cada mes. Una app de libro semanal te pide unos minutos cada semana, cincuenta y dos semanas seguidas. Ninguna de las dos parece mucho, hasta que llega el quinto mes, duermes a turnos de dos horas y el libro va tres semanas atrasado.',
+        'Las fotos, en cambio, siguieron llegando. Nunca dejaste de hacerlas. BabyBookAI empieza ahí: cuando acaba el año, revisa tu galería y hace el álbum con lo que ya tienes. Tu parte lleva minutos, una vez.',
       ],
       compare: [
         { label: 'Libro para rellenar', value: 'Cada mes' },
@@ -352,18 +361,23 @@ export const es: Copy = {
         { label: 'BabyBookAI', value: 'Una vez, en minutos' },
       ],
     },
-    howTitle: 'Cómo se hace el fotolibro del primer año',
+    howTitle: 'Cómo se hace el álbum del primer año',
     birthday: {
       title: 'A tiempo para su primer cumpleaños',
-      body: 'Tú eliges las fechas, así que el libro puede cerrarse la semana de la fiesta o el día después. Los meses con pocas fotos no son problema: la maqueta sigue a las fotos, y un mes con una sola gran foto tiene una página hecha para una. ¿Quieres ir más allá del primer año? Un libro puede abarcar hasta 18 meses.',
-      more: 'Ver el fotolibro del bebé en detalle',
+      body: 'Tú eliges las fechas, así que el álbum puede cerrarse la semana de la fiesta o el día después. Los meses con pocas fotos no son problema: la maqueta sigue a las fotos, y un mes con una sola gran foto tiene una página hecha para una. ¿Quieres ir más allá del primer año? Un libro puede abarcar hasta 18 meses.',
+      more: 'Ver el álbum de fotos del bebé en detalle',
     },
-    faqTitle: 'Preguntas sobre el fotolibro del primer año',
+    faqTitle: 'Preguntas sobre el álbum del primer año',
     faq: [
       {
-        question: '¿Cuándo debería hacer el fotolibro del primer año?',
+        question: '¿Cuándo debería hacer el álbum del primer año?',
         answer:
-          'Cuando quieras después del primer cumpleaños, o antes si quieres el libro para la fiesta: tú eliges las fechas que abarca. Como BabyBookAI lee las fotos que ya tienes, durante el año no hay nada que llevar al día.',
+          'Cuando quieras después del primer cumpleaños, o antes si quieres el álbum para la fiesta: tú eliges las fechas que abarca. Como BabyBookAI lee las fotos que ya tienes, durante el año no hay nada que llevar al día.',
+      },
+      {
+        question: '¿Es un álbum para rellenar a mano?',
+        answer:
+          'No. El álbum del primer año de BabyBookAI llega impreso y terminado: las fotos ya van colocadas en sus páginas, mes a mes. Solo escribes si quieres cambiar una frase o añadir una nota tuya.',
       },
       {
         question: '¿Y si de algunos meses tengo pocas fotos?',
@@ -417,7 +431,7 @@ export const es: Copy = {
     details: {
       title: 'Un recuerdo hecho para tocarlo',
       body: `Un libro cuadrado de tapa dura de {size}, con cubierta mate y de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas en papel satinado de 170 g, por {price} con envío incluido. Cuadrado, porque así caben sus fotos verticales y horizontales sin recortar mal ninguna.`,
-      more: `¿Prefieres azul o crema? Mira el ${a('boy', 'álbum de fotos de bebé niño')}, o todo sobre el ${a('babyPhotoBook', 'fotolibro del bebé')}.`,
+      more: `¿Prefieres azul o crema? Mira el ${a('boy', 'álbum de fotos de bebé niño')}, o todo sobre el ${a('babyPhotoBook', 'álbum de fotos del bebé')}.`,
     },
     faqTitle: 'Preguntas sobre el álbum de fotos de bebé niña',
     faq: [
@@ -474,7 +488,7 @@ export const es: Copy = {
     details: {
       title: 'El álbum en sí',
       body: `Un libro cuadrado de tapa dura de {size}, cubierta mate, de ${BOOK.pagesMin} a ${BOOK.pagesMax} páginas en papel satinado de 170 g. {price} con envío incluido, impreso bajo pedido y enviado a tu casa. Cada foto va solo donde tiene píxeles para imprimirse nítida, así que una copia pequeña de un chat nunca acaba en la portada.`,
-      more: `¿Lo haces para una hija? Mira el ${a('girl', 'álbum de fotos de bebé niña')}. Para todo el año, mes a mes, mira el ${a('firstYear', 'fotolibro del primer año')}.`,
+      more: `¿Lo haces para una hija? Mira el ${a('girl', 'álbum de fotos de bebé niña')}. Para todo el año, mes a mes, mira el ${a('firstYear', 'álbum del primer año')}.`,
     },
     faqTitle: 'Preguntas sobre el álbum de fotos de bebé niño',
     faq: [
@@ -502,19 +516,19 @@ export const es: Copy = {
   },
 
   ideas: {
-    title: 'Ideas para el fotolibro del bebé: 25 formas de contar su primer año | BabyBookAI',
-    headline: 'Ideas para el fotolibro del bebé: 25 formas de contar su primer año',
+    title: 'Ideas para el álbum del bebé: 25 formas de contar su primer año | BabyBookAI',
+    headline: 'Ideas para el álbum del bebé: 25 formas de contar su primer año',
     description:
-      'Ideas para el fotolibro del bebé y su primer año: cómo organizarlo, qué fotografiar, maquetas que funcionan, frases para copiar y cuántas fotos elegir.',
-    crumb: 'Ideas para el fotolibro',
+      'Ideas para el álbum del bebé y su primer año: cómo organizarlo, qué fotografiar, maquetas que funcionan, frases para copiar y cuántas fotos elegir.',
+    crumb: 'Ideas para el álbum',
     eyebrow: 'Ideas',
-    h1: 'Ideas para el fotolibro del bebé: 25 formas de contar su primer año',
+    h1: 'Ideas para el álbum del bebé: 25 formas de contar su primer año',
     byline: 'Por el equipo de BabyBookAI',
     date: '9 de octubre de 2026',
-    lead: 'Al llegar el primer cumpleaños, casi todos los padres tienen miles de fotos de su bebé y ni idea de por dónde empezar. Estas ideas para el fotolibro del bebé son las que funcionan en papel: cómo organizar el año, qué fotografiar mientras aún hay tiempo, maquetas que parecen diseñadas y frases que puedes tomar prestadas.',
+    lead: 'Al llegar el primer cumpleaños, casi todos los padres tienen miles de fotos de su bebé y ni idea de por dónde empezar. Estas ideas para el álbum del bebé son las que funcionan en papel: cómo organizar el año, qué fotografiar mientras aún hay tiempo, maquetas que parecen diseñadas y frases que puedes tomar prestadas.',
     tocTitle: 'En este artículo',
     toc: {
-      organize: 'Formas de organizar el libro',
+      organize: 'Formas de organizar el álbum',
       photograph: 'Qué fotografiar mientras hay tiempo',
       layout: 'Ideas de páginas y maquetación',
       captions: 'Ideas de frases',
@@ -522,12 +536,12 @@ export const es: Copy = {
       gifts: 'Ideas para regalar',
     },
     organize: {
-      title: 'Formas de organizar un fotolibro del bebé',
-      body: 'Elige un hilo para el libro antes de escoger una sola foto. Decide qué entra y qué se queda en el móvil.',
+      title: 'Formas de organizar un álbum de fotos del bebé',
+      body: 'Elige un hilo para el álbum antes de escoger una sola foto. Decide qué entra y qué se queda en el móvil.',
       items: [
         {
           title: 'Mes a mes',
-          body: 'El fotolibro clásico del primer año: una doble página por mes, en el orden en que pasó. Al hojearlo, lo ves crecer. Además resuelve la pregunta más difícil, dónde va cada foto, solo con su fecha.',
+          body: 'El álbum clásico del primer año: una doble página por mes, en el orden en que pasó. Al hojearlo, lo ves crecer. Además resuelve la pregunta más difícil, dónde va cada foto, solo con su fecha.',
         },
         {
           title: 'Por primeras veces',
@@ -596,7 +610,7 @@ export const es: Copy = {
       figcaption: 'Una foto grande, una cuadrícula al lado, nada cruzando el pliegue.',
     },
     captions: {
-      title: 'Ideas de frases para el fotolibro del bebé',
+      title: 'Ideas de frases para el álbum del bebé',
       body: 'Frases cortas: una línea por página. Fechas, lugares, apodos y los detalles que vas a olvidar (la canción que paraba el llanto, la primera palabra) valen más que párrafos largos. Algunas para tomar prestadas:',
       items: [
         'Sueña en grande, pequeño amor',
@@ -616,7 +630,7 @@ export const es: Copy = {
       tips: [
         {
           lead: 'Apunta a entre 10 y 15 al mes.',
-          body: 'Un fotolibro del primer año de 30 páginas lleva unas 150 fotos con holgura. En un año real que revisamos, se eligieron 225 fotos de 5.450.',
+          body: 'Un álbum del primer año de 30 páginas lleva unas 150 fotos con holgura. En un año real que revisamos, se eligieron 225 fotos de 5.450.',
         },
         { lead: 'Quédate con una de cada momento.', body: 'El móvil hace ráfagas; el libro necesita el fotograma más nítido, no los doce.' },
         {
@@ -624,7 +638,7 @@ export const es: Copy = {
           body: 'Una foto guardada de una app de mensajería es una copia más pequeña. Se imprime bien en pequeño, pero no a página completa ni en la portada. Si tienes la original, usa esa.',
         },
       ],
-      product: `Esta parte, la de elegir, es donde se atascan la mayoría de los libros del bebé. Es la parte que ${a('home', 'BabyBookAI')} hace por ti: revisa la galería en tu móvil, se queda con la foto más nítida de cada momento, ordena el año mes a mes y maqueta el libro, así que tú solo lo hojeas. Mira cómo se hace el ${a('firstYear', 'fotolibro del primer año')}.`,
+      product: `Esta parte, la de elegir, es donde se atascan la mayoría de los álbumes del bebé. Es la parte que ${a('home', 'BabyBookAI')} hace por ti: revisa la galería en tu móvil, se queda con la foto más nítida de cada momento, ordena el año mes a mes y maqueta el libro, así que tú solo lo hojeas. Mira cómo se hace el ${a('firstYear', 'álbum del primer año')}.`,
     },
     gifts: {
       title: 'Ideas para regalar',
@@ -638,22 +652,22 @@ export const es: Copy = {
     },
     box: {
       title: '¿Te faltan tardes libres?',
-      body: 'BabyBookAI convierte las fotos que ya tienes en el móvil en un libro de tapa dura del primer año, en minutos.',
+      body: 'BabyBookAI convierte las fotos que ya tienes en el móvil en un álbum de tapa dura del primer año, en minutos.',
     },
-    faqTitle: 'Preguntas sobre el fotolibro del bebé',
+    faqTitle: 'Preguntas sobre el álbum del bebé',
     faq: [
       {
-        question: '¿Cuántas fotos debe tener un fotolibro del bebé?',
+        question: '¿Cuántas fotos debe tener un álbum del bebé?',
         answer:
-          'Para un primer año, entre 10 y 15 fotos al mes funcionan bien: de 120 a 180 en total. Un libro de 30 páginas lleva unas 150 sin parecer abarrotado, con sitio para una foto grande en casi todas las dobles páginas.',
+          'Para un primer año, entre 10 y 15 fotos al mes funcionan bien: de 120 a 180 en total. Un álbum de 30 páginas lleva unas 150 sin parecer abarrotado, con sitio para una foto grande en casi todas las dobles páginas.',
       },
       {
-        question: '¿Qué debe llevar el fotolibro del primer año del bebé?',
+        question: '¿Qué debe llevar el álbum del primer año del bebé?',
         answer:
           'El día en que nació, una doble página para cada mes en orden, las primeras veces que captaste con la cámara (sonrisa, baño, comida, pasos), las personas que lo tuvieron en brazos y un primer cumpleaños para cerrar el año. Las frases cortas con fechas ayudan más que los textos largos.',
       },
       {
-        question: '¿Qué se escribe en un fotolibro del bebé?',
+        question: '¿Qué se escribe en un álbum del bebé?',
         answer:
           'Frases cortas: una fecha, un lugar, un apodo, un peso, o eso que olvidarás en cinco años (la canción que paraba el llanto, su primera palabra). Una línea por página es suficiente.',
       },
@@ -666,15 +680,15 @@ export const es: Copy = {
   },
 
   about: {
-    title: 'Sobre BabyBookAI | El fotolibro del bebé que se hace solo',
+    title: 'Sobre BabyBookAI | El álbum de tu bebé que se hace solo',
     description:
-      'BabyBookAI es una app de Photo-to-Text que convierte las fotos de tu móvil en un fotolibro impreso del primer año de tu bebé. Quiénes somos y cómo lo hacemos.',
+      'BabyBookAI es una app de Photo-to-Text que convierte las fotos de tu móvil en un álbum impreso del primer año de tu bebé. Quiénes somos y cómo lo hacemos.',
     crumb: 'Sobre nosotros',
     eyebrow: 'Sobre nosotros',
-    h1: 'Un libro del bebé para padres sin tiempo para hacerlo',
+    h1: 'Un álbum del bebé para padres sin tiempo para hacerlo',
     paragraphs: [
-      'En el primer año de un bebé, los padres hacen miles de fotos. Muy pocas acaban en un libro, porque hacerlo supone horas de elegir, ordenar y colocar, con un bebé en casa.',
-      `${SITE.name} hace ese trabajo por ti. Lee las fotos de tu móvil, se queda con lo mejor de cada momento, las ordena mes a mes y maqueta un libro de tapa dura. Tú lo hojeas, cambias lo que quieras, y se imprime y te llega a casa.`,
+      'En el primer año de un bebé, los padres hacen miles de fotos. Muy pocas acaban en un álbum, porque hacerlo supone horas de elegir, ordenar y colocar, con un bebé en casa.',
+      `${SITE.name} hace ese trabajo por ti. Lee las fotos de tu móvil, se queda con lo mejor de cada momento, las ordena mes a mes y maqueta un álbum de tapa dura. Tú lo hojeas, cambias lo que quieras, y se imprime y te llega a casa.`,
     ],
     beliefsTitle: 'Lo que defendemos',
     beliefs: [
@@ -691,19 +705,19 @@ export const es: Copy = {
         body: 'Sin recordatorios semanales, sin diarios, sin suscripción. Las fotos ya las hiciste; el libro se hace con ellas, una vez, cuando tú quieras.',
       },
       {
-        title: 'Un libro hecho para durar',
-        body: 'Un libro cuadrado de tapa dura de {size} en papel satinado de 170 g, impreso bajo pedido por nuestro socio de impresión y enviado a tu casa.',
+        title: 'Un álbum hecho para durar',
+        body: 'Un álbum cuadrado de tapa dura de {size} en papel satinado de 170 g, impreso bajo pedido por nuestro socio de impresión y enviado a tu casa.',
       },
     ],
     who: {
       title: `Un producto de ${PUBLISHER.name}`,
       body: `${SITE.name} lo hace <a class="lnk-light" href="${PUBLISHER.url}">${PUBLISHER.name}</a>, una pequeña empresa que hace regalos personalizados con fotos. Su logo va en la contraportada de cada libro. Preguntas, ideas o un libro que no salió bien: escríbenos a <a class="lnk-light" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>.`,
     },
-    more: `Mira el ${a('babyPhotoBook', 'fotolibro del bebé')}, lee la ${a('privacy', 'política de privacidad')} o busca ayuda en la ${a('support', 'página de ayuda')}.`,
+    more: `Mira el ${a('babyPhotoBook', 'álbum de fotos del bebé')}, lee la ${a('privacy', 'política de privacidad')} o busca ayuda en la ${a('support', 'página de ayuda')}.`,
   },
 
   support: {
-    title: 'Ayuda de BabyBookAI | Preguntas sobre tu fotolibro del bebé',
+    title: 'Ayuda de BabyBookAI | Preguntas sobre tu álbum del bebé',
     description:
       'Ayuda con la app BabyBookAI y tu pedido: encontrar las fotos, las fotos de WhatsApp, guardar tu libro, precio y envío, y cómo contactarnos.',
     crumb: 'Ayuda y preguntas',
@@ -713,7 +727,7 @@ export const es: Copy = {
     emailLabel: 'Correo',
     emailNote: '¿Es sobre un pedido? Escríbenos desde el correo con el que lo hiciste, para poder encontrarlo.',
     appTitle: 'La app y tu pedido',
-    bookTitle: 'El libro y cómo se hace',
+    bookTitle: 'El álbum y cómo se hace',
     more: `Más: la ${a('privacy', 'política de privacidad')}, las ${a('terms', 'condiciones')} y ${a('about', 'quiénes somos')}.`,
     faq: [
       {
@@ -829,7 +843,7 @@ export const es: Copy = {
   terms: {
     title: 'Condiciones de uso y de venta | BabyBookAI',
     description:
-      'Las condiciones para usar la app BabyBookAI y pedir un fotolibro del bebé impreso: tus fotos, pedidos y pago, impresión y envío, y libros dañados.',
+      'Las condiciones para usar la app BabyBookAI y pedir un álbum del bebé impreso: tus fotos, pedidos y pago, impresión y envío, y libros dañados.',
     crumb: 'Condiciones',
     eyebrow: 'Condiciones',
     h1: 'Condiciones de uso y de venta',
@@ -890,7 +904,7 @@ export const es: Copy = {
 
   notFound: {
     title: 'Página no encontrada | BabyBookAI',
-    description: 'Esta página no existe. Encuentra aquí el fotolibro del bebé de BabyBookAI.',
+    description: 'Esta página no existe. Encuentra aquí el álbum del bebé de BabyBookAI.',
     h1: 'Esta página se ha perdido',
     body: 'Puede que el enlace sea antiguo. Estos son buenos sitios para empezar:',
   },

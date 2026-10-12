@@ -14,7 +14,10 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 - **Product facts** (printer, format, pages, how photos are picked, privacy):
   the app's `CLAUDE.md` in `C:\Users\X421\proyectos\librofotos`. Read only.
   `src/config/site.ts` mirrors what the site states; keep it in step.
-- **Keyword strategy**: `docs/` (Carlos's research, Sept–Oct 2026).
+- **Keyword strategy**: Carlos's research (Sept–Oct 2026) for the US; per
+  country in `docs/keywords/<lang>/` (Semrush data and what it showed), one
+  language at a time. Spain is done; the others still carry the Play listings'
+  product words.
 
 ## Settled decisions
 
@@ -26,6 +29,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | **Ten languages** (en es fr de it pt nl ja ko zh), English at the root, the rest under `/xx/` with their own slugs. The visitor's country picks the language of the home page on a first visit (never a deep page) and, on every page, the **price and size** the app shows there | Carlos, Oct 2026. Same rules as the app: `lib/order/pricing.dart`, `lib/util/dates.dart` |
 | Size in inches only in US, LR, MM, written `11 × 11″`; everywhere else `28 × 28 cm` | Carlos, Oct 2026; the app's `BookSize` |
 | Legal pages are translated, but the English text applies (`ui.translationNote`) | A lawyer reviews the English; a translation must not become a second contract |
+| Spanish ranks on **"álbum"** (`album bebe primer año`, `album de fotos bebe`, as people type them), not "fotolibro" or "libro del bebé"; each page says early that ours arrives printed and laid out, since "álbum" also names the empty paste-in kind | Semrush, Spain, Oct 2026: "fotolibro bebe" has no searches; a small shop's page with no links ranks first for the first-year term (`docs/keywords/es/`) |
 | Titles, H1s and meta: `[searched keyword] + [what is different]` | Speed and "zero work" are not searched, but they win the click |
 | SEO is a complement; App Store + Meta are the channels | Measured on competitors; build once, keep it small |
 | **No fake social proof**: no ratings, reviews or `aggregateRating` until real ones exist | |

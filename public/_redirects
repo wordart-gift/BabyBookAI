@@ -1,0 +1,10 @@
+# Old addresses of pages whose slug changed. One line per old URL, with and
+# without its trailing slash; 301 so search engines move what they had learnt.
+
+# Spanish, Oct 2026: "fotolibro" gave way to "album" (docs/keywords/es).
+/es/fotolibro-bebe /es/album-fotos-bebe/ 301
+/es/fotolibro-bebe/ /es/album-fotos-bebe/ 301
+/es/fotolibro-primer-ano /es/album-primer-ano-bebe/ 301
+/es/fotolibro-primer-ano/ /es/album-primer-ano-bebe/ 301
+/es/ideas-fotolibro-bebe /es/ideas-album-bebe/ 301
+/es/ideas-fotolibro-bebe/ /es/ideas-album-bebe/ 301

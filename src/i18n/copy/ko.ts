@@ -794,7 +794,7 @@ export const ko: Copy = {
       '이 정보는 주문을 제작하고, 배송하고, 지원하는 데에만 사용해요. 판매하지 않고, 광고에 쓰지 않고, 사진은 책을 인쇄하는 것 외의 목적으로 쓰지 않아요.',
     othersTitle: '그 밖에 처리하는 곳',
     others: [
-      '<strong>Stripe</strong>가 결제를 처리해요(<a class="lnk" href="https://stripe.com/kr/privacy">stripe.com/privacy</a>).',
+      '<strong>Stripe</strong>가 결제를 처리해요(<a class="lnk" href="https://stripe.com/privacy">stripe.com/privacy</a>).',
       '<strong>Gelato</strong>가 책을 인쇄하고 배송해요(<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>).',
       '당사의 주문 서버. 책 파일이 인쇄소에 도착할 때까지 여기에서 기다려요.',
     ],
