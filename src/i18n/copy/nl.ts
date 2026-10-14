@@ -4,7 +4,10 @@ import type { Copy } from './en';
 
 /**
  * Nederlands, met je/jij, zoals de app (librofotos lib/l10n/app_nl.arb). Het
- * gezochte woord is «fotoboek maken» (Keyword Tool, Nederland, okt. 2026).
+ * gezochte woord is «baby fotoboek» (Semrush, Nederland en België, okt. 2026;
+ * de gegevens staan in docs/keywords/nl), met «maken» erbij de haalbaarste.
+ * «Fotoalbum» deelt deels de eerste pagina en staat in de tekst. «Babyboek»
+ * en «invulboek» zijn het boek om in te vullen: niet in titels.
  */
 const a = linker('nl');
 const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>`;
@@ -114,10 +117,10 @@ export const nl: Copy = {
     description:
       'Het eerste jaar van je baby als gedrukt hardcover fotoboek, gemaakt van de foto’s die al op je telefoon staan. BabyBookAI kiest, sorteert en maakt ze voor je op.',
     eyebrow: 'Fotoboek van het eerste jaar van je baby',
-    h1: 'Het babyboek dat zichzelf maakt',
+    h1: 'Het baby-fotoboek dat zichzelf maakt',
     lead: 'Onze eigen AI loopt je galerij langs, kiest voor jou de mooiste foto’s van elke maand en maakt een hardcover boek op. Jij bladert erdoorheen, wisselt een foto voor een andere uit dezelfde maand of haalt hem eruit, en het is onderweg.',
     homework: {
-      title: 'Elk babyboek is huiswerk. Behalve dit.',
+      title: 'Elk babyalbum is huiswerk. Behalve dit.',
       body: 'De foto’s heb je al gemaakt: honderden, elke maand. Er een boek van maken is het deel waar niemand tijd voor heeft met een baby in huis.',
       yourPart: 'Jouw deel',
       ways: [
@@ -199,7 +202,7 @@ export const nl: Copy = {
 
   babyPhotoBook: {
     title: 'Baby-fotoboek maken van de foto’s op je telefoon | BabyBookAI',
-    description: `Een hardcover baby-fotoboek, voor je gemaakt: BabyBookAI kiest de mooiste foto’s op je telefoon, sorteert ze per maand en maakt elke pagina op. {size}, ${BOOK.pagesMin} tot ${BOOK.pagesMax} pagina’s.`,
+    description: `Een baby-fotoalbum dat gedrukt bij je aankomt: BabyBookAI kiest de mooiste foto’s op je telefoon, sorteert ze per maand en maakt een hardcover fotoboek op. {size}.`,
     crumb: 'Baby-fotoboek',
     eyebrow: 'Baby-fotoboek',
     h1: 'Baby-fotoboek maken van de foto’s op je telefoon',
@@ -279,6 +282,11 @@ export const nl: Copy = {
     faqTitle: 'Vragen over het baby-fotoboek',
     faq: [
       {
+        question: 'Is het een fotoalbum om foto’s in te plakken?',
+        answer:
+          'Nee. Het is een gedrukt fotoboek: de foto’s staan op de pagina’s gedrukt, al op hun plek en opgemaakt. Geen insteekhoesjes, niets om in te plakken.',
+      },
+      {
         question: 'Hoe groot is het baby-fotoboek?',
         answer:
           'Het is een vierkant hardcover boek van {size}. Vierkant is de enige vorm waarin staande en liggende telefoonfoto’s allebei passen zonder dat een ervan slecht wordt bijgesneden.',
@@ -311,12 +319,12 @@ export const nl: Copy = {
   },
 
   firstYear: {
-    title: 'Fotoboek van het eerste jaar van je baby, zonder dat jij het hoeft te maken | BabyBookAI',
+    title: 'Fotoboek van baby’s eerste jaar, maand voor maand | BabyBookAI',
     description:
-      'Een fotoboek van het eerste jaar van je baby, maand voor maand, gemaakt van de foto’s die al op je telefoon staan. Niet elke week uploaden: BabyBookAI kiest, sorteert en maakt het hele jaar op.',
+      'Het baby-fotoboek van het eerste jaar, maand voor maand, gemaakt van de foto’s op je telefoon. Niets om in te vullen: BabyBookAI kiest, sorteert en maakt het hele jaar op.',
     crumb: 'Fotoboek eerste jaar',
-    eyebrow: 'Fotoboek van het eerste jaar van je baby',
-    h1: 'Het fotoboek van het eerste jaar dat je niet zelf hoeft te maken',
+    eyebrow: 'Fotoboek baby eerste jaar',
+    h1: 'Het fotoboek van baby’s eerste jaar dat je niet zelf hoeft te maken',
     lead: 'Twaalf maanden, voor elke maand een dubbele pagina, van het ziekenhuis tot de taart. BabyBookAI bouwt het van de foto’s die al op je telefoon staan, dus je hoeft het hele jaar niets bij te houden.',
     months: {
       eyebrow: 'Maand voor maand',
@@ -359,6 +367,11 @@ export const nl: Copy = {
     },
     faqTitle: 'Vragen over het fotoboek van het eerste jaar',
     faq: [
+      {
+        question: 'Is het een invulboek?',
+        answer:
+          'Nee. Het fotoboek van het eerste jaar komt gedrukt en af: de foto’s staan al op hun pagina’s, maand voor maand. Je schrijft alleen als je een zin wilt veranderen of een eigen notitie wilt toevoegen.',
+      },
       {
         question: 'Wanneer moet ik het fotoboek van het eerste jaar maken?',
         answer:
@@ -670,7 +683,7 @@ export const nl: Copy = {
       'BabyBookAI is een app van Photo-to-Text die de foto’s op je telefoon omzet in een gedrukt fotoboek van het eerste jaar van je baby. Wie we zijn en hoe we het maken.',
     crumb: 'Over ons',
     eyebrow: 'Over ons',
-    h1: 'Een babyboek voor ouders die geen tijd hebben om er een te maken',
+    h1: 'Een baby-fotoboek voor ouders die geen tijd hebben om er een te maken',
     paragraphs: [
       'In het eerste jaar van een baby maken ouders duizenden foto’s. Heel weinig daarvan belandt in een boek, omdat er een maken uren kiezen, sorteren en plaatsen betekent, met een baby in huis.',
       `${SITE.name} doet dat werk voor je. De app leest de foto’s op je telefoon, houdt het beste van elk moment, sorteert ze maand voor maand en maakt een hardcover boek op. Jij bladert erdoorheen, verandert wat je wilt, en het wordt gedrukt en bij je thuis bezorgd.`,

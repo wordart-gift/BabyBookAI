@@ -16,7 +16,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
   `src/config/site.ts` mirrors what the site states; keep it in step.
 - **Keyword strategy**: Carlos's research (Sept–Oct 2026) for the US; per
   country in `docs/keywords/<lang>/` (Semrush data and what it showed), one
-  language at a time. English (US, UK), Spain, France, Germany, Italy and Portugal are done; the others still carry the Play listings'
+  language at a time. English (US, UK), Spain, France, Germany, Italy, Portugal and the Netherlands are done; ja, ko and zh still carry the Play listings'
   product words.
 
 ## Settled decisions
@@ -34,6 +34,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | German ranks on **"Fotobuch"**, the only product word whose first page is printers; "Fotoalbum" (more searched, empty paste-in albums) stays in the body, "Babybuch" (books to read, fill-in books) out of titles. The first year is **"mein erstes Jahr"** (`/de/fotobuch-erstes-jahr/`), not "Lebensjahr" | Semrush, Germany and Austria, Oct 2026 (`docs/keywords/de/`). Small shops that rank sit on domains with authority 27–37 |
 | Italian ranks on **"album foto neonato"** ("fotolibro neonato" has 20 searches); "nascita", "ricordi" and "da compilare" name the fill-in book and stay out of titles. The girl page says **"neonata"** (260 against 90 for "bambina"); the ideas article keeps "fotolibro", the only form searched there | Semrush, Italy, Oct 2026 (`docs/keywords/it/`) |
 | Portuguese ranks on **"álbum de fotos do bebé"**; "fotolivro" has no searches and "livro do bebé" (fill-in book, books to read) stays out of titles. A small market: the whole family is about 2,000 searches a month | Semrush, Portugal, Oct 2026 (`docs/keywords/pt/`) |
+| Dutch ranks on **"baby fotoboek"** ("baby fotoboek maken" has the lowest personal difficulty of the whole study, 59); "fotoalbum" stays in the body, "babyboek" and "invulboek" (the fill-in book) out of titles | Semrush, Netherlands and Belgium, Oct 2026 (`docs/keywords/nl/`) |
 | Semrush's **personal difficulty** for babybookai.com is 58–100 on every keyword (general KD 4–30): with no links, no keyword is easy. Where a variant of the same family was much lower, it went into the title without changing the URL | `docs/keywords/<lang>/dificultad-personal.md`, Oct 2026. Links, not keyword choice, are what is missing |
 | Titles, H1s and meta: `[searched keyword] + [what is different]` | Speed and "zero work" are not searched, but they win the click |
 | SEO is a complement; App Store + Meta are the channels | Measured on competitors; build once, keep it small |
