@@ -204,7 +204,7 @@ export const es: Copy = {
 
   babyPhotoBook: {
     title: 'Álbum de fotos del bebé, hecho con tu móvil | BabyBookAI',
-    description: `Un álbum de fotos del bebé que llega impreso y ya maquetado: BabyBookAI elige las mejores fotos de tu móvil y las ordena por meses. Tapa dura, {size}, ${BOOK.pagesMin}–${BOOK.pagesMax} páginas.`,
+    description: `Un álbum de fotos para bebés que llega impreso y ya maquetado: BabyBookAI elige las mejores fotos de tu móvil y las ordena por meses. Tapa dura, {size}, ${BOOK.pagesMin}–${BOOK.pagesMax} páginas.`,
     crumb: 'Álbum de fotos del bebé',
     eyebrow: 'Álbum de fotos del bebé',
     h1: 'Álbum de fotos del bebé, hecho con las fotos de tu móvil',
@@ -321,12 +321,12 @@ export const es: Copy = {
   },
 
   firstYear: {
-    title: 'Álbum del primer año del bebé, mes a mes y ya hecho | BabyBookAI',
+    title: 'Álbum de fotos del primer año del bebé, mes a mes | BabyBookAI',
     description:
       'El álbum del primer año de tu bebé, mes a mes: un libro del primer año hecho con las fotos que ya tienes en el móvil. BabyBookAI las elige, las ordena y las maqueta por ti.',
     crumb: 'Álbum del primer año',
     eyebrow: 'Álbum del primer año del bebé',
-    h1: 'Álbum del primer año de tu bebé, mes a mes y ya hecho',
+    h1: 'Álbum de fotos del primer año de tu bebé, mes a mes y ya hecho',
     lead: 'Doce meses, una doble página para cada uno, del hospital a la tarta. BabyBookAI hace el álbum con las fotos que ya tienes en el móvil y te llega impreso a casa, así que durante el año no tienes que ir al día con nada.',
     months: {
       eyebrow: 'Mes a mes',

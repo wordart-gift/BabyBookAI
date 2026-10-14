@@ -203,11 +203,11 @@ export const fr: Copy = {
   },
 
   babyPhotoBook: {
-    title: 'Album photo bébé imprimé, fait avec votre téléphone | BabyBookAI',
+    title: 'Album photo pour bébé imprimé, fait avec votre téléphone | BabyBookAI',
     description: `Un album photo bébé livré imprimé et déjà mis en page : BabyBookAI choisit les meilleures photos de votre téléphone et les classe par mois. Couverture rigide, {size}.`,
     crumb: 'Album photo bébé',
     eyebrow: 'Album photo bébé',
-    h1: 'Album photo bébé, fait avec les photos de votre téléphone',
+    h1: 'Album photo pour bébé, fait avec les photos de votre téléphone',
     lead: "BabyBookAI trouve les meilleures photos de votre bébé sur votre téléphone, les classe mois par mois et met en page un livre photo carré à couverture rigide, livré imprimé chez vous. Aucune photo à coller ni à glisser dans un modèle, et rien à téléverser pour les choisir. Vous n'avez qu'à le feuilleter.",
     features: {
       title: 'Tout ce que doit être un album photo de bébé. Sans le travail.',

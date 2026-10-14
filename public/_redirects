@@ -20,3 +20,11 @@
 # German, Oct 2026: the first year is searched as "erstes Jahr" (docs/keywords/de).
 /de/fotobuch-erstes-lebensjahr /de/fotobuch-erstes-jahr/ 301
 /de/fotobuch-erstes-lebensjahr/ /de/fotobuch-erstes-jahr/ 301
+
+# Italian, Oct 2026: "album foto neonato" is searched, "fotolibro" hardly (docs/keywords/it).
+/it/fotolibro-neonato /it/album-foto-neonato/ 301
+/it/fotolibro-neonato/ /it/album-foto-neonato/ 301
+/it/fotolibro-primo-anno /it/album-primo-anno/ 301
+/it/fotolibro-primo-anno/ /it/album-primo-anno/ 301
+/it/album-foto-bambina /it/album-foto-neonata/ 301
+/it/album-foto-bambina/ /it/album-foto-neonata/ 301

@@ -3,8 +3,12 @@ import { linker } from '../format';
 import type { Copy } from './en';
 
 /**
- * Italiano, con il tu, come l'app (librofotos lib/l10n/app_it.arb). La parola
- * cercata è «fotolibro» (Keyword Tool, Italia, ott. 2026).
+ * Italiano, con il tu, come l'app (librofotos lib/l10n/app_it.arb). Si cerca
+ * «album foto neonato» (Semrush, Italia, ott. 2026; i dati sono in
+ * docs/keywords/it): «fotolibro neonato» ha 20 ricerche, «album neonato» quasi
+ * quattromila. «Nascita», «ricordi» e «da compilare» indicano il libro da
+ * riempire a mano: mai nei titoli. L'articolo delle idee tiene «fotolibro»,
+ * l'unica forma che lì si cerca.
  */
 const a = linker('it');
 const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>`;
@@ -14,22 +18,22 @@ export const it: Copy = {
     skip: 'Vai al contenuto',
     homeAria: `${SITE.name}, home`,
     mainNav: 'Principale',
-    nav: { babyPhotoBook: 'Fotolibro del neonato', firstYear: 'Il primo anno' },
+    nav: { babyPhotoBook: 'Album foto del neonato', firstYear: 'Il primo anno' },
     getApp: 'Scarica',
     language: 'Lingua',
     breadcrumb: 'Percorso di navigazione',
     home: 'Home',
     footer: {
-      tagline: 'Il primo anno del tuo bebè, trasformato in un libro per te.',
+      tagline: 'Il primo anno del tuo bebè, trasformato in un album per te.',
       productOf: 'Un prodotto di',
-      book: 'Il libro',
+      book: 'L’album',
       company: 'Azienda',
       links: {
-        babyPhotoBook: 'Fotolibro del neonato',
-        firstYear: 'Fotolibro del primo anno',
+        babyPhotoBook: 'Album foto del neonato',
+        firstYear: 'Album del primo anno',
         boy: 'Album foto per bambino',
-        girl: 'Album foto per bambina',
-        ideas: 'Idee per il fotolibro del neonato',
+        girl: 'Album foto per neonata',
+        ideas: 'Idee per l’album foto del neonato',
         about: 'Chi siamo',
         support: 'Assistenza e domande',
         privacy: 'Privacy',
@@ -81,8 +85,8 @@ export const it: Copy = {
     stork: 'Una cicogna che porta un fagotto',
     spreadMonth: 'Primo mese',
     defaultDescription:
-      'BabyBookAI trasforma le foto che hai già sul telefono in un fotolibro stampato con copertina rigida sul primo anno del tuo bebè. Sceglie, ordina e impagina le foto per te.',
-    ogImageAlt: 'BabyBookAI: un fotolibro stampato sul primo anno di un bebè',
+      'BabyBookAI trasforma le foto che hai già sul telefono in un album foto stampato con copertina rigida sul primo anno del tuo bebè. Sceglie, ordina e impagina le foto per te.',
+    ogImageAlt: 'BabyBookAI: un album foto stampato sul primo anno di un bebè',
     /** The spread picture's alt text (src/assets/app/spread-first-month.png). */
     spreadAlt:
       'Una doppia pagina di BabyBookAI, «Primo mese»: sette foto di una neonata con la famiglia e i nonni',
@@ -101,8 +105,8 @@ export const it: Copy = {
         `Impagina un libro quadrato a copertina rigida da ${BOOK.pagesMin} a ${BOOK.pagesMax} pagine`,
         'Invia il libro in stampa e lo spedisce',
       ],
-      bookName: 'Fotolibro del neonato BabyBookAI',
-      bookDescription: `Un fotolibro quadrato a copertina rigida, 28 × 28 cm, sul primo anno di un bebè, da ${BOOK.pagesMin} a ${BOOK.pagesMax} pagine su carta patinata da 170 g, realizzato dall'app BabyBookAI con le foto del tuo telefono.`,
+      bookName: 'Album foto del neonato BabyBookAI',
+      bookDescription: `Un album foto (fotolibro) quadrato a copertina rigida, 28 × 28 cm, sul primo anno di un bebè, da ${BOOK.pagesMin} a ${BOOK.pagesMax} pagine su carta patinata da 170 g, realizzato dall'app BabyBookAI con le foto del tuo telefono.`,
       pages: 'Pagine',
       binding: 'Rilegatura',
       bindingValue: 'Copertina rigida',
@@ -110,14 +114,14 @@ export const it: Copy = {
   },
 
   home: {
-    title: 'BabyBookAI — Il fotolibro del neonato che si fa da solo',
+    title: 'BabyBookAI — L’album foto del neonato che si fa da solo',
     description:
-      'Il primo anno del tuo bebè in un fotolibro stampato con copertina rigida, fatto con le foto che hai già sul telefono. BabyBookAI le sceglie, le ordina e le impagina per te.',
-    eyebrow: 'Fotolibro del primo anno del bebè',
-    h1: 'Il libro del bebè che si fa da solo',
-    lead: 'La nostra IA passa in rassegna la galleria del tuo telefono, sceglie per te le foto migliori di ogni mese e impagina un libro rigido. Tu lo sfogli, cambi una foto con un’altra dello stesso mese o la togli, ed è in viaggio.',
+      'Il primo anno del tuo bebè in un album foto stampato con copertina rigida, fatto con le foto che hai già sul telefono. BabyBookAI le sceglie, le ordina e le impagina per te.',
+    eyebrow: 'Album del primo anno del neonato',
+    h1: 'L’album foto del tuo bambino che si fa da solo',
+    lead: 'La nostra IA passa in rassegna la galleria del tuo telefono, sceglie per te le foto migliori di ogni mese e impagina un album con copertina rigida. Tu lo sfogli, cambi una foto con un’altra dello stesso mese o la togli, e ti arriva stampato a casa.',
     homework: {
-      title: 'Ogni libro del bebè costa fatica. Tranne questo.',
+      title: 'Ogni album del bebè costa fatica. Tranne questo.',
       body: 'Le foto le hai già fatte: centinaia, ogni mese. Trasformarle in un libro è la parte per cui nessuno ha tempo con un bebè in casa.',
       yourPart: 'La tua parte',
       ways: [
@@ -138,7 +142,7 @@ export const it: Copy = {
         { label: 'Impaginazione', value: 'Una doppia pagina per mese' },
         { label: 'Spedizione in', value: '16 paesi' },
       ],
-      more: 'Vedi il fotolibro del neonato nel dettaglio',
+      more: 'Vedi l’album foto del neonato nel dettaglio',
     },
     privacy: {
       title: 'Le foto del tuo bebè restano sul tuo telefono',
@@ -147,14 +151,14 @@ export const it: Copy = {
     birthday: {
       title: 'Pronto per il primo compleanno',
       body: 'L’anno finisce, il libro è fatto. Ordinalo la settimana della festa, o fanne uno anche per i nonni. Il loro regalo preferito è quello con il bebè dentro.',
-      more: 'Come funziona il fotolibro del primo anno',
+      more: 'Come funziona l’album del primo anno',
     },
     faqTitle: 'Le domande dei genitori',
     faq: [
       {
         question: 'Che cos’è BabyBookAI?',
         answer:
-          'BabyBookAI è un’app che trasforma le foto che hai già sul telefono in un fotolibro stampato con copertina rigida sul primo anno del tuo bebè. Sceglie le foto, le ordina mese per mese e impagina ogni pagina per te. L’app è gratuita: paghi solo il libro stampato.',
+          'BabyBookAI è un’app che trasforma le foto che hai già sul telefono in un album foto stampato con copertina rigida sul primo anno del tuo bebè. Sceglie le foto, le ordina mese per mese e impagina ogni pagina per te. L’app è gratuita: paghi solo il libro stampato.',
       },
       {
         question: 'Come sceglie le foto BabyBookAI?',
@@ -198,12 +202,12 @@ export const it: Copy = {
   },
 
   babyPhotoBook: {
-    title: 'Fotolibro del neonato con le foto del tuo telefono | BabyBookAI',
-    description: `Un fotolibro del neonato a copertina rigida fatto per te: BabyBookAI sceglie le foto migliori del tuo telefono, le ordina per mese e impagina ogni pagina. {size}, da ${BOOK.pagesMin} a ${BOOK.pagesMax} pagine.`,
-    crumb: 'Fotolibro del neonato',
-    eyebrow: 'Fotolibro del neonato',
-    h1: 'Fotolibro del neonato, fatto con le foto del tuo telefono',
-    lead: 'BabyBookAI trova le foto migliori del tuo bebè sul telefono, le ordina mese per mese e impagina un libro quadrato rigido. Niente caricamenti, niente foto da trascinare in un modello. Lo sfogli e basta.',
+    title: 'Album foto neonato stampato, fatto con il tuo telefono | BabyBookAI',
+    description: `Un album foto del neonato che arriva stampato e già impaginato: BabyBookAI sceglie le foto migliori del tuo telefono e le ordina per mese. Copertina rigida, {size}.`,
+    crumb: 'Album foto neonato',
+    eyebrow: 'Album foto neonato',
+    h1: 'Album fotografico del neonato, fatto con le foto del tuo telefono',
+    lead: 'BabyBookAI trova le foto migliori del tuo bebè sul telefono, le ordina mese per mese e impagina un album quadrato con copertina rigida, che ti arriva stampato a casa. Niente foto da incollare o da trascinare in un modello, niente caricamenti. Lo sfogli e basta.',
     features: {
       title: 'Tutto ciò che un album del bebè dovrebbe essere. Senza il lavoro.',
       items: [
@@ -225,7 +229,7 @@ export const it: Copy = {
         },
       ],
     },
-    howTitle: 'Come fare un fotolibro del neonato in tre passi',
+    howTitle: 'Come fare un album foto del neonato in tre passi',
     inside: {
       eyebrow: 'Dentro il libro',
       title: 'Dal giorno della nascita al primo compleanno',
@@ -242,7 +246,7 @@ export const it: Copy = {
     personal: {
       eyebrow: 'Personalizzato',
       title: 'Un album del bebè personalizzato, senza la parte noiosa',
-      body: 'Un fotolibro personalizzato di solito significa una serata intera in un editor. Qui le foto sono già al loro posto, quindi renderlo tuo richiede pochi tocchi.',
+      body: 'Un album del neonato personalizzato di solito significa una serata intera in un editor. Qui le foto sono già al loro posto, quindi renderlo tuo richiede pochi tocchi.',
       items: [
         { title: 'Il suo nome in copertina', body: 'E le date che scegli: dal giorno della nascita o da qualsiasi giorno, per 6, 12 o 18 mesi.' },
         { title: 'Tre toni di carta', body: 'Crema classico, rosa tenue o azzurro tenue. Tutta la pagina prende il tono, non solo il bordo.' },
@@ -251,12 +255,12 @@ export const it: Copy = {
           body: 'Ogni pagina ha brevi frasi come «Sogna in grande, piccolo amore». Tienile, cambiale o aggiungi una tua nota dove vuoi.',
         },
       ],
-      colors: `Cerchi i colori? Guarda l’${a('girl', 'album foto per bambina')} e l’${a('boy', 'album foto per bambino')}.`,
+      colors: `Cerchi i colori? Guarda l’${a('girl', 'album foto per neonata')} e l’${a('boy', 'album foto per bambino')}.`,
     },
     specs: {
       title: 'Il libro, nel dettaglio',
       items: [
-        { label: 'Formato', value: 'Fotolibro quadrato a copertina rigida' },
+        { label: 'Formato', value: 'Album foto stampato (fotolibro), quadrato, a copertina rigida' },
         { label: 'Dimensioni', value: '{size}' },
         { label: 'Pagine', value: `Da ${BOOK.pagesMin} a ${BOOK.pagesMax}, una doppia pagina per mese` },
         { label: 'Carta', value: 'Carta patinata da 170 g, stampa a colori' },
@@ -266,22 +270,32 @@ export const it: Copy = {
     },
     gift: {
       title: 'Il regalo che chiedono i nonni',
-      body: 'Un telefono pieno di foto è difficile da far girare a tavola. Un fotolibro del neonato no. È il regalo per un primo compleanno, per la Festa della mamma o del papà, e quello che i nonni tengono sul tavolino del salotto.',
+      body: 'Un telefono pieno di foto è difficile da far girare a tavola. Un album foto del neonato no. È il regalo per un primo compleanno, per la Festa della mamma o del papà, e quello che i nonni tengono sul tavolino del salotto.',
     },
     why: {
-      title: 'Perché un fotolibro del neonato, se le foto sono già sul telefono',
+      title: 'Perché un album foto del neonato, se le foto sono già sul telefono',
       paragraphs: [
         'Nel primo anno di un bebè i genitori scattano centinaia di foto al mese. Vivono in una galleria, tra screenshot e scontrini, e scorrono via in un lampo. Un album del bebè è il contrario: poche delle migliori, in ordine, su carta, in un libro che chiunque può prendere in mano.',
         'La parte difficile non è mai stata la stampa. Sono le ore passate a scegliere: quale delle quaranta foto del bagnetto, a che mese appartiene quella foto, come far stare una foto verticale accanto a una orizzontale. È lì che si fermano la maggior parte degli album, intorno al terzo mese.',
-        `BabyBookAI fa quella parte per te, sul tuo telefono. Legge le date, tiene la foto più nitida di ogni momento, dà a ogni mese la sua doppia pagina e impagina un album che sembra progettato, non buttato lì. A te resta la parte bella: sfogliarlo. Per tutto il primo anno, dall’ospedale alla torta, guarda il ${a('firstYear', 'fotolibro del primo anno')}.`,
+        `BabyBookAI fa quella parte per te, sul tuo telefono. Legge le date, tiene la foto più nitida di ogni momento, dà a ogni mese la sua doppia pagina e impagina un album che sembra progettato, non buttato lì. A te resta la parte bella: sfogliarlo. Per tutto il primo anno, dall’ospedale alla torta, guarda l’${a('firstYear', 'album del primo anno')}.`,
       ],
     },
-    faqTitle: 'Domande sul fotolibro del neonato',
+    faqTitle: 'Domande sull’album foto del neonato',
     faq: [
       {
-        question: 'Che dimensioni ha il fotolibro del neonato?',
+        question: 'È un album in cui incollare le foto?',
         answer:
-          'È un libro quadrato a copertina rigida, {size}. Il quadrato è l’unica forma in cui le foto verticali e orizzontali del telefono stanno entrambe senza che una sia ritagliata male.',
+          'No. È un album fotografico stampato: le foto sono stampate sulle pagine, già messe al loro posto e impaginate, come in un fotolibro. Niente taschine, niente da incollare.',
+      },
+      {
+        question: 'È un album nascita da compilare?',
+        answer:
+          'No. Non ci sono pagine da riempire a mano: l’album arriva finito, con le foto del primo anno mese per mese. Scrivi solo se vuoi cambiare una frase o aggiungere una tua nota.',
+      },
+      {
+        question: 'Che dimensioni ha l’album foto del neonato?',
+        answer:
+          'È un album quadrato a copertina rigida, {size}. Il quadrato è l’unica forma in cui le foto verticali e orizzontali del telefono stanno entrambe senza che una sia ritagliata male.',
       },
       {
         question: 'Quante pagine ha?',
@@ -311,16 +325,16 @@ export const it: Copy = {
   },
 
   firstYear: {
-    title: 'Fotolibro del primo anno del bebè che non devi fare tu | BabyBookAI',
+    title: 'Album del primo anno di vita del bambino, mese per mese | BabyBookAI',
     description:
-      'Un fotolibro del primo anno del bebè, mese per mese, fatto con le foto che hai già sul telefono. Niente caricamenti settimanali: BabyBookAI sceglie, ordina e impagina tutto l’anno.',
-    crumb: 'Fotolibro del primo anno',
-    eyebrow: 'Fotolibro del primo anno del bebè',
-    h1: 'Il fotolibro del primo anno del bebè che non devi fare tu',
-    lead: 'Dodici mesi, una doppia pagina per ciascuno, dall’ospedale alla torta. BabyBookAI lo costruisce con le foto che hai già sul telefono, quindi durante l’anno non devi tenere aggiornato niente.',
+      'L’album del primo anno di vita del tuo bambino, mese per mese, fatto con le foto che hai già sul telefono. Niente da compilare: BabyBookAI sceglie, ordina e impagina tutto l’anno.',
+    crumb: 'Album del primo anno',
+    eyebrow: 'Album del primo anno di vita',
+    h1: 'L’album del primo anno del tuo bambino, mese per mese e già fatto',
+    lead: 'Dodici mesi, una doppia pagina per ciascuno, dall’ospedale alla torta. BabyBookAI fa l’album con le foto che hai già sul telefono e ti arriva stampato, quindi durante l’anno non devi tenere aggiornato niente.',
     months: {
       eyebrow: 'Mese per mese',
-      title: 'Un fotolibro mensile del bebè, senza il servizio fotografico di ogni mese',
+      title: 'Un album del bebè mese per mese, senza il servizio fotografico di ogni mese',
       body: 'Niente cartoncini delle tappe, niente stessa posa sulla stessa copertina ogni mese. Il libro segue le foto che hai scattato comunque, nell’ordine in cui le hai scattate. Ogni bebè ha il suo calendario.',
       items: [
         { n: 'Pagina 1', moment: 'Il giorno della nascita' },
@@ -351,16 +365,21 @@ export const it: Copy = {
         { label: 'BabyBookAI', value: 'Una volta, in minuti' },
       ],
     },
-    howTitle: 'Come si fa il fotolibro del primo anno',
+    howTitle: 'Come si fa l’album del primo anno',
     birthday: {
       title: 'In tempo per il primo compleanno',
       body: 'Scegli tu le date, quindi il libro può chiudersi la settimana della festa o il giorno dopo. I mesi con poche foto non sono un problema: l’impaginazione segue le foto, e un mese con una sola foto bellissima ha una pagina fatta per una. Vuoi andare oltre il primo anno? Un libro può coprire fino a 18 mesi.',
-      more: 'Vedi il fotolibro del neonato nel dettaglio',
+      more: 'Vedi l’album foto del neonato nel dettaglio',
     },
-    faqTitle: 'Domande sul fotolibro del primo anno',
+    faqTitle: 'Domande sull’album del primo anno',
     faq: [
       {
-        question: 'Quando devo fare il fotolibro del primo anno?',
+        question: 'È un album da compilare a mano?',
+        answer:
+          'No. L’album del primo anno di BabyBookAI arriva stampato e finito: le foto sono già sulle loro pagine, mese per mese. Scrivi solo se vuoi cambiare una frase o aggiungere una tua nota.',
+      },
+      {
+        question: 'Quando devo fare l’album del primo anno?',
         answer:
           'Quando vuoi dopo il primo compleanno, o prima se lo vuoi per la festa: scegli tu le date che copre. Poiché BabyBookAI legge le foto che hai già, durante l’anno non c’è nulla da tenere aggiornato.',
       },
@@ -388,21 +407,21 @@ export const it: Copy = {
   },
 
   girl: {
-    title: 'Album foto per bambina che si riempie da solo | BabyBookAI',
+    title: 'Album foto per neonata che si riempie da solo | BabyBookAI',
     description:
-      'Un album foto rosa per la tua bambina, fatto con le foto del tuo telefono. BabyBookAI sceglie le sue foto migliori, le ordina mese per mese e impagina un libro rigido.',
-    crumb: 'Album foto per bambina',
-    eyebrow: 'Album foto per bambina',
-    h1: 'L’album foto per bambina che si riempie da solo',
+      'Un album foto per neonata, in rosa, fatto con le foto del tuo telefono. BabyBookAI sceglie le sue foto migliori, le ordina mese per mese e impagina un libro rigido.',
+    crumb: 'Album foto per neonata',
+    eyebrow: 'Album foto per neonata',
+    h1: 'L’album foto per neonata che si riempie da solo',
     lead: 'Il suo primo anno è già sul tuo telefono, in centinaia di foto. BabyBookAI sceglie le migliori, mette ciascuna nel suo mese e impagina un album rigido in rosa tenue, con il suo nome in copertina.',
     empty: {
-      title: 'La maggior parte degli album per bambina arriva vuota',
+      title: 'La maggior parte degli album per neonata arriva vuota',
       paragraphs: [
         'Un album rosa con le taschine, un libro del bebè da compilare, un modello in un editor di foto: ognuno aspetta che tu stampi, scelga e metta al suo posto un anno di foto. Con un bebè in casa, quella serata arriva di rado.',
         'Questo parte già pieno. La nostra IA legge le date delle tue foto, tiene la più nitida di ogni momento, lascia fuori le sfocate e le dodici quasi copie dello stesso sorriso, e dà a ogni mese la sua doppia pagina. Lo sfogli e, se una foto non ti convince, la cambi con un’altra dello stesso mese o la togli.',
       ],
     },
-    howTitle: 'Come fare un album foto per bambina in pochi minuti',
+    howTitle: 'Come fare un album foto per neonata in pochi minuti',
     inside: {
       eyebrow: 'Dentro il suo album',
       title: 'Dal giorno della nascita al primo compleanno',
@@ -416,9 +435,9 @@ export const it: Copy = {
     details: {
       title: 'Un ricordo fatto per essere toccato',
       body: `Un libro quadrato a copertina rigida, {size}, copertina opaca e da ${BOOK.pagesMin} a ${BOOK.pagesMax} pagine su carta patinata da 170 g, a {price} con spedizione inclusa. Quadrato, perché le sue foto verticali e orizzontali stanno entrambe senza che una sia ritagliata male.`,
-      more: `Preferisci azzurro o crema? Guarda l’${a('boy', 'album foto per bambino')}, o tutto sul ${a('babyPhotoBook', 'fotolibro del neonato')}.`,
+      more: `Preferisci azzurro o crema? Guarda l’${a('boy', 'album foto per bambino')}, o tutto sull’${a('babyPhotoBook', 'album foto del neonato')}.`,
     },
-    faqTitle: 'Domande sull’album foto per bambina',
+    faqTitle: 'Domande sull’album foto per neonata',
     faq: [
       {
         question: 'Posso fare il suo album foto rosa?',
@@ -473,7 +492,7 @@ export const it: Copy = {
     details: {
       title: 'L’album in sé',
       body: `Un libro quadrato a copertina rigida, {size}, copertina opaca, da ${BOOK.pagesMin} a ${BOOK.pagesMax} pagine su carta patinata da 170 g. {price} con spedizione inclusa, stampato su ordinazione e spedito a casa tua. Ogni foto va solo dove ha i pixel per stamparsi nitida, quindi una copia piccola da una chat non finisce mai in copertina.`,
-      more: `Lo fai per una figlia? Guarda l’${a('girl', 'album foto per bambina')}. Per tutto l’anno, mese per mese, guarda il ${a('firstYear', 'fotolibro del primo anno')}.`,
+      more: `Lo fai per una figlia? Guarda l’${a('girl', 'album foto per neonata')}. Per tutto l’anno, mese per mese, guarda l’${a('firstYear', 'album del primo anno')}.`,
     },
     faqTitle: 'Domande sull’album foto per bambino',
     faq: [
@@ -623,7 +642,7 @@ export const it: Copy = {
           body: 'Una foto salvata da un’app di messaggistica è una copia più piccola. Si stampa bene in piccolo, ma non a pagina intera né in copertina. Se hai l’originale, usa quella.',
         },
       ],
-      product: `Questa parte, la scelta, è dove si fermano la maggior parte dei libri del bebè. È la parte che ${a('home', 'BabyBookAI')} fa per te: legge la galleria sul tuo telefono, tiene la foto più nitida di ogni momento, ordina l’anno mese per mese e impagina il libro, così tu lo sfogli e basta. Guarda come si fa il ${a('firstYear', 'fotolibro del primo anno')}.`,
+      product: `Questa parte, la scelta, è dove si fermano la maggior parte dei libri del bebè. È la parte che ${a('home', 'BabyBookAI')} fa per te: legge la galleria sul tuo telefono, tiene la foto più nitida di ogni momento, ordina l’anno mese per mese e impagina il libro, così tu lo sfogli e basta. Guarda come si fa l’${a('firstYear', 'album del primo anno')}.`,
     },
     gifts: {
       title: 'Idee regalo',
@@ -631,7 +650,7 @@ export const it: Copy = {
         { lead: 'Per il primo compleanno.', body: 'Chiudi il libro la settimana della festa e fallo girare a tavola.' },
         {
           lead: 'Per i nonni.',
-          body: `Il regalo che tengono sul tavolino del salotto. Un ${a('girl', 'album foto per bambina')} in rosa o un ${a('boy', 'album foto per bambino')} in azzurro, con il nome del bebè in copertina.`,
+          body: `Il regalo che tengono sul tavolino del salotto. Un ${a('girl', 'album foto per neonata')} in rosa o un ${a('boy', 'album foto per bambino')} in azzurro, con il nome del bebè in copertina.`,
         },
       ],
     },
@@ -665,12 +684,12 @@ export const it: Copy = {
   },
 
   about: {
-    title: 'Chi è BabyBookAI | Il fotolibro del neonato che si fa da solo',
+    title: 'Chi è BabyBookAI | L’album foto del neonato che si fa da solo',
     description:
-      'BabyBookAI è un’app di Photo-to-Text che trasforma le foto del tuo telefono in un fotolibro stampato del primo anno del tuo bebè. Chi siamo e come lo facciamo.',
+      'BabyBookAI è un’app di Photo-to-Text che trasforma le foto del tuo telefono in un album foto stampato del primo anno del tuo bebè. Chi siamo e come lo facciamo.',
     crumb: 'Chi siamo',
     eyebrow: 'Chi siamo',
-    h1: 'Un libro del bebè per genitori che non hanno tempo di farlo',
+    h1: 'Un album del bebè per genitori che non hanno tempo di farlo',
     paragraphs: [
       'Nel primo anno di un bebè i genitori scattano migliaia di foto. Pochissime finiscono in un libro, perché farne uno significa ore a scegliere, ordinare e sistemare, con un bebè in casa.',
       `${SITE.name} fa questo lavoro per te. Legge le foto del tuo telefono, tiene il meglio di ogni momento, le ordina mese per mese e impagina un libro rigido. Lo sfogli, cambi ciò che vuoi, e viene stampato e spedito a casa tua.`,
@@ -698,11 +717,11 @@ export const it: Copy = {
       title: `Un prodotto ${PUBLISHER.name}`,
       body: `${SITE.name} è fatto da <a class="lnk-light" href="${PUBLISHER.url}">${PUBLISHER.name}</a>, una piccola azienda che crea regali personalizzati dalle foto. Il suo logo è sul retro di ogni libro. Domande, idee o un libro che non è venuto bene: scrivi a <a class="lnk-light" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>.`,
     },
-    more: `Guarda il ${a('babyPhotoBook', 'fotolibro del neonato')}, leggi l’${a('privacy', 'informativa sulla privacy')} o cerca aiuto nella ${a('support', 'pagina di assistenza')}.`,
+    more: `Guarda l’${a('babyPhotoBook', 'album foto del neonato')}, leggi l’${a('privacy', 'informativa sulla privacy')} o cerca aiuto nella ${a('support', 'pagina di assistenza')}.`,
   },
 
   support: {
-    title: 'Assistenza BabyBookAI | Aiuto con il tuo fotolibro del neonato',
+    title: 'Assistenza BabyBookAI | Aiuto con il tuo album foto del neonato',
     description:
       'Aiuto con l’app BabyBookAI e il tuo ordine: trovare le foto, le foto di WhatsApp, salvare il libro, prezzo e spedizione, e come contattarci.',
     crumb: 'Assistenza e domande',
@@ -767,7 +786,7 @@ export const it: Copy = {
     h1: 'Le foto del tuo bebè restano sul tuo telefono',
     updatedLabel: 'Informativa sulla privacy · Ultimo aggiornamento:',
     updated: '9 ottobre 2026',
-    intro: `BabyBookAI («noi») è un’app che realizza un fotolibro stampato del primo anno del tuo bebè con le foto del tuo telefono. È un prodotto di Photo-to-Text. Contatto: ${EMAIL}.`,
+    intro: `BabyBookAI («noi») è un’app che realizza un album foto stampato del primo anno del tuo bebè con le foto del tuo telefono. È un prodotto di Photo-to-Text. Contatto: ${EMAIL}.`,
     shortTitle: 'In breve',
     short: [
       'La tua libreria di foto viene letta <strong>sul tuo telefono</strong>. Noi non la vediamo mai.',
@@ -828,7 +847,7 @@ export const it: Copy = {
   terms: {
     title: 'Termini di utilizzo e di vendita | BabyBookAI',
     description:
-      'I termini per usare l’app BabyBookAI e ordinare un fotolibro del neonato stampato: le tue foto, ordini e pagamento, stampa e consegna, e libri danneggiati.',
+      'I termini per usare l’app BabyBookAI e ordinare un album foto del neonato stampato: le tue foto, ordini e pagamento, stampa e consegna, e libri danneggiati.',
     crumb: 'Termini',
     eyebrow: 'Termini',
     h1: 'Termini di utilizzo e di vendita',
@@ -889,7 +908,7 @@ export const it: Copy = {
 
   notFound: {
     title: 'Pagina non trovata | BabyBookAI',
-    description: 'Questa pagina non esiste. Trova da qui il fotolibro del neonato di BabyBookAI.',
+    description: 'Questa pagina non esiste. Trova da qui l’album foto del neonato di BabyBookAI.',
     h1: 'Questa pagina si è persa',
     body: 'Il link potrebbe essere vecchio. Questi sono buoni punti da cui partire:',
   },

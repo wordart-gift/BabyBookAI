@@ -16,7 +16,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
   `src/config/site.ts` mirrors what the site states; keep it in step.
 - **Keyword strategy**: Carlos's research (Sept–Oct 2026) for the US; per
   country in `docs/keywords/<lang>/` (Semrush data and what it showed), one
-  language at a time. English (US, UK), Spain, France and Germany are done; the others still carry the Play listings'
+  language at a time. English (US, UK), Spain, France, Germany and Italy are done; the others still carry the Play listings'
   product words.
 
 ## Settled decisions
@@ -32,6 +32,8 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Spanish ranks on **"álbum"** (`album bebe primer año`, `album de fotos bebe`, as people type them), not "fotolibro" or "libro del bebé"; each page says early that ours arrives printed and laid out, since "álbum" also names the empty paste-in kind | Semrush, Spain, Oct 2026: "fotolibro bebe" has no searches; a small shop's page with no links ranks first for the first-year term (`docs/keywords/es/`) |
 | French ranks on **"album photo bébé"**; "livre photo", the printers' word, stays in subtitles and body (a third of the searches, the same results). The first-year page keeps "1ère année"; "album photo naissance" is answered on the baby album page | Semrush, France, Oct 2026 (`docs/keywords/fr/`). Harder than Spain: the small shops that rank sit on domains with authority 27–34 |
 | German ranks on **"Fotobuch"**, the only product word whose first page is printers; "Fotoalbum" (more searched, empty paste-in albums) stays in the body, "Babybuch" (books to read, fill-in books) out of titles. The first year is **"mein erstes Jahr"** (`/de/fotobuch-erstes-jahr/`), not "Lebensjahr" | Semrush, Germany and Austria, Oct 2026 (`docs/keywords/de/`). Small shops that rank sit on domains with authority 27–37 |
+| Italian ranks on **"album foto neonato"** ("fotolibro neonato" has 20 searches); "nascita", "ricordi" and "da compilare" name the fill-in book and stay out of titles. The girl page says **"neonata"** (260 against 90 for "bambina"); the ideas article keeps "fotolibro", the only form searched there | Semrush, Italy, Oct 2026 (`docs/keywords/it/`) |
+| Semrush's **personal difficulty** for babybookai.com is 58–100 on every keyword (general KD 4–30): with no links, no keyword is easy. Where a variant of the same family was much lower, it went into the title without changing the URL | `docs/keywords/<lang>/dificultad-personal.md`, Oct 2026. Links, not keyword choice, are what is missing |
 | Titles, H1s and meta: `[searched keyword] + [what is different]` | Speed and "zero work" are not searched, but they win the click |
 | SEO is a complement; App Store + Meta are the channels | Measured on competitors; build once, keep it small |
 | **No fake social proof**: no ratings, reviews or `aggregateRating` until real ones exist | |

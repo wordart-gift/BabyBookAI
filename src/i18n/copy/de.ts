@@ -323,9 +323,9 @@ export const de: Copy = {
   firstYear: {
     title: 'Fotobuch „Mein erstes Jahr“ fürs Baby, ohne Basteln | BabyBookAI',
     description:
-      'Das Fotobuch „Mein erstes Jahr“ deines Babys, Monat für Monat, aus den Fotos auf deinem Handy. Nichts zum Ausfüllen: BabyBookAI wählt, ordnet und gestaltet das ganze Jahr.',
+      'Das Baby-Fotobuch fürs 1. Jahr, „Mein erstes Jahr“, Monat für Monat aus den Fotos auf deinem Handy. Nichts zum Ausfüllen: BabyBookAI wählt, ordnet und gestaltet alles.',
     crumb: 'Fotobuch erstes Jahr',
-    eyebrow: 'Fotobuch „Mein erstes Jahr“',
+    eyebrow: 'Baby-Fotobuch fürs 1. Jahr',
     h1: 'Das Fotobuch von Babys erstem Jahr, das du nicht basteln musst',
     lead: 'Zwölf Monate, eine Doppelseite für jeden, vom Krankenhaus bis zum Kuchen. BabyBookAI macht es aus den Fotos, die schon auf deinem Handy sind, also musst du das ganze Jahr über nichts nachhalten.',
     months: {
