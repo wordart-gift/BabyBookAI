@@ -63,12 +63,12 @@ export const nl: Copy = {
           body: 'De naam van je baby komt op de kaft. De meeste boeken beginnen op de geboortedag en eindigen op de eerste verjaardag.',
         },
         {
-          title: 'De app leest je galerij',
-          body: 'Op je telefoon vindt de app de foto’s van dat jaar, laat de wazige en bijna dubbele weg, houdt de beste van elk moment en sorteert ze maand voor maand.',
+          title: 'Onze eigen AI kiest de foto’s',
+          body: 'Op je telefoon loopt onze AI de foto’s van dat jaar langs, laat de wazige en bijna dubbele weg, houdt de beste van elk moment en sorteert ze maand voor maand. Zelf hoef je er niet één te kiezen.',
         },
         {
           title: 'Bladeren, wisselen, bestellen',
-          body: 'Het boek wordt voor je opgemaakt. Wissel elke foto die je niet mooi vindt, pas de teksten aan als je wilt, en het hardcover wordt gedrukt en bij je thuis bezorgd.',
+          body: 'Het boek wordt voor je opgemaakt. Vind je een foto niet mooi, wissel hem dan voor een andere uit dezelfde maand of haal hem eruit. Pas de teksten aan als je wilt, en het hardcover wordt gedrukt en bij je thuis bezorgd.',
         },
       ],
     },
@@ -115,7 +115,7 @@ export const nl: Copy = {
       'Het eerste jaar van je baby als gedrukt hardcover fotoboek, gemaakt van de foto’s die al op je telefoon staan. BabyBookAI kiest, sorteert en maakt ze voor je op.',
     eyebrow: 'Fotoboek van het eerste jaar van je baby',
     h1: 'Het babyboek dat zichzelf maakt',
-    lead: 'De app leest je galerij, kiest de mooiste foto’s van elke maand en maakt een hardcover boek op. Jij bladert erdoorheen, wisselt wat je niet mooi vindt, en het is onderweg.',
+    lead: 'Onze eigen AI loopt je galerij langs, kiest voor jou de mooiste foto’s van elke maand en maakt een hardcover boek op. Jij bladert erdoorheen, wisselt een foto voor een andere uit dezelfde maand of haalt hem eruit, en het is onderweg.',
     homework: {
       title: 'Elk babyboek is huiswerk. Behalve dit.',
       body: 'De foto’s heb je al gemaakt: honderden, elke maand. Er een boek van maken is het deel waar niemand tijd voor heeft met een baby in huis.',
@@ -169,7 +169,7 @@ export const nl: Copy = {
       {
         question: 'Kan ik de gekozen foto’s veranderen?',
         answer:
-          'Ja. Je bladert op je telefoon door het boek en wisselt elke foto die je niet mooi vindt. Je kunt ook de teksten op elke pagina bewerken en een eigen korte notitie toevoegen.',
+          'Ja. Je bladert op je telefoon door het boek en tikt op een foto die je niet mooi vindt: wissel hem voor een andere uit dezelfde maand of haal hem eruit, en de pagina wordt vanzelf opnieuw opgemaakt. Je kunt ook de teksten op elke pagina bewerken en een eigen korte notitie toevoegen.',
       },
       {
         question: 'Hoe ziet het boek eruit?',
@@ -305,7 +305,7 @@ export const nl: Copy = {
       {
         question: 'Hoe lang duurt het om te maken?',
         answer:
-          'Een paar minuten. Het meeste daarvan is je telefoon die de galerij leest; daarna blader je door het boek, wissel je wat je wilt en bestel je.',
+          'Een paar minuten. Het meeste daarvan is onze AI die op je telefoon je galerij langsloopt; daarna blader je door het boek, wissel of verwijder je foto’s zoals je wilt en bestel je.',
       },
     ],
   },
@@ -399,7 +399,7 @@ export const nl: Copy = {
       title: 'De meeste albums voor babymeisjes zijn leeg',
       paragraphs: [
         'Een roze album met insteekhoesjes, een invulboek, een sjabloon in een fotobewerker: elk wacht tot jij een jaar aan foto’s print, kiest en plaatst. Met een baby in huis komt die avond zelden.',
-        'Dit begint vol. Het leest de data van je foto’s, houdt de scherpste van elk moment, laat de wazige foto’s en de twaalf bijna-kopieën van dezelfde glimlach weg en geeft elke maand een eigen dubbele pagina. Jij bladert erdoorheen en wisselt wat je liever niet bewaart.',
+        'Dit begint vol. Onze AI leest de data van je foto’s, houdt de scherpste van elk moment, laat de wazige foto’s en de twaalf bijna-kopieën van dezelfde glimlach weg en geeft elke maand een eigen dubbele pagina. Jij bladert erdoorheen en wisselt een foto voor een andere uit dezelfde maand, of haalt eruit wat je liever niet bewaart.',
       ],
     },
     howTitle: 'Een fotoalbum voor een babymeisje maken in een paar minuten',
@@ -450,7 +450,7 @@ export const nl: Copy = {
     crumb: 'Fotoalbum babyjongen',
     eyebrow: 'Fotoalbum babyjongen',
     h1: 'Fotoalbum babyjongen, gemaakt van de foto’s op je telefoon',
-    lead: 'Geef BabyBookAI zijn naam en zijn verjaardag. De app loopt de foto’s op je telefoon langs, houdt zijn mooiste momenten van elke maand en maakt een hardcover album op in zachtblauw. Jij bladert er alleen doorheen.',
+    lead: 'Geef BabyBookAI zijn naam en zijn verjaardag. Onze eigen AI loopt de foto’s op je telefoon langs, houdt zijn mooiste momenten van elke maand en maakt een hardcover album op in zachtblauw. Jij bladert er alleen doorheen.',
     thousands: {
       title: 'Van duizenden foto’s naar één album',
       body: 'Het moeilijke deel van een babyalbum was nooit het drukken. Het is kiezen. BabyBookAI kiest op je telefoon, dus er wordt niets geüpload voordat je bestelt.',
@@ -490,7 +490,7 @@ export const nl: Copy = {
       {
         question: 'Kiest de app foto’s van hem en niet van iedereen?',
         answer:
-          'De app kiest uit de foto’s van de data die je opgeeft, houdt de scherpste van elk moment en laat dubbele weg. Daarna blader je door het boek en wissel of verwijder je elke foto die je er niet in wilt.',
+          'De app kiest uit de foto’s van de data die je opgeeft, houdt de scherpste van elk moment en laat dubbele weg. Daarna blader je door het boek en wissel je een foto voor een andere uit dezelfde maand, of verwijder je wat je er niet in wilt.',
       },
       {
         question: 'Is het een goed cadeau voor opa en oma?',

@@ -64,12 +64,12 @@ export const de: Copy = {
           body: 'Der Name deines Babys kommt aufs Cover. Die meisten Bücher beginnen am Tag der Geburt und enden am ersten Geburtstag.',
         },
         {
-          title: 'Die App liest deine Galerie',
-          body: 'Auf deinem Handy findet sie die Fotos des Jahres, sortiert verwackelte und fast doppelte aus, behält das beste von jedem Moment und ordnet sie Monat für Monat.',
+          title: 'Unsere eigene KI wählt die Fotos',
+          body: 'Auf deinem Handy geht unsere KI die Fotos des Jahres durch, sortiert verwackelte und fast doppelte aus, behält das beste von jedem Moment und ordnet sie Monat für Monat. Du musst kein einziges selbst aussuchen.',
         },
         {
           title: 'Durchblättern, tauschen, bestellen',
-          body: 'Das Buch wird für dich gestaltet. Tausch jedes Foto, das dir nicht gefällt, ändere die Texte, wenn du magst, und das Hardcover wird gedruckt und zu dir nach Hause geschickt.',
+          body: 'Das Buch wird für dich gestaltet. Gefällt dir ein Foto nicht, tauschst du es gegen ein anderes aus demselben Monat oder nimmst es heraus. Ändere die Texte, wenn du magst, und das Hardcover wird gedruckt und zu dir nach Hause geschickt.',
         },
       ],
     },
@@ -116,7 +116,7 @@ export const de: Copy = {
       'Das erste Jahr deines Babys als gedrucktes Hardcover-Fotobuch, gemacht aus den Fotos, die schon auf deinem Handy sind. BabyBookAI wählt, sortiert und gestaltet sie für dich.',
     eyebrow: 'Fotobuch vom ersten Babyjahr',
     h1: 'Das Babybuch, das sich selbst macht',
-    lead: 'Die App liest deine Handy-Galerie, wählt die besten Fotos jedes Monats und gestaltet ein Hardcover-Buch. Du blätterst durch, tauschst aus, was dir nicht gefällt, und es ist unterwegs.',
+    lead: 'Unsere eigene KI geht deine Handy-Galerie durch, wählt für dich die besten Fotos jedes Monats aus und gestaltet ein Hardcover-Buch. Du blätterst durch, tauschst ein Foto gegen ein anderes aus demselben Monat oder nimmst es heraus, und es ist unterwegs.',
     homework: {
       title: 'Jedes Babybuch macht Arbeit. Außer diesem.',
       body: 'Die Fotos hast du schon gemacht: Hunderte, jeden Monat. Ein Buch daraus zu machen, dafür hat mit einem Baby im Haus niemand Zeit.',
@@ -170,7 +170,7 @@ export const de: Copy = {
       {
         question: 'Kann ich die ausgewählten Fotos ändern?',
         answer:
-          'Ja. Du blätterst das Buch auf dem Handy durch und tauschst jedes Foto aus, das dir nicht gefällt. Du kannst auch die Texte jeder Seite bearbeiten und eine eigene kurze Notiz hinzufügen.',
+          'Ja. Du blätterst das Buch auf dem Handy durch und tippst auf ein Foto, das dir nicht gefällt: Tausch es gegen ein anderes aus demselben Monat oder nimm es heraus, und die Seite ordnet sich von selbst neu. Du kannst auch die Texte jeder Seite bearbeiten und eine eigene kurze Notiz hinzufügen.',
       },
       {
         question: 'Wie sieht das Buch aus?',
@@ -306,7 +306,7 @@ export const de: Copy = {
       {
         question: 'Wie lange dauert es?',
         answer:
-          'Ein paar Minuten. Die meiste Zeit liest dein Handy die Galerie; dann blätterst du das Buch durch, tauschst aus, was du willst, und bestellst.',
+          'Ein paar Minuten. Die meiste Zeit geht unsere KI auf deinem Handy die Galerie durch; dann blätterst du das Buch durch, tauschst oder entfernst Fotos, wie du willst, und bestellst.',
       },
     ],
   },
@@ -400,7 +400,7 @@ export const de: Copy = {
       title: 'Die meisten Mädchenalben kommen leer an',
       paragraphs: [
         'Ein rosa Album mit Einsteckhüllen, ein Babybuch zum Ausfüllen, eine Vorlage im Fotoeditor: Alle warten darauf, dass du ein Jahr voller Fotos druckst, auswählst und einklebst. Mit einem Baby im Haus kommt dieser Abend selten.',
-        'Dieses fängt voll an. Es liest die Daten deiner Fotos, behält das schärfste jedes Moments, lässt verwackelte und die zwölf fast gleichen Bilder desselben Lächelns weg und gibt jedem Monat seine Doppelseite. Du blätterst durch und tauschst aus, was du lieber nicht behalten willst.',
+        'Dieses fängt voll an. Unsere KI liest die Daten deiner Fotos, behält das schärfste jedes Moments, lässt verwackelte und die zwölf fast gleichen Bilder desselben Lächelns weg und gibt jedem Monat seine Doppelseite. Du blätterst durch und tauschst ein Foto gegen ein anderes aus demselben Monat oder nimmst heraus, was du lieber nicht behalten willst.',
       ],
     },
     howTitle: 'Ein Fotoalbum für Mädchen in Minuten erstellen',
@@ -451,7 +451,7 @@ export const de: Copy = {
     crumb: 'Fotoalbum für Jungen',
     eyebrow: 'Baby-Fotoalbum für Jungen',
     h1: 'Baby-Fotoalbum für Jungen, aus den Fotos auf deinem Handy',
-    lead: 'Gib BabyBookAI seinen Namen und seinen Geburtstag. Die App geht die Fotos auf deinem Handy durch, behält seine schönsten Momente jedes Monats und gestaltet ein Hardcover-Album in Zartblau. Du blätterst es nur durch.',
+    lead: 'Gib BabyBookAI seinen Namen und seinen Geburtstag. Unsere eigene KI geht die Fotos auf deinem Handy durch, behält seine schönsten Momente jedes Monats und gestaltet ein Hardcover-Album in Zartblau. Du blätterst es nur durch.',
     thousands: {
       title: 'Von Tausenden Fotos zu einem Album',
       body: 'Das Schwierige an einem Babyalbum war nie das Drucken. Es ist das Auswählen. BabyBookAI wählt auf deinem Handy aus, also wird nichts hochgeladen, bis du bestellst.',
@@ -491,7 +491,7 @@ export const de: Copy = {
       {
         question: 'Wählt die App Fotos von ihm aus und nicht von allen anderen?',
         answer:
-          'Sie wählt aus den Fotos der Daten, die du angibst, behält das schärfste jedes Moments und sortiert Duplikate aus. Dann blätterst du das Buch durch und tauschst oder entfernst jedes Foto, das du nicht drin haben willst.',
+          'Sie wählt aus den Fotos der Daten, die du angibst, behält das schärfste jedes Moments und sortiert Duplikate aus. Dann blätterst du das Buch durch und tauschst jedes Foto gegen ein anderes aus demselben Monat oder entfernst, was du nicht drin haben willst.',
       },
       {
         question: 'Ist es ein gutes Geschenk für die Großeltern?',

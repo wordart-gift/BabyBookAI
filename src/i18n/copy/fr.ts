@@ -68,12 +68,12 @@ export const fr: Copy = {
           body: 'Le prénom de votre bébé va sur la couverture. La plupart des livres commencent le jour de sa naissance et se terminent à son premier anniversaire.',
         },
         {
-          title: 'Il parcourt votre galerie',
-          body: "Sur votre téléphone, il trouve les photos de l'année, écarte les floues et les quasi-doublons, garde la meilleure de chaque moment et les classe mois par mois.",
+          title: 'Notre propre IA choisit les photos',
+          body: "Sur votre téléphone, notre IA parcourt les photos de l'année, écarte les floues et les quasi-doublons, garde la meilleure de chaque moment et les classe mois par mois. Vous n'avez pas à en choisir une seule.",
         },
         {
           title: 'Feuilletez, remplacez, commandez',
-          body: "L'album est mis en page pour vous. Remplacez la photo qui ne vous plaît pas, retouchez les textes si vous le souhaitez, et il est imprimé avec une couverture rigide et livré chez vous.",
+          body: "L'album est mis en page pour vous. Une photo ne vous plaît pas ? Remplacez-la par une autre du même mois ou retirez-la, retouchez les textes si vous le souhaitez, et il est imprimé avec une couverture rigide et livré chez vous.",
         },
       ],
     },
@@ -120,9 +120,9 @@ export const fr: Copy = {
       'La première année de votre bébé en album photo imprimé, à couverture rigide, réalisé avec les photos déjà dans votre téléphone. BabyBookAI les choisit, les classe et les met en page pour vous.',
     eyebrow: 'Album photo de la première année de bébé',
     h1: "L'album photo de votre bébé qui se fait tout seul",
-    lead: 'Il parcourt la galerie de votre téléphone, choisit les meilleures photos de chaque mois et met en page un album photo à couverture rigide. Vous le feuilletez, remplacez ce qui ne vous plaît pas, et il arrive imprimé chez vous.',
+    lead: 'Notre propre IA parcourt la galerie de votre téléphone, choisit pour vous les meilleures photos de chaque mois et met en page un album photo à couverture rigide. Vous le feuilletez, remplacez une photo par une autre du même mois ou la retirez, et il arrive imprimé chez vous.',
     homework: {
-      title: "Chaque album de bébé est un devoir. Sauf celui-ci.",
+      title: "Tout album de bébé demande du travail. Sauf celui-ci.",
       body: "Les photos, vous les avez déjà prises : des centaines, chaque mois. En faire un album, c'est la partie pour laquelle personne n'a le temps avec un bébé à la maison.",
       yourPart: 'Votre part',
       ways: [
@@ -174,7 +174,7 @@ export const fr: Copy = {
       {
         question: "Puis-je changer les photos qu'il a choisies ?",
         answer:
-          'Oui. Vous feuilletez le livre sur votre téléphone et remplacez toute photo qui ne vous plaît pas. Vous pouvez aussi modifier les textes de chaque page et ajouter un petit mot à vous.',
+          "Oui. Vous feuilletez le livre sur votre téléphone et touchez la photo qui ne vous plaît pas : remplacez-la par une autre du même mois ou retirez-la, et la page se recompose d'elle-même. Vous pouvez aussi modifier les textes de chaque page et ajouter un petit mot à vous.",
       },
       {
         question: "À quoi ressemble l'album ?",
@@ -325,7 +325,7 @@ export const fr: Copy = {
       {
         question: 'Combien de temps faut-il pour le faire ?',
         answer:
-          "Quelques minutes. L'essentiel, c'est votre téléphone qui parcourt la galerie ; ensuite vous feuilletez le livre, remplacez ce que vous voulez et commandez.",
+          "Quelques minutes. L'essentiel, c'est notre IA qui parcourt la galerie sur votre téléphone ; ensuite vous feuilletez le livre, remplacez ou retirez les photos que vous voulez et commandez.",
       },
     ],
   },
@@ -424,7 +424,7 @@ export const fr: Copy = {
       title: 'La plupart des albums de bébé fille arrivent vides',
       paragraphs: [
         "Un album rose à pochettes, un livre de naissance à remplir, un modèle dans un éditeur photo : tous attendent que vous imprimiez, choisissiez et placiez une année de photos. Avec un bébé à la maison, cette soirée-là arrive rarement.",
-        "Celui-ci commence plein. Il lit les dates de vos photos, garde la plus nette de chaque moment, laisse de côté les floues et les douze quasi-copies du même sourire, et donne à chaque mois sa double page. Vous le feuilletez et remplacez ce que vous préférez ne pas garder.",
+        "Celui-ci commence plein. Notre IA lit les dates de vos photos, garde la plus nette de chaque moment, laisse de côté les floues et les douze quasi-copies du même sourire, et donne à chaque mois sa double page. Vous le feuilletez et, si une photo ne vous plaît pas, vous la remplacez par une autre du même mois ou la retirez.",
       ],
     },
     howTitle: 'Comment faire un album photo bébé fille en quelques minutes',
@@ -475,7 +475,7 @@ export const fr: Copy = {
     crumb: 'Album photo bébé garçon',
     eyebrow: 'Album photo bébé garçon',
     h1: 'Album photo bébé garçon, réalisé avec les photos de votre téléphone',
-    lead: "Donnez à BabyBookAI son prénom et sa date de naissance. Il parcourt les photos de votre téléphone, garde ses plus beaux moments de chaque mois et met en page un album à couverture rigide en bleu doux. Vous n'avez qu'à le feuilleter.",
+    lead: "Donnez à BabyBookAI son prénom et sa date de naissance. Notre propre IA parcourt les photos de votre téléphone, garde ses plus beaux moments de chaque mois et met en page un album à couverture rigide en bleu doux. Vous n'avez qu'à le feuilleter.",
     thousands: {
       title: 'Des milliers de photos, un seul album',
       body: "Le plus dur dans un album photo de bébé, ça n'a jamais été l'impression. C'est le choix. BabyBookAI fait ce choix sur votre téléphone : rien n'est envoyé avant votre commande.",
@@ -515,7 +515,7 @@ export const fr: Copy = {
       {
         question: "Choisira-t-il des photos de lui, et pas de tout le monde ?",
         answer:
-          "Il choisit parmi les photos des dates que vous indiquez, garde la plus nette de chaque moment et écarte les doublons. Ensuite vous feuilletez le livre et remplacez ou retirez toute photo que vous ne voulez pas.",
+          "Il choisit parmi les photos des dates que vous indiquez, garde la plus nette de chaque moment et écarte les doublons. Ensuite vous feuilletez le livre et remplacez une photo par une autre du même mois, ou retirez celle que vous ne voulez pas.",
       },
       {
         question: 'Est-ce un bon cadeau pour les grands-parents ?',
@@ -711,7 +711,7 @@ export const fr: Copy = {
         body: "Les photos sont choisies sur votre téléphone. Rien n'est envoyé pour les choisir ; seul le livre terminé part, quand vous le commandez, pour être imprimé.",
       },
       {
-        title: 'Pas de devoirs',
+        title: 'Rien à faire chaque semaine',
         body: "Pas de rappels hebdomadaires, pas de journal, pas d'abonnement. Les photos, vous les avez déjà prises ; le livre se fait avec elles, une fois, quand vous le voulez.",
       },
       {

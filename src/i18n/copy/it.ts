@@ -63,12 +63,12 @@ export const it: Copy = {
           body: 'Il nome del tuo bebè va in copertina. La maggior parte dei libri inizia il giorno della nascita e finisce al primo compleanno.',
         },
         {
-          title: 'Legge la galleria del telefono',
-          body: "Sul tuo telefono trova le foto di quell'anno, scarta quelle sfocate e le quasi doppie, tiene la migliore di ogni momento e le ordina mese per mese.",
+          title: 'La nostra IA sceglie le foto',
+          body: "Sul tuo telefono la nostra IA passa in rassegna le foto di quell’anno, scarta quelle sfocate e le quasi doppie, tiene la migliore di ogni momento e le ordina mese per mese. Non devi sceglierne nemmeno una.",
         },
         {
           title: 'Sfoglia, cambia, ordina',
-          body: 'Il libro è impaginato per te. Cambia le foto che non ti convincono, ritocca i testi se vuoi, e il libro rigido viene stampato e spedito a casa tua.',
+          body: 'Il libro è impaginato per te. Se una foto non ti convince, la cambi con un’altra dello stesso mese o la togli; ritocchi i testi se vuoi, e il libro rigido viene stampato e spedito a casa tua.',
         },
       ],
     },
@@ -115,9 +115,9 @@ export const it: Copy = {
       'Il primo anno del tuo bebè in un fotolibro stampato con copertina rigida, fatto con le foto che hai già sul telefono. BabyBookAI le sceglie, le ordina e le impagina per te.',
     eyebrow: 'Fotolibro del primo anno del bebè',
     h1: 'Il libro del bebè che si fa da solo',
-    lead: 'Legge la galleria del tuo telefono, sceglie le foto migliori di ogni mese e impagina un libro rigido. Tu lo sfogli, cambi quello che non ti piace, ed è in viaggio.',
+    lead: 'La nostra IA passa in rassegna la galleria del tuo telefono, sceglie per te le foto migliori di ogni mese e impagina un libro rigido. Tu lo sfogli, cambi una foto con un’altra dello stesso mese o la togli, ed è in viaggio.',
     homework: {
-      title: 'Ogni libro del bebè è un compito. Tranne questo.',
+      title: 'Ogni libro del bebè costa fatica. Tranne questo.',
       body: 'Le foto le hai già fatte: centinaia, ogni mese. Trasformarle in un libro è la parte per cui nessuno ha tempo con un bebè in casa.',
       yourPart: 'La tua parte',
       ways: [
@@ -169,7 +169,7 @@ export const it: Copy = {
       {
         question: 'Posso cambiare le foto che ha scelto?',
         answer:
-          'Sì. Sfogli il libro sul telefono e cambi qualsiasi foto che non ti piace. Puoi anche modificare i testi di ogni pagina e aggiungere una tua breve nota.',
+          'Sì. Sfogli il libro sul telefono e tocchi la foto che non ti piace: la cambi con un’altra dello stesso mese o la togli, e la pagina si reimpagina da sola. Puoi anche modificare i testi di ogni pagina e aggiungere una tua breve nota.',
       },
       {
         question: 'Com’è il libro?',
@@ -305,7 +305,7 @@ export const it: Copy = {
       {
         question: 'Quanto ci vuole?',
         answer:
-          'Pochi minuti. Quasi tutto è il telefono che legge la galleria; poi sfogli il libro, cambi ciò che vuoi e ordini.',
+          'Pochi minuti. Quasi tutto è la nostra IA che passa in rassegna la galleria sul telefono; poi sfogli il libro, cambi o togli le foto che vuoi e ordini.',
       },
     ],
   },
@@ -399,7 +399,7 @@ export const it: Copy = {
       title: 'La maggior parte degli album per bambina arriva vuota',
       paragraphs: [
         'Un album rosa con le taschine, un libro del bebè da compilare, un modello in un editor di foto: ognuno aspetta che tu stampi, scelga e metta al suo posto un anno di foto. Con un bebè in casa, quella serata arriva di rado.',
-        'Questo parte già pieno. Legge le date delle tue foto, tiene la più nitida di ogni momento, lascia fuori le sfocate e le dodici quasi copie dello stesso sorriso, e dà a ogni mese la sua doppia pagina. Lo sfogli e cambi ciò che preferisci non tenere.',
+        'Questo parte già pieno. La nostra IA legge le date delle tue foto, tiene la più nitida di ogni momento, lascia fuori le sfocate e le dodici quasi copie dello stesso sorriso, e dà a ogni mese la sua doppia pagina. Lo sfogli e, se una foto non ti convince, la cambi con un’altra dello stesso mese o la togli.',
       ],
     },
     howTitle: 'Come fare un album foto per bambina in pochi minuti',
@@ -450,7 +450,7 @@ export const it: Copy = {
     crumb: 'Album foto per bambino',
     eyebrow: 'Album foto per bambino',
     h1: 'Album foto per bambino, fatto con le foto del tuo telefono',
-    lead: 'Dai a BabyBookAI il suo nome e la sua data di nascita. Passa in rassegna le foto del tuo telefono, tiene i suoi momenti migliori di ogni mese e impagina un album rigido in azzurro tenue. Tu lo sfogli e basta.',
+    lead: 'Dai a BabyBookAI il suo nome e la sua data di nascita. La nostra IA passa in rassegna le foto del tuo telefono, tiene i suoi momenti migliori di ogni mese e impagina un album rigido in azzurro tenue. Tu lo sfogli e basta.',
     thousands: {
       title: 'Da migliaia di foto a un solo album',
       body: 'La parte difficile di un album del bebè non è mai stata la stampa. È la scelta. BabyBookAI sceglie sul tuo telefono, quindi non viene caricato nulla finché non ordini.',
@@ -490,7 +490,7 @@ export const it: Copy = {
       {
         question: 'Sceglierà foto di lui e non di tutti gli altri?',
         answer:
-          'Sceglie tra le foto delle date che indichi, tiene la più nitida di ogni momento e scarta i doppioni. Poi sfogli il libro e cambi o togli qualsiasi foto che non vuoi.',
+          'Sceglie tra le foto delle date che indichi, tiene la più nitida di ogni momento e scarta i doppioni. Poi sfogli il libro e cambi una foto con un’altra dello stesso mese, o togli quella che non vuoi.',
       },
       {
         question: 'È un buon regalo per i nonni?',
@@ -686,7 +686,7 @@ export const it: Copy = {
         body: 'Le foto vengono scelte sul tuo telefono. Per sceglierle non si carica nulla; solo il libro finito viene inviato, quando lo ordini, per essere stampato.',
       },
       {
-        title: 'Nessun compito',
+        title: 'Niente da fare ogni settimana',
         body: 'Niente promemoria settimanali, niente diario, niente abbonamento. Le foto le hai già fatte; il libro nasce da loro, una volta, quando vuoi.',
       },
       {

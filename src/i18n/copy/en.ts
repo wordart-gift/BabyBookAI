@@ -65,12 +65,12 @@ export const en = {
           body: 'Your baby’s name goes on the cover. Most books start on the day they were born and end on the first birthday.',
         },
         {
-          title: 'It reads your camera roll',
-          body: 'On your phone, it finds that year’s photos, drops the blurry ones and the near-duplicates, keeps the best of every moment and sorts them month by month.',
+          title: 'Our own AI picks the photos',
+          body: 'On your phone, our AI goes through that year’s photos, drops the blurry ones and the near-duplicates, keeps the best of every moment and sorts them month by month. You don’t have to choose a single one.',
         },
         {
           title: 'Flip through, swap, order',
-          body: 'The book is laid out for you. Swap any photo you don’t love, change the words if you like, and the hardcover is printed and shipped to your door.',
+          body: 'The book is laid out for you. Swap any photo you don’t love for another from the same month, or take it out, change the words if you like, and the hardcover is printed and shipped to your door.',
         },
       ],
     },
@@ -119,7 +119,7 @@ export const en = {
       'Your baby’s first year as a printed hardcover photo book, made from the photos already on your phone. BabyBookAI picks, sorts and lays them out for you.',
     eyebrow: 'Baby’s first year photo book',
     h1: 'The baby memory book that makes itself',
-    lead: 'It reads your camera roll, picks the best photos of every month and lays out a hardcover book. You flip through, swap what you don’t love, and it’s on its way.',
+    lead: 'Our own AI goes through your camera roll, picks the best photos of every month for you and lays out a hardcover book. You flip through, swap any photo for another from the same month or take it out, and it’s on its way.',
     homework: {
       title: 'Every baby book is homework. Except this one.',
       body: 'You already took the photos: hundreds of them, every month. Turning them into a book is the part nobody has time for with a baby in the house.',
@@ -173,7 +173,7 @@ export const en = {
       {
         question: 'Can I change the photos it picked?',
         answer:
-          'Yes. You flip through the book on your phone and swap any photo you don’t love. You can also edit the words on each page and add a short note of your own.',
+          'Yes. You flip through the book on your phone and tap any photo you don’t love: swap it for another from the same month, or take it out, and the page lays itself out again. You can also edit the words on each page and add a short note of your own.',
       },
       {
         question: 'What does the book look like?',
@@ -212,7 +212,7 @@ export const en = {
       title: 'Everything a baby photo album should be. Minus the work.',
       items: [
         {
-          title: 'It picks the photos',
+          title: 'Our own AI picks the photos',
           body: 'From hundreds of shots a month, it keeps the sharpest of every moment and leaves out the blurry ones, the bursts and the duplicates.',
         },
         {
@@ -314,7 +314,7 @@ export const en = {
       {
         question: 'How long does it take to make?',
         answer:
-          'A few minutes. Most of that is your phone reading the camera roll; then you flip through the book, swap anything you want and order.',
+          'A few minutes. Most of that is our AI going through your camera roll on your phone; then you flip through the book, swap or remove any photo you like and order.',
       },
     ],
   },
@@ -414,7 +414,7 @@ export const en = {
       title: 'Most baby girl albums arrive empty',
       paragraphs: [
         'A pink album with sleeves, a fill-in memory book, a template in a photo editor: each one waits for you to print, choose and place a year of photos. With a baby in the house, that evening rarely comes.',
-        'This one starts full. It reads the dates on your photos, keeps the sharpest of every moment, leaves out the blurry shots and the twelve near-copies of the same smile, and gives every month its own spread. You flip through it and swap anything you would rather not keep.',
+        'This one starts full. Our AI reads the dates on your photos, keeps the sharpest of every moment, leaves out the blurry shots and the twelve near-copies of the same smile, and gives every month its own spread. You flip through it, swap any photo for another from the same month, or take out the ones you would rather not keep.',
       ],
     },
     howTitle: 'How to make a baby girl photo album in minutes',
@@ -465,7 +465,7 @@ export const en = {
     crumb: 'Baby boy photo album',
     eyebrow: 'Baby boy photo album',
     h1: 'Baby boy photo album, made from your camera roll',
-    lead: 'Give BabyBookAI his name and his birthday. It goes through the photos on your phone, keeps his best moments of every month and lays out a soft blue hardcover album. You just look through it.',
+    lead: 'Give BabyBookAI his name and his birthday. Our own AI goes through the photos on your phone, keeps his best moments of every month and lays out a soft blue hardcover album. You just look through it.',
     thousands: {
       title: 'From thousands of photos to one album',
       body: 'The hard part of a baby boy photo album was never the printing. It is choosing. BabyBookAI does the choosing on your phone, so nothing is uploaded until you order.',
@@ -505,7 +505,7 @@ export const en = {
       {
         question: 'Will it pick photos of him, not of everyone else?',
         answer:
-          'It picks from the photos of the dates you choose, keeps the sharpest of every moment and drops duplicates. Then you flip through the book and swap or remove any photo you don’t want in it.',
+          'It picks from the photos of the dates you choose, keeps the sharpest of every moment and drops duplicates. Then you flip through the book and swap any photo for another from the same month, or remove the ones you don’t want in it.',
       },
       {
         question: 'Is it a good gift for grandparents?',

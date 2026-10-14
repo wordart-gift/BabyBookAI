@@ -145,7 +145,7 @@ function facts(): string {
     ? 'Android (Google Play) and iPhone (App Store)'
     : 'Android (Google Play); the iPhone app is coming soon';
   return [
-    `- **What it is:** a free phone app that makes a printed hardcover photo book of a baby’s first year from the photos already on the parent’s phone. It chooses the photos, sorts them month by month and lays out every page; the parent looks through the book, swaps what they like and orders it.`,
+    `- **What it is:** a free phone app that makes a printed hardcover photo book of a baby’s first year from the photos already on the parent’s phone. Its own AI chooses the best photos automatically, sorts them month by month and lays out every page; the parent looks through the book, swaps any photo for another from the same month or takes it out, and orders it.`,
     `- **Who it is for:** parents who have thousands of baby photos and no time to make a photo book, and grandparents or relatives who want one as a gift.`,
     `- **How it differs:** fill-in memory books and weekly baby book apps need work every week or month of the year, and photo book editors need the parent to choose and place every photo. ${SITE.name} needs nothing during the year and a few minutes at the end.`,
     `- **The book:** square hardcover, 28 × 28 cm (11 × 11 in), ${BOOK.pagesMin}–${BOOK.pagesMax} pages, 170 gsm silk-coated paper, matte laminated cover, glued binding. A two-page spread for every month, the baby’s name and best photo on the cover, three paper tones (cream, soft pink, soft blue). It can cover ${BOOK.monthsOptions.join(', ').replace(/, (\d+)$/, ' or $1')} months.`,

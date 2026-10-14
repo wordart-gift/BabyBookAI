@@ -64,12 +64,12 @@ export const pt: Copy = {
           body: 'O nome do teu bebé vai na capa. A maioria dos livros começa no dia em que nasceu e acaba no primeiro aniversário.',
         },
         {
-          title: 'Lê a galeria do telemóvel',
-          body: 'No teu telemóvel, encontra as fotografias desse ano, deixa de fora as tremidas e as quase repetidas, fica com a melhor de cada momento e ordena-as mês a mês.',
+          title: 'A nossa própria IA escolhe as fotografias',
+          body: 'No teu telemóvel, a nossa IA percorre as fotografias desse ano, deixa de fora as tremidas e as quase repetidas, fica com a melhor de cada momento e ordena-as mês a mês. Não tens de escolher nenhuma.',
         },
         {
           title: 'Folheia, troca, encomenda',
-          body: 'O livro é organizado por ti. Troca qualquer fotografia de que não gostes, altera os textos se quiseres, e o livro de capa dura é impresso e enviado para tua casa.',
+          body: 'O livro já vem paginado. Se uma fotografia não te convence, troca-la por outra do mesmo mês ou tira-la; alteras os textos se quiseres, e o livro de capa dura é impresso e enviado para tua casa.',
         },
       ],
     },
@@ -116,7 +116,7 @@ export const pt: Copy = {
       'O primeiro ano do teu bebé num fotolivro impresso de capa dura, feito com as fotografias que já tens no telemóvel. O BabyBookAI escolhe-as, ordena-as e pagina-as por ti.',
     eyebrow: 'Fotolivro do primeiro ano do bebé',
     h1: 'O livro do bebé que se faz sozinho',
-    lead: 'Lê a galeria do teu telemóvel, escolhe as melhores fotografias de cada mês e pagina um livro de capa dura. Tu folheias, trocas o que não te agrada, e ele segue a caminho.',
+    lead: 'A nossa própria IA percorre a galeria do teu telemóvel, escolhe por ti as melhores fotografias de cada mês e pagina um livro de capa dura. Tu folheias, trocas a fotografia de que não gostes por outra do mesmo mês ou tira-la, e ele segue a caminho.',
     homework: {
       title: 'Todos os livros de bebé dão trabalho. Menos este.',
       body: 'As fotografias já as tiraste: centenas, todos os meses. Transformá-las num livro é a parte para a qual ninguém tem tempo com um bebé em casa.',
@@ -170,7 +170,7 @@ export const pt: Copy = {
       {
         question: 'Posso mudar as fotografias que escolheu?',
         answer:
-          'Sim. Folheias o livro no telemóvel e trocas qualquer fotografia de que não gostes. Também podes editar os textos de cada página e juntar uma pequena nota tua.',
+          'Sim. Folheias o livro no telemóvel e tocas na fotografia de que não gostes: troca-la por outra do mesmo mês ou tira-la, e a página volta a paginar-se sozinha. Também podes editar os textos de cada página e juntar uma pequena nota tua.',
       },
       {
         question: 'Como é o livro?',
@@ -209,7 +209,7 @@ export const pt: Copy = {
       title: 'Tudo o que um álbum de bebé deve ser. Sem o trabalho.',
       items: [
         {
-          title: 'Escolhe as fotografias',
+          title: 'A nossa própria IA escolhe as fotografias',
           body: 'De centenas de fotografias por mês, fica com a mais nítida de cada momento e deixa de fora as tremidas, as rajadas e os duplicados.',
         },
         {
@@ -306,7 +306,7 @@ export const pt: Copy = {
       {
         question: 'Quanto tempo demora a fazer?',
         answer:
-          'Uns minutos. Quase todo esse tempo é o teu telemóvel a ler a galeria; depois folheias o livro, trocas o que quiseres e encomendas.',
+          'Uns minutos. Quase todo esse tempo é a nossa IA a percorrer a galeria no teu telemóvel; depois folheias o livro, trocas ou tiras as fotografias que quiseres e encomendas.',
       },
     ],
   },
@@ -400,7 +400,7 @@ export const pt: Copy = {
       title: 'A maioria dos álbuns de bebé menina chega vazia',
       paragraphs: [
         'Um álbum cor-de-rosa com bolsas, um livro de bebé para preencher, um modelo num editor de fotografia: todos esperam que imprimas, escolhas e coloques um ano de fotografias. Com um bebé em casa, essa noite raramente chega.',
-        'Este começa cheio. Lê as datas das tuas fotografias, fica com a mais nítida de cada momento, deixa de fora as tremidas e as doze quase cópias do mesmo sorriso, e dá a cada mês a sua página dupla. Folheias e trocas o que preferires não guardar.',
+        'Este começa cheio. A nossa IA lê as datas das tuas fotografias, fica com a mais nítida de cada momento, deixa de fora as tremidas e as doze quase cópias do mesmo sorriso, e dá a cada mês a sua página dupla. Folheias e, se uma fotografia não te convence, troca-la por outra do mesmo mês ou tira-la.',
       ],
     },
     howTitle: 'Como fazer um álbum de fotografias de bebé menina em minutos',
@@ -451,7 +451,7 @@ export const pt: Copy = {
     crumb: 'Álbum de fotografias de bebé menino',
     eyebrow: 'Álbum de fotografias de bebé menino',
     h1: 'Álbum de fotografias de bebé menino, feito com as fotografias do teu telemóvel',
-    lead: 'Dá ao BabyBookAI o nome dele e o dia do aniversário. Percorre as fotografias do teu telemóvel, fica com os melhores momentos dele de cada mês e pagina um álbum de capa dura em azul suave. Só tens de o folhear.',
+    lead: 'Dá ao BabyBookAI o nome dele e o dia do aniversário. A nossa própria IA percorre as fotografias do teu telemóvel, fica com os melhores momentos dele de cada mês e pagina um álbum de capa dura em azul suave. Só tens de o folhear.',
     thousands: {
       title: 'De milhares de fotografias a um só álbum',
       body: 'A parte difícil de um álbum de bebé nunca foi imprimir. É escolher. O BabyBookAI escolhe no teu telemóvel, por isso não se carrega nada até encomendares.',
@@ -491,7 +491,7 @@ export const pt: Copy = {
       {
         question: 'Vai escolher fotografias dele e não de toda a gente?',
         answer:
-          'Escolhe entre as fotografias das datas que indicares, fica com a mais nítida de cada momento e deixa de fora os duplicados. Depois folheias o livro e trocas ou tiras qualquer fotografia que não queiras.',
+          'Escolhe entre as fotografias das datas que indicares, fica com a mais nítida de cada momento e deixa de fora os duplicados. Depois folheias o livro e trocas qualquer fotografia por outra do mesmo mês, ou tiras a que não queiras.',
       },
       {
         question: 'É um bom presente para os avós?',
