@@ -3,9 +3,13 @@ import { linker } from '../format';
 import type { Copy } from './en';
 
 /**
- * Deutsch, mit du, wie die App (librofotos lib/l10n/app_de.arb). Gesucht
- * wird „Fotobuch“ und „Fotobuch erstellen“ (Keyword Tool, Deutschland,
- * Okt. 2026): Das Wort steht in Titeln und H1 vorn.
+ * Deutsch, mit du, wie die App (librofotos lib/l10n/app_de.arb). Das Wort
+ * fürs Produkt ist „Fotobuch“ (Semrush, Deutschland, Okt. 2026; die Daten
+ * stehen in docs/keywords/de): Nur bei „Fotobuch baby“ zeigt die erste Seite
+ * Druckereien. „Fotoalbum“ wird etwas mehr gesucht, führt aber zu leeren
+ * Alben zum Einkleben; es steht im Text. „Babybuch“ meint Bücher zum Vorlesen
+ * und das Buch zum Ausfüllen, also nicht in Titeln. Das erste Jahr heißt
+ * „mein erstes Jahr“, nicht „Lebensjahr“.
  */
 const a = linker('de');
 const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportEmail}</a>`;
@@ -15,7 +19,7 @@ export const de: Copy = {
     skip: 'Zum Inhalt springen',
     homeAria: `${SITE.name}, Startseite`,
     mainNav: 'Hauptmenü',
-    nav: { babyPhotoBook: 'Baby-Fotobuch', firstYear: 'Erstes Lebensjahr' },
+    nav: { babyPhotoBook: 'Baby-Fotobuch', firstYear: 'Erstes Jahr' },
     getApp: 'App laden',
     language: 'Sprache',
     breadcrumb: 'Brotkrümelnavigation',
@@ -27,7 +31,7 @@ export const de: Copy = {
       company: 'Unternehmen',
       links: {
         babyPhotoBook: 'Baby-Fotobuch',
-        firstYear: 'Fotobuch erstes Lebensjahr',
+        firstYear: 'Fotobuch erstes Jahr',
         boy: 'Fotoalbum für Jungen',
         girl: 'Fotoalbum für Mädchen',
         ideas: 'Ideen fürs Baby-Fotobuch',
@@ -115,7 +119,7 @@ export const de: Copy = {
     description:
       'Das erste Jahr deines Babys als gedrucktes Hardcover-Fotobuch, gemacht aus den Fotos, die schon auf deinem Handy sind. BabyBookAI wählt, sortiert und gestaltet sie für dich.',
     eyebrow: 'Fotobuch vom ersten Babyjahr',
-    h1: 'Das Babybuch, das sich selbst macht',
+    h1: 'Das Baby-Fotobuch, das sich selbst macht',
     lead: 'Unsere eigene KI geht deine Handy-Galerie durch, wählt für dich die besten Fotos jedes Monats aus und gestaltet ein Hardcover-Buch. Du blätterst durch, tauschst ein Foto gegen ein anderes aus demselben Monat oder nimmst es heraus, und es ist unterwegs.',
     homework: {
       title: 'Jedes Babybuch macht Arbeit. Außer diesem.',
@@ -148,7 +152,7 @@ export const de: Copy = {
     birthday: {
       title: 'Fertig zum ersten Geburtstag',
       body: 'Das Jahr endet, das Buch ist fertig. Bestell es in der Woche der Feier, oder mach gleich eins für die Großeltern mit. Ihr liebstes Geschenk ist das, in dem das Baby steckt.',
-      more: "So funktioniert das Fotobuch vom ersten Lebensjahr",
+      more: "So funktioniert das Fotobuch vom ersten Jahr",
     },
     faqTitle: 'Was Eltern fragen',
     faq: [
@@ -200,7 +204,7 @@ export const de: Copy = {
 
   babyPhotoBook: {
     title: 'Baby-Fotobuch aus den Fotos auf deinem Handy | BabyBookAI',
-    description: `Ein Hardcover-Baby-Fotobuch, für dich gemacht: BabyBookAI wählt die besten Fotos auf deinem Handy, ordnet sie nach Monaten und gestaltet jede Seite. {size}, ${BOOK.pagesMin} bis ${BOOK.pagesMax} Seiten.`,
+    description: `Ein Baby-Fotoalbum, das fertig gedruckt kommt: BabyBookAI wählt die besten Fotos auf deinem Handy, ordnet sie nach Monaten und gestaltet ein Hardcover-Fotobuch. {size}.`,
     crumb: 'Baby-Fotobuch',
     eyebrow: 'Baby-Fotobuch',
     h1: 'Baby-Fotobuch, erstellt aus den Fotos auf deinem Handy',
@@ -274,11 +278,16 @@ export const de: Copy = {
       paragraphs: [
         'Im ersten Lebensjahr machen Eltern Hunderte Fotos pro Monat. Sie liegen in der Galerie, zwischen Screenshots und Kassenbons, und rauschen beim Scrollen vorbei. Ein Fotoalbum fürs Baby ist das Gegenteil: ein paar der besten, in Reihenfolge, auf Papier, in einem Buch, das jeder in die Hand nehmen kann.',
         'Das Schwierige war nie das Drucken. Es sind die Stunden des Auswählens: welches der vierzig Badefotos, zu welchem Monat dieses Foto gehört, wie ein Hochformat neben ein Querformat passt. Daran bleiben die meisten Babyalben hängen, irgendwo um den dritten Monat.',
-        `BabyBookAI übernimmt diesen Teil für dich, auf deinem Handy. Die App liest die Daten, behält das schärfste Foto jedes Moments, gibt jedem Monat seine Doppelseite und gestaltet ein Babyalbum, das gestaltet aussieht, nicht abgeladen. Dir bleibt der schöne Teil: das Durchblättern. Für das ganze erste Jahr, vom Krankenhaus bis zum Kuchen, schau dir das ${a('firstYear', 'Fotobuch vom ersten Lebensjahr')} an.`,
+        `BabyBookAI übernimmt diesen Teil für dich, auf deinem Handy. Die App liest die Daten, behält das schärfste Foto jedes Moments, gibt jedem Monat seine Doppelseite und gestaltet ein Babyalbum, das gestaltet aussieht, nicht abgeladen. Dir bleibt der schöne Teil: das Durchblättern. Für das ganze erste Jahr, vom Krankenhaus bis zum Kuchen, schau dir das ${a('firstYear', 'Fotobuch vom ersten Jahr')} an.`,
       ],
     },
     faqTitle: 'Fragen zum Baby-Fotobuch',
     faq: [
+      {
+        question: 'Ist das ein Fotoalbum zum Einkleben?',
+        answer:
+          'Nein. Es ist ein gedrucktes Fotobuch: Die Fotos sind auf die Seiten gedruckt, schon platziert und gestaltet. Keine Folien, keine Fotoecken, nichts zum Einkleben.',
+      },
       {
         question: 'Wie groß ist das Baby-Fotobuch?',
         answer:
@@ -312,12 +321,12 @@ export const de: Copy = {
   },
 
   firstYear: {
-    title: 'Fotobuch vom ersten Lebensjahr, ohne selbst zu basteln | BabyBookAI',
+    title: 'Fotobuch „Mein erstes Jahr“ fürs Baby, ohne Basteln | BabyBookAI',
     description:
-      'Ein Fotobuch vom ersten Lebensjahr deines Babys, Monat für Monat, aus den Fotos auf deinem Handy. Kein wöchentliches Hochladen: BabyBookAI wählt, ordnet und gestaltet das ganze Jahr.',
-    crumb: 'Fotobuch erstes Lebensjahr',
-    eyebrow: 'Fotobuch vom ersten Babyjahr',
-    h1: 'Das Fotobuch vom ersten Lebensjahr, das du nicht basteln musst',
+      'Das Fotobuch „Mein erstes Jahr“ deines Babys, Monat für Monat, aus den Fotos auf deinem Handy. Nichts zum Ausfüllen: BabyBookAI wählt, ordnet und gestaltet das ganze Jahr.',
+    crumb: 'Fotobuch erstes Jahr',
+    eyebrow: 'Fotobuch „Mein erstes Jahr“',
+    h1: 'Das Fotobuch von Babys erstem Jahr, das du nicht basteln musst',
     lead: 'Zwölf Monate, eine Doppelseite für jeden, vom Krankenhaus bis zum Kuchen. BabyBookAI macht es aus den Fotos, die schon auf deinem Handy sind, also musst du das ganze Jahr über nichts nachhalten.',
     months: {
       eyebrow: 'Monat für Monat',
@@ -352,14 +361,19 @@ export const de: Copy = {
         { label: 'BabyBookAI', value: 'Einmal, in Minuten' },
       ],
     },
-    howTitle: 'So entsteht das Fotobuch vom ersten Lebensjahr',
+    howTitle: 'So entsteht das Fotobuch vom ersten Jahr',
     birthday: {
       title: 'Rechtzeitig zum ersten Geburtstag',
       body: 'Du wählst die Daten, also kann das Buch in der Woche der Feier enden oder am Tag danach. Monate mit wenigen Fotos sind kein Problem: Das Layout folgt den Fotos, und ein Monat mit einem einzigen tollen Bild bekommt eine Seite für eins. Du willst über das erste Jahr hinaus? Ein Buch kann bis zu 18 Monate umfassen.',
       more: 'Das Baby-Fotobuch im Detail',
     },
-    faqTitle: 'Fragen zum Fotobuch vom ersten Lebensjahr',
+    faqTitle: 'Fragen zum Fotobuch vom ersten Jahr',
     faq: [
+      {
+        question: 'Ist das ein Babybuch zum Ausfüllen?',
+        answer:
+          'Nein. Das Fotobuch vom ersten Jahr kommt fertig gedruckt: Die Fotos sind schon auf ihren Seiten, Monat für Monat. Du schreibst nur, wenn du einen Satz ändern oder eine eigene Notiz hinzufügen willst.',
+      },
       {
         question: 'Wann sollte ich das Fotobuch vom ersten Jahr machen?',
         answer:
@@ -474,7 +488,7 @@ export const de: Copy = {
     details: {
       title: 'Das Album selbst',
       body: `Ein quadratisches Hardcover-Buch, {size}, matter Einband, ${BOOK.pagesMin} bis ${BOOK.pagesMax} Seiten auf 170-g-Seidenpapier. {price} inklusive Versand, auf Bestellung gedruckt und zu dir nach Hause geschickt. Jedes Foto kommt nur dorthin, wo es die Pixel für einen scharfen Druck hat, also landet eine kleine Kopie aus einem Chat nie auf dem Cover.`,
-      more: `Du machst eins für eine Tochter? Schau dir das ${a('girl', 'Fotoalbum für Mädchen')} an. Für das ganze Jahr, Monat für Monat, das ${a('firstYear', 'Fotobuch vom ersten Lebensjahr')}.`,
+      more: `Du machst eins für eine Tochter? Schau dir das ${a('girl', 'Fotoalbum für Mädchen')} an. Für das ganze Jahr, Monat für Monat, das ${a('firstYear', 'Fotobuch vom ersten Jahr')}.`,
     },
     faqTitle: 'Fragen zum Fotoalbum für Jungen',
     faq: [
@@ -624,7 +638,7 @@ export const de: Copy = {
           body: 'Ein aus einer Messenger-App gespeichertes Foto ist eine kleinere Kopie. Klein gedruckt sieht es gut aus, aber nicht über eine ganze Seite oder auf dem Cover. Wenn du das Original hast, nimm das.',
         },
       ],
-      product: `Genau an diesem Teil, dem Auswählen, bleiben die meisten Babybücher hängen. Diesen Teil übernimmt ${a('home', 'BabyBookAI')} für dich: Die App liest deine Galerie auf dem Handy, behält das schärfste Foto jedes Moments, ordnet das Jahr Monat für Monat und gestaltet das Buch, sodass du es nur durchblätterst. So entsteht das ${a('firstYear', 'Fotobuch vom ersten Lebensjahr')}.`,
+      product: `Genau an diesem Teil, dem Auswählen, bleiben die meisten Babybücher hängen. Diesen Teil übernimmt ${a('home', 'BabyBookAI')} für dich: Die App liest deine Galerie auf dem Handy, behält das schärfste Foto jedes Moments, ordnet das Jahr Monat für Monat und gestaltet das Buch, sodass du es nur durchblätterst. So entsteht das ${a('firstYear', 'Fotobuch vom ersten Jahr')}.`,
     },
     gifts: {
       title: 'Geschenkideen',

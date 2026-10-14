@@ -451,7 +451,7 @@ export const pt: Copy = {
     crumb: 'Álbum de fotografias de bebé menino',
     eyebrow: 'Álbum de fotografias de bebé menino',
     h1: 'Álbum de fotografias de bebé menino, feito com as fotografias do teu telemóvel',
-    lead: 'Dá ao BabyBookAI o nome dele e o dia do aniversário. A nossa própria IA percorre as fotografias do teu telemóvel, fica com os melhores momentos dele de cada mês e pagina um álbum de capa dura em azul suave. Só tens de o folhear.',
+    lead: 'Dá ao BabyBookAI o nome dele e a data de nascimento. A nossa própria IA percorre as fotografias do teu telemóvel, fica com os melhores momentos dele de cada mês e pagina um álbum de capa dura em azul suave. Só tens de o folhear.',
     thousands: {
       title: 'De milhares de fotografias a um só álbum',
       body: 'A parte difícil de um álbum de bebé nunca foi imprimir. É escolher. O BabyBookAI escolhe no teu telemóvel, por isso não se carrega nada até encomendares.',

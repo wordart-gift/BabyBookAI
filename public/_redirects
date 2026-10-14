@@ -16,3 +16,7 @@
 /fr/livre-photo-premiere-annee/ /fr/album-photo-bebe-premiere-annee/ 301
 /fr/idees-livre-photo-bebe /fr/idees-album-photo-bebe/ 301
 /fr/idees-livre-photo-bebe/ /fr/idees-album-photo-bebe/ 301
+
+# German, Oct 2026: the first year is searched as "erstes Jahr" (docs/keywords/de).
+/de/fotobuch-erstes-lebensjahr /de/fotobuch-erstes-jahr/ 301
+/de/fotobuch-erstes-lebensjahr/ /de/fotobuch-erstes-jahr/ 301

@@ -16,7 +16,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
   `src/config/site.ts` mirrors what the site states; keep it in step.
 - **Keyword strategy**: Carlos's research (Sept–Oct 2026) for the US; per
   country in `docs/keywords/<lang>/` (Semrush data and what it showed), one
-  language at a time. English (US, UK), Spain and France are done; the others still carry the Play listings'
+  language at a time. English (US, UK), Spain, France and Germany are done; the others still carry the Play listings'
   product words.
 
 ## Settled decisions
@@ -31,6 +31,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Legal pages are translated, but the English text applies (`ui.translationNote`) | A lawyer reviews the English; a translation must not become a second contract |
 | Spanish ranks on **"álbum"** (`album bebe primer año`, `album de fotos bebe`, as people type them), not "fotolibro" or "libro del bebé"; each page says early that ours arrives printed and laid out, since "álbum" also names the empty paste-in kind | Semrush, Spain, Oct 2026: "fotolibro bebe" has no searches; a small shop's page with no links ranks first for the first-year term (`docs/keywords/es/`) |
 | French ranks on **"album photo bébé"**; "livre photo", the printers' word, stays in subtitles and body (a third of the searches, the same results). The first-year page keeps "1ère année"; "album photo naissance" is answered on the baby album page | Semrush, France, Oct 2026 (`docs/keywords/fr/`). Harder than Spain: the small shops that rank sit on domains with authority 27–34 |
+| German ranks on **"Fotobuch"**, the only product word whose first page is printers; "Fotoalbum" (more searched, empty paste-in albums) stays in the body, "Babybuch" (books to read, fill-in books) out of titles. The first year is **"mein erstes Jahr"** (`/de/fotobuch-erstes-jahr/`), not "Lebensjahr" | Semrush, Germany and Austria, Oct 2026 (`docs/keywords/de/`). Small shops that rank sit on domains with authority 27–37 |
 | Titles, H1s and meta: `[searched keyword] + [what is different]` | Speed and "zero work" are not searched, but they win the click |
 | SEO is a complement; App Store + Meta are the channels | Measured on competitors; build once, keep it small |
 | **No fake social proof**: no ratings, reviews or `aggregateRating` until real ones exist | |
