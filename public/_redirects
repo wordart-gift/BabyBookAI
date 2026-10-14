@@ -28,3 +28,11 @@
 /it/fotolibro-primo-anno/ /it/album-primo-anno/ 301
 /it/album-foto-bambina /it/album-foto-neonata/ 301
 /it/album-foto-bambina/ /it/album-foto-neonata/ 301
+
+# Portuguese, Oct 2026: "álbum de fotos" is searched, "fotolivro" not at all (docs/keywords/pt).
+/pt/fotolivro-bebe /pt/album-fotos-bebe/ 301
+/pt/fotolivro-bebe/ /pt/album-fotos-bebe/ 301
+/pt/fotolivro-primeiro-ano /pt/album-primeiro-ano/ 301
+/pt/fotolivro-primeiro-ano/ /pt/album-primeiro-ano/ 301
+/pt/ideias-fotolivro-bebe /pt/ideias-album-bebe/ 301
+/pt/ideias-fotolivro-bebe/ /pt/ideias-album-bebe/ 301
