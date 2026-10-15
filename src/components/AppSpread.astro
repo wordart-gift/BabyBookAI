@@ -25,7 +25,7 @@ const { month, alt, class: className, eager = false } = Astro.props;
       src={spread}
       alt={alt}
       widths={[480, 800, 1200, 1600]}
-      sizes="(min-width: 1024px) 640px, 92vw"
+      sizes="(min-width: 1536px) 820px, (min-width: 1280px) 720px, (min-width: 1024px) 640px, 92vw"
       loading={eager ? 'eager' : 'lazy'}
       fetchpriority={eager ? 'high' : 'auto'}
     />

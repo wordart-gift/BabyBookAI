@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
-import Perch from '../components/Perch.astro';
 import AppSpread from '../components/AppSpread.astro';
 import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
@@ -40,8 +39,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
 >
   <!-- Hero -->
   <div class="relative overflow-x-clip">
-    <Perch />
-    <section class="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-[0.8fr_1.2fr] lg:pt-16">
+    <section class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:pt-16">
       <div>
         <p class="font-extrabold uppercase tracking-wider text-teal">{t.eyebrow}</p>
         {/* 14vw on a phone: at 2.6rem the balanced lines of a short H1 filled two thirds of the column. */}
@@ -49,7 +47,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
         <p class="mt-6 max-w-xl text-xl text-ink">{t.lead}</p>
         <DownloadCta source="home-hero" lang={lang} class="mt-8" />
       </div>
-      <div class="relative sm:mt-24 lg:mt-0">
+      <div class="relative sm:mt-24 lg:mt-24">
         <AppSpread month={ui.spreadMonth} alt={ui.spreadAlt} eager />
         <Stork
           size={120}
@@ -63,7 +61,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
 
   <!-- The problem: the homework -->
   <section class="band" aria-labelledby="homework">
-    <div class="mx-auto max-w-6xl px-5">
+    <div class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5">
       <h2 id="homework" class="max-w-3xl text-4xl text-teal sm:text-5xl">{t.homework.title}</h2>
       <p class="mt-5 max-w-2xl text-lg text-ink-soft">{t.homework.body}</p>
       <ul class="mt-12 grid gap-5 md:grid-cols-3">
@@ -95,7 +93,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
 
   <!-- The book -->
   <section class="band" aria-labelledby="book">
-    <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.2fr_1fr]">
+    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-14 px-5 lg:grid-cols-[1.2fr_1fr]">
       <div class="mx-auto flex max-w-[34rem] items-center justify-center gap-5">
         <PhoneShot src={SCREENS.selection.src} alt={SCREENS.selection.alt} class="w-[46%]" />
         <PhoneShot src={SCREENS.order.src} alt={SCREENS.order.alt} class="w-[46%]" />
@@ -122,7 +120,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
   </section>
 
   <!-- Privacy -->
-  <section class="mx-auto max-w-6xl px-5 py-20" aria-labelledby="privacy">
+  <section class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5 py-20" aria-labelledby="privacy">
     <div class="grid items-center gap-12 rounded-card bg-teal p-8 text-surface sm:p-12 lg:grid-cols-[auto_1fr]">
       <Stork size={150} swing={false} stage={false} lang={lang} class="mx-auto" />
       <div>
@@ -134,7 +132,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
 
   <!-- First year, gift -->
   <section class="band" aria-labelledby="first-year">
-    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-12 px-5 md:grid-cols-2">
       <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem]" />
       <div>
         <h2 id="first-year" class="text-4xl text-teal sm:text-5xl">{t.birthday.title}</h2>

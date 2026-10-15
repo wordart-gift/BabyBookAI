@@ -17,9 +17,18 @@ export interface Props {
   /** Draw the disc the bird stands on, as in the app. */
   stage?: boolean;
   lang?: Lang;
+  style?: string;
+  /**
+   * Every five seconds the dark wing comes up and waves, the body leaning into
+   * it, and the eye blinks in between: the app's stork (librofotos
+   * lib/widgets/stork.dart, _hello), in CSS.
+   */
+  wave?: boolean;
 }
 
-const { size = 200, class: className, swing = true, stage = true, lang = 'en' } = Astro.props;
+const { size = 200, class: className, swing = true, stage = true, lang = 'en', style, wave = false } = Astro.props;
+// Out of step with any other stork on the page.
+const delay = `${-(Math.random() * 5).toFixed(2)}s`;
 // Each instance needs its own clip id, or a second stork clips to the first.
 const clip = `stork-body-${Math.random().toString(36).slice(2, 8)}`;
 const bodyPath =
@@ -27,7 +36,8 @@ const bodyPath =
 ---
 
 <svg
-  class:list={['stork', className]}
+  class:list={['stork', className, { 'stork-waves': wave }]}
+  style={[style, wave && `--stork-delay:${delay}`].filter(Boolean).join(';')}
   width={size}
   height={Math.round((size * 230) / 200)}
   viewBox="0 0 200 230"
@@ -38,6 +48,7 @@ const bodyPath =
     <clipPath id={clip}><path d={bodyPath}></path></clipPath>
   </defs>
   {stage && <ellipse cx="100" cy="212" rx="70" ry="11" fill="#d8e8ea" />}
+  <g class="stork-bird">
   <g stroke="#b5721c" stroke-width="5" stroke-linecap="round" fill="none">
     <path d="M90,172 L85,208 M85,208 L74,213 M85,208 L73,208 M85,208 L92,212"></path>
     <path d="M110,172 L115,208 M115,208 L104,213 M115,208 L103,208 M115,208 L122,212"></path>
@@ -45,8 +56,10 @@ const bodyPath =
   <path d={bodyPath} fill="#fffcf6"></path>
   <g clip-path={`url(#${clip})`}>
     <path d="M148,107 C156,148 138,173 116,166 C122,142 128,119 148,107 Z" fill="#4e97a5"></path>
-    <path d="M52,107 C44,148 62,173 84,166 C78,142 72,119 52,107 Z" fill="#1d5a66"></path>
+    <path class="stork-wing" d="M52,107 C44,148 62,173 84,166 C78,142 72,119 52,107 Z" fill="#1d5a66"></path>
   </g>
+  {/* The same wing raised: swung from the shoulder (55, 109), drawn whole. */}
+  {wave && <path class="stork-wing-up" d="M52,107 C44,148 62,173 84,166 C78,142 72,119 52,107 Z" fill="#1d5a66"></path>}
   <path
     d="M100,96 C99,76 104,64 106,50"
     stroke="#fffcf6"
@@ -55,7 +68,7 @@ const bodyPath =
     fill="none"></path>
   <circle cx="108" cy="42" r="21" fill="#fffcf6"></circle>
   <path d="M127,41 L183,46 L127,46.5 Z M127,35.5 L183,46 L127,41 Z" fill="#e8a33f"></path>
-  <circle cx="116" cy="35" r="3.3" fill="#0e2a31"></circle>
+  <circle class="stork-eye" cx="116" cy="35" r="3.3" fill="#0e2a31"></circle>
   <g class:list={['stork-bundle', { 'stork-swing': swing }]}>
     <line x1="172" y1="46" x2="172" y2="62" stroke="#9aaab0" stroke-width="2.6" stroke-linecap="round"
     ></line>
@@ -68,6 +81,7 @@ const bodyPath =
     <path d="M169,69 C158,60 153,55 151,58 C154,65 162,69 169,71 Z" fill="#e8a33f"></path>
     <path d="M175,69 C186,60 191,55 193,58 C190,65 182,69 175,71 Z" fill="#e8a33f"></path>
     <circle cx="172" cy="68" r="5.5" fill="#b5721c"></circle>
+  </g>
   </g>
 </svg>
 
@@ -93,8 +107,68 @@ const bodyPath =
       transform: rotate(5deg);
     }
   }
+
+  /* The wave, on a five-second loop: at rest until 66%, the wing up by 73%,
+     three waves, down by 100% (the app's 1.7 s wave in a 5 s cycle). */
+  .stork-waves .stork-bird,
+  .stork-waves .stork-wing,
+  .stork-waves .stork-wing-up,
+  .stork-waves .stork-eye {
+    transform-box: view-box;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: var(--stork-delay, 0s);
+  }
+  .stork-waves .stork-bird {
+    transform-origin: 100px 212px;
+    animation-name: stork-lean;
+  }
+  .stork-waves .stork-wing {
+    animation-name: stork-wing-rest;
+  }
+  .stork-waves .stork-wing-up {
+    transform-origin: 55px 109px;
+    opacity: 0;
+    animation-name: stork-wing-up;
+  }
+  .stork-waves .stork-eye {
+    transform-origin: 116px 35px;
+    animation-name: stork-blink;
+  }
+  @keyframes stork-lean {
+    0%, 66% { transform: none; }
+    73%, 93% { transform: translateY(-2px) rotate(-3.4deg); }
+    77%, 85% { transform: translateY(-4px) rotate(-3.4deg); }
+    100% { transform: none; }
+  }
+  @keyframes stork-wing-rest {
+    0%, 66% { opacity: 1; }
+    66.5%, 99.5% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes stork-wing-up {
+    0%, 66% { opacity: 0; transform: rotate(0deg); }
+    66.5% { opacity: 1; transform: rotate(10deg); }
+    73% { transform: rotate(149deg); }
+    76.4% { transform: rotate(166deg); }
+    79.8% { transform: rotate(132deg); }
+    83.2% { transform: rotate(166deg); }
+    86.6% { transform: rotate(132deg); }
+    90% { transform: rotate(166deg); }
+    93.2% { transform: rotate(149deg); }
+    99.5% { opacity: 1; transform: rotate(10deg); }
+    100% { opacity: 0; transform: rotate(0deg); }
+  }
+  @keyframes stork-blink {
+    0%, 30%, 33%, 100% { transform: scaleY(1); }
+    31.5% { transform: scaleY(0.1); }
+  }
   @media (prefers-reduced-motion: reduce) {
-    .stork-swing {
+    .stork-swing,
+    .stork-waves .stork-bird,
+    .stork-waves .stork-wing,
+    .stork-waves .stork-wing-up,
+    .stork-waves .stork-eye {
       animation: none;
     }
   }
