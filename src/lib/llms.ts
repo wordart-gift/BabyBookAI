@@ -1,4 +1,4 @@
-import { BOOK, PUBLISHER, SITE, STORES } from '../config/site';
+import { BOOK, PUBLISHER, SITE, SOCIAL, STORES } from '../config/site';
 import { currencyFor, priceFor, SHIPPING_COUNTRIES, sizeFor } from '../config/pricing';
 import { COPY } from '../i18n/copy';
 import { LANGS, LOCALES, type Lang } from '../i18n/locales';
@@ -155,6 +155,7 @@ function facts(): string {
     `- **Platforms:** ${platforms}. The app and this site are in ${LANGS.length} languages.`,
     `- **Download:** ${STORES.googlePlay ?? abs('/#download')}`,
     `- **Made by:** ${PUBLISHER.name} (${PUBLISHER.url}). Contact: ${SITE.supportEmail}`,
+    `- **Social:** Instagram ${SOCIAL.instagram} · YouTube ${SOCIAL.youtube}`,
   ].join('\n');
 }
 

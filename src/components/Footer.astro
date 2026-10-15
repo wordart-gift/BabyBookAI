@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import publisherLogo from '../assets/brand/photo-to-text.png';
-import { PUBLISHER, SITE } from '../config/site';
+import { PUBLISHER, SITE, SOCIAL } from '../config/site';
 import { COPY } from '../i18n/copy';
 import { LANGS, LOCALES, type Lang } from '../i18n/locales';
 import { path, type PageId } from '../i18n/routes';
@@ -30,6 +30,26 @@ const year = new Date().getFullYear();
         {f.productOf}
         <Image src={publisherLogo} alt={PUBLISHER.name} width={120} densities={[1, 2]} class="h-auto w-[120px]" />
       </p>
+      {/* The glyphs are drawn inline: no request, no script. */}
+      <p class="mt-5 text-sm font-extrabold uppercase tracking-wide text-ink-soft">{f.follow}</p>
+      <ul class="mt-2 flex gap-3">
+        <li>
+          <a href={SOCIAL.instagram} rel="me noopener" aria-label="Instagram" class="grid size-10 place-items-center rounded-full bg-teal-wash text-teal hover:bg-teal hover:text-surface">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href={SOCIAL.youtube} rel="me noopener" aria-label="YouTube" class="grid size-10 place-items-center rounded-full bg-teal-wash text-teal hover:bg-teal hover:text-surface">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
     {
       groups.map((group) => (

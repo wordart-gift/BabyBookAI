@@ -41,6 +41,7 @@ export const fr: Copy = {
         terms: 'Conditions',
       },
       rights: 'Tous droits réservés.',
+      follow: 'Suivez-nous',
     },
     closing: {
       title: "Faites l'album en quelques minutes. Gardez-le pour toujours.",

@@ -39,6 +39,7 @@ export const nl: Copy = {
         terms: 'Voorwaarden',
       },
       rights: 'Alle rechten voorbehouden.',
+      follow: 'Volg ons',
     },
     closing: {
       title: 'Maak het boek in een paar minuten. Bewaar het voor altijd.',

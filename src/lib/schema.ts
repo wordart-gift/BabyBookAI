@@ -1,4 +1,4 @@
-import { BOOK, PUBLISHER, SITE, STORES } from '../config/site';
+import { BOOK, PUBLISHER, SITE, SOCIAL, STORES } from '../config/site';
 import { allPrices } from '../config/pricing';
 import { COPY } from '../i18n/copy';
 import { LANGS, LOCALES, type Lang } from '../i18n/locales';
@@ -41,7 +41,8 @@ export function organization(lang: Lang): SchemaNode {
       height: 115,
     },
     email: SITE.supportEmail,
-    brand: { '@type': 'Brand', name: SITE.name, logo: abs('/brand/babybookai-icon.png') },
+    sameAs: Object.values(SOCIAL),
+    brand: { '@type': 'Brand', name: SITE.name, logo: abs('/brand/babybookai-icon.png'), sameAs: Object.values(SOCIAL) },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',

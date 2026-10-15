@@ -35,6 +35,7 @@ export const zh: Copy = {
         terms: '服务条款',
       },
       rights: '保留所有权利。',
+      follow: '关注我们',
     },
     closing: {
       title: '几分钟做成一本书,留住一辈子。',

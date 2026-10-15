@@ -36,6 +36,7 @@ export const ko: Copy = {
         terms: '이용약관',
       },
       rights: '모든 권리 보유.',
+      follow: '팔로우하기',
     },
     closing: {
       title: '몇 분이면 책이 완성돼요. 평생 간직하세요.',

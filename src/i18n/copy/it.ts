@@ -40,6 +40,7 @@ export const it: Copy = {
         terms: 'Termini',
       },
       rights: 'Tutti i diritti riservati.',
+      follow: 'Seguici',
     },
     closing: {
       title: 'Fai il libro in pochi minuti. Tienilo per sempre.',

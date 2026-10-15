@@ -38,6 +38,7 @@ export const en = {
         terms: 'Terms',
       },
       rights: 'All rights reserved.',
+      follow: 'Follow us',
     },
     closing: {
       title: 'Make the book in minutes. Keep it for good.',

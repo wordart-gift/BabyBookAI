@@ -38,6 +38,7 @@ export const ja: Copy = {
         terms: '利用規約',
       },
       rights: '無断転載を禁じます。',
+      follow: 'フォローする',
     },
     closing: {
       title: '数分でブックが完成。ずっと残せます。',

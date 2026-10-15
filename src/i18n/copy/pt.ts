@@ -39,6 +39,7 @@ export const pt: Copy = {
         terms: 'Termos',
       },
       rights: 'Todos os direitos reservados.',
+      follow: 'Segue-nos',
     },
     closing: {
       title: 'Faz o livro em minutos. Guarda-o para sempre.',

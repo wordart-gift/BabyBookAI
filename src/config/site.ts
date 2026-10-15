@@ -27,6 +27,12 @@ export const GOOGLE = {
   siteVerification: null as string | null,
 } as const;
 
+/** The brand's own accounts: the footer of every page and the Organization's sameAs. */
+export const SOCIAL = {
+  instagram: 'https://www.instagram.com/baby.bookai/',
+  youtube: 'https://www.youtube.com/@BabyBookAI',
+} as const;
+
 export const PUBLISHER = {
   name: 'Photo-to-Text',
   url: 'https://photo-to-text.com',

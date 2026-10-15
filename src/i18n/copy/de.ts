@@ -41,6 +41,7 @@ export const de: Copy = {
         terms: 'AGB',
       },
       rights: 'Alle Rechte vorbehalten.',
+      follow: 'Folge uns',
     },
     closing: {
       title: 'In Minuten gemacht. Für immer behalten.',
