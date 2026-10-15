@@ -118,4 +118,25 @@
       max-width: 84rem;
     }
   }
+
+  /* On a phone the page's headings are centred, with the eyebrow above them,
+     the sentence right after them and the hero's download buttons (Carlos,
+     Oct 2026). Longer text stays aligned left, and so do articles and the
+     legal pages: centred paragraphs are hard to read. */
+  @media (width < 40rem) {
+    main :is(h1, h2):not(article *),
+    main :is(h1, h2):not(article *) + p,
+    main p:not(article *):has(+ :is(h1, h2)) {
+      text-align: center;
+      margin-inline: auto;
+    }
+    main h1:not(article *) ~ [data-cta],
+    main h1:not(article *) ~ [data-cta] > div {
+      align-items: center;
+      text-align: center;
+    }
+    main h1:not(article *) ~ [data-cta] ul {
+      justify-content: center;
+    }
+  }
 }

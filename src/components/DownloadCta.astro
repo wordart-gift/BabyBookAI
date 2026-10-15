@@ -21,6 +21,7 @@ const { source, lang, class: className, center = false } = Astro.props;
 
 {/* In a hero column the QR goes under the badges; centred, beside them. */}
 <div
+  data-cta
   class:list={[
     'flex flex-col gap-6',
     center && 'items-center md:flex-row md:justify-center md:gap-10',
