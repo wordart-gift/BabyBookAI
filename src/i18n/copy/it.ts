@@ -85,6 +85,12 @@ export const it: Copy = {
     },
     stork: 'Una cicogna che porta un fagotto',
     spreadMonth: 'Primo mese',
+    /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
+    spreads: {
+      fifth: { month: 'Quinto mese', alt: 'Una doppia pagina di BabyBookAI, «Quinto mese»: una bimba a pancia in giù, con le nonne' },
+      seventh: { month: 'Settimo mese', alt: 'Una doppia pagina di BabyBookAI, «Settimo mese»: una bimba con un berretto rosa e foto con il papà' },
+      ninth: { month: 'Nono mese', alt: 'Una doppia pagina di BabyBookAI, «Nono mese»: una bimba seduta sul prato del giardino' },
+    },
     defaultDescription:
       'BabyBookAI trasforma le foto che hai già sul telefono in un album foto stampato con copertina rigida sul primo anno del tuo bebè. Sceglie, ordina e impagina le foto per te.',
     ogImageAlt: 'BabyBookAI: un album foto stampato sul primo anno di un bebè',

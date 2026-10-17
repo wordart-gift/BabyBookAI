@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import spread from '../assets/app/spread-first-month.png';
+import type { ImageMetadata } from 'astro';
+import firstMonth from '../assets/app/spread-first-month.png';
 
 /**
  * A month spread exactly as the app shows it: a capture of the book on the
@@ -11,25 +12,31 @@ import spread from '../assets/app/spread-first-month.png';
 export interface Props {
   month: string;
   alt: string;
+  /** Another spread from the app (lib/photos.ts spreads()); the first month by default. */
+  src?: ImageMetadata;
+  /** Which page the month's name is printed on, as the app lays it out. */
+  side?: 'left' | 'right';
   class?: string;
   /** The first spread on the page is the LCP candidate: load it eagerly. */
   eager?: boolean;
 }
 
-const { month, alt, class: className, eager = false } = Astro.props;
+const { month, alt, src = firstMonth, side = 'left', class: className, eager = false } = Astro.props;
+// Never asked to grow past the capture itself (the other spreads are 1000 wide).
+const widths = [480, 800, 1200, 1600].filter((w) => w <= src.width);
 ---
 
 <figure class:list={['spread', className]}>
   <div class="spread-book">
     <Image
-      src={spread}
+      src={src}
       alt={alt}
-      widths={[480, 800, 1200, 1600]}
+      widths={widths}
       sizes="(min-width: 1536px) 820px, (min-width: 1280px) 720px, (min-width: 1024px) 640px, 92vw"
       loading={eager ? 'eager' : 'lazy'}
       fetchpriority={eager ? 'high' : 'auto'}
     />
-    <p class="spread-month" aria-hidden="true">{month}</p>
+    <p class:list={['spread-month', side === 'right' && 'spread-month-right']} aria-hidden="true">{month}</p>
   </div>
   <slot />
 </figure>
@@ -67,5 +74,10 @@ const { month, alt, class: className, eager = false } = Astro.props;
     text-transform: uppercase;
     white-space: nowrap;
     color: #6b6761;
+  }
+  /* The right page's name ends where the app ends it, short of the corner. */
+  .spread-month-right {
+    left: auto;
+    right: 7.6%;
   }
 </style>

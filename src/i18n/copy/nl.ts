@@ -84,6 +84,12 @@ export const nl: Copy = {
     },
     stork: 'Een ooievaar met een bundeltje',
     spreadMonth: 'Eerste maand',
+    /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
+    spreads: {
+      fifth: { month: 'Vijfde maand', alt: 'Een dubbele pagina van BabyBookAI, ‘Vijfde maand’: een baby op haar buik, met haar oma’s' },
+      seventh: { month: 'Zevende maand', alt: 'Een dubbele pagina van BabyBookAI, ‘Zevende maand’: een baby met een roze gebreid mutsje en foto’s met haar vader' },
+      ninth: { month: 'Negende maand', alt: 'Een dubbele pagina van BabyBookAI, ‘Negende maand’: een baby zittend op het gras in de tuin' },
+    },
     defaultDescription:
       'BabyBookAI maakt van de foto’s die al op je telefoon staan een gedrukt hardcover fotoboek van het eerste jaar van je baby. De app kiest, sorteert en maakt de foto’s voor je op.',
     ogImageAlt: 'BabyBookAI: een gedrukt fotoboek van het eerste jaar van een baby',

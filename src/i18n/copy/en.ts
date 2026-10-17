@@ -93,6 +93,12 @@ export const en = {
     },
     /** The app's own words for the month (librofotos BookWords.monthNames). */
     spreadMonth: 'First month',
+    /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
+    spreads: {
+      fifth: { month: 'Fifth month', alt: 'A BabyBookAI spread, “Fifth month”: a baby lying on her tummy, with her grandmothers' },
+      seventh: { month: 'Seventh month', alt: 'A BabyBookAI spread, “Seventh month”: a baby in a pink knitted hat, and photos with her father' },
+      ninth: { month: 'Ninth month', alt: 'A BabyBookAI spread, “Ninth month”: a baby sitting on the grass in the garden' },
+    },
     defaultDescription:
       'BabyBookAI turns the photos already on your phone into a printed hardcover book of your baby’s first year. It picks, sorts and lays out the photos for you.',
     ogImageAlt: 'BabyBookAI: a printed photo book of a baby’s first year',

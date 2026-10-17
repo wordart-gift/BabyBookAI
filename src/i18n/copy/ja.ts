@@ -83,6 +83,12 @@ export const ja: Copy = {
     },
     stork: '包みを運ぶコウノトリ',
     spreadMonth: '1か月目',
+    /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
+    spreads: {
+      fifth: { month: '5か月目', alt: 'BabyBookAIの見開き「5か月目」:うつぶせの赤ちゃんと、おばあちゃんたち' },
+      seventh: { month: '7か月目', alt: 'BabyBookAIの見開き「7か月目」:ピンクのニット帽の赤ちゃんと、お父さんとの写真' },
+      ninth: { month: '9か月目', alt: 'BabyBookAIの見開き「9か月目」:庭の芝生に座る赤ちゃん' },
+    },
     defaultDescription:
       'BabyBookAIは、スマートフォンの中の写真から、赤ちゃんの最初の1年のハードカバーのフォトブックを作ります。写真の選別、整理、レイアウトまでおまかせ。',
     ogImageAlt: 'BabyBookAI:赤ちゃんの最初の1年を印刷したフォトブック',

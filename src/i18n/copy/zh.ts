@@ -80,6 +80,12 @@ export const zh: Copy = {
     },
     stork: '叼着包袱的送子鹳',
     spreadMonth: '第一个月',
+    /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
+    spreads: {
+      fifth: { month: '第五个月', alt: 'BabyBookAI 的一个跨页「第五个月」:趴着的宝宝,和她的外婆奶奶' },
+      seventh: { month: '第七个月', alt: 'BabyBookAI 的一个跨页「第七个月」:戴粉色毛线帽的宝宝,和与爸爸的合影' },
+      ninth: { month: '第九个月', alt: 'BabyBookAI 的一个跨页「第九个月」:坐在花园草地上的宝宝' },
+    },
     defaultDescription:
       'BabyBookAI 把你手机里已有的照片,做成一本宝宝第一年的精装印刷相册书。照片的挑选、整理和排版,都替你完成。',
     ogImageAlt: 'BabyBookAI:宝宝第一年的印刷相册书',

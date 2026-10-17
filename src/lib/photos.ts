@@ -24,3 +24,22 @@ export const screens = (lang: Lang) => {
     order: { src: shot('order', lang), alt: alt.order },
   } satisfies Record<string, Photo>;
 };
+
+const spreadShots = import.meta.glob<{ default: ImageMetadata }>('../assets/app/spread-*-month-*.png', { eager: true });
+
+/**
+ * Three more spreads from the app, one set per language (cut from the store
+ * screenshots, librofotos tool/out/store_noa/lang): each landing shows its
+ * own, the home keeps the first month. Their month labels were cut short by
+ * the page's corner in the capture, so the label is erased and set as text by
+ * AppSpread, on the page the app prints it on.
+ */
+export const spreads = (lang: Lang) => {
+  const t = COPY[lang].ui.spreads;
+  const pick = (name: string) => spreadShots[`../assets/app/spread-${name}-${lang}.png`].default;
+  return {
+    fifth: { src: pick('fifth-month'), side: 'right' as const, ...t.fifth },
+    seventh: { src: pick('seventh-month'), side: 'right' as const, ...t.seventh },
+    ninth: { src: pick('ninth-month'), side: 'left' as const, ...t.ninth },
+  };
+};
