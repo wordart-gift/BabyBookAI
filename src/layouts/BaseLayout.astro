@@ -20,9 +20,6 @@ export type Props = Omit<SeoProps, 'lang' | 'page'> & {
 };
 
 const { cta = 'page', lang, page, ...seo } = Astro.props;
-// These pages carry the perch on their hero spread (Perch anchored). The boy
-// page's two tall phones reach the header, so its perch stays the page's.
-const HERO_ART: PageId[] = ['home', 'babyPhotoBook', 'firstYear', 'girl'];
 const ui = COPY[lang].ui;
 ---
 
@@ -54,7 +51,9 @@ const ui = COPY[lang].ui;
     <Sky />
     <Header lang={lang} page={page} />
     <main id="main" class="relative flex-1 overflow-x-clip">
-      {!HERO_ART.includes(page as PageId) && <Perch />}
+      {/* Same place on every page (Carlos): never tied to the hero picture,
+          whose height follows the length of each page's title. */}
+      <Perch />
       <slot />
       {cta && <ClosingCta source={cta} lang={lang} />}
     </main>

@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import AppSpread from '../components/AppSpread.astro';
-import Perch from '../components/Perch.astro';
 import Butterflies from '../components/Butterflies.astro';
 import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
@@ -57,7 +56,7 @@ const items = t.months.items;
       <p class="mt-6 max-w-xl text-xl text-ink">{t.lead}</p>
       <DownloadCta source="first-year-hero" lang={lang} class="mt-8" />
     </div>
-    <div class="relative"><Perch anchored /><AppSpread {...spreads(lang).ninth} eager /></div>
+    <div><AppSpread {...spreads(lang).ninth} eager /></div>
     <Butterflies />
     </section>
 

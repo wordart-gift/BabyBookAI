@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
 import AppSpread from '../components/AppSpread.astro';
-import Perch from '../components/Perch.astro';
 import Butterflies from '../components/Butterflies.astro';
 import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
@@ -50,7 +49,6 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
         <DownloadCta source="home-hero" lang={lang} class="mt-8" />
       </div>
       <div class="relative sm:mt-24 lg:mt-0">
-        <Perch anchored />
         <AppSpread month={ui.spreadMonth} alt={ui.spreadAlt} eager />
         <Stork
           size={120}
