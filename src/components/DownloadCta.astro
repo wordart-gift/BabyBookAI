@@ -5,8 +5,11 @@ import { COPY } from '../i18n/copy';
 import type { Lang } from '../i18n/locales';
 
 /**
- * Badges everywhere; the QR code from md up only, where the visitor is on a
- * computer and the phone is the device the app goes on.
+ * Badges everywhere, side by side. The QR code only in the closing download
+ * section, beside the badges and from md up, where the visitor is on a
+ * computer: in a hero column it stacked under the badges and made the hero
+ * too tall (Carlos, Oct 2026), and the stores' own pages and the competitors'
+ * keep their heroes to the two badges. The header's "Get the app" leads to it.
  */
 export interface Props {
   source: string;
@@ -19,7 +22,6 @@ export interface Props {
 const { source, lang, class: className, center = false } = Astro.props;
 ---
 
-{/* In a hero column the QR goes under the badges; centred, beside them. */}
 <div
   data-cta
   class:list={[
@@ -32,5 +34,5 @@ const { source, lang, class: className, center = false } = Astro.props;
     <StoreBadges source={source} lang={lang} class={center ? 'justify-center' : undefined} />
     <p class="text-sm text-ink-soft">{COPY[lang].ui.free}</p>
   </div>
-  <QrCode source={source} lang={lang} class="hidden md:flex" />
+  {center && <QrCode source={source} lang={lang} class="hidden md:flex" />}
 </div>
