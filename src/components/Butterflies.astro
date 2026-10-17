@@ -58,9 +58,12 @@ const wings = [
     animation: butterfly-tilt 7s ease-in-out infinite alternate;
     animation-delay: var(--tilt-delay);
   }
+  /* The view-box reference box starts at the user origin, not at the
+     viewBox's corner: 0 0 is the body, so the wings fold onto it. (12px 12px
+     folded them towards the bottom right and left the body behind.) */
   .butterfly-wings {
     transform-box: view-box;
-    transform-origin: 12px 12px;
+    transform-origin: 0 0;
     animation: butterfly-flap 0.29s ease-in-out infinite alternate;
   }
   @keyframes butterfly-fly {
