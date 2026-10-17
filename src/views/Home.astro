@@ -62,13 +62,11 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
     </section>
   </div>
 
-  <BookVideo lang={lang} />
-
   <!-- The problem: the homework -->
   <section class="band" aria-labelledby="homework">
     <div class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5">
-      <h2 id="homework" class="max-w-3xl text-4xl text-teal sm:text-5xl">{t.homework.title}</h2>
-      <p class="mt-5 max-w-2xl text-lg text-ink-soft">{t.homework.body}</p>
+      <h2 id="homework" class="mx-auto max-w-3xl text-center text-4xl text-teal sm:text-5xl">{t.homework.title}</h2>
+      <p class="mx-auto mt-5 max-w-2xl text-center text-lg text-ink-soft">{t.homework.body}</p>
       <ul class="mt-12 grid gap-5 md:grid-cols-3">
         {
           t.homework.ways.map((way, i) => {
@@ -148,6 +146,8 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
       </div>
     </div>
   </section>
+
+  <BookVideo lang={lang} />
 
   <!-- FAQ -->
   <section class="mx-auto max-w-3xl px-5 py-20" aria-labelledby="faq">
