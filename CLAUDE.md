@@ -120,7 +120,8 @@ validator.schema.org and Google's Rich Results Test after changing it.
 - These files are `noindex` (`public/_headers`) and outside the edge function
   (`public/_routes.json`): read by whoever asks, never a search result.
 - `public/robots.txt` names the AI crawlers and allows them all, training
-  included (`Content-Signal`). Carlos wants the brand known to the models.
+  included. Carlos wants the brand known to the models. No `Content-Signal`
+  line: Lighthouse counts it as an unknown directive and drops SEO to 92 (Oct 2026).
 - The home FAQ opens with "What is BabyBookAI?" in every language: the
   one-paragraph definition assistants quote. Keep it first.
 - Google's AI Overviews use none of this, only normal search ranking. What

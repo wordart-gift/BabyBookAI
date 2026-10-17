@@ -4,7 +4,6 @@
 # https://babybookai.com/pricing.md (the price in every country).
 
 User-agent: *
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /get/
 
@@ -30,7 +29,6 @@ User-agent: MistralAI-User
 User-agent: cohere-ai
 User-agent: CCBot
 User-agent: Bytespider
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /get/
 
