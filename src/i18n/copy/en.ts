@@ -93,6 +93,15 @@ export const en = {
     },
     /** The app's own words for the month (librofotos BookWords.monthNames). */
     spreadMonth: 'First month',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'This is how it looks printed',
+      caption: 'A hardcover book, {size}, with the photos of your baby’s first year: a two-page spread for every month.',
+      play: 'Play the video',
+      pause: 'Pause the video',
+      label: 'Video: a hardcover BabyBookAI book opens and its pages turn, a spread for every month of the first year',
+      name: 'BabyBookAI: the printed hardcover photo book',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Fifth month', alt: 'A BabyBookAI spread, “Fifth month”: a baby lying on her tummy, with her grandmothers' },

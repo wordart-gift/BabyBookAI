@@ -34,6 +34,7 @@
     "/ko/llms.txt",
     "/ko/llms-full.txt",
     "/zh/llms.txt",
-    "/zh/llms-full.txt"
+    "/zh/llms-full.txt",
+    "/videos/*"
   ]
 }

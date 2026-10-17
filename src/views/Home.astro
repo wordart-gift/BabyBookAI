@@ -3,11 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
 import AppSpread from '../components/AppSpread.astro';
 import Butterflies from '../components/Butterflies.astro';
+import BookVideo from '../components/BookVideo.astro';
 import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import FaqList from '../components/FaqList.astro';
 import HowItWorks from '../components/HowItWorks.astro';
-import { APP_ID, BOOK_ID, faqPage, howTo, mobileApplication, photoBook } from '../lib/schema';
+import { APP_ID, BOOK_ID, faqPage, bookVideo, howTo, mobileApplication, photoBook } from '../lib/schema';
 import { screens } from '../lib/photos';
 import { COPY } from '../i18n/copy';
 import { plain, rich } from '../i18n/format';
@@ -34,7 +35,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
   page="home"
   title={t.title}
   description={plain(t.description, lang)}
-  schema={[mobileApplication(lang), photoBook(lang), howTo(lang, 'home'), faqPage(faqs.map((f) => ({ ...f, answer: plain(f.answer, lang) })))]}
+  schema={[mobileApplication(lang), photoBook(lang), howTo(lang, 'home'), bookVideo(lang), faqPage(faqs.map((f) => ({ ...f, answer: plain(f.answer, lang) })))]}
   about={[APP_ID, BOOK_ID]}
   cta="home"
 >
@@ -60,6 +61,8 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
       <Butterflies />
     </section>
   </div>
+
+  <BookVideo lang={lang} />
 
   <!-- The problem: the homework -->
   <section class="band" aria-labelledby="homework">

@@ -10,6 +10,10 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# The book videos: fixed names, so a week, not forever.
+/videos/*
+  Cache-Control: public, max-age=604800
+
 # The site as Markdown for AI assistants (src/lib/llms.ts). Read by whoever
 # asks for it, but never a search result: the pages themselves are.
 /llms.txt

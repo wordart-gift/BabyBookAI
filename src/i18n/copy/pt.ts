@@ -84,6 +84,15 @@ export const pt: Copy = {
     },
     stork: 'Uma cegonha a carregar uma trouxa',
     spreadMonth: 'Primeiro mês',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'É assim que fica impresso',
+      caption: 'Um livro de capa dura de {size} com as fotografias do primeiro ano do teu bebé: uma página dupla por mês.',
+      play: 'Reproduzir o vídeo',
+      pause: 'Pausar o vídeo',
+      label: 'Vídeo: abre-se um livro de capa dura do BabyBookAI e passam-se as páginas, uma página dupla por cada mês do primeiro ano',
+      name: 'BabyBookAI: o álbum impresso de capa dura',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Quinto mês', alt: 'Uma página dupla do BabyBookAI, «Quinto mês»: uma bebé deitada de barriga para baixo, com as avós' },

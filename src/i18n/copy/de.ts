@@ -86,6 +86,15 @@ export const de: Copy = {
     },
     stork: 'Ein Storch mit einem Bündel',
     spreadMonth: 'Erster Monat',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'So sieht es gedruckt aus',
+      caption: 'Ein Hardcover-Buch, {size}, mit den Fotos vom ersten Jahr deines Babys: eine Doppelseite für jeden Monat.',
+      play: 'Video abspielen',
+      pause: 'Video pausieren',
+      label: 'Video: Ein Hardcover-Buch von BabyBookAI öffnet sich und die Seiten werden umgeblättert, eine Doppelseite für jeden Monat des ersten Jahres',
+      name: 'BabyBookAI: das gedruckte Hardcover-Fotobuch',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Fünfter Monat', alt: 'Eine Doppelseite von BabyBookAI, „Fünfter Monat“: ein Baby auf dem Bauch, mit seinen Großmüttern' },

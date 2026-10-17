@@ -80,6 +80,15 @@ export const zh: Copy = {
     },
     stork: '叼着包袱的送子鹳',
     spreadMonth: '第一个月',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: '印出来就是这个样子',
+      caption: '一本 {size} 的精装书,收录宝宝第一年的照片:每个月一个跨页。',
+      play: '播放视频',
+      pause: '暂停视频',
+      label: '视频:一本 BabyBookAI 精装书翻开,书页一页页翻过,第一年的每个月各有一个跨页',
+      name: 'BabyBookAI:印刷的精装相册书',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: '第五个月', alt: 'BabyBookAI 的一个跨页「第五个月」:趴着的宝宝,和她的外婆奶奶' },

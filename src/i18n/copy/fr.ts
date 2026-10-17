@@ -86,6 +86,15 @@ export const fr: Copy = {
     },
     stork: 'Une cigogne portant un balluchon',
     spreadMonth: 'Premier mois',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'Voici le livre une fois imprimé',
+      caption: 'Un livre à couverture rigide de {size} avec les photos de la première année de votre bébé : une double page par mois.',
+      play: 'Lancer la vidéo',
+      pause: 'Mettre la vidéo en pause',
+      label: 'Vidéo : un livre BabyBookAI à couverture rigide s’ouvre et ses pages se tournent, une double page pour chaque mois de la première année',
+      name: 'BabyBookAI : le livre photo imprimé à couverture rigide',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Cinquième mois', alt: 'Une double page BabyBookAI, « Cinquième mois » : une bébé allongée sur le ventre, avec ses grands-mères' },

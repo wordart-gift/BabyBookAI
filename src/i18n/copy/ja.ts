@@ -83,6 +83,15 @@ export const ja: Copy = {
     },
     stork: '包みを運ぶコウノトリ',
     spreadMonth: '1か月目',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: '印刷されると、こうなります',
+      caption: '赤ちゃんの最初の1年の写真が入った、{size}のハードカバーのブック。1か月ごとに見開き1つ。',
+      play: '動画を再生',
+      pause: '動画を一時停止',
+      label: '動画:BabyBookAIのハードカバーのブックが開き、ページがめくられます。最初の1年の毎月に見開きが1つずつあります',
+      name: 'BabyBookAI:印刷されたハードカバーのフォトブック',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: '5か月目', alt: 'BabyBookAIの見開き「5か月目」:うつぶせの赤ちゃんと、おばあちゃんたち' },

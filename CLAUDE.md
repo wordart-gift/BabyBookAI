@@ -89,6 +89,10 @@ Measured Oct 2026 on a Cloudflare preview, Lighthouse mobile (simulated slow
 not `astro preview` (no compression there). Previews score SEO 69 on purpose:
 `*.pages.dev` is `noindex` (`public/_headers`).
 
+## Book video
+
+Each language's home has the book video under the hero (`BookVideo.astro`, copy `ui.video`): `public/videos/book-<lang>.{mp4,webm}` and `-poster.webp`, 1280x720, ~1.7 MB, made with ffmpeg from the renders in `librofotos/tool/out/store_noa/book_video/` (H.264 crf 26 slow, VP9 crf 36, poster = second 4). `preload="none"`, plays in view and pauses out of it, never on its own with reduced motion. VideoObject in the page's JSON-LD (`bookVideo()`), `<video:video>` in the sitemap (`astro.config.mjs`). The videos show the family's photos (Carlos confirmed).
+
 ## Structured data
 
 `src/lib/schema.ts`. The layout adds WebSite, Organization and the page's own

@@ -84,6 +84,15 @@ export const nl: Copy = {
     },
     stork: 'Een ooievaar met een bundeltje',
     spreadMonth: 'Eerste maand',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'Zo ziet het er gedrukt uit',
+      caption: 'Een hardcover boek van {size} met de foto’s van het eerste jaar van je baby: een dubbele pagina voor elke maand.',
+      play: 'Video afspelen',
+      pause: 'Video pauzeren',
+      label: 'Video: een hardcover BabyBookAI-boek gaat open en de pagina’s worden omgeslagen, een dubbele pagina voor elke maand van het eerste jaar',
+      name: 'BabyBookAI: het gedrukte hardcover fotoboek',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Vijfde maand', alt: 'Een dubbele pagina van BabyBookAI, ‘Vijfde maand’: een baby op haar buik, met haar oma’s' },

@@ -5,6 +5,30 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import { GOOGLE } from './src/config/site.ts';
+import { COPY } from './src/i18n/copy/index.ts';
+import { LANGS } from './src/i18n/locales.ts';
+import { path } from './src/i18n/routes.ts';
+import { plain } from './src/i18n/format.ts';
+
+// The book video of each language's home, for the sitemap (video extension).
+const videoOf = new Map(
+  LANGS.map((lang) => {
+    const v = COPY[lang].ui.video;
+    return [
+      `https://babybookai.com${path('home', lang)}`,
+      [
+        {
+          title: v.name,
+          description: plain(v.caption, lang),
+          thumbnail_loc: `https://babybookai.com/videos/book-${lang}-poster.webp`,
+          content_loc: `https://babybookai.com/videos/book-${lang}.mp4`,
+          duration: 29,
+          family_friendly: 'yes',
+        },
+      ],
+    ];
+  }),
+);
 
 // https://astro.build/config
 export default defineConfig({
@@ -58,7 +82,12 @@ export default defineConfig({
     },
   ],
   integrations: [
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        const video = videoOf.get(item.url);
+        return video ? { ...item, video } : item;
+      },
+    }),
     // Google Analytics runs in a web worker, off the main thread, so the tag
     // costs no blocking time. Only once there is an ID (src/config/site.ts).
     ...(GOOGLE.analyticsId ? [partytown({ config: { forward: ['dataLayer.push', 'gtag'] } })] : []),

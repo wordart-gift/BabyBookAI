@@ -86,6 +86,15 @@ export const es: Copy = {
     },
     stork: 'Una cigüeña que lleva un hatillo',
     spreadMonth: 'Primer mes',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'Así queda impreso',
+      caption: 'Un libro de tapa dura de {size} con las fotos del primer año de tu bebé: una doble página por mes.',
+      play: 'Reproducir el vídeo',
+      pause: 'Pausar el vídeo',
+      label: 'Vídeo: se abre un libro de tapa dura de BabyBookAI y pasan sus páginas, una doble página por cada mes del primer año',
+      name: 'BabyBookAI: el álbum impreso de tapa dura',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Quinto mes', alt: 'Una doble página de BabyBookAI, «Quinto mes»: una bebé tumbada boca abajo, con sus abuelas' },

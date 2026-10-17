@@ -81,6 +81,15 @@ export const ko: Copy = {
     },
     stork: '보따리를 나르는 황새',
     spreadMonth: '첫째 달',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: '인쇄하면 이렇게 나와요',
+      caption: '아기의 첫 1년 사진이 담긴 {size} 하드커버 책이에요. 한 달에 펼침면 하나씩이에요.',
+      play: '동영상 재생',
+      pause: '동영상 일시정지',
+      label: '동영상: BabyBookAI 하드커버 책이 펼쳐지고 페이지가 넘어갑니다. 첫 1년의 매달 펼침면이 하나씩 있어요',
+      name: 'BabyBookAI: 인쇄된 하드커버 포토북',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: '다섯째 달', alt: 'BabyBookAI 펼침면 ‘다섯째 달’: 엎드려 있는 아기와 할머니들' },

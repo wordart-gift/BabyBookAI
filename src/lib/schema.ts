@@ -3,6 +3,7 @@ import { allPrices } from '../config/pricing';
 import { COPY } from '../i18n/copy';
 import { LANGS, LOCALES, type Lang } from '../i18n/locales';
 import { path, type PageId } from '../i18n/routes';
+import { plain } from '../i18n/format';
 
 /**
  * JSON-LD builders. Every page gets WebSite, Organization and its own WebPage
@@ -205,6 +206,29 @@ export function howTo(lang: Lang, page: PageId, name?: string): SchemaNode {
       text: step.body,
       url: `${url}#how`,
     })),
+  };
+}
+
+/**
+ * The book video on the home (BookVideo.astro). uploadDate is the day it went
+ * up; the duration is the render's 28.8 s, rounded up as the sitemap does.
+ */
+export const VIDEO_UPLOADED = '2026-10-18';
+export function bookVideo(lang: Lang): SchemaNode {
+  const v = COPY[lang].ui.video;
+  const description = plain(v.caption, lang);
+  return {
+    '@type': 'VideoObject',
+    '@id': `${abs(path('home', lang))}#video`,
+    name: v.name,
+    description,
+    thumbnailUrl: abs(`/videos/book-${lang}-poster.webp`),
+    contentUrl: abs(`/videos/book-${lang}.mp4`),
+    uploadDate: VIDEO_UPLOADED,
+    duration: 'PT29S',
+    inLanguage: LOCALES[lang].tag,
+    isFamilyFriendly: true,
+    publisher: { '@id': ORG_ID },
   };
 }
 

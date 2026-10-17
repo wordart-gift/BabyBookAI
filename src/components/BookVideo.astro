@@ -1,0 +1,110 @@
+---
+import { COPY } from '../i18n/copy';
+import { rich } from '../i18n/format';
+import type { Lang } from '../i18n/locales';
+
+/**
+ * The printed book opening and its pages turning (a 29 s render from the
+ * app's own pages, one video per language: the month names and the lines in
+ * the pages are in that language). Under the home's hero, so it cannot be the
+ * LCP, and it costs nothing until seen: preload="none", the poster is a
+ * 12 KB WebP, the sources load only when the section scrolls into view.
+ *
+ * Plays on its own while in view and pauses out of it; with reduced motion it
+ * never starts by itself, and a button starts and pauses it. Fixed 16:9 box,
+ * so nothing moves when it loads. No audio track, no native controls.
+ */
+export interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const v = COPY[lang].ui.video;
+const base = `/videos/book-${lang}`;
+---
+
+<section class="band" aria-labelledby="book-video">
+  <div class="mx-auto max-w-4xl px-5 text-center">
+    <h2 id="book-video" class="text-4xl text-teal sm:text-5xl">{v.title}</h2>
+    <figure class="mt-10">
+      <div class="book-video relative mx-auto aspect-video w-full overflow-hidden rounded-card bg-paper shadow-[0_18px_40px_-12px_rgb(14_42_49/0.28)]">
+        <video
+          muted
+          loop
+          playsinline
+          preload="none"
+          width="1280"
+          height="720"
+          poster={`${base}-poster.webp`}
+          aria-label={v.label}
+          class="block h-full w-full"
+        >
+          <source src={`${base}.webm`} type="video/webm" />
+          <source src={`${base}.mp4`} type="video/mp4" />
+        </video>
+        <button
+          type="button"
+          hidden
+          data-play={v.play}
+          data-pause={v.pause}
+          aria-label={v.play}
+          class="absolute bottom-4 right-4 grid size-12 place-items-center rounded-full bg-amber text-ink shadow-[0_4px_0_var(--color-amber-deep)] active:translate-y-1 active:shadow-none"
+        >
+          <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>
+        </button>
+      </div>
+      <figcaption class="mx-auto mt-6 max-w-2xl text-lg text-ink-soft" set:html={rich(v.caption, lang)} />
+    </figure>
+  </div>
+</section>
+
+<style>
+  .book-video button .pause-icon {
+    display: none;
+  }
+  .book-video[data-playing] button .play-icon {
+    display: none;
+  }
+  .book-video[data-playing] button .pause-icon {
+    display: block;
+  }
+</style>
+
+<script>
+  // Without this the poster simply stays: the page works without JS.
+  const box = document.querySelector<HTMLElement>('.book-video');
+  const video = box?.querySelector('video');
+  const button = box?.querySelector('button');
+  if (box && video && button) {
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let userPaused = false;
+    const sync = () => {
+      box.toggleAttribute('data-playing', !video.paused);
+      button.setAttribute('aria-label', (video.paused ? button.dataset.play : button.dataset.pause) ?? '');
+    };
+    video.addEventListener('play', sync);
+    video.addEventListener('pause', sync);
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      if (video.paused) {
+        userPaused = false;
+        void video.play();
+      } else {
+        userPaused = true;
+        video.pause();
+      }
+    });
+    if (!reduced) {
+      new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            if (!userPaused) void video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        },
+        { threshold: 0.4 },
+      ).observe(box);
+    }
+  }
+</script>

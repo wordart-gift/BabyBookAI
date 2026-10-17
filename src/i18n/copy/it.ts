@@ -85,6 +85,15 @@ export const it: Copy = {
     },
     stork: 'Una cicogna che porta un fagotto',
     spreadMonth: 'Primo mese',
+    /** The book video under the home's hero (src/components/BookVideo.astro). */
+    video: {
+      title: 'Ecco come viene stampato',
+      caption: 'Un libro rigido di {size} con le foto del primo anno del tuo bebè: una doppia pagina per ogni mese.',
+      play: 'Riproduci il video',
+      pause: 'Metti in pausa il video',
+      label: 'Video: si apre un libro rigido di BabyBookAI e si sfogliano le pagine, una doppia pagina per ogni mese del primo anno',
+      name: 'BabyBookAI: il libro stampato a copertina rigida',
+    },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
       fifth: { month: 'Quinto mese', alt: 'Una doppia pagina di BabyBookAI, «Quinto mese»: una bimba a pancia in giù, con le nonne' },
