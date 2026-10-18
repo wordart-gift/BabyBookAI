@@ -11,7 +11,7 @@ import HowItWorks from '../components/HowItWorks.astro';
 import { APP_ID, BOOK_ID, faqPage, bookVideo, howTo, mobileApplication, photoBook } from '../lib/schema';
 import { screens } from '../lib/photos';
 import { COPY } from '../i18n/copy';
-import { plain, rich } from '../i18n/format';
+import { defaultPriceHtml, plain, rich } from '../i18n/format';
 import type { Lang } from '../i18n/locales';
 import { path } from '../i18n/routes';
 
@@ -72,8 +72,14 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
           t.homework.ways.map((way, i) => {
             const ours = i === t.homework.ways.length - 1;
             return (
-              <li class:list={['rounded-card border p-7', ours ? 'border-teal bg-teal text-surface' : 'border-hair bg-paper']}>
-                <p class:list={['font-display text-2xl font-bold', ours ? 'text-surface' : 'text-ink']}>{way.name}</p>
+              <li class:list={['relative rounded-card border p-7', ours ? 'border-teal bg-teal pt-16 text-surface lg:pt-7' : 'border-hair bg-paper']}>
+                {ours && (
+                  <p class="absolute -top-1 right-4 rotate-3 rounded-2xl bg-amber px-4 py-2 text-center text-ink shadow-[0_3px_0_var(--color-amber-deep)] md:-right-3 lg:right-4">
+                    <span class="block font-display text-2xl font-bold leading-none" data-price-html set:html={defaultPriceHtml(lang)} />
+                    <span class="mt-1 block text-xs font-extrabold uppercase tracking-wide">{t.homework.priceNote}</span>
+                  </p>
+                )}
+                <p class:list={['font-display text-2xl font-bold', ours ? 'text-surface lg:pr-24' : 'text-ink']}>{way.name}</p>
                 <p
                   class:list={[
                     'mt-4 text-sm font-extrabold uppercase tracking-wide',

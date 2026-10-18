@@ -141,6 +141,7 @@ export const fr: Copy = {
       title: "Tout album de bébé demande du travail. Sauf celui-ci.",
       body: "Les photos, vous les avez déjà prises : des centaines, chaque mois. En faire un album, c'est la partie pour laquelle personne n'a le temps avec un bébé à la maison.",
       yourPart: 'Votre part',
+      priceNote: 'Livraison incluse',
       ways: [
         { name: 'Un livre de naissance à remplir', effort: 'Imprimer, découper, coller et écrire, chaque mois', verdict: 'La plupart arrêtent vers le troisième mois.' },
         { name: 'Une app de livre hebdomadaire', effort: 'Quelques minutes chaque semaine, pendant 52 semaines', verdict: 'Le travail est toujours là, en 52 morceaux.' },

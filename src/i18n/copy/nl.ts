@@ -139,6 +139,7 @@ export const nl: Copy = {
       title: 'Elk babyalbum is huiswerk. Behalve dit.',
       body: 'De foto’s heb je al gemaakt: honderden, elke maand. Er een boek van maken is het deel waar niemand tijd voor heeft met een baby in huis.',
       yourPart: 'Jouw deel',
+      priceNote: 'Verzending inbegrepen',
       ways: [
         { name: 'Een invulboek voor de baby', effort: 'Printen, knippen, plakken en schrijven, elke maand', verdict: 'De meesten stoppen rond maand drie.' },
         { name: 'Een wekelijkse babyboek-app', effort: 'Een paar minuten per week, 52 weken lang', verdict: 'Het werk is er nog, in 52 stukjes.' },

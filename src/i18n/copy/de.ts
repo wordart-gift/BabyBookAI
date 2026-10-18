@@ -141,6 +141,7 @@ export const de: Copy = {
       title: 'Jedes Babybuch macht Arbeit. Außer diesem.',
       body: 'Die Fotos hast du schon gemacht: Hunderte, jeden Monat. Ein Buch daraus zu machen, dafür hat mit einem Baby im Haus niemand Zeit.',
       yourPart: 'Dein Teil',
+      priceNote: 'Versand inklusive',
       ways: [
         { name: 'Ein Babybuch zum Ausfüllen', effort: 'Drucken, ausschneiden, kleben und schreiben, jeden Monat', verdict: 'Die meisten hören um den dritten Monat auf.' },
         { name: 'Eine wöchentliche Babybuch-App', effort: 'Ein paar Minuten pro Woche, 52 Wochen lang', verdict: 'Die Arbeit bleibt, nur in 52 Stücken.' },

@@ -141,6 +141,7 @@ export const es: Copy = {
       title: 'Todos los álbumes de bebé dan trabajo. Este no.',
       body: 'Las fotos ya las hiciste: cientos, cada mes. Convertirlas en un álbum es la parte para la que nadie tiene tiempo con un bebé en casa.',
       yourPart: 'Tu parte',
+      priceNote: 'Envío incluido',
       ways: [
         { name: 'Un libro del bebé para rellenar', effort: 'Imprimir, recortar, pegar y escribir, cada mes', verdict: 'Casi todos lo dejan hacia el tercer mes.' },
         { name: 'Una app de libro semanal', effort: 'Unos minutos cada semana, 52 semanas', verdict: 'El trabajo sigue ahí, en 52 trozos.' },

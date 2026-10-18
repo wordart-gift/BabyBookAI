@@ -23,7 +23,7 @@
  */
 import { COUNTRY_LANGS, DEFAULT_LANG, isLang, LOCALES, type Lang } from '../src/i18n/locales';
 import { path } from '../src/i18n/routes';
-import { priceFor, sizeFor } from '../src/config/pricing';
+import { priceFor, priceHtmlFor, sizeFor } from '../src/config/pricing';
 
 const COOKIE = 'lang';
 // Search crawlers, link previewers, testing tools, and the AI assistants'
@@ -111,6 +111,7 @@ export const onRequest: PagesFunction = async (context) => {
   if (rewrite) {
     out = new HTMLRewriter()
       .on('[data-price]', { element: (el) => void el.setInnerContent(price!) })
+      .on('[data-price-html]', { element: (el) => void el.setInnerContent(priceHtmlFor(country, lang), { html: true }) })
       .on('[data-size]', { element: (el) => void el.setInnerContent(size!) })
       .transform(response);
     out = new Response(out.body, out);

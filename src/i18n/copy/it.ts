@@ -140,6 +140,7 @@ export const it: Copy = {
       title: 'Ogni album del bebè costa fatica. Tranne questo.',
       body: 'Le foto le hai già fatte: centinaia, ogni mese. Trasformarle in un libro è la parte per cui nessuno ha tempo con un bebè in casa.',
       yourPart: 'La tua parte',
+      priceNote: 'Spedizione inclusa',
       ways: [
         { name: 'Un libro del bebè da compilare', effort: 'Stampare, ritagliare, incollare e scrivere, ogni mese', verdict: 'Quasi tutti smettono verso il terzo mese.' },
         { name: 'Un’app di libro settimanale', effort: 'Qualche minuto a settimana, per 52 settimane', verdict: 'Il lavoro c’è ancora, in 52 pezzi.' },

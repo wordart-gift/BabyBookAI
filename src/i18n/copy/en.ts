@@ -140,6 +140,7 @@ export const en = {
       title: 'Every baby book is homework. Except this one.',
       body: 'You already took the photos: hundreds of them, every month. Turning them into a book is the part nobody has time for with a baby in the house.',
       yourPart: 'Your part',
+      priceNote: 'Shipping included',
       ways: [
         { name: 'A fill-in memory book', effort: 'Print, cut, glue and write, every month', verdict: 'Most stop around month three.' },
         { name: 'A weekly baby book app', effort: 'A few minutes every week, for 52 weeks', verdict: 'The work is still there, in 52 pieces.' },

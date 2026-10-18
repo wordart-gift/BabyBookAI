@@ -69,7 +69,7 @@ function moneyLocale(currency: Currency, country: string, lang: string): string 
  * "$49.99", "44,99 €", "CA$74.99": every dollar says which one it is, as in
  * the app (a Canadian could not tell theirs from the American "$").
  */
-export function priceFor(country: string, lang: string): string {
+export function priceFor(country: string, lang: string, html = false): string {
   const currency = currencyFor(country);
   const { amount, decimals } = BASE[currency];
   const symbol: string | undefined = {
@@ -84,8 +84,17 @@ export function priceFor(country: string, lang: string): string {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   }).formatToParts(amount);
-  return parts.map((p) => (p.type === 'currency' && symbol ? symbol : p.value)).join('');
+  return parts
+    .map((p) => {
+      if (p.type !== 'currency') return p.value;
+      const sign = symbol ?? p.value;
+      return html && currency === 'EUR' ? `<span class="font-normal">${sign}</span>` : sign;
+    })
+    .join('');
 }
+
+/** The same price with the euro sign in a regular weight (bold, it looks heavy), for the price tag. */
+export const priceHtmlFor = (country: string, lang: string) => priceFor(country, lang, true);
 
 /** Every price, for the Product's offers: one per currency and its countries. */
 export function allPrices(): { currency: Currency; price: string; countries: string[] }[] {

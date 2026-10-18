@@ -1,6 +1,6 @@
 import { LOCALES, type Lang } from './locales';
 import { path, type PageId } from './routes';
-import { priceFor, sizeFor } from '../config/pricing';
+import { priceFor, priceHtmlFor, sizeFor } from '../config/pricing';
 
 /**
  * Copy is written as short HTML strings so a sentence can carry a link, and
@@ -10,6 +10,7 @@ import { priceFor, sizeFor } from '../config/pricing';
  * middleware rewrites the spans' contents for a visitor from anywhere else.
  */
 
+export const defaultPriceHtml = (lang: Lang) => priceHtmlFor(LOCALES[lang].country, lang);
 export const defaultPrice = (lang: Lang) => priceFor(LOCALES[lang].country, lang);
 export const defaultSize = (lang: Lang) => sizeFor(LOCALES[lang].country);
 

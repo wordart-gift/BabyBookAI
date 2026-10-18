@@ -139,6 +139,7 @@ export const pt: Copy = {
       title: 'Todos os livros de bebé dão trabalho. Menos este.',
       body: 'As fotografias já as tiraste: centenas, todos os meses. Transformá-las num livro é a parte para a qual ninguém tem tempo com um bebé em casa.',
       yourPart: 'A tua parte',
+      priceNote: 'Envio incluído',
       ways: [
         { name: 'Um livro de bebé para preencher', effort: 'Imprimir, recortar, colar e escrever, todos os meses', verdict: 'A maioria desiste por volta do terceiro mês.' },
         { name: 'Uma app de livro semanal', effort: 'Uns minutos por semana, durante 52 semanas', verdict: 'O trabalho continua lá, em 52 pedaços.' },
