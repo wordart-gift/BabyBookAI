@@ -63,6 +63,12 @@
     line-height: 1.12;
   }
 
+  /* No one-word last lines in running text. */
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
   /* Long compound words (German, Dutch...) break at a hyphen instead of
      running out of a narrow column. */
   :lang(de) :is(h1, h2, h3),
