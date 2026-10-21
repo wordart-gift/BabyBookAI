@@ -99,6 +99,8 @@ export const en = {
       caption: 'A hardcover book, {size}, with the photos of your baby’s first year: a two-page spread for every month.',
       play: 'Play the video',
       pause: 'Pause the video',
+      watch: 'Watch the book',
+      close: 'Close',
       label: 'Video: a hardcover BabyBookAI book opens and its pages turn, a spread for every month of the first year',
       name: 'BabyBookAI: the printed hardcover photo book',
     },
@@ -141,10 +143,11 @@ export const en = {
       body: 'You already took the photos: hundreds of them, every month. Turning them into a book is the part nobody has time for with a baby in the house.',
       yourPart: 'Your part',
       priceNote: 'Shipping included',
+      others: 'Other options',
       ways: [
         { name: 'A fill-in memory book', effort: 'Print, cut, glue and write, every month', verdict: 'Most stop around month three.' },
         { name: 'A weekly baby book app', effort: 'A few minutes every week, for 52 weeks', verdict: 'The work is still there, in 52 pieces.' },
-        { name: 'BabyBookAI', effort: 'Nothing until the year is over', verdict: 'Then one look-through, and it’s done.' },
+        { name: 'A book that makes itself', effort: 'Nothing until the year is over', verdict: 'Then one look-through, and it’s done.' },
       ],
     },
     book: {
@@ -213,7 +216,7 @@ export const en = {
       {
         question: 'Is it on iPhone and Android?',
         answer:
-          'BabyBookAI is free on Google Play now, for Android. The iPhone app is coming soon. Books ship to 16 countries in North America, Europe and Asia.',
+          'Yes. BabyBookAI is free on the App Store for iPhone and on Google Play for Android. Books ship to 16 countries in North America, Europe and Asia.',
       },
     ],
   },
@@ -781,7 +784,7 @@ export const en = {
       },
       {
         question: 'Is there an iPhone app?',
-        answer: 'Not yet. BabyBookAI is on Google Play for Android now, and the iPhone app is coming soon.',
+        answer: 'Yes. BabyBookAI is on the App Store for iPhone and on Google Play for Android.',
       },
       {
         question: 'How do I delete my data?',

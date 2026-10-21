@@ -47,7 +47,7 @@ const base = `/videos/book-${lang}`;
           data-play={v.play}
           data-pause={v.pause}
           aria-label={v.play}
-          class="absolute bottom-4 right-4 grid size-12 place-items-center rounded-full bg-amber text-ink shadow-[0_4px_0_var(--color-amber-deep)] active:translate-y-1 active:shadow-none"
+          class="absolute bottom-4 right-4 grid size-12 cursor-pointer place-items-center rounded-full bg-amber text-ink shadow-[0_4px_0_var(--color-amber-deep)] transition hover:scale-110 hover:brightness-105 active:translate-y-1 active:shadow-none"
         >
           <svg class="play-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
           <svg class="pause-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>

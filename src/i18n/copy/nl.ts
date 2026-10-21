@@ -90,6 +90,8 @@ export const nl: Copy = {
       caption: 'Een hardcover boek van {size} met de foto’s van het eerste jaar van je baby: een dubbele pagina voor elke maand.',
       play: 'Video afspelen',
       pause: 'Video pauzeren',
+      watch: 'Bekijk het boek',
+      close: 'Sluiten',
       label: 'Video: een hardcover BabyBookAI-boek gaat open en de pagina’s worden omgeslagen, een dubbele pagina voor elke maand van het eerste jaar',
       name: 'BabyBookAI: het gedrukte hardcover fotoboek',
     },
@@ -140,10 +142,11 @@ export const nl: Copy = {
       body: 'De foto’s heb je al gemaakt: honderden, elke maand. Er een boek van maken is het deel waar niemand tijd voor heeft met een baby in huis.',
       yourPart: 'Jouw deel',
       priceNote: 'Verzending inbegrepen',
+      others: 'Andere opties',
       ways: [
         { name: 'Een invulboek voor de baby', effort: 'Printen, knippen, plakken en schrijven, elke maand', verdict: 'De meesten stoppen rond maand drie.' },
         { name: 'Een wekelijkse babyboek-app', effort: 'Een paar minuten per week, 52 weken lang', verdict: 'Het werk is er nog, in 52 stukjes.' },
-        { name: 'BabyBookAI', effort: 'Niets tot het jaar voorbij is', verdict: 'Dan één keer doorbladeren, en klaar.' },
+        { name: 'Een fotoboek dat zichzelf maakt', effort: 'Niets tot het jaar voorbij is', verdict: 'Dan één keer doorbladeren, en klaar.' },
       ],
     },
     book: {
@@ -212,7 +215,7 @@ export const nl: Copy = {
       {
         question: 'Is het er voor iPhone en Android?',
         answer:
-          'BabyBookAI is nu gratis op Google Play, voor Android. De iPhone-app komt binnenkort. De boeken worden bezorgd in 16 landen in Noord-Amerika, Europa en Azië.',
+          'Ja. BabyBookAI is gratis in de App Store voor iPhone en op Google Play voor Android. De boeken worden bezorgd in 16 landen in Noord-Amerika, Europa en Azië.',
       },
     ],
   },
@@ -779,7 +782,7 @@ export const nl: Copy = {
       },
       {
         question: 'Is er een iPhone-app?',
-        answer: 'Nog niet. BabyBookAI staat op Google Play voor Android, en de iPhone-app komt binnenkort.',
+        answer: 'Ja. BabyBookAI staat in de App Store voor iPhone en op Google Play voor Android.',
       },
       {
         question: 'Hoe verwijder ik mijn gegevens?',

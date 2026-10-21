@@ -89,6 +89,8 @@ export const ja: Copy = {
       caption: '赤ちゃんの最初の1年の写真が入った、{size}のハードカバーのブック。1か月ごとに見開き1つ。',
       play: '動画を再生',
       pause: '動画を一時停止',
+      watch: '動画で見る',
+      close: '閉じる',
       label: '動画:BabyBookAIのハードカバーのブックが開き、ページがめくられます。最初の1年の毎月に見開きが1つずつあります',
       name: 'BabyBookAI:印刷されたハードカバーのフォトブック',
     },
@@ -138,10 +140,11 @@ export const ja: Copy = {
       body: '写真はもう撮ってあります。毎月何百枚も。それを1冊にまとめるのは、赤ちゃんのいる家では誰も時間がない作業です。',
       yourPart: 'あなたの作業',
       priceNote: '送料込み',
+      others: 'ほかの方法',
       ways: [
         { name: '書き込み式のベビーブック', effort: '毎月、印刷して、切って、貼って、書く', verdict: 'たいてい3か月目あたりで止まります。' },
         { name: '毎週更新するベビーブックアプリ', effort: '毎週数分を、52週間', verdict: '作業は消えず、52回に分かれただけ。' },
-        { name: 'BabyBookAI', effort: '1年が終わるまで何もなし', verdict: 'あとは一度ざっと見るだけで完成。' },
+        { name: '自動でできるアルバム', effort: '1年が終わるまで何もなし', verdict: 'あとは一度ざっと見るだけで完成。' },
       ],
     },
     book: {
@@ -210,7 +213,7 @@ export const ja: Copy = {
       {
         question: 'iPhoneとAndroidのどちらで使えますか?',
         answer:
-          'BabyBookAIは、Android向けにGoogle Playで無料配信中です。iPhone版は近日公開予定です。ブックは、北米、ヨーロッパ、アジアの16か国にお届けします。',
+          'はい。BabyBookAIは、iPhone向けにApp Storeで、Android向けにGoogle Playで無料配信中です。ブックは、北米、ヨーロッパ、アジアの16か国にお届けします。',
       },
     ],
   },
@@ -772,7 +775,7 @@ export const ja: Copy = {
       },
       {
         question: 'iPhone版はありますか?',
-        answer: 'まだです。BabyBookAIは、Android向けにGoogle Playで配信中で、iPhone版は近日公開予定です。',
+        answer: 'はい。BabyBookAIは、iPhone向けにApp Storeで、Android向けにGoogle Playで配信中です。',
       },
       {
         question: 'データを削除するには?',

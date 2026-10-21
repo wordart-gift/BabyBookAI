@@ -27,11 +27,13 @@ const { source, lang, class: className, center = false } = Astro.props;
   class:list={[
     'flex flex-col gap-6',
     center && 'items-center md:flex-row md:justify-center md:gap-10',
+    // In a hero, centred under the lead paragraph on a computer (Carlos, Oct 2026).
+    !center && 'lg:max-w-xl',
     className,
   ]}
 >
-  <div class:list={['flex flex-col gap-3', center && 'items-center']}>
-    <StoreBadges source={source} lang={lang} class={center ? 'justify-center' : undefined} />
+  <div class:list={['flex flex-col gap-3', center ? 'items-center' : 'lg:items-center lg:text-center']}>
+    <StoreBadges source={source} lang={lang} class={center ? 'justify-center' : 'lg:justify-center'} />
     <p class="text-sm text-ink-soft">{COPY[lang].ui.free}</p>
   </div>
   {center && <QrCode source={source} lang={lang} class="hidden md:flex" />}

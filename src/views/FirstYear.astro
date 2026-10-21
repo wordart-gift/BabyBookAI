@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import WatchBook from '../components/WatchBook.astro';
 import AppSpread from '../components/AppSpread.astro';
 import Butterflies from '../components/Butterflies.astro';
 import PhoneShot from '../components/PhoneShot.astro';
@@ -56,7 +57,7 @@ const items = t.months.items;
       <p class="mt-6 max-w-xl text-xl text-ink">{t.lead}</p>
       <DownloadCta source="first-year-hero" lang={lang} class="mt-8" />
     </div>
-    <div><AppSpread {...spreads(lang).ninth} eager /></div>
+    <div><WatchBook lang={lang}><AppSpread {...spreads(lang).ninth} eager /></WatchBook></div>
     <Butterflies />
     </section>
 
@@ -105,7 +106,7 @@ const items = t.months.items;
   <HowItWorks lang={lang} title={t.howTitle} />
 
   <section class="band" aria-labelledby="birthday">
-    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-12 px-5 md:grid-cols-2">
+    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-12 px-5 md:grid-cols-2 lg:grid-cols-[1fr_2fr]">
       <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem]" />
       <div>
         <h2 id="birthday" class="text-4xl text-teal sm:text-5xl">{t.birthday.title}</h2>

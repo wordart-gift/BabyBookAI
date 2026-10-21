@@ -55,12 +55,18 @@
     line-height: 1.55;
   }
 
+  /* A heading aligned left fills its first line (pretty): balanced, two short
+     lines left a gap beside them in a wide column. Centred, it is balanced. */
   h1,
   h2,
   h3 {
-    @apply font-display text-balance;
+    @apply font-display text-pretty;
     font-weight: 700;
     line-height: 1.12;
+  }
+  :is(h1, h2, h3).text-center,
+  .text-center :is(h1, h2, h3) {
+    text-wrap: balance;
   }
 
   /* No one-word last lines in running text. */
@@ -135,6 +141,9 @@
     main p:not(article *):has(+ :is(h1, h2)) {
       text-align: center;
       margin-inline: auto;
+    }
+    main :is(h1, h2):not(article *) {
+      text-wrap: balance;
     }
     main h1:not(article *) ~ [data-cta],
     main h1:not(article *) ~ [data-cta] > div {

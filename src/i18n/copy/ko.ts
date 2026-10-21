@@ -87,6 +87,8 @@ export const ko: Copy = {
       caption: '아기의 첫 1년 사진이 담긴 {size} 하드커버 책이에요. 한 달에 펼침면 하나씩이에요.',
       play: '동영상 재생',
       pause: '동영상 일시정지',
+      watch: '영상으로 보기',
+      close: '닫기',
       label: '동영상: BabyBookAI 하드커버 책이 펼쳐지고 페이지가 넘어갑니다. 첫 1년의 매달 펼침면이 하나씩 있어요',
       name: 'BabyBookAI: 인쇄된 하드커버 포토북',
     },
@@ -136,10 +138,11 @@ export const ko: Copy = {
       body: '사진은 이미 찍어 두었어요. 달마다 수백 장씩요. 그걸 책으로 만드는 일은 아기와 함께 사는 집에서 아무도 시간이 없는 일이에요.',
       yourPart: '내가 할 일',
       priceNote: '배송비 포함',
+      others: '다른 방법',
       ways: [
         { name: '직접 채우는 아기 앨범', effort: '매달 인쇄하고, 오리고, 붙이고, 쓰기', verdict: '대부분 세 번째 달쯤 멈춰요.' },
         { name: '매주 쓰는 아기 책 앱', effort: '매주 몇 분씩, 52주 동안', verdict: '일이 52조각으로 나뉘었을 뿐이에요.' },
-        { name: 'BabyBookAI', effort: '1년이 끝날 때까지 아무것도 안 해도 돼요', verdict: '그다음 한 번 훑어보면 끝이에요.' },
+        { name: '저절로 만들어지는 앨범', effort: '1년이 끝날 때까지 아무것도 안 해도 돼요', verdict: '그다음 한 번 훑어보면 끝이에요.' },
       ],
     },
     book: {
@@ -208,7 +211,7 @@ export const ko: Copy = {
       {
         question: 'iPhone과 Android 모두 되나요?',
         answer:
-          'BabyBookAI는 Android용으로 Google Play에서 무료로 받을 수 있어요. iPhone 앱은 곧 나와요. 책은 북미, 유럽, 아시아의 16개국으로 배송돼요.',
+          '네. BabyBookAI는 iPhone용은 App Store에서, Android용은 Google Play에서 무료로 받을 수 있어요. 책은 북미, 유럽, 아시아의 16개국으로 배송돼요.',
       },
     ],
   },
@@ -765,7 +768,7 @@ export const ko: Copy = {
       },
       {
         question: 'iPhone 앱이 있나요?',
-        answer: '아직 없어요. BabyBookAI는 Android용으로 Google Play에 있고, iPhone 앱은 곧 나와요.',
+        answer: '네. BabyBookAI는 iPhone용은 App Store에, Android용은 Google Play에 있어요.',
       },
       {
         question: '내 데이터를 어떻게 삭제하나요?',

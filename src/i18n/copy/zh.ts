@@ -86,6 +86,8 @@ export const zh: Copy = {
       caption: '一本 {size} 的精装书,收录宝宝第一年的照片:每个月一个跨页。',
       play: '播放视频',
       pause: '暂停视频',
+      watch: '观看视频',
+      close: '关闭',
       label: '视频:一本 BabyBookAI 精装书翻开,书页一页页翻过,第一年的每个月各有一个跨页',
       name: 'BabyBookAI:印刷的精装相册书',
     },
@@ -135,10 +137,11 @@ export const zh: Copy = {
       body: '照片你早就拍好了,每个月几百张。把它们做成一本书,是家里有宝宝时谁都没空做的事。',
       yourPart: '你要做的',
       priceNote: '含运费',
+      others: '其他方式',
       ways: [
         { name: '自己填写的成长册', effort: '每个月打印、剪、贴、写', verdict: '大多数人在第三个月前后就停了。' },
         { name: '每周更新的成长册应用', effort: '每周几分钟,持续 52 周', verdict: '工作还在,只是拆成了 52 份。' },
-        { name: 'BabyBookAI', effort: '一年结束前什么都不用做', verdict: '之后翻一遍,就完成了。' },
+        { name: '自动生成的相册书', effort: '一年结束前什么都不用做', verdict: '之后翻一遍,就完成了。' },
       ],
     },
     book: {
@@ -207,7 +210,7 @@ export const zh: Copy = {
       {
         question: 'iPhone 和 Android 都有吗?',
         answer:
-          'BabyBookAI 现已在 Google Play 免费提供 Android 版,iPhone 版即将推出。相册书配送至北美、欧洲和亚洲的 16 个国家。',
+          '是的。BabyBookAI 在 App Store 免费提供 iPhone 版,在 Google Play 免费提供 Android 版。相册书配送至北美、欧洲和亚洲的 16 个国家。',
       },
     ],
   },
@@ -764,7 +767,7 @@ export const zh: Copy = {
       },
       {
         question: '有 iPhone 版应用吗?',
-        answer: '还没有。BabyBookAI 现已在 Google Play 提供 Android 版,iPhone 版即将推出。',
+        answer: '有。BabyBookAI 在 App Store 提供 iPhone 版,在 Google Play 提供 Android 版。',
       },
       {
         question: '如何删除我的数据?',

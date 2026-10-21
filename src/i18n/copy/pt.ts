@@ -90,6 +90,8 @@ export const pt: Copy = {
       caption: 'Um livro de capa dura de {size} com as fotografias do primeiro ano do teu bebé: uma página dupla por mês.',
       play: 'Reproduzir o vídeo',
       pause: 'Pausar o vídeo',
+      watch: 'Ver o livro',
+      close: 'Fechar',
       label: 'Vídeo: abre-se um livro de capa dura do BabyBookAI e passam-se as páginas, uma página dupla por cada mês do primeiro ano',
       name: 'BabyBookAI: o álbum impresso de capa dura',
     },
@@ -140,10 +142,11 @@ export const pt: Copy = {
       body: 'As fotografias já as tiraste: centenas, todos os meses. Transformá-las num livro é a parte para a qual ninguém tem tempo com um bebé em casa.',
       yourPart: 'A tua parte',
       priceNote: 'Envio incluído',
+      others: 'Outras opções',
       ways: [
         { name: 'Um livro de bebé para preencher', effort: 'Imprimir, recortar, colar e escrever, todos os meses', verdict: 'A maioria desiste por volta do terceiro mês.' },
         { name: 'Uma app de livro semanal', effort: 'Uns minutos por semana, durante 52 semanas', verdict: 'O trabalho continua lá, em 52 pedaços.' },
-        { name: 'BabyBookAI', effort: 'Nada até o ano acabar', verdict: 'Depois uma vista de olhos, e está feito.' },
+        { name: 'Um álbum que se faz sozinho', effort: 'Nada até o ano acabar', verdict: 'Depois uma vista de olhos, e está feito.' },
       ],
     },
     book: {
@@ -212,7 +215,7 @@ export const pt: Copy = {
       {
         question: 'Existe para iPhone e Android?',
         answer:
-          'O BabyBookAI já está gratuito no Google Play, para Android. A app para iPhone chega em breve. Os livros são enviados para 16 países da América do Norte, da Europa e da Ásia.',
+          'Sim. O BabyBookAI é gratuito na App Store para iPhone e no Google Play para Android. Os livros são enviados para 16 países da América do Norte, da Europa e da Ásia.',
       },
     ],
   },
@@ -779,7 +782,7 @@ export const pt: Copy = {
       },
       {
         question: 'Existe app para iPhone?',
-        answer: 'Ainda não. O BabyBookAI está no Google Play para Android, e a app para iPhone chega em breve.',
+        answer: 'Sim. O BabyBookAI está na App Store para iPhone e no Google Play para Android.',
       },
       {
         question: 'Como apago os meus dados?',

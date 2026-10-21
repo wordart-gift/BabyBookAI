@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import WatchBook from '../components/WatchBook.astro';
 import PhoneShot from '../components/PhoneShot.astro';
 import DownloadCta from '../components/DownloadCta.astro';
 import HowItWorks from '../components/HowItWorks.astro';
@@ -53,10 +54,12 @@ const trail = [
       <p class="mt-6 max-w-xl text-xl text-ink">{t.lead}</p>
       <DownloadCta source="baby-boy-hero" lang={lang} class="mt-8" />
     </div>
-    <div class="mx-auto flex w-full max-w-[30rem] items-center justify-center gap-5 pb-12 lg:pb-20">
-      <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="w-[48%]" eager />
-      <PhoneShot src={SCREENS.selection.src} alt={SCREENS.selection.alt} class="w-[48%]" eager />
-    </div>
+    <WatchBook lang={lang} class="mx-auto mb-12 w-full max-w-[30rem] lg:mb-20">
+      <div class="flex items-center justify-center gap-5">
+        <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="w-[48%]" eager />
+        <PhoneShot src={SCREENS.selection.src} alt={SCREENS.selection.alt} class="w-[48%]" eager />
+      </div>
+    </WatchBook>
   </section>
 
   <section class="band" aria-labelledby="from-thousands">

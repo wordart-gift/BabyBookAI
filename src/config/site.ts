@@ -60,11 +60,13 @@ export const BOOK = {
 
 /**
  * The store listings. The site goes live with the apps, so every download
- * button and the /get/ smart link read these. Google Play is live (Oct 2026);
- * the iPhone app is not yet: while appStore is null the site says "coming soon".
+ * button and the /get/ smart link read these. Google Play is live (Oct 2026).
+ * The App Store link has no country: Apple opens each visitor's own storefront
+ * and language. It went on the site before Apple's approval (Carlos, Oct 2026).
+ * With appStore set to null the site says "coming soon" again.
  */
 export const STORES = {
-  appStore: null as string | null,
+  appStore: 'https://apps.apple.com/app/id6823942812' as string | null,
   googlePlay: 'https://play.google.com/store/apps/details?id=com.babybookai.app' as string | null,
 } as const;
 

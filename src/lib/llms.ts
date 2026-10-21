@@ -40,7 +40,7 @@ function md(text: string, lang: Lang): string {
 /** Keys that are page furniture, not content. */
 const SKIP = new Set([
   'title', 'description', 'crumb', 'eyebrow', 'headline', 'tocTitle', 'toc', 'figcaption', 'yourPart',
-  'emailLabel', 'bookTitle',
+  'emailLabel', 'bookTitle', 'priceNote', 'others',
 ]);
 
 type Node = string | Node[] | { [key: string]: Node };
@@ -105,7 +105,10 @@ function pageMarkdown(page: PageId, lang: Lang): string {
   if (page === 'home') {
     // The three steps have no key of their own on the home page: they follow
     // the comparison, as on the page.
-    const entries = Object.entries(source);
+    // The page names ours by its tag, not in the card's own name.
+    const homework = COPY[lang].home.homework;
+    const ways = homework.ways.map((w, i) => (i === homework.ways.length - 1 ? { ...w, name: `${SITE.name} (${w.name})` } : w));
+    const entries = Object.entries({ ...source, homework: { ...homework, ways } });
     const cut = entries.findIndex(([key]) => key === 'homework') + 1;
     walk(Object.fromEntries(entries.slice(0, cut)), lang, 1, out);
     out.push(`## ${copy.ui.how.title}`, copy.ui.how.steps.map((s, i) => `${i + 1}. **${s.title}.** ${s.body}`).join('\n'));

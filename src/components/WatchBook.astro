@@ -1,0 +1,170 @@
+---
+import { COPY } from '../i18n/copy';
+import type { Lang } from '../i18n/locales';
+
+/**
+ * Turns the hero's picture into a way to the book video, in the page's
+ * language: a "Watch the book" tag on its corner, and the whole picture
+ * clickable. On the home the video is further down, so it is a link to it
+ * (BookVideo plays it once in view). On the other pages it opens in a
+ * popover: no JS needed to open or close it, and nothing of the video loads
+ * until it opens (preload="none"; the script only plays and pauses it).
+ *
+ * Costs nothing to the hero: the picture keeps its size and stays the LCP,
+ * the tag sits on top of it (one grid cell, no positioning, so its ::after
+ * can cover the whole picture), and the hover only moves things with
+ * transform.
+ */
+export interface Props {
+  lang: Lang;
+  /** The video's own section on this page (the home); else a popover. */
+  href?: string;
+  class?: string;
+}
+
+const { lang, href, class: className } = Astro.props;
+const v = COPY[lang].ui.video;
+const base = `/videos/book-${lang}`;
+const tag = 'watch-tag cursor-pointer rounded-full bg-surface py-1.5 pl-1.5 pr-3.5 text-sm font-extrabold text-ink sm:py-2 sm:pl-2 sm:pr-4 sm:text-base shadow-[0_3px_0_rgb(14_42_49/0.18),0_10px_24px_-8px_rgb(14_42_49/0.35)]';
+---
+
+<div class:list={['watch', className]}>
+  <slot />
+  {
+    href ? (
+      <a href={href} class={tag}>
+        <span class="watch-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
+        {v.watch}
+      </a>
+    ) : (
+      <button type="button" popovertarget="book-pop" class={tag}>
+        <span class="watch-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
+        {v.watch}
+      </button>
+    )
+  }
+</div>
+
+{
+  !href && (
+    <div id="book-pop" popover class="book-pop" aria-label={v.label}>
+      <button type="button" popovertarget="book-pop" popovertargetaction="hide" class="book-pop-close" aria-label={v.close}>
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+      <video controls muted loop playsinline preload="none" width="1280" height="720" poster={`${base}-poster.webp`}>
+        <source src={`${base}.webm`} type="video/webm" />
+        <source src={`${base}.mp4`} type="video/mp4" />
+      </video>
+    </div>
+  )
+}
+
+<style>
+  .watch {
+    display: grid;
+    position: relative;
+  }
+  .watch > :global(*) {
+    grid-area: 1 / 1;
+  }
+  .watch-tag {
+    z-index: 2;
+    align-self: end;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 -0.9rem 0.75rem;
+    transition:
+      box-shadow 0.2s,
+      color 0.2s;
+  }
+  /* The whole picture is the target, not only the tag. */
+  .watch-tag::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .watch-play {
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 9999px;
+    background: var(--color-amber);
+    padding-left: 2px;
+    transition: transform 0.2s;
+  }
+  @media (width >= 40rem) {
+    .watch-play {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  .watch > :global(:first-child) {
+    transition: transform 0.35s ease;
+  }
+  @media (hover: hover) {
+    .watch:hover > :global(:first-child) {
+      transform: translateY(-6px) rotate(-0.6deg);
+    }
+    .watch:hover .watch-tag {
+      color: var(--color-teal);
+    }
+    .watch:hover .watch-play {
+      transform: scale(1.15);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .watch:hover > :global(:first-child) {
+      transform: none;
+    }
+  }
+
+  .book-pop {
+    width: min(92vw, 1100px);
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 1rem;
+    background: #000;
+    overflow: visible;
+  }
+  .book-pop::backdrop {
+    background: rgb(14 42 49 / 0.8);
+  }
+  .book-pop video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+  .book-pop-close {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 0.75rem);
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background: var(--color-surface);
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // Plays when the popover opens and stops when it closes. Without this the
+  // video's own controls still work.
+  const pop = document.getElementById('book-pop');
+  const video = pop?.querySelector('video');
+  if (pop && video) {
+    pop.addEventListener('toggle', (event) => {
+      if ((event as ToggleEvent).newState === 'open') void video.play().catch(() => {});
+      else video.pause();
+    });
+  }
+</script>

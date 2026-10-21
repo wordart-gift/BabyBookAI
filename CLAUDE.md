@@ -45,9 +45,9 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Amber is only for the next action (buttons); teal, ink and paper for the rest | Same rule as the app's theme |
 | Trailing slash on every URL | One canonical URL per page on Cloudflare Pages |
 | **No waitlist.** The site goes live the day the apps do, so it is written as if they are out; store URLs live in `src/config/site.ts` (`STORES`) | Carlos, Oct 2026 |
-| Official store badges, unaltered, same height; one QR code (desktop only) to the `/get/` smart link, which `functions/get/[[path]].ts` sends to the right store by User-Agent | Two QR codes make the visitor pick; one works for both phones |
+| Official store badges, unaltered, same height, both in the page's language (`src/assets/badges/`: Google's PNGs, Apple's SVGs from toolbox.marketingtools.apple.com); one QR code (desktop only) to the `/get/` smart link, which `functions/get/[[path]].ts` sends to the right store by User-Agent | Two QR codes make the visitor pick; one works for both phones |
 | Every page ends with the download section (`#download`, from the layout) | The header's "Get the app" must work on every page |
-| **Android first, iPhone coming.** Google Play badge is live; while `STORES.appStore` is null the site shows an "App Store: coming soon" label (no Apple badge: Apple's rules cover live apps only). Set `STORES.appStore` and the badge, QR redirect and schema follow | Carlos, Oct 2026 |
+| **Both stores on the site.** `STORES.appStore` is `https://apps.apple.com/app/id6823942812`, no country in it (Apple opens each visitor's own storefront and language); it went live before Apple's approval, so the link fails until then. The FAQs say the app is on both stores. Back to `null` and the site shows "App Store: coming soon" | Carlos, Oct 2026 |
 | Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). Photos with the family may be used too; pick the best framed. Unsplash stand-ins are gone | Carlos, Oct 2026 (he first allowed only Noa alone) |
 | App screens sit in a whole phone (`PhoneShot`): the screenshots are cut just under the last button, where a display would end | A frame open at the bottom read as a cropped image |
 | Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to Carlos's Gmail (cargarm3@gmail.com) by Cloudflare Email Routing | Carlos, Oct 2026 |
@@ -91,7 +91,7 @@ not `astro preview` (no compression there). Previews score SEO 69 on purpose:
 
 ## Book video
 
-Each language's home has the book video under the hero (`BookVideo.astro`, copy `ui.video`): `public/videos/book-<lang>.{mp4,webm}` and `-poster.webp`, 1280x720, ~1.7 MB, made with ffmpeg from the renders in `librofotos/tool/out/store_noa/book_video/` (H.264 crf 26 slow, VP9 crf 36, poster = second 4). `preload="none"`, plays in view and pauses out of it, never on its own with reduced motion. VideoObject in the page's JSON-LD (`bookVideo()`), `<video:video>` in the sitemap (`astro.config.mjs`). The videos show the family's photos (Carlos confirmed).
+Each language's home has the book video under the hero (`BookVideo.astro`, copy `ui.video`): `public/videos/book-<lang>.{mp4,webm}` and `-poster.webp`, 1280x720, ~1.7 MB, made with ffmpeg from the renders in `librofotos/tool/out/store_noa/book_video/` (H.264 crf 26 slow, VP9 crf 36, poster = second 4). `preload="none"`, plays in view and pauses out of it, never on its own with reduced motion. The heroes link to it (`WatchBook.astro`, "Watch the book" tag on the picture, the whole picture clickable): on the home a link to the section, on the landings a popover with the same video (no JS to open it, nothing loads until it opens). VideoObject in the page's JSON-LD (`bookVideo()`), `<video:video>` in the sitemap (`astro.config.mjs`). The videos show the family's photos (Carlos confirmed).
 
 ## Structured data
 

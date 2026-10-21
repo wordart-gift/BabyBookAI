@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Stork from '../components/Stork.astro';
+import WatchBook from '../components/WatchBook.astro';
 import AppSpread from '../components/AppSpread.astro';
 import Butterflies from '../components/Butterflies.astro';
 import BookVideo from '../components/BookVideo.astro';
@@ -10,6 +11,7 @@ import FaqList from '../components/FaqList.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import { APP_ID, BOOK_ID, faqPage, bookVideo, howTo, mobileApplication, photoBook } from '../lib/schema';
 import { screens } from '../lib/photos';
+import { SITE } from '../config/site';
 import { COPY } from '../i18n/copy';
 import { defaultPriceHtml, plain, rich } from '../i18n/format';
 import type { Lang } from '../i18n/locales';
@@ -50,7 +52,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
         <DownloadCta source="home-hero" lang={lang} class="mt-8" />
       </div>
       <div class="relative sm:mt-24 lg:mt-0">
-        <AppSpread month={ui.spreadMonth} alt={ui.spreadAlt} eager />
+        <WatchBook lang={lang} href="#book-video"><AppSpread month={ui.spreadMonth} alt={ui.spreadAlt} eager /></WatchBook>
         <Stork
           size={120}
           stage={false}
@@ -72,14 +74,33 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
           t.homework.ways.map((way, i) => {
             const ours = i === t.homework.ways.length - 1;
             return (
-              <li class:list={['relative rounded-card border p-7', ours ? 'border-teal bg-teal pt-16 text-surface lg:pt-7' : 'border-hair bg-paper']}>
+              <li class:list={['relative rounded-card border p-7', ours ? 'border-teal bg-teal pt-16 text-surface 2xl:pt-7' : 'border-hair bg-paper']}>
                 {ours && (
                   <p class="absolute -top-1 right-4 rotate-3 rounded-2xl bg-amber px-4 py-2 text-center text-ink shadow-[0_3px_0_var(--color-amber-deep)] md:-right-3 lg:right-4">
                     <span class="block font-display text-2xl font-bold leading-none" data-price-html set:html={defaultPriceHtml(lang)} />
                     <span class="mt-1 block text-xs font-extrabold uppercase tracking-wide">{t.homework.priceNote}</span>
                   </p>
                 )}
-                <p class:list={['font-display text-2xl font-bold', ours ? 'text-surface lg:pr-24' : 'text-ink']}>{way.name}</p>
+                {/* Ours against the others, said in words beside a tick or a cross. */}
+                <p class="flex items-center gap-3">
+                  <span
+                    class:list={[
+                      'grid size-9 shrink-0 place-items-center rounded-full',
+                      ours ? 'bg-surface text-teal' : 'border border-hair bg-surface text-[#b8564a]',
+                    ]}
+                    aria-hidden="true"
+                  >
+                    {ours ? (
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+                    )}
+                  </span>
+                  <span class:list={[ours ? 'font-display text-lg font-bold text-surface' : 'text-sm font-extrabold uppercase tracking-wide text-ink-soft']}>
+                    {ours ? SITE.name : t.homework.others}
+                  </span>
+                </p>
+                <p class:list={['mt-4 font-display text-2xl font-bold', ours ? 'text-surface' : 'text-ink']}>{way.name}</p>
                 <p
                   class:list={[
                     'mt-4 text-sm font-extrabold uppercase tracking-wide',
@@ -141,7 +162,7 @@ const faqs = t.faq.map((f) => ({ question: f.question, answer: f.answer }));
 
   <!-- First year, gift -->
   <section class="band" aria-labelledby="first-year">
-    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-12 px-5 md:grid-cols-2">
+    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center gap-12 px-5 md:grid-cols-2 lg:grid-cols-[1fr_2fr]">
       <PhoneShot src={SCREENS.setup.src} alt={SCREENS.setup.alt} class="mx-auto w-[15rem]" />
       <div>
         <h2 id="first-year" class="text-4xl text-teal sm:text-5xl">{t.birthday.title}</h2>
