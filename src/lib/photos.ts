@@ -1,4 +1,5 @@
 import type { ImageMetadata } from 'astro';
+import eleventhMonth from '../assets/app/spread-eleventh-month.png';
 import { COPY } from '../i18n/copy';
 import type { Lang } from '../i18n/locales';
 
@@ -28,18 +29,19 @@ export const screens = (lang: Lang) => {
 const spreadShots = import.meta.glob<{ default: ImageMetadata }>('../assets/app/spread-*-month-*.png', { eager: true });
 
 /**
- * Three more spreads from the app, one set per language (cut from the store
- * screenshots, librofotos tool/out/store_noa/lang): each landing shows its
- * own, the home keeps the first month. Their month labels were cut short by
- * the page's corner in the capture, so the label is erased and set as text by
- * AppSpread, on the page the app prints it on.
+ * More spreads from the app: each landing shows its own, the home keeps the
+ * first month. The seventh and ninth are one set per language (cut from the
+ * store screenshots, librofotos tool/out/store_noa/lang); the eleventh, which
+ * shares no photo with the home, is one file (tool/out/web_book). The month
+ * label is erased from all of them and set as text by AppSpread, on the page
+ * the app prints it on.
  */
 export const spreads = (lang: Lang) => {
   const t = COPY[lang].ui.spreads;
   const pick = (name: string) => spreadShots[`../assets/app/spread-${name}-${lang}.png`].default;
   return {
-    fifth: { src: pick('fifth-month'), side: 'right' as const, ...t.fifth },
     seventh: { src: pick('seventh-month'), side: 'right' as const, ...t.seventh },
     ninth: { src: pick('ninth-month'), side: 'left' as const, ...t.ninth },
+    eleventh: { src: eleventhMonth, side: 'left' as const, ...t.eleventh },
   };
 };

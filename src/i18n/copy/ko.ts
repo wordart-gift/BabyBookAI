@@ -97,7 +97,7 @@ export const ko: Copy = {
     },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
-      fifth: { month: '다섯째 달', alt: 'BabyBookAI 펼침면 ‘다섯째 달’: 엎드려 있는 아기와 할머니들' },
+      eleventh: { month: '열한째 달', alt: 'BabyBookAI 펼침면 ‘열한째 달’: 부모님, 할아버지, 할머니와 함께 있는 아기' },
       seventh: { month: '일곱째 달', alt: 'BabyBookAI 펼침면 ‘일곱째 달’: 분홍 니트 모자를 쓴 아기와 아빠와 찍은 사진' },
       ninth: { month: '아홉째 달', alt: 'BabyBookAI 펼침면 ‘아홉째 달’: 정원 잔디에 앉아 있는 아기' },
     },

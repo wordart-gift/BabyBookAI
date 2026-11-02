@@ -22,7 +22,7 @@ export interface Props {
 }
 
 const { month, alt, src = firstMonth, side = 'left', class: className, eager = false } = Astro.props;
-// Never asked to grow past the capture itself (the other spreads are 1000 wide).
+// Never asked to grow past the capture itself (some spreads are 1000 wide).
 const widths = [480, 800, 1200, 1600].filter((w) => w <= src.width);
 ---
 

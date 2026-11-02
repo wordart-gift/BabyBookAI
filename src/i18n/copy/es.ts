@@ -102,7 +102,7 @@ export const es: Copy = {
     },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
-      fifth: { month: 'Quinto mes', alt: 'Una doble página de BabyBookAI, «Quinto mes»: una bebé tumbada boca abajo, con sus abuelas' },
+      eleventh: { month: 'Undécimo mes', alt: 'Una doble página de BabyBookAI, «Undécimo mes»: una bebé con sus padres y sus abuelos' },
       seventh: { month: 'Séptimo mes', alt: 'Una doble página de BabyBookAI, «Séptimo mes»: una bebé con un gorro rosa de punto y fotos con su padre' },
       ninth: { month: 'Noveno mes', alt: 'Una doble página de BabyBookAI, «Noveno mes»: una bebé sentada en el césped del jardín' },
     },

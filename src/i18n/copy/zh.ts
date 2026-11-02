@@ -96,7 +96,7 @@ export const zh: Copy = {
     },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
-      fifth: { month: '第五个月', alt: 'BabyBookAI 的一个跨页「第五个月」:趴着的宝宝,和她的外婆奶奶' },
+      eleventh: { month: '第十一个月', alt: 'BabyBookAI 的一个跨页「第十一个月」:宝宝和爸爸妈妈、爷爷奶奶在一起' },
       seventh: { month: '第七个月', alt: 'BabyBookAI 的一个跨页「第七个月」:戴粉色毛线帽的宝宝,和与爸爸的合影' },
       ninth: { month: '第九个月', alt: 'BabyBookAI 的一个跨页「第九个月」:坐在花园草地上的宝宝' },
     },

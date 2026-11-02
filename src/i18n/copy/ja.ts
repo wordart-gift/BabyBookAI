@@ -99,7 +99,7 @@ export const ja: Copy = {
     },
     /** The landings' spreads (lib/photos.ts spreads()), the app's month names. */
     spreads: {
-      fifth: { month: '5か月目', alt: 'BabyBookAIの見開き「5か月目」:うつぶせの赤ちゃんと、おばあちゃんたち' },
+      eleventh: { month: '11か月目', alt: 'BabyBookAIの見開き「11か月目」:両親やおじいちゃん、おばあちゃんと一緒の赤ちゃん' },
       seventh: { month: '7か月目', alt: 'BabyBookAIの見開き「7か月目」:ピンクのニット帽の赤ちゃんと、お父さんとの写真' },
       ninth: { month: '9か月目', alt: 'BabyBookAIの見開き「9か月目」:庭の芝生に座る赤ちゃん' },
     },
