@@ -19,7 +19,7 @@ aprobado por Carlos el 2 nov 2026.
 | pt | o meu primeiro album bebe | 90 | 10 | 94 | /pt/blog/o-meu-primeiro-album-bebe/ | escrita; es la categoría «álbum del bebé», no un producto. Difícil que posicione |
 | nl | baby fotoalbum zelf inplakken | 110 | 8 | 69 | /nl/blog/baby-fotoalbum-zelf-inplakken/ | escrita; «fotoalbum» en el título es una excepción al vocabulario |
 | ko | 돌 앨범 | 20 | n/d | 95 | /ko/blog/first-birthday-album/ | escrita; datos no fiables: Semrush ve Google y en Corea se busca en Naver |
-| zh | sin keyword del estudio | — | — | — | — | sin escribir: faltan los datos de `宝宝相册书`, `宝宝相册`, `宝宝周岁纪念册`, `宝宝成长相册` |
+| zh | sin keyword del estudio | — | — | — | — | sin escribir: Semrush no tiene base de China, y Taiwán (chino tradicional, otro mercado) tampoco la sustituye (`zh/ronda-blog.md`). El índice queda con el artículo de ideas |
 
 Condicionada, no aprobada: `baby fotobuch gestalten` (de, 90, KD 16, PKD 63), solo si la SERP muestra guías; si son imprentas, tiene la misma intención que `/de/fotobuch-baby/`.
 

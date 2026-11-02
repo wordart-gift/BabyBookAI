@@ -16,7 +16,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
   `src/config/site.ts` mirrors what the site states; keep it in step.
 - **Keyword strategy**: Carlos's research (Sept–Oct 2026) for the US; per
   country in `docs/keywords/<lang>/` (Semrush data and what it showed), one
-  language at a time. English (US, UK), Spain, France, Germany, Italy, Portugal, the Netherlands and Japan are done; Korea has no usable data (Semrush sees Google, Koreans search Naver) and zh was not studied; they still carry the Play listings'
+  language at a time. English (US, UK), Spain, France, Germany, Italy, Portugal, the Netherlands and Japan are done; Korea has no usable data (Semrush sees Google, Koreans search Naver) and zh cannot be studied there (Semrush has no China database, and the site writes simplified Chinese for China); they still carry the Play listings'
   product words.
 
 ## Settled decisions
