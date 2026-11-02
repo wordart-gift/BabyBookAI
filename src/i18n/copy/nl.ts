@@ -842,7 +842,7 @@ export const nl: Copy = {
       rows: [
         ['Het boekbestand: de foto’s in je boek, je teksten, de naam en het geboortejaar van je baby', 'Om je boek te drukken', 'Gelato (onze drukker)'],
         ['Aantal pagina’s, valuta', 'Om de bestelling te prijzen', '—'],
-        ['Je naam, e-mail, bezorgadres, telefoon (optioneel)', 'Om het boek te bezorgen en de bon te sturen', 'Gelato (bezorging), Stripe (bon)'],
+        ['Je naam, e-mail, bezorgadres, telefoon (optioneel)', 'Om het boek te bezorgen en de bon, de factuur en de verzendmails te sturen', 'Gelato (bezorging), Stripe (bon), Resend e-mails)'],
         ['Betaalgegevens', 'Om de betaling te innen', 'Alleen Stripe; wij ontvangen ze nooit'],
       ],
     },
@@ -852,6 +852,7 @@ export const nl: Copy = {
     others: [
       '<strong>Stripe</strong> verwerkt betalingen (<a class="lnk" href="https://stripe.com/nl/privacy">stripe.com/privacy</a>).',
       '<strong>Gelato</strong> drukt en verzendt het boek (<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>).',
+      '<strong>Resend</strong> bezorgt onze bestelmails (<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>).',
       'Onze bestelserver, waar het boekbestand wacht tot het de drukker bereikt.',
     ],
     keepTitle: 'Hoe lang we ze bewaren',

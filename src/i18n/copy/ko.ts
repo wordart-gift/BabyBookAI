@@ -828,7 +828,7 @@ export const ko: Copy = {
       rows: [
         ['책 파일: 책 속의 사진, 내가 쓴 글, 아기 이름과 출생 연도', '책을 인쇄하기 위해', 'Gelato(당사의 인쇄소)'],
         ['페이지 수, 통화', '주문 가격을 계산하기 위해', '—'],
-        ['이름, 이메일, 배송 주소, 전화번호(선택)', '책을 배송하고 영수증을 보내기 위해', 'Gelato(배송), Stripe(영수증)'],
+        ['이름, 이메일, 배송 주소, 전화번호(선택)', '책을 배송하고 영수증, 청구서, 발송 이메일을 보내기 위해', 'Gelato(배송), Stripe(영수증), Resend(이메일)'],
         ['결제 정보', '결제를 받기 위해', 'Stripe만. 당사는 받지 않아요'],
       ],
     },
@@ -838,6 +838,7 @@ export const ko: Copy = {
     others: [
       '<strong>Stripe</strong>가 결제를 처리해요(<a class="lnk" href="https://stripe.com/privacy">stripe.com/privacy</a>).',
       '<strong>Gelato</strong>가 책을 인쇄하고 배송해요(<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>).',
+      '<strong>Resend</strong>가 주문 관련 이메일을 전달해요(<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>).',
       '당사의 주문 서버. 책 파일이 인쇄소에 도착할 때까지 여기에서 기다려요.',
     ],
     keepTitle: '보관 기간',

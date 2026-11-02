@@ -844,7 +844,7 @@ export const en = {
       rows: [
         ['The book file: the photos in your book, your words, your baby’s name and birth year', 'To print your book', 'Gelato (our printer)'],
         ['Number of pages, currency', 'To price the order', '—'],
-        ['Your name, email, shipping address, phone (optional)', 'To deliver the book and send the receipt', 'Gelato (delivery), Stripe (receipt)'],
+        ['Your name, email, shipping address, phone (optional)', 'To deliver the book, and to send the receipt, the invoice and the shipping emails', 'Gelato (delivery), Stripe (receipt), Resend emails)'],
         ['Payment details', 'To take payment', 'Stripe only; we never receive them'],
       ],
     },
@@ -854,6 +854,7 @@ export const en = {
     others: [
       '<strong>Stripe</strong> processes payments (<a class="lnk" href="https://stripe.com/privacy">stripe.com/privacy</a>).',
       '<strong>Gelato</strong> prints and ships the book (<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>).',
+      '<strong>Resend</strong> delivers our order emails (<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>).',
       'Our order server, where the book file waits until it reaches the printer.',
     ],
     keepTitle: 'How long we keep it',

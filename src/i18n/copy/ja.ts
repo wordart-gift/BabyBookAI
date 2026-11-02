@@ -835,7 +835,7 @@ export const ja: Copy = {
       rows: [
         ['ブックのファイル:ブック内の写真、あなたの言葉、赤ちゃんの名前と生まれた年', 'ブックを印刷するため', 'Gelato(印刷所)'],
         ['ページ数、通貨', 'ご注文の価格を計算するため', '—'],
-        ['お名前、メールアドレス、配送先住所、電話番号(任意)', 'ブックをお届けし、領収書を送るため', 'Gelato(配送)、Stripe(領収書)'],
+        ['お名前、メールアドレス、配送先住所、電話番号(任意)', 'ブックをお届けし、領収書、請求書、発送のメールを送るため', 'Gelato(配送)、Stripe(領収書)、Resend(メール)'],
         ['お支払い情報', 'お支払いを受け付けるため', 'Stripeのみ。当社は受け取りません'],
       ],
     },
@@ -845,6 +845,7 @@ export const ja: Copy = {
     others: [
       '<strong>Stripe</strong>が、お支払いを処理します(<a class="lnk" href="https://stripe.com/jp/privacy">stripe.com/privacy</a>)。',
       '<strong>Gelato</strong>が、ブックを印刷、発送します(<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>)。',
+      '<strong>Resend</strong>が、ご注文に関するメールを配信します(<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>)。',
       '当社の注文サーバー。ブックのファイルは、印刷所に届くまでここで待機します。',
     ],
     keepTitle: '保管期間',

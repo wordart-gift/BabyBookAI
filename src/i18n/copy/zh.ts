@@ -827,7 +827,7 @@ export const zh: Copy = {
       rows: [
         ['相册书文件:书中的照片、你的文字、宝宝的名字和出生年份', '用于印刷你的相册书', 'Gelato(我们的印刷厂)'],
         ['页数、货币', '用于为订单定价', '—'],
-        ['你的姓名、邮箱、收货地址、电话(可选)', '用于送达相册书并发送收据', 'Gelato(配送)、Stripe(收据)'],
+        ['你的姓名、邮箱、收货地址、电话(可选)', '用于送达相册书,并发送收据、账单和发货邮件', 'Gelato(配送)、Stripe(收据)、Resend(邮件)'],
         ['付款信息', '用于收款', '仅 Stripe;我们从不会收到'],
       ],
     },
@@ -837,6 +837,7 @@ export const zh: Copy = {
     others: [
       '<strong>Stripe</strong> 处理付款(<a class="lnk" href="https://stripe.com/cn/privacy">stripe.com/privacy</a>)。',
       '<strong>Gelato</strong> 印刷并寄出相册书(<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>)。',
+      '<strong>Resend</strong> 投递我们的订单邮件(<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>)。',
       '我们的订单服务器,相册书文件在那里等待,直到送达印刷厂。',
     ],
     keepTitle: '我们保存多久',

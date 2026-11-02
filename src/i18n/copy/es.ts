@@ -844,7 +844,7 @@ export const es: Copy = {
       rows: [
         ['El archivo del libro: las fotos de tu libro, tus textos, el nombre de tu bebé y su año de nacimiento', 'Para imprimir tu libro', 'Gelato (nuestra imprenta)'],
         ['Número de páginas, moneda', 'Para calcular el precio del pedido', '—'],
-        ['Tu nombre, correo, dirección de envío y teléfono (opcional)', 'Para entregar el libro y enviar el recibo', 'Gelato (entrega), Stripe (recibo)'],
+        ['Tu nombre, correo, dirección de envío y teléfono (opcional)', 'Para entregar el libro y enviar el recibo, la factura y los correos de envío', 'Gelato (entrega), Stripe (recibo), Resend correos)'],
         ['Datos de pago', 'Para cobrar', 'Solo Stripe; nosotros nunca los recibimos'],
       ],
     },
@@ -854,6 +854,7 @@ export const es: Copy = {
     others: [
       '<strong>Stripe</strong> procesa los pagos (<a class="lnk" href="https://stripe.com/es/privacy">stripe.com/privacy</a>).',
       '<strong>Gelato</strong> imprime y envía el libro (<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>).',
+      '<strong>Resend</strong> entrega nuestros correos de pedido (<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>).',
       'Nuestro servidor de pedidos, donde el archivo del libro espera hasta llegar a la imprenta.',
     ],
     keepTitle: 'Cuánto tiempo la guardamos',
