@@ -42,7 +42,7 @@ const ui = COPY[lang].ui;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <SEO {...seo} lang={lang} page={page} />
   </head>
-  <body class="min-h-dvh flex flex-col">
+  <body id="top" class="min-h-dvh flex flex-col">
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-control focus:bg-surface focus:px-4 focus:py-2"
@@ -58,5 +58,9 @@ const ui = COPY[lang].ui;
       {cta && <ClosingCta source={cta} lang={lang} />}
     </main>
     <Footer lang={lang} page={page} />
+    {/* Back to the top: a plain link, no JavaScript; it shows once the page is scrolled (global.css). */}
+    <a href="#top" class="to-top" aria-label={ui.toTop} title={ui.toTop}>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+    </a>
   </body>
 </html>

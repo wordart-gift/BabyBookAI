@@ -14,6 +14,7 @@ const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportE
 export const ja: Copy = {
   ui: {
     skip: '本文へスキップ',
+    toTop: 'ページの先頭へ',
     homeAria: `${SITE.name} ホーム`,
     mainNav: 'メイン',
     nav: { babyPhotoBook: '赤ちゃんアルバム', firstYear: '1年間の成長記録' },

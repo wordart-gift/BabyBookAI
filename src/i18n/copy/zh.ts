@@ -11,6 +11,7 @@ const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportE
 export const zh: Copy = {
   ui: {
     skip: '跳到正文',
+    toTop: '返回顶部',
     homeAria: `${SITE.name} 首页`,
     mainNav: '主导航',
     nav: { babyPhotoBook: '宝宝相册书', firstYear: '成长第一年' },

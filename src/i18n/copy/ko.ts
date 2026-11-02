@@ -12,6 +12,7 @@ const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportE
 export const ko: Copy = {
   ui: {
     skip: '본문으로 건너뛰기',
+    toTop: '맨 위로',
     homeAria: `${SITE.name} 홈`,
     mainNav: '메인',
     nav: { babyPhotoBook: '아기 포토북', firstYear: '첫 1년 포토북' },

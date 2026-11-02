@@ -17,6 +17,7 @@ const EMAIL = `<a class="lnk" href="mailto:${SITE.supportEmail}">${SITE.supportE
 export const es: Copy = {
   ui: {
     skip: 'Ir al contenido',
+    toTop: 'Volver arriba',
     homeAria: `${SITE.name}, inicio`,
     mainNav: 'Principal',
     nav: { babyPhotoBook: 'Álbum del bebé', firstYear: 'Su primer año' },

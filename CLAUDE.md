@@ -51,6 +51,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). Photos with the family may be used too; pick the best framed. Unsplash stand-ins are gone | Carlos, Oct 2026 (he first allowed only Noa alone) |
 | App screens sit in a whole phone (`PhoneShot`): the screenshots are cut just under the last button, where a display would end | A frame open at the bottom read as a cropped image |
 | Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to Carlos's Gmail (cargarm3@gmail.com) by Cloudflare Email Routing | Carlos, Oct 2026 |
+| **Back-to-top link**: `<a href="#top" class="to-top">` in `BaseLayout`, teal circle with a white arrow (amber stays for the next action), no JavaScript: a CSS scroll-driven animation fades it in after the first screen (always visible where unsupported or with reduced motion). `animation-timeline` lives in its own rule (`html .to-top`) because the minifier merged it into the `animation` shorthand and Chrome dropped it. Label `ui.toTop` in the ten languages | Carlos, 24 Oct 2026 (same on madeofnames.com) |
 
 ## Languages
 
