@@ -14,22 +14,25 @@ const ui = COPY[lang].ui;
 const nav = [
   { href: path('babyPhotoBook', lang), label: ui.nav.babyPhotoBook },
   { href: path('firstYear', lang), label: ui.nav.firstYear },
+  { href: path('blog', lang), label: ui.nav.blog },
+  { href: `${path('support', lang)}#contact`, label: ui.nav.contact },
 ];
 const current = Astro.url.pathname;
 ---
 
-<header class="mx-auto flex w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center justify-between gap-3 px-5 py-4">
-  <a href={path('home', lang)} class="font-display text-2xl font-bold text-teal" aria-label={ui.homeAria}>
+<header class="mx-auto flex w-full max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] items-center justify-between gap-3 px-5 py-4 max-[359px]:gap-1.5 max-[359px]:px-3">
+  <a href={path('home', lang)} class="font-display text-2xl font-bold text-teal max-[359px]:text-xl" aria-label={ui.homeAria}>
     {SITE.name}
   </a>
-  <nav aria-label={ui.mainNav} class="flex items-center gap-3 sm:gap-5">
-    <ul class="hidden items-center gap-5 md:flex">
+  <nav aria-label={ui.mainNav} class="flex items-center gap-3 sm:gap-5 max-[359px]:gap-1">
+    {/* All four links only fit from 1024px in every language (measured, Nov 2026). */}
+    <ul class="hidden items-center gap-5 lg:flex">
       {
         nav.map((item) => (
           <li>
             <a
               href={item.href}
-              class="font-bold text-ink hover:text-teal"
+              class="whitespace-nowrap font-bold text-ink hover:text-teal"
               aria-current={current === item.href ? 'page' : undefined}
             >
               {item.label}
@@ -40,7 +43,7 @@ const current = Astro.url.pathname;
     </ul>
     {/* The language switcher: a <details>, so it needs no JS. Each link goes
         to the same page in the other language. */}
-    <details class="lang relative">
+    <details class="lang relative hidden lg:block">
       <summary
         class="flex cursor-pointer list-none items-center gap-1.5 rounded-control px-2 py-2 font-bold text-ink hover:text-teal [&::-webkit-details-marker]:hidden"
         aria-label={ui.language}
@@ -72,9 +75,61 @@ const current = Astro.url.pathname;
         }
       </ul>
     </details>
+    {/* Under 1024px one button takes the links and the languages, in the place
+        of the globe, which is wider: at 390px there was no room for both. A
+        popover, like the book video's: no JS, and it closes on a tap outside or
+        with Esc. */}
+    <button
+      type="button"
+      popovertarget="site-menu"
+      class="grid size-11 shrink-0 place-items-center rounded-control text-ink transition-transform duration-150 hover:text-teal active:scale-95 lg:hidden max-[359px]:size-9"
+      aria-label={ui.menu}
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+    <div id="site-menu" popover class="site-menu" aria-label={ui.mainNav}>
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="block rounded-control px-3 py-3 text-lg font-bold text-ink hover:bg-teal-wash"
+                aria-current={current === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-3 px-3 text-sm font-bold text-ink-soft">{ui.language}</p>
+      <ul class="mt-1 grid grid-cols-2">
+        {
+          LANGS.map((l) => (
+            <li>
+              <a
+                href={path(page ?? 'home', l)}
+                hreflang={LOCALES[l].tag}
+                lang={LOCALES[l].tag}
+                aria-current={l === lang ? 'true' : undefined}
+                class:list={[
+                  'block rounded-control px-3 py-2 font-bold hover:bg-teal-wash',
+                  l === lang ? 'text-teal' : 'text-ink',
+                ]}
+              >
+                {LOCALES[l].name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
     <a
       href="#download"
-      class="whitespace-nowrap rounded-control bg-amber px-4 py-2 font-extrabold text-ink shadow-[0_4px_0_var(--color-amber-deep)] hover:brightness-105 active:translate-y-1 active:shadow-none"
+      class="whitespace-nowrap rounded-control bg-amber px-4 py-2 font-extrabold text-ink shadow-[0_4px_0_var(--color-amber-deep)] hover:brightness-105 active:translate-y-1 active:shadow-none max-[359px]:px-2.5 max-[359px]:text-sm"
     >
       {ui.getApp}
     </a>

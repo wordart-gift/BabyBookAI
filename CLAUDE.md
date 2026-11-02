@@ -25,7 +25,7 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 |---|---|
 | Brand is **BabyBookAI** everywhere | Carlos, Oct 2026 |
 | Rank on the **"photo book" / "photo album"** family, which Google answers with one first page; "album" is searched twice as much, so it leads the baby photo book page's title and H1 while the URL and body say "photo book". "Memory book" only for naming (H1 on home, App Store, ads); the English home's title says "baby book app", the search that apps like ours answer with their home pages | "memory book" SERPs are fill-in book brands, Amazon and media; checked with Semrush, US and UK, Oct 2026 (`docs/keywords/en/`) |
-| Pages: `/`, `/baby-photo-book/`, `/first-year-photo-book/`, `/baby-boy-photo-album/`, `/baby-girl-photo-album/`, `/baby-photo-book-ideas/` + support, about, legal. Each exists in the app's ten languages (see "Languages") | One search intent per page. Do not add pages without checking the real SERP |
+| Pages: `/`, `/baby-photo-book/`, `/first-year-photo-book/`, `/baby-boy-photo-album/`, `/baby-girl-photo-album/`, `/baby-photo-book-ideas/`, `/blog/` + support, about, legal. Each exists in the app's ten languages (see "Languages") | One search intent per page. Do not add pages without checking the real SERP |
 | **Ten languages** (en es fr de it pt nl ja ko zh), English at the root, the rest under `/xx/` with their own slugs. The visitor's country picks the language of the home page on a first visit (never a deep page) and, on every page, the **price and size** the app shows there | Carlos, Oct 2026. Same rules as the app: `lib/order/pricing.dart`, `lib/util/dates.dart` |
 | Size in inches only in US, LR, MM, written `11 × 11″`; everywhere else `28 × 28 cm` | Carlos, Oct 2026; the app's `BookSize` |
 | Legal pages are translated, but the English text applies (`ui.translationNote`) | A lawyer reviews the English; a translation must not become a second contract |
@@ -51,7 +51,14 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Photos are real, from the app's store screenshots (`src/assets/app/`, cropped from `librofotos/tool/out/store_noa/`). Photos with the family may be used too; pick the best framed. Unsplash stand-ins are gone | Carlos, Oct 2026 (he first allowed only Noa alone) |
 | App screens sit in a whole phone (`PhoneShot`): the screenshots are cut just under the last button, where a display would end | A frame open at the bottom read as a cropped image |
 | Contact is **info@babybookai.com** (`SITE.supportEmail`), forwarded to Carlos's Gmail (cargarm3@gmail.com) by Cloudflare Email Routing | Carlos, Oct 2026 |
+| **Contact form on the support page** (name, email, subject, message), no new page: the menu's Contact goes to `support#contact`. Plain HTML with no JavaScript, posted to the Worker in `workers/contact/`, which redirects back to `#sent` or `#failed` (shown with `:target`). Replies go out in the language the message came in; the site does not say so | Carlos, Nov 2026 |
+| **Blog**: one index per language at `/blog/` and posts at `/blog/<slug>/`, one Markdown file each. A post belongs to one language and targets a keyword no page or post has (`docs/keywords/blog.md`): posts are not translations and have no hreflang | Carlos, Nov 2026 |
+| Stock photos are allowed in blog posts that need a picture per idea, with a credit line (`docs/blog-photos.md`). Never presented as customers' or the family's. The product pages keep the real ones | Carlos, Nov 2026 |
 | **Back-to-top link**: `<a href="#top" class="to-top">` in `BaseLayout`, teal circle with a white arrow (amber stays for the next action), no JavaScript: a CSS scroll-driven animation fades it in after the first screen (always visible where unsupported or with reduced motion). `animation-timeline` lives in its own rule (`html .to-top`) because the minifier merged it into the `animation` shorthand and Chrome dropped it. Label `ui.toTop` in the ten languages | Carlos, 24 Oct 2026 (same on madeofnames.com) |
+
+## Blog
+
+`src/content/blog/<lang>/<slug>.md` (`src/content.config.ts`), newest first on the index, followed by the ideas article, which keeps its URL. In the body `[text](page:firstYear)` links to a page in the post's language and {price} and {size} work as in the copy files (`resolvePostHtml` in `src/lib/blog.ts`, applied to the rendered HTML by `PostBody.astro`: Astro 7's Markdown processor does not take remark plugins without an extra package). On a phone a table's rows stack and each cell names its column (`labelCells`), so give every column a header. A repeated keyword or a mistyped `page:` stops the build. Vocabulary per language is the table above. Before adding a post, check the real SERP and add its row to `docs/keywords/blog.md`.
 
 ## Languages
 
@@ -83,6 +90,9 @@ Lighthouse 100 in every category. LCP < 1.5 s, CLS 0. No JS on any page
 `astro:assets` with explicit sizes. Fonts through Astro's fonts API
 (`astro.config.mjs`): latin files only, fallbacks with matched metrics, so the
 page does not move when they arrive; do not go back to `@fontsource` CSS imports.
+`font-display: optional` (Nov 2026): with the fonts 1.5 s late, `swap` rewrapped text and gave CLS 0.22 on `/es/ideas-album-bebe/`; `optional` gives 0 everywhere, at the price of Arial on a very slow first view.
+
+The header's four links only fit from 1024px in all ten languages; under that a popover menu takes them and the languages, in the place of the globe.
 
 Measured Oct 2026 on a Cloudflare preview, Lighthouse mobile (simulated slow
 4G): performance 96-100, accessibility, best practices 100, CLS 0 (privacy
@@ -141,4 +151,5 @@ npm run build
 npm run preview
 npm run deploy    # build + direct upload to Cloudflare Pages (wrangler)
 npm run indexnow  # after a deploy: ping Bing/Yandex with the sitemap's URLs
+cd workers/contact && npx wrangler deploy  # the contact form's mailer, on its own and before the site that posts to it
 ```

@@ -15,9 +15,10 @@ export const en = {
   ui: {
     skip: 'Skip to content',
     toTop: 'Back to top',
+    menu: 'Menu',
     homeAria: `${SITE.name} home`,
     mainNav: 'Main',
-    nav: { babyPhotoBook: 'Baby photo book', firstYear: 'First year book' },
+    nav: { babyPhotoBook: 'Baby photo book', firstYear: 'First year book', blog: 'Blog', contact: 'Contact' },
     getApp: 'Get the app',
     language: 'Language',
     breadcrumb: 'Breadcrumb',
@@ -33,6 +34,7 @@ export const en = {
         boy: 'Baby boy photo album',
         girl: 'Baby girl photo album',
         ideas: 'Baby book ideas',
+        blog: 'Blog',
         about: 'About',
         support: 'Support & FAQ',
         privacy: 'Privacy policy',
@@ -700,6 +702,14 @@ export const en = {
     ],
   },
 
+  blog: {
+    title: 'BabyBookAI Blog: Guides for Your Baby’s Photos',
+    description: 'Practical guides for the photos of your baby’s first year: what to take, what to write and how to turn them into a printed book.',
+    crumb: 'Blog',
+    h1: 'Guides for your baby’s photos',
+    lead: 'What to take, what to write and how to turn a phone full of photos into something you can hold.',
+  },
+
   about: {
     title: 'About BabyBookAI | The Baby Photo Book That Makes Itself',
     description:
@@ -747,6 +757,17 @@ export const en = {
     lead: 'Most answers are below. For anything else, about the app or an order, write to us and a person will reply.',
     emailLabel: 'Email',
     emailNote: 'About an order? Write from the email address you ordered with, so we can find it.',
+    form: {
+      title: 'Write to us',
+      name: 'Your name',
+      email: 'Your email',
+      subject: 'Subject',
+      message: 'Message',
+      send: 'Send message',
+      sent: 'Thanks, your message is on its way. We’ll answer by email.',
+      failed: `We couldn’t send your message. Write to us at ${EMAIL} instead.`,
+      privacy: `We use these details only to answer you. See the ${a('privacy', 'privacy policy')}.`,
+    },
     appTitle: 'The app and your order',
     bookTitle: 'The book and how it is made',
     more: `More: the ${a('privacy', 'privacy policy')}, the ${a('terms', 'terms')}, and ${a('about', 'who we are')}.`,
@@ -802,7 +823,7 @@ export const en = {
     eyebrow: 'Privacy',
     h1: 'Your baby’s photos stay on your phone',
     updatedLabel: 'Privacy policy · Last updated:',
-    updated: 'October 9, 2026',
+    updated: 'November 2, 2026',
     intro: `BabyBookAI (“we”) is an app that makes a printed photo book of your baby’s first year from the photos on your phone. It is a Photo-to-Text product. Contact ${EMAIL}.`,
     shortTitle: 'The short version',
     short: [
@@ -851,6 +872,7 @@ export const en = {
     websiteAnalytics:
       'babybookai.com uses Google Analytics to count visits and see which pages are read, through cookies set by Google. It receives your IP address, browser and the pages you visit, never anything from the app. You can block it with your browser’s settings or Google’s opt-out add-on (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). Google’s policy: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: 'babybookai.com runs no analytics or advertising scripts.',
+    websiteContact: 'If you write to us through the contact form, your name, email address, subject and message reach us by email, through Cloudflare and Google, our email providers. We use them only to answer you and keep them as long as the conversation needs. You can ask us to delete them.',
     childrenTitle: 'Children',
     children:
       'BabyBookAI is for parents. It is not directed at children, and we do not knowingly collect information from children. The photos of your baby are used only to print your book.',

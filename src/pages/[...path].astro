@@ -10,6 +10,9 @@ import About from '../views/About.astro';
 import Support from '../views/Support.astro';
 import Privacy from '../views/Privacy.astro';
 import Terms from '../views/Terms.astro';
+import Blog from '../views/Blog.astro';
+import BlogPost from '../views/BlogPost.astro';
+import { allPosts, postLang, postPath, type Post } from '../lib/blog';
 import { routes, type PageId } from '../i18n/routes';
 import type { Lang } from '../i18n/locales';
 
@@ -17,12 +20,18 @@ import type { Lang } from '../i18n/locales';
  * Every page in every language, from the route table (src/i18n/routes.ts):
  * one view per page, its words from src/i18n/copy/<lang>.ts.
  */
-export const getStaticPaths = (() =>
-  routes().map((r) => ({
+export const getStaticPaths = (async () => [
+  ...routes().map((r) => ({
     // The rest parameter takes the path without its slashes; undefined is "/".
     params: { path: r.path.replace(/^\/|\/$/g, '') || undefined },
     props: { page: r.page, lang: r.lang },
-  }))) satisfies GetStaticPaths;
+  })),
+  // A blog post exists only in the language it was written for.
+  ...(await allPosts()).map((post) => ({
+    params: { path: postPath(post).replace(/^\/|\/$/g, '') },
+    props: { post, lang: postLang(post) },
+  })),
+]) satisfies GetStaticPaths;
 
 const VIEWS: Record<PageId, typeof Home> = {
   home: Home,
@@ -31,14 +40,15 @@ const VIEWS: Record<PageId, typeof Home> = {
   boy: Boy,
   girl: Girl,
   ideas: Ideas,
+  blog: Blog,
   about: About,
   support: Support,
   privacy: Privacy,
   terms: Terms,
 };
 
-const { page, lang } = Astro.props as { page: PageId; lang: Lang };
-const View = VIEWS[page];
+const { page, post, lang } = Astro.props as { page?: PageId; post?: Post; lang: Lang };
+const View = page ? VIEWS[page] : null;
 ---
 
-<View lang={lang} />
+{post ? <BlogPost post={post} /> : View && <View lang={lang} />}

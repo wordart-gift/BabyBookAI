@@ -18,9 +18,10 @@ export const de: Copy = {
   ui: {
     skip: 'Zum Inhalt springen',
     toTop: 'Nach oben',
+    menu: 'Menü',
     homeAria: `${SITE.name}, Startseite`,
     mainNav: 'Hauptmenü',
-    nav: { babyPhotoBook: 'Baby-Fotobuch', firstYear: 'Erstes Jahr' },
+    nav: { babyPhotoBook: 'Baby-Fotobuch', firstYear: 'Erstes Jahr', blog: 'Blog', contact: 'Kontakt' },
     getApp: 'App laden',
     language: 'Sprache',
     breadcrumb: 'Brotkrümelnavigation',
@@ -36,6 +37,7 @@ export const de: Copy = {
         boy: 'Fotoalbum für Jungen',
         girl: 'Fotoalbum für Mädchen',
         ideas: 'Ideen fürs Baby-Fotobuch',
+        blog: 'Blog',
         about: 'Über uns',
         support: 'Hilfe & FAQ',
         privacy: 'Datenschutz',
@@ -700,6 +702,14 @@ export const de: Copy = {
     ],
   },
 
+  blog: {
+    title: 'BabyBookAI-Blog: Ratgeber für die Fotos deines Babys',
+    description: 'Praktische Ratgeber für die Fotos aus dem ersten Jahr deines Babys: was du fotografierst, was du aufschreibst und wie daraus ein gedrucktes Fotobuch wird.',
+    crumb: 'Blog',
+    h1: 'Ratgeber für die Fotos deines Babys',
+    lead: 'Was du fotografierst, was du aufschreibst und wie aus einem vollen Handy etwas wird, das man in den Händen hält.',
+  },
+
   about: {
     title: 'Über BabyBookAI | Das Baby-Fotobuch, das sich selbst macht',
     description:
@@ -747,6 +757,17 @@ export const de: Copy = {
     lead: 'Die meisten Antworten stehen unten. Für alles andere, zur App oder zu einer Bestellung, schreib uns, und ein Mensch antwortet dir.',
     emailLabel: 'E-Mail',
     emailNote: 'Geht es um eine Bestellung? Schreib von der E-Mail-Adresse, mit der du bestellt hast, damit wir sie finden.',
+    form: {
+      title: 'Schreib uns',
+      name: 'Dein Name',
+      email: 'Deine E-Mail-Adresse',
+      subject: 'Betreff',
+      message: 'Nachricht',
+      send: 'Nachricht senden',
+      sent: 'Danke, deine Nachricht ist unterwegs. Wir antworten dir per E-Mail.',
+      failed: `Deine Nachricht konnte nicht gesendet werden. Schreib uns an ${EMAIL}.`,
+      privacy: `Wir nutzen diese Angaben nur, um dir zu antworten. Mehr in der ${a('privacy', 'Datenschutzerklärung')}.`,
+    },
     appTitle: 'Die App und deine Bestellung',
     bookTitle: 'Das Buch und wie es entsteht',
     more: `Mehr: die ${a('privacy', 'Datenschutzerklärung')}, die ${a('terms', 'AGB')} und ${a('about', 'wer wir sind')}.`,
@@ -802,7 +823,7 @@ export const de: Copy = {
     eyebrow: 'Datenschutz',
     h1: 'Die Fotos deines Babys bleiben auf deinem Handy',
     updatedLabel: 'Datenschutzerklärung · Zuletzt aktualisiert:',
-    updated: '9. Oktober 2026',
+    updated: '2. November 2026',
     intro: `BabyBookAI („wir“) ist eine App, die aus den Fotos auf deinem Handy ein gedrucktes Fotobuch vom ersten Lebensjahr deines Babys macht. Sie ist ein Produkt von Photo-to-Text. Kontakt: ${EMAIL}.`,
     shortTitle: 'Kurz gesagt',
     short: [
@@ -851,6 +872,7 @@ export const de: Copy = {
     websiteAnalytics:
       'babybookai.com nutzt Google Analytics, um Besuche zu zählen und zu sehen, welche Seiten gelesen werden, über Cookies von Google. Google erhält deine IP-Adresse, deinen Browser und die besuchten Seiten, nie etwas aus der App. Du kannst es in den Browsereinstellungen oder mit Googles Deaktivierungs-Add-on blockieren (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). Googles Datenschutzerklärung: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: 'babybookai.com verwendet keine Analyse- oder Werbeskripte.',
+    websiteContact: 'Wenn du uns über das Kontaktformular schreibst, erreichen uns dein Name, deine E-Mail-Adresse, der Betreff und die Nachricht per E-Mail, über Cloudflare und Google, unsere E-Mail-Anbieter. Wir nutzen sie nur, um dir zu antworten, und bewahren sie so lange auf, wie das Gespräch es erfordert. Du kannst uns bitten, sie zu löschen.',
     childrenTitle: 'Kinder',
     children:
       'BabyBookAI ist für Eltern. Die App richtet sich nicht an Kinder, und wir erheben wissentlich keine Daten von Kindern. Die Fotos deines Babys werden nur verwendet, um dein Buch zu drucken.',

@@ -18,9 +18,10 @@ export const es: Copy = {
   ui: {
     skip: 'Ir al contenido',
     toTop: 'Volver arriba',
+    menu: 'Menú',
     homeAria: `${SITE.name}, inicio`,
     mainNav: 'Principal',
-    nav: { babyPhotoBook: 'Álbum del bebé', firstYear: 'Su primer año' },
+    nav: { babyPhotoBook: 'Álbum del bebé', firstYear: 'Su primer año', blog: 'Blog', contact: 'Contacto' },
     getApp: 'Descargar',
     language: 'Idioma',
     breadcrumb: 'Ruta de navegación',
@@ -36,6 +37,7 @@ export const es: Copy = {
         boy: 'Álbum de fotos de bebé niño',
         girl: 'Álbum de fotos de bebé niña',
         ideas: 'Ideas para el álbum del bebé',
+        blog: 'Blog',
         about: 'Sobre nosotros',
         support: 'Ayuda y preguntas',
         privacy: 'Privacidad',
@@ -700,6 +702,14 @@ export const es: Copy = {
     ],
   },
 
+  blog: {
+    title: 'Blog de BabyBookAI: guías para las fotos de tu bebé',
+    description: 'Guías prácticas para las fotos del primer año de tu bebé: qué fotografiar, qué apuntar y cómo convertirlas en un álbum impreso.',
+    crumb: 'Blog',
+    h1: 'Guías para las fotos de tu bebé',
+    lead: 'Qué fotografiar, qué apuntar y cómo convertir un móvil lleno de fotos en algo que puedas tener en las manos.',
+  },
+
   about: {
     title: 'Sobre BabyBookAI | El álbum de tu bebé que se hace solo',
     description:
@@ -747,6 +757,17 @@ export const es: Copy = {
     lead: 'Casi todas las respuestas están aquí abajo. Para cualquier otra cosa, sobre la app o un pedido, escríbenos y te contestará una persona.',
     emailLabel: 'Correo',
     emailNote: '¿Es sobre un pedido? Escríbenos desde el correo con el que lo hiciste, para poder encontrarlo.',
+    form: {
+      title: 'Escríbenos',
+      name: 'Tu nombre',
+      email: 'Tu correo',
+      subject: 'Asunto',
+      message: 'Mensaje',
+      send: 'Enviar mensaje',
+      sent: 'Gracias, tu mensaje ya va de camino. Te responderemos por correo.',
+      failed: `No hemos podido enviar tu mensaje. Escríbenos a ${EMAIL}.`,
+      privacy: `Usamos estos datos solo para responderte. Consulta la ${a('privacy', 'política de privacidad')}.`,
+    },
     appTitle: 'La app y tu pedido',
     bookTitle: 'El álbum y cómo se hace',
     more: `Más: la ${a('privacy', 'política de privacidad')}, las ${a('terms', 'condiciones')} y ${a('about', 'quiénes somos')}.`,
@@ -802,7 +823,7 @@ export const es: Copy = {
     eyebrow: 'Privacidad',
     h1: 'Las fotos de tu bebé no salen de tu móvil',
     updatedLabel: 'Política de privacidad · Última actualización:',
-    updated: '9 de octubre de 2026',
+    updated: '2 de noviembre de 2026',
     intro: `BabyBookAI («nosotros») es una app que hace un fotolibro impreso del primer año de tu bebé con las fotos de tu móvil. Es un producto de Photo-to-Text. Contacto: ${EMAIL}.`,
     shortTitle: 'En resumen',
     short: [
@@ -851,6 +872,7 @@ export const es: Copy = {
     websiteAnalytics:
       'babybookai.com usa Google Analytics para contar las visitas y ver qué páginas se leen, mediante cookies de Google. Recibe tu dirección IP, tu navegador y las páginas que visitas, nunca nada de la app. Puedes bloquearlo con los ajustes de tu navegador o con el complemento de inhabilitación de Google (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). La política de Google: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: 'babybookai.com no usa scripts de analítica ni de publicidad.',
+    websiteContact: 'Si nos escribes con el formulario de contacto, tu nombre, tu correo, el asunto y el mensaje nos llegan por correo electrónico, a través de Cloudflare y Google, nuestros proveedores de correo. Los usamos solo para responderte y los guardamos el tiempo que necesite la conversación. Puedes pedirnos que los borremos.',
     childrenTitle: 'Menores',
     children:
       'BabyBookAI es para padres. No está dirigida a menores y no recogemos a sabiendas información de menores. Las fotos de tu bebé solo se usan para imprimir tu libro.',

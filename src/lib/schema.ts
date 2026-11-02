@@ -48,8 +48,6 @@ export function organization(lang: Lang): SchemaNode {
       '@type': 'ContactPoint',
       contactType: 'customer support',
       email: SITE.supportEmail,
-      // Support answers in English and Spanish.
-      availableLanguage: ['en', 'es'],
       url: abs(path('support', lang)),
     },
   };
@@ -257,11 +255,12 @@ export function article(opts: {
   datePublished: string;
   dateModified?: string;
   image?: string;
+  type?: 'Article' | 'BlogPosting';
   lang: Lang;
 }): SchemaNode {
   const url = abs(opts.path);
   return {
-    '@type': 'Article',
+    '@type': opts.type ?? 'Article',
     '@id': `${url}#article`,
     headline: opts.headline,
     description: opts.description,
@@ -273,6 +272,20 @@ export function article(opts: {
     inLanguage: LOCALES[opts.lang].tag,
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
+  };
+}
+
+/** What the blog's index lists. */
+export function blogList(items: { name: string; path: string }[], page: string): SchemaNode {
+  return {
+    '@type': 'ItemList',
+    '@id': `${abs(page)}#list`,
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      url: abs(item.path),
+    })),
   };
 }
 

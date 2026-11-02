@@ -12,9 +12,10 @@ export const zh: Copy = {
   ui: {
     skip: '跳到正文',
     toTop: '返回顶部',
+    menu: '菜单',
     homeAria: `${SITE.name} 首页`,
     mainNav: '主导航',
-    nav: { babyPhotoBook: '宝宝相册书', firstYear: '成长第一年' },
+    nav: { babyPhotoBook: '宝宝相册书', firstYear: '成长第一年', blog: '博客', contact: '联系我们' },
     getApp: '获取应用',
     language: '语言',
     breadcrumb: '面包屑导航',
@@ -30,6 +31,7 @@ export const zh: Copy = {
         boy: '男宝宝相册',
         girl: '女宝宝相册',
         ideas: '宝宝相册书创意',
+        blog: '博客',
         about: '关于我们',
         support: '帮助与常见问题',
         privacy: '隐私政策',
@@ -683,6 +685,14 @@ export const zh: Copy = {
     ],
   },
 
+  blog: {
+    title: 'BabyBookAI 博客:宝宝照片指南',
+    description: '关于宝宝第一年照片的实用指南:拍什么、记什么,以及如何把它们做成一本印好的相册书。',
+    crumb: '博客',
+    h1: '宝宝照片指南',
+    lead: '拍什么、记什么,以及如何把手机里满满的照片变成一本可以捧在手里的书。',
+  },
+
   about: {
     title: '关于 BabyBookAI | 会自己做好的宝宝相册书',
     description:
@@ -730,6 +740,17 @@ export const zh: Copy = {
     lead: '大多数答案都在下面。其他任何问题,关于应用或订单,请写信给我们,会有真人回复你。',
     emailLabel: '电子邮件',
     emailNote: '关于订单?请用下单时使用的邮箱地址来信,以便我们找到它。',
+    form: {
+      title: '给我们留言',
+      name: '姓名',
+      email: '邮箱',
+      subject: '主题',
+      message: '留言内容',
+      send: '发送',
+      sent: '谢谢,你的留言已发出。我们会通过邮件回复你。',
+      failed: `留言发送失败。请直接写信到 ${EMAIL}。`,
+      privacy: `这些信息仅用于回复你。详见${a('privacy', '隐私政策')}。`,
+    },
     appTitle: '应用与你的订单',
     bookTitle: '相册书及其制作',
     more: `更多:${a('privacy', '隐私政策')}、${a('terms', '服务条款')},以及${a('about', '我们是谁')}。`,
@@ -785,7 +806,7 @@ export const zh: Copy = {
     eyebrow: '隐私',
     h1: '宝宝的照片留在你的手机里',
     updatedLabel: '隐私政策 · 最后更新:',
-    updated: '2026 年 10 月 9 日',
+    updated: '2026 年 11 月 2 日',
     intro: `BabyBookAI(“我们”)是一款用你手机里的照片制作宝宝第一年印刷相册书的应用。它是 Photo-to-Text 的产品。联系方式:${EMAIL}。`,
     shortTitle: '简要说明',
     short: [
@@ -834,6 +855,7 @@ export const zh: Copy = {
     websiteAnalytics:
       'babybookai.com 使用 Google Analytics 统计访问量并了解哪些页面被阅读,通过 Google 设置的 Cookie 实现。它会收到你的 IP 地址、浏览器和你访问的页面,绝不会收到应用里的任何内容。你可以通过浏览器设置或 Google 的退出插件(<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>)来阻止它。Google 的政策:<a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>。',
     websiteNoAnalytics: 'babybookai.com 不运行任何分析或广告脚本。',
+    websiteContact: '如果你通过联系表单写信给我们,你的姓名、邮箱、主题和留言会通过我们的邮件服务商 Cloudflare 和 Google 以邮件形式送达。这些信息仅用于回复你,只在沟通需要的期间保留。你可以要求我们删除。',
     childrenTitle: '儿童',
     children:
       'BabyBookAI 面向家长。它不针对儿童,我们也不会有意收集儿童的信息。你宝宝的照片只用于印刷你的相册书。',

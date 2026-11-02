@@ -91,6 +91,7 @@ const r = (s: string) => rich(s, lang);
       <h2 class="mt-12 text-2xl text-teal">{t.websiteTitle}</h2>
       <p class="mt-4">{t.websiteLanguage}</p>
       <p class="mt-4" set:html={r(GOOGLE.analyticsId ? t.websiteAnalytics : t.websiteNoAnalytics)} />
+      <p class="mt-4">{t.websiteContact}</p>
 
       <h2 class="mt-12 text-2xl text-teal">{t.childrenTitle}</h2>
       <p class="mt-4">{t.children}</p>

@@ -48,12 +48,15 @@ export default defineConfig({
   },
   // Latin files from Fontsource, served by Astro with fallbacks whose metrics
   // match each face: the page does not move when the web fonts arrive (it
-  // used to, CLS 0.04-0.06), and the browser lays it out once less.
+  // used to, CLS 0.04-0.06), and the browser lays it out once less. Matched
+  // widths are still an average: with `swap`, fonts that came late rewrapped long
+  // articles (CLS 0.22, Nov 2026). `optional` never swaps once the page is drawn.
   fonts: [
     {
       provider: fontProviders.local(),
       name: 'Nunito',
       cssVariable: '--font-nunito',
+      display: 'optional',
       fallbacks: ['sans-serif'],
       options: {
         variants: [{ src: ['./node_modules/@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2'], weight: '200 1000', style: 'normal' }],
@@ -63,6 +66,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: 'Baloo 2',
       cssVariable: '--font-baloo',
+      display: 'optional',
       fallbacks: ['sans-serif'],
       options: {
         variants: [{ src: ['./node_modules/@fontsource-variable/baloo-2/files/baloo-2-latin-wght-normal.woff2'], weight: '400 800', style: 'normal' }],
@@ -72,6 +76,7 @@ export default defineConfig({
       provider: fontProviders.local(),
       name: 'Lora',
       cssVariable: '--font-lora',
+      display: 'optional',
       fallbacks: ['serif'],
       options: {
         variants: [

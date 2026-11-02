@@ -16,9 +16,10 @@ export const nl: Copy = {
   ui: {
     skip: 'Naar de inhoud',
     toTop: 'Naar boven',
+    menu: 'Menu',
     homeAria: `${SITE.name}, startpagina`,
     mainNav: 'Hoofdmenu',
-    nav: { babyPhotoBook: 'Baby-fotoboek', firstYear: 'Het eerste jaar' },
+    nav: { babyPhotoBook: 'Baby-fotoboek', firstYear: 'Het eerste jaar', blog: 'Blog', contact: 'Contact' },
     getApp: 'Download',
     language: 'Taal',
     breadcrumb: 'Kruimelpad',
@@ -34,6 +35,7 @@ export const nl: Copy = {
         boy: 'Fotoalbum babyjongen',
         girl: 'Fotoalbum babymeisje',
         ideas: 'Ideeën voor een baby-fotoboek',
+        blog: 'Blog',
         about: 'Over ons',
         support: 'Hulp en vragen',
         privacy: 'Privacy',
@@ -698,6 +700,14 @@ export const nl: Copy = {
     ],
   },
 
+  blog: {
+    title: 'BabyBookAI-blog: gidsen voor de foto’s van je baby',
+    description: 'Praktische gidsen voor de foto’s van het eerste jaar van je baby: wat je fotografeert, wat je opschrijft en hoe je er een gedrukt fotoboek van maakt.',
+    crumb: 'Blog',
+    h1: 'Gidsen voor de foto’s van je baby',
+    lead: 'Wat je fotografeert, wat je opschrijft en hoe een telefoon vol foto’s iets wordt dat je kunt vasthouden.',
+  },
+
   about: {
     title: 'Over BabyBookAI | Het baby-fotoboek dat zichzelf maakt',
     description:
@@ -745,6 +755,17 @@ export const nl: Copy = {
     lead: 'De meeste antwoorden staan hieronder. Voor al het andere, over de app of een bestelling, schrijf je ons en antwoordt een mens.',
     emailLabel: 'E-mail',
     emailNote: 'Gaat het over een bestelling? Schrijf vanaf het e-mailadres waarmee je bestelde, zodat we hem kunnen vinden.',
+    form: {
+      title: 'Schrijf ons',
+      name: 'Je naam',
+      email: 'Je e-mailadres',
+      subject: 'Onderwerp',
+      message: 'Bericht',
+      send: 'Bericht versturen',
+      sent: 'Bedankt, je bericht is onderweg. We antwoorden je per e-mail.',
+      failed: `Je bericht kon niet worden verstuurd. Schrijf ons op ${EMAIL}.`,
+      privacy: `We gebruiken deze gegevens alleen om je te antwoorden. Lees het ${a('privacy', 'privacybeleid')}.`,
+    },
     appTitle: 'De app en je bestelling',
     bookTitle: 'Het boek en hoe het wordt gemaakt',
     more: `Meer: de ${a('privacy', 'privacyverklaring')}, de ${a('terms', 'voorwaarden')} en ${a('about', 'wie we zijn')}.`,
@@ -800,7 +821,7 @@ export const nl: Copy = {
     eyebrow: 'Privacy',
     h1: 'De foto’s van je baby blijven op je telefoon',
     updatedLabel: 'Privacyverklaring · Laatst bijgewerkt:',
-    updated: '9 oktober 2026',
+    updated: '2 november 2026',
     intro: `BabyBookAI («wij») is een app die van de foto’s op je telefoon een gedrukt fotoboek van het eerste jaar van je baby maakt. Het is een product van Photo-to-Text. Contact: ${EMAIL}.`,
     shortTitle: 'In het kort',
     short: [
@@ -849,6 +870,7 @@ export const nl: Copy = {
     websiteAnalytics:
       'babybookai.com gebruikt Google Analytics om bezoeken te tellen en te zien welke pagina’s worden gelezen, met cookies van Google. Het ontvangt je IP-adres, browser en de pagina’s die je bezoekt, nooit iets uit de app. Je kunt het blokkeren met de instellingen van je browser of de opt-outextensie van Google (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). Het beleid van Google: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: 'babybookai.com gebruikt geen analyse- of reclamescripts.',
+    websiteContact: 'Als je ons schrijft via het contactformulier, bereiken je naam, e-mailadres, onderwerp en bericht ons per e-mail, via Cloudflare en Google, onze e-mailleveranciers. We gebruiken ze alleen om je te antwoorden en bewaren ze zolang het gesprek dat nodig heeft. Je kunt ons vragen ze te verwijderen.',
     childrenTitle: 'Kinderen',
     children:
       'BabyBookAI is voor ouders. De app is niet gericht op kinderen en we verzamelen niet bewust gegevens van kinderen. De foto’s van je baby worden alleen gebruikt om je boek te drukken.',

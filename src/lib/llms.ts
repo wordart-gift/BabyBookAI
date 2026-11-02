@@ -4,6 +4,7 @@ import { COPY } from '../i18n/copy';
 import { LANGS, LOCALES, type Lang } from '../i18n/locales';
 import { path, type PageId } from '../i18n/routes';
 import { defaultPrice, defaultSize } from '../i18n/format';
+import { pageLink, postPath, postsIn } from './blog';
 
 /**
  * The site as plain Markdown, for AI assistants and agents (llmstxt.org):
@@ -40,7 +41,7 @@ function md(text: string, lang: Lang): string {
 /** Keys that are page furniture, not content. */
 const SKIP = new Set([
   'title', 'description', 'crumb', 'eyebrow', 'headline', 'tocTitle', 'toc', 'figcaption', 'yourPart',
-  'emailLabel', 'bookTitle', 'priceNote', 'others',
+  'emailLabel', 'bookTitle', 'priceNote', 'others', 'form',
 ]);
 
 type Node = string | Node[] | { [key: string]: Node };
@@ -168,17 +169,40 @@ const link = (page: PageId, lang: Lang) => {
   return `- [${label}](${abs(path(page, lang))}): ${md((copy[page] as { description: string }).description, lang)}`;
 };
 
+/** A post as Markdown: its own source, with the site's links and values filled in and no pictures. */
+async function postsMarkdown(lang: Lang): Promise<string[]> {
+  return (await postsIn(lang)).map((post) =>
+    [
+      `# ${post.data.headline}`,
+      abs(postPath(post)),
+      post.data.lead,
+      md(post.body ?? '', lang)
+        .replace(/^!\[[^\]]*\]\([^)]*\)\s*$/gm, '')
+        .replace(/\]\((page:[^)]+)\)/g, (_, url: string) => `](${abs(pageLink(url, lang))})`)
+        .replace(/\n{3,}/g, '\n\n')
+        .trim(),
+      ...post.data.faq.flatMap((f) => [`## ${f.question}`, md(f.answer, lang)]),
+    ].join('\n\n'),
+  );
+}
+
 /** /llms.txt: what the product is, and a link to every page (llmstxt.org). */
-export function llmsTxt(lang: Lang): string {
+export async function llmsTxt(lang: Lang): Promise<string> {
   const { ui, home } = COPY[lang];
   const price = priceFaq(lang);
   const others = LANGS.filter((l) => l !== lang);
+  const posts = await postsIn(lang);
   return [
     `# ${SITE.name}`,
     `> ${ui.defaultDescription}`,
     lang === 'en' ? facts() : [home.lead, md(price.answer, lang), ui.free].join('\n\n'),
     `## ${ui.footer.book}`,
     (['home', 'babyPhotoBook', 'firstYear', 'girl', 'boy', 'ideas'] as PageId[]).map((p) => link(p, lang)).join('\n'),
+    `## ${ui.footer.links.blog}`,
+    [
+      link('blog', lang),
+      ...posts.map((post) => `- [${post.data.headline}](${abs(postPath(post))}): ${md(post.data.description, lang)}`),
+    ].join('\n'),
     `## ${ui.footer.company}`,
     (['about', 'support', 'privacy', 'terms'] as PageId[]).map((p) => link(p, lang)).join('\n'),
     `## ${ui.language}`,
@@ -193,7 +217,7 @@ export function llmsTxt(lang: Lang): string {
 }
 
 /** /llms-full.txt: the product pages' whole text, one after another. */
-export function llmsFullTxt(lang: Lang): string {
+export async function llmsFullTxt(lang: Lang): Promise<string> {
   const { ui } = COPY[lang];
   const price = priceFaq(lang);
   return [
@@ -204,6 +228,7 @@ export function llmsFullTxt(lang: Lang): string {
     md(price.answer, lang),
     priceList(lang),
     ...FULL_PAGES.flatMap((page) => ['---', pageMarkdown(page, lang)]),
+    ...(await postsMarkdown(lang)).flatMap((post) => ['---', post]),
   ].join('\n\n') + '\n';
 }
 

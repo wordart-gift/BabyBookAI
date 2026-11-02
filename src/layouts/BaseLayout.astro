@@ -13,13 +13,15 @@ import type { PageId } from '../i18n/routes';
 
 export type Props = Omit<SeoProps, 'lang' | 'page'> & {
   lang: Lang;
-  /** Which page this is, in every language; null for the 404. */
+  /** Which page this is, in every language; null for the 404 and blog posts. */
   page: PageId | null;
+  /** Where the language links go from a page with no twin in other languages. */
+  switcherPage?: PageId;
   /** Name of the page for the download links' ?src=; false hides the closing call to action. */
   cta?: string | false;
 };
 
-const { cta = 'page', lang, page, ...seo } = Astro.props;
+const { cta = 'page', lang, page, switcherPage, ...seo } = Astro.props;
 const ui = COPY[lang].ui;
 ---
 
@@ -49,7 +51,7 @@ const ui = COPY[lang].ui;
       >{ui.skip}</a
     >
     <Sky />
-    <Header lang={lang} page={page} />
+    <Header lang={lang} page={switcherPage ?? page} />
     <main id="main" class="relative flex-1 overflow-x-clip">
       {/* Same place on every page (Carlos): never tied to the hero picture,
           whose height follows the length of each page's title. */}
@@ -57,7 +59,7 @@ const ui = COPY[lang].ui;
       <slot />
       {cta && <ClosingCta source={cta} lang={lang} />}
     </main>
-    <Footer lang={lang} page={page} />
+    <Footer lang={lang} page={switcherPage ?? page} />
     {/* Back to the top: a plain link, no JavaScript; it shows once the page is scrolled (global.css). */}
     <a href="#top" class="to-top" aria-label={ui.toTop} title={ui.toTop}>
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>

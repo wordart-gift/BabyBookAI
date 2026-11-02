@@ -18,9 +18,10 @@ export const fr: Copy = {
   ui: {
     skip: 'Aller au contenu',
     toTop: 'Haut de page',
+    menu: 'Menu',
     homeAria: `${SITE.name}, accueil`,
     mainNav: 'Principal',
-    nav: { babyPhotoBook: 'Album photo bébé', firstYear: 'Première année' },
+    nav: { babyPhotoBook: 'Album photo bébé', firstYear: 'Première année', blog: 'Blog', contact: 'Contact' },
     getApp: 'Télécharger',
     language: 'Langue',
     breadcrumb: "Fil d'Ariane",
@@ -36,6 +37,7 @@ export const fr: Copy = {
         boy: 'Album photo bébé garçon',
         girl: 'Album photo bébé fille',
         ideas: "Idées d'album photo bébé",
+        blog: 'Blog',
         about: 'À propos',
         support: 'Aide et questions',
         privacy: 'Confidentialité',
@@ -710,6 +712,14 @@ export const fr: Copy = {
     ],
   },
 
+  blog: {
+    title: 'Blog BabyBookAI : des guides pour les photos de bébé',
+    description: 'Des guides pratiques pour les photos de la première année de votre bébé : quoi photographier, quoi écrire et comment en faire un album imprimé.',
+    crumb: 'Blog',
+    h1: 'Des guides pour les photos de votre bébé',
+    lead: 'Quoi photographier, quoi écrire et comment transformer un téléphone plein de photos en un album à tenir entre les mains.',
+  },
+
   about: {
     title: "À propos de BabyBookAI | L'album photo de bébé qui se fait tout seul",
     description:
@@ -757,6 +767,17 @@ export const fr: Copy = {
     lead: "La plupart des réponses sont ci-dessous. Pour tout le reste, sur l'app ou une commande, écrivez-nous : une personne vous répondra.",
     emailLabel: 'E-mail',
     emailNote: "C'est au sujet d'une commande ? Écrivez-nous depuis l'adresse avec laquelle vous avez commandé, pour que nous la retrouvions.",
+    form: {
+      title: 'Écrivez-nous',
+      name: 'Votre nom',
+      email: 'Votre e-mail',
+      subject: 'Objet',
+      message: 'Message',
+      send: 'Envoyer le message',
+      sent: 'Merci, votre message est bien parti. Nous vous répondrons par e-mail.',
+      failed: `Votre message n’a pas pu être envoyé. Écrivez-nous à ${EMAIL}.`,
+      privacy: `Ces informations servent uniquement à vous répondre. Voir la ${a('privacy', 'politique de confidentialité')}.`,
+    },
     appTitle: "L'app et votre commande",
     bookTitle: 'Le livre et sa fabrication',
     more: `Plus : la ${a('privacy', 'politique de confidentialité')}, les ${a('terms', 'conditions')} et ${a('about', 'qui nous sommes')}.`,
@@ -812,7 +833,7 @@ export const fr: Copy = {
     eyebrow: 'Confidentialité',
     h1: 'Les photos de votre bébé restent sur votre téléphone',
     updatedLabel: 'Politique de confidentialité · Dernière mise à jour :',
-    updated: '9 octobre 2026',
+    updated: '2 novembre 2026',
     intro: `BabyBookAI (« nous ») est une app qui réalise un livre photo imprimé de la première année de votre bébé à partir des photos de votre téléphone. C'est un produit Photo-to-Text. Contact : ${EMAIL}.`,
     shortTitle: 'En bref',
     short: [
@@ -861,6 +882,7 @@ export const fr: Copy = {
     websiteAnalytics:
       'babybookai.com utilise Google Analytics pour compter les visites et voir quelles pages sont lues, au moyen de cookies déposés par Google. Il reçoit votre adresse IP, votre navigateur et les pages visitées, jamais rien de l’app. Vous pouvez le bloquer dans les réglages de votre navigateur ou avec le module de désactivation de Google (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). La politique de Google : <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: "babybookai.com n'utilise aucun script de statistiques ni de publicité.",
+    websiteContact: 'Si vous nous écrivez avec le formulaire de contact, votre nom, votre e-mail, l\'objet et le message nous parviennent par e-mail, via Cloudflare et Google, nos prestataires de messagerie. Nous les utilisons uniquement pour vous répondre et les gardons le temps de l\'échange. Vous pouvez nous demander de les supprimer.',
     childrenTitle: 'Enfants',
     children:
       "BabyBookAI s'adresse aux parents. L'app ne vise pas les enfants, et nous ne collectons pas sciemment d'informations sur des enfants. Les photos de votre bébé servent uniquement à imprimer votre livre.",

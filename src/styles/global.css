@@ -152,6 +152,154 @@
     }
   }
 
+  /* The phone's menu (Header.astro): a popover under the header, which scrolls
+     away with it. Comes in from the button's side, a little, and quickly: it is
+     opened often enough that it must not make anyone wait. */
+  .site-menu {
+    @apply rounded-card border border-hair bg-surface p-2 text-ink;
+    position: absolute;
+    inset: 4.5rem 0.75rem auto;
+    width: auto;
+    margin: 0;
+    box-shadow: 0 18px 40px -12px rgb(14 42 49 / 0.35);
+    transform-origin: top right;
+    transition:
+      opacity 180ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 180ms cubic-bezier(0.23, 1, 0.32, 1),
+      display 180ms allow-discrete,
+      overlay 180ms allow-discrete;
+  }
+  .site-menu:not(:popover-open) {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  @starting-style {
+    .site-menu:popover-open {
+      opacity: 0;
+      transform: translateY(-6px) scale(0.98);
+    }
+  }
+  .site-menu::backdrop {
+    background: rgb(14 42 49 / 0.2);
+  }
+  /* A tap outside closes the menu; without this it also follows the link under
+     the finger. */
+  body:has(.site-menu:popover-open) :is(main, footer) {
+    pointer-events: none;
+  }
+  @media (min-width: 64rem) {
+    .site-menu {
+      display: none !important;
+    }
+  }
+
+  /* The contact form (Support.astro). 16px and up in the fields: iOS zooms the
+     page into anything smaller. */
+  .field {
+    @apply flex flex-col gap-1.5 font-bold text-ink;
+  }
+  .field :is(input, textarea) {
+    @apply w-full rounded-control border-2 border-hair bg-surface px-4 py-3 font-medium text-ink transition-colors duration-150;
+    font-size: 1rem;
+  }
+  .field :is(input, textarea):hover {
+    border-color: var(--color-teal-light);
+  }
+  .field :is(input, textarea):user-invalid {
+    border-color: var(--color-amber-deep);
+  }
+  /* Shown by the redirect back from the form, with no script: #sent or #failed. */
+  .form-status {
+    @apply mt-4 hidden scroll-mt-6 rounded-control bg-teal-wash px-4 py-3 font-bold text-ink;
+  }
+  .form-status-failed {
+    @apply bg-amber-wash;
+  }
+  .form-status:target {
+    display: block;
+  }
+
+  /* A blog post's body, from Markdown (BlogPost.astro): no classes to hang
+     anything on, so the same sizes as the ideas article, set from here. */
+  .post {
+    @apply text-lg text-ink;
+  }
+  .post > * + * {
+    margin-top: 1.25rem;
+  }
+  .post h2 {
+    @apply mt-16 scroll-mt-6 text-4xl text-teal;
+  }
+  .post h3 {
+    @apply mt-10 scroll-mt-6 text-2xl text-ink;
+  }
+  .post > :first-child {
+    margin-top: 0;
+  }
+  .post h2 + *,
+  .post h3 + * {
+    margin-top: 0.75rem;
+  }
+  .post a {
+    @apply font-bold text-teal underline underline-offset-4;
+  }
+  .post ul {
+    @apply list-disc space-y-2 pl-6;
+  }
+  .post ol {
+    @apply list-decimal space-y-2 pl-6;
+  }
+  .post small {
+    @apply text-sm text-ink-soft;
+  }
+  .post li::marker {
+    color: var(--color-teal);
+  }
+  .post img {
+    @apply h-auto w-full rounded-card;
+  }
+  .post table {
+    @apply w-full overflow-hidden rounded-card bg-surface text-left text-base;
+  }
+  .post :is(th, td) {
+    @apply px-3 py-3 align-top sm:px-4;
+  }
+  .post th {
+    @apply bg-teal-wash font-extrabold;
+  }
+  .post tr + tr td {
+    border-top: 1px solid var(--color-hair);
+  }
+  /* Too wide for a phone, and <main> clips what sticks out: each row becomes a
+     block there, and its cells name their column (labelCells in lib/blog.ts). */
+  @media (width < 40rem) {
+    .post :is(table, tbody, tr, td) {
+      display: block;
+    }
+    .post thead {
+      display: none;
+    }
+    .post tr {
+      @apply py-3;
+    }
+    .post tr + tr {
+      border-top: 1px solid var(--color-hair);
+    }
+    .post tr + tr td {
+      border-top: 0;
+    }
+    .post td {
+      @apply px-4 py-1.5;
+    }
+    .post td:first-child {
+      @apply font-extrabold;
+    }
+    .post td:not(:first-child)[data-label]:not([data-label=''])::before {
+      content: attr(data-label);
+      @apply block text-sm font-bold text-teal;
+    }
+  }
+
   /* A link inside a sentence of copy (src/i18n/format.ts linker). */
   .lnk {
     @apply font-bold text-teal underline underline-offset-4;

@@ -15,9 +15,10 @@ export const ja: Copy = {
   ui: {
     skip: '本文へスキップ',
     toTop: 'ページの先頭へ',
+    menu: 'メニュー',
     homeAria: `${SITE.name} ホーム`,
     mainNav: 'メイン',
-    nav: { babyPhotoBook: '赤ちゃんアルバム', firstYear: '1年間の成長記録' },
+    nav: { babyPhotoBook: '赤ちゃんアルバム', firstYear: '1年間の成長記録', blog: 'ブログ', contact: 'お問い合わせ' },
     getApp: 'アプリを入手',
     language: '言語',
     breadcrumb: 'パンくずリスト',
@@ -33,6 +34,7 @@ export const ja: Copy = {
         boy: '男の子の赤ちゃんアルバム',
         girl: '女の子の赤ちゃんアルバム',
         ideas: '赤ちゃんフォトブックのアイデア',
+        blog: 'ブログ',
         about: '私たちについて',
         support: 'サポートとよくある質問',
         privacy: 'プライバシーポリシー',
@@ -691,6 +693,14 @@ export const ja: Copy = {
     ],
   },
 
+  blog: {
+    title: 'BabyBookAIブログ:赤ちゃんの写真のガイド',
+    description: '赤ちゃんの最初の1年の写真についての実用ガイド。何を撮るか、何を書き残すか、印刷されたアルバムにする方法。',
+    crumb: 'ブログ',
+    h1: '赤ちゃんの写真のガイド',
+    lead: '何を撮るか、何を書き残すか。スマートフォンの中の写真を、手に取れる形にする方法。',
+  },
+
   about: {
     title: 'BabyBookAIについて | 自動で完成する赤ちゃんのフォトブック',
     description:
@@ -738,6 +748,17 @@ export const ja: Copy = {
     lead: 'ほとんどの答えは下にあります。それ以外、アプリやご注文についてのことは、メールでご連絡ください。担当者がお答えします。',
     emailLabel: 'メール',
     emailNote: 'ご注文についてですか? 見つけやすいよう、ご注文時のメールアドレスからご連絡ください。',
+    form: {
+      title: 'お問い合わせフォーム',
+      name: 'お名前',
+      email: 'メールアドレス',
+      subject: '件名',
+      message: 'メッセージ',
+      send: 'メッセージを送信',
+      sent: 'ありがとうございます。メッセージを受け付けました。メールでお返事します。',
+      failed: `メッセージを送信できませんでした。${EMAIL} までご連絡ください。`,
+      privacy: `ご入力の内容は、お返事のためだけに使用します。詳しくは${a('privacy', 'プライバシーポリシー')}をご覧ください。`,
+    },
     appTitle: 'アプリとご注文',
     bookTitle: 'ブックと、その作り方',
     more: `ほかに:${a('privacy', 'プライバシーポリシー')}、${a('terms', '利用規約')}、${a('about', '私たちについて')}。`,
@@ -793,7 +814,7 @@ export const ja: Copy = {
     eyebrow: 'プライバシー',
     h1: '赤ちゃんの写真は、スマートフォンの中に',
     updatedLabel: 'プライバシーポリシー · 最終更新日:',
-    updated: '2026年10月9日',
+    updated: '2026年11月2日',
     intro: `BabyBookAI(以下「当社」)は、スマートフォンの写真から、赤ちゃんの最初の1年の印刷されたフォトブックを作るアプリです。Photo-to-Textのプロダクトです。連絡先:${EMAIL}。`,
     shortTitle: '要点',
     short: [
@@ -842,6 +863,7 @@ export const ja: Copy = {
     websiteAnalytics:
       'babybookai.comは、訪問数と読まれたページを把握するために、Googleが設定するCookieを通じてGoogleアナリティクスを使用します。IPアドレス、ブラウザ、閲覧したページを受け取りますが、アプリからの情報は一切受け取りません。ブラウザの設定、またはGoogleのオプトアウトアドオン(<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>)でブロックできます。Googleのポリシー:<a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>。',
     websiteNoAnalytics: 'babybookai.comは、分析や広告のスクリプトを使用していません。',
+    websiteContact: 'お問い合わせフォームをご利用の場合、お名前、メールアドレス、件名、メッセージは、メールサービスを提供するCloudflareとGoogleを通じて、メールで当社に届きます。お返事のためだけに使用し、やり取りに必要な間だけ保管します。削除をご依頼いただくこともできます。',
     childrenTitle: 'お子さまについて',
     children:
       'BabyBookAIは、保護者向けです。お子さまを対象とせず、お子さまから情報を故意に収集することもありません。赤ちゃんの写真は、ブックの印刷にのみ使用されます。',

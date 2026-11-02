@@ -13,9 +13,10 @@ export const ko: Copy = {
   ui: {
     skip: '본문으로 건너뛰기',
     toTop: '맨 위로',
+    menu: '메뉴',
     homeAria: `${SITE.name} 홈`,
     mainNav: '메인',
-    nav: { babyPhotoBook: '아기 포토북', firstYear: '첫 1년 포토북' },
+    nav: { babyPhotoBook: '아기 포토북', firstYear: '첫 1년 포토북', blog: '블로그', contact: '문의하기' },
     getApp: '앱 받기',
     language: '언어',
     breadcrumb: '현재 위치',
@@ -31,6 +32,7 @@ export const ko: Copy = {
         boy: '남자아기 앨범',
         girl: '여자아기 앨범',
         ideas: '아기 포토북 아이디어',
+        blog: '블로그',
         about: '소개',
         support: '고객지원 및 자주 묻는 질문',
         privacy: '개인정보 처리방침',
@@ -684,6 +686,14 @@ export const ko: Copy = {
     ],
   },
 
+  blog: {
+    title: 'BabyBookAI 블로그: 아기 사진 가이드',
+    description: '아기의 첫 1년 사진을 위한 실용 가이드. 무엇을 찍고, 무엇을 적어 두고, 어떻게 인쇄된 포토북으로 만드는지 알려 드려요.',
+    crumb: '블로그',
+    h1: '아기 사진 가이드',
+    lead: '무엇을 찍고, 무엇을 적어 둘까요. 휴대폰 가득한 사진을 손에 쥘 수 있는 책으로 만드는 방법이에요.',
+  },
+
   about: {
     title: 'BabyBookAI 소개 | 저절로 만들어지는 아기 포토북',
     description:
@@ -731,6 +741,17 @@ export const ko: Copy = {
     lead: '대부분의 답은 아래에 있어요. 그 밖에 앱이나 주문에 대한 것은 메일을 보내 주시면 담당자가 답해 드려요.',
     emailLabel: '이메일',
     emailNote: '주문에 관한 문의인가요? 찾을 수 있도록 주문하신 이메일 주소로 보내 주세요.',
+    form: {
+      title: '문의하기',
+      name: '이름',
+      email: '이메일',
+      subject: '제목',
+      message: '메시지',
+      send: '메시지 보내기',
+      sent: '감사합니다. 메시지가 전송되었어요. 이메일로 답변해 드릴게요.',
+      failed: `메시지를 보내지 못했어요. ${EMAIL} 로 보내 주세요.`,
+      privacy: `입력하신 내용은 답변에만 사용해요. 자세한 내용은 ${a('privacy', '개인정보 처리방침')}을 확인해 주세요.`,
+    },
     appTitle: '앱과 주문',
     bookTitle: '책과 만드는 방법',
     more: `더 보기: ${a('privacy', '개인정보 처리방침')}, ${a('terms', '이용약관')}, ${a('about', '소개')}.`,
@@ -786,7 +807,7 @@ export const ko: Copy = {
     eyebrow: '개인정보',
     h1: '아기 사진은 휴대폰에 그대로 있어요',
     updatedLabel: '개인정보 처리방침 · 최종 업데이트:',
-    updated: '2026년 10월 9일',
+    updated: '2026년 11월 2일',
     intro: `BabyBookAI(이하 「당사」)는 휴대폰 사진으로 아기의 첫 1년을 인쇄된 포토북으로 만드는 앱이에요. Photo-to-Text의 제품이에요. 문의: ${EMAIL}.`,
     shortTitle: '한눈에 보기',
     short: [
@@ -835,6 +856,7 @@ export const ko: Copy = {
     websiteAnalytics:
       'babybookai.com은 방문 수와 읽힌 페이지를 알기 위해 Google이 설정하는 쿠키를 통해 Google 애널리틱스를 사용해요. IP 주소, 브라우저, 방문한 페이지를 받지만, 앱의 정보는 절대 받지 않아요. 브라우저 설정이나 Google의 차단 부가기능(<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>)으로 막을 수 있어요. Google의 정책: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: 'babybookai.com은 분석이나 광고 스크립트를 사용하지 않아요.',
+    websiteContact: '문의 양식으로 연락하시면 이름, 이메일 주소, 제목과 메시지가 이메일 서비스 제공업체인 Cloudflare와 Google을 거쳐 이메일로 저희에게 전달돼요. 답변에만 사용하고 대화에 필요한 기간 동안만 보관해요. 삭제를 요청하실 수도 있어요.',
     childrenTitle: '아동',
     children:
       'BabyBookAI는 부모를 위한 앱이에요. 아동을 대상으로 하지 않으며, 아동의 정보를 알면서 수집하지 않아요. 아기 사진은 책을 인쇄하는 데에만 사용돼요.',

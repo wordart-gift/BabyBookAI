@@ -15,7 +15,7 @@ const { lang, page } = Astro.props;
 const f = COPY[lang].ui.footer;
 const link = (id: keyof typeof f.links) => ({ href: path(id, lang), label: f.links[id] });
 const groups = [
-  { title: f.book, links: [link('babyPhotoBook'), link('firstYear'), link('boy'), link('girl'), link('ideas')] },
+  { title: f.book, links: [link('babyPhotoBook'), link('firstYear'), link('boy'), link('girl'), link('ideas'), link('blog')] },
   { title: f.company, links: [link('about'), link('support'), link('privacy'), link('terms')] },
 ];
 const year = new Date().getFullYear();

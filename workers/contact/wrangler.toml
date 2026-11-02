@@ -1,0 +1,22 @@
+# The contact form's mailer. Deployed on its own, before the site that posts to
+# it: from this folder, npx wrangler deploy. See src/index.ts.
+name = "babybookai-contact"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+routes = [{ pattern = "babybookai.com/api/contact", zone_name = "babybookai.com" }]
+
+# Sending to a destination verified in Email Routing is free. It is the address
+# info@babybookai.com already forwards to.
+[[send_email]]
+name = "EMAIL"
+destination_address = "cargarm3@gmail.com"
+
+[vars]
+TO = "cargarm3@gmail.com"
+FROM = "form@babybookai.com"
+
+# Five messages a minute from one address.
+[[ratelimits]]
+name = "LIMIT"
+namespace_id = "1001"
+simple = { limit = 5, period = 60 }

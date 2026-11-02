@@ -16,9 +16,10 @@ export const pt: Copy = {
   ui: {
     skip: 'Saltar para o conteúdo',
     toTop: 'Voltar ao topo',
+    menu: 'Menu',
     homeAria: `${SITE.name}, página inicial`,
     mainNav: 'Principal',
-    nav: { babyPhotoBook: 'Álbum de fotos do bebé', firstYear: 'O primeiro ano' },
+    nav: { babyPhotoBook: 'Álbum de fotos do bebé', firstYear: 'O primeiro ano', blog: 'Blog', contact: 'Contacto' },
     getApp: 'Descarregar',
     language: 'Idioma',
     breadcrumb: 'Caminho de navegação',
@@ -34,6 +35,7 @@ export const pt: Copy = {
         boy: 'Álbum de fotografias de bebé menino',
         girl: 'Álbum de fotografias de bebé menina',
         ideas: 'Ideias para o álbum de fotos do bebé',
+        blog: 'Blog',
         about: 'Sobre nós',
         support: 'Ajuda e perguntas',
         privacy: 'Privacidade',
@@ -698,6 +700,14 @@ export const pt: Copy = {
     ],
   },
 
+  blog: {
+    title: 'Blog do BabyBookAI: guias para as fotografias do teu bebé',
+    description: 'Guias práticos para as fotografias do primeiro ano do teu bebé: o que fotografar, o que apontar e como as transformar num álbum impresso.',
+    crumb: 'Blog',
+    h1: 'Guias para as fotografias do teu bebé',
+    lead: 'O que fotografar, o que apontar e como transformar um telemóvel cheio de fotografias em algo que podes ter nas mãos.',
+  },
+
   about: {
     title: 'Sobre o BabyBookAI | O álbum de fotos do bebé que se faz sozinho',
     description:
@@ -745,6 +755,17 @@ export const pt: Copy = {
     lead: 'A maioria das respostas está em baixo. Para tudo o resto, sobre a app ou uma encomenda, escreve-nos e uma pessoa responderá.',
     emailLabel: 'E-mail',
     emailNote: 'É sobre uma encomenda? Escreve a partir do e-mail com que encomendaste, para a podermos encontrar.',
+    form: {
+      title: 'Escreve-nos',
+      name: 'O teu nome',
+      email: 'O teu e-mail',
+      subject: 'Assunto',
+      message: 'Mensagem',
+      send: 'Enviar mensagem',
+      sent: 'Obrigado, a tua mensagem já vai a caminho. Respondemos-te por e-mail.',
+      failed: `Não conseguimos enviar a tua mensagem. Escreve-nos para ${EMAIL}.`,
+      privacy: `Usamos estes dados só para te responder. Vê a ${a('privacy', 'política de privacidade')}.`,
+    },
     appTitle: 'A app e a tua encomenda',
     bookTitle: 'O livro e como é feito',
     more: `Mais: a ${a('privacy', 'política de privacidade')}, os ${a('terms', 'termos')} e ${a('about', 'quem somos')}.`,
@@ -800,7 +821,7 @@ export const pt: Copy = {
     eyebrow: 'Privacidade',
     h1: 'As fotografias do teu bebé ficam no teu telemóvel',
     updatedLabel: 'Política de privacidade · Última atualização:',
-    updated: '9 de outubro de 2026',
+    updated: '2 de novembro de 2026',
     intro: `O BabyBookAI («nós») é uma app que faz um álbum de fotos impresso do primeiro ano do teu bebé com as fotografias do teu telemóvel. É um produto da Photo-to-Text. Contacto: ${EMAIL}.`,
     shortTitle: 'Em resumo',
     short: [
@@ -849,6 +870,7 @@ export const pt: Copy = {
     websiteAnalytics:
       'O babybookai.com usa o Google Analytics para contar as visitas e ver que páginas são lidas, através de cookies da Google. Recebe o teu endereço IP, o navegador e as páginas que visitas, nunca nada da app. Podes bloqueá-lo nas definições do navegador ou com o suplemento de desativação da Google (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). A política da Google: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
     websiteNoAnalytics: 'O babybookai.com não usa scripts de análise nem de publicidade.',
+    websiteContact: 'Se nos escreveres pelo formulário de contacto, o teu nome, o teu e-mail, o assunto e a mensagem chegam-nos por e-mail, através da Cloudflare e da Google, os nossos fornecedores de e-mail. Usamo-los só para te responder e guardamo-los enquanto a conversa precisar. Podes pedir-nos que os apaguemos.',
     childrenTitle: 'Crianças',
     children:
       'O BabyBookAI é para pais. Não se dirige a crianças, e não recolhemos conscientemente informação de crianças. As fotografias do teu bebé só são usadas para imprimir o teu livro.',

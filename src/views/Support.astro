@@ -42,12 +42,50 @@ const productFaq = [
     <p class="font-extrabold uppercase tracking-wider text-teal">{t.eyebrow}</p>
     <h1 class="mt-3 text-[2.6rem] text-teal sm:text-6xl">{t.h1}</h1>
     <p class="mt-6 text-xl text-ink">{t.lead}</p>
-    <div class="mt-8 rounded-card border-2 border-hair bg-surface p-6 sm:p-8">
-      <p class="text-sm font-extrabold uppercase tracking-wide text-ink-soft">{t.emailLabel}</p>
-      <p class="mt-1 break-all text-2xl font-bold">
+    {/* The menu's "Contact" lands here. A plain form: no JS. It posts to the
+        Worker in workers/contact, which answers with a redirect back to #sent
+        or #failed, and the status lines below show themselves with :target. */}
+    <div id="contact" class="mt-8 scroll-mt-6 rounded-card border-2 border-hair bg-surface p-6 sm:p-8">
+      <h2 class="text-left text-3xl text-teal sm:text-4xl">{t.form.title}</h2>
+      <p id="sent" role="status" class="form-status text-left">{t.form.sent}</p>
+      <p id="failed" role="alert" class="form-status form-status-failed text-left" set:html={rich(t.form.failed, lang)} />
+      <form method="post" action="/api/contact" class="mt-6 grid gap-5 sm:grid-cols-2">
+        <input type="hidden" name="lang" value={lang} />
+        <label class="field">
+          <span>{t.form.name}</span>
+          <input type="text" name="name" autocomplete="name" required maxlength="120" />
+        </label>
+        <label class="field">
+          <span>{t.form.email}</span>
+          <input type="email" name="email" autocomplete="email" required maxlength="200" />
+        </label>
+        <label class="field sm:col-span-2">
+          <span>{t.form.subject}</span>
+          <input type="text" name="subject" required maxlength="200" />
+        </label>
+        <label class="field sm:col-span-2">
+          <span>{t.form.message}</span>
+          <textarea name="message" rows="6" required maxlength="5000"></textarea>
+        </label>
+        {/* A trap for bots: out of sight and out of the tab order. */}
+        <div class="absolute -left-[9999px]" aria-hidden="true">
+          <input type="text" name="fax" tabindex="-1" autocomplete="off" />
+        </div>
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-3 sm:col-span-2">
+          <button
+            type="submit"
+            class="rounded-control bg-amber px-6 py-3 font-extrabold text-ink shadow-[0_4px_0_var(--color-amber-deep)] hover:brightness-105 active:translate-y-1 active:shadow-none"
+          >
+            {t.form.send}
+          </button>
+          <p class="min-w-0 flex-1 basis-64 text-sm text-ink-soft" set:html={rich(t.form.privacy, lang)} />
+        </div>
+      </form>
+      <p class="mt-8 text-sm font-extrabold uppercase tracking-wide text-ink-soft">{t.emailLabel}</p>
+      <p class="mt-1 break-all text-xl font-bold">
         <a href={`mailto:${SITE.supportEmail}`} class="text-teal underline underline-offset-4">{SITE.supportEmail}</a>
       </p>
-      <p class="mt-3 text-ink-soft">{t.emailNote}</p>
+      <p class="mt-2 text-ink-soft">{t.emailNote}</p>
     </div>
   </section>
 

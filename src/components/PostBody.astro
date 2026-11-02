@@ -1,0 +1,13 @@
+---
+import { resolvePostHtml } from '../lib/blog';
+import type { Lang } from '../i18n/locales';
+
+/** A post's rendered Markdown with its links and values filled in (src/lib/blog.ts). */
+export interface Props {
+  lang: Lang;
+}
+
+const html = await Astro.slots.render('default');
+---
+
+<Fragment set:html={resolvePostHtml(html, Astro.props.lang)} />
