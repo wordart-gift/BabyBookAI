@@ -863,7 +863,7 @@ export const ja: Copy = {
       'babybookai.comは、ご利用の通貨での価格表示と、初回訪問時のお客様の言語でのページ表示のために、ホスティング事業者(Cloudflare)が通知する訪問元の国を読み取ります。これは保存されません。Cookie「lang」は、最後に読んだ言語を記憶して、次回ホームページをその言語で開くためのものです。',
     websiteAnalytics:
       'babybookai.comは、訪問数と読まれたページを把握するために、Googleが設定するCookieを通じてGoogleアナリティクスを使用します。IPアドレス、ブラウザ、閲覧したページを受け取りますが、アプリからの情報は一切受け取りません。ブラウザの設定、またはGoogleのオプトアウトアドオン(<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>)でブロックできます。Googleのポリシー:<a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>。',
-    websiteNoAnalytics: 'babybookai.comは、分析や広告のスクリプトを使用していません。',
+    websiteNoAnalytics: "babybookai.comは広告スクリプトを使用していません。訪問数の集計にはCloudflare Web Analyticsを使用しており、Cookieは設定されず、あなたのプロフィールも作成されません。広告や投稿のリンクにはキャンペーンタグが付くことがあり、どのリンクがインストールにつながったかを確認するためにストアへ渡されます。",
     websiteContact: 'お問い合わせフォームをご利用の場合、お名前、メールアドレス、件名、メッセージは、メールサービスを提供するCloudflareとGoogleを通じて、メールで当社に届きます。お返事のためだけに使用し、やり取りに必要な間だけ保管します。削除をご依頼いただくこともできます。',
     childrenTitle: 'お子さまについて',
     children:

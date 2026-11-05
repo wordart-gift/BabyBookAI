@@ -870,7 +870,7 @@ export const nl: Copy = {
       'babybookai.com leest het land waaruit je bezoek komt, zoals onze hostingpartij (Cloudflare) dat meldt, om prijzen in jouw valuta en, bij een eerste bezoek, de pagina in jouw taal te tonen. Het wordt niet opgeslagen. Eén cookie, «lang», onthoudt de taal waarin je de site het laatst las, zodat de startpagina de volgende keer daarin opent.',
     websiteAnalytics:
       'babybookai.com gebruikt Google Analytics om bezoeken te tellen en te zien welke pagina’s worden gelezen, met cookies van Google. Het ontvangt je IP-adres, browser en de pagina’s die je bezoekt, nooit iets uit de app. Je kunt het blokkeren met de instellingen van je browser of de opt-outextensie van Google (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). Het beleid van Google: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
-    websiteNoAnalytics: 'babybookai.com gebruikt geen analyse- of reclamescripts.',
+    websiteNoAnalytics: "babybookai.com gebruikt geen reclamescripts. Om bezoeken te tellen gebruikt de site Cloudflare Web Analytics, dat geen cookies plaatst en geen profiel van je maakt. Links in advertenties en berichten kunnen een campagnelabel bevatten dat aan de store wordt doorgegeven, zodat we zien welke links installaties opleveren.",
     websiteContact: 'Als je ons schrijft via het contactformulier, bereiken je naam, e-mailadres, onderwerp en bericht ons per e-mail, via Cloudflare en Google, onze e-mailleveranciers. We gebruiken ze alleen om je te antwoorden en bewaren ze zolang het gesprek dat nodig heeft. Je kunt ons vragen ze te verwijderen.',
     childrenTitle: 'Kinderen',
     children:

@@ -876,7 +876,7 @@ export const it: Copy = {
       'babybookai.com legge il paese da cui proviene la tua visita, come lo segnala il nostro fornitore di hosting (Cloudflare), per mostrare i prezzi nella tua valuta e, alla prima visita, la pagina nella tua lingua. Non viene memorizzato. Un cookie, «lang», ricorda la lingua in cui hai letto il sito l’ultima volta, così la home si apre in quella la volta successiva.',
     websiteAnalytics:
       'babybookai.com usa Google Analytics per contare le visite e vedere quali pagine vengono lette, tramite cookie di Google. Riceve il tuo indirizzo IP, il browser e le pagine che visiti, mai nulla dall’app. Puoi bloccarlo con le impostazioni del browser o con il componente aggiuntivo di disattivazione di Google (<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>). L’informativa di Google: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
-    websiteNoAnalytics: 'babybookai.com non usa script di analisi né di pubblicità.',
+    websiteNoAnalytics: "babybookai.com non usa script di pubblicità. Per contare le visite usa Cloudflare Web Analytics, che non imposta cookie e non crea un profilo su di te. I link negli annunci e nei post possono avere un tag di campagna, passato allo store per sapere quali link portano installazioni.",
     websiteContact: 'Se ci scrivi con il modulo di contatto, il tuo nome, la tua email, l’oggetto e il messaggio ci arrivano via email, tramite Cloudflare e Google, i nostri fornitori di posta. Li usiamo solo per risponderti e li conserviamo per il tempo necessario alla conversazione. Puoi chiederci di cancellarli.',
     childrenTitle: 'Minori',
     children:

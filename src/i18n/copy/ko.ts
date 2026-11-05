@@ -856,7 +856,7 @@ export const ko: Copy = {
       'babybookai.com은 사용하는 통화로 가격을 보여 드리고 첫 방문 때 사용하는 언어로 페이지를 보여 드리기 위해, 호스팅 업체(Cloudflare)가 알려 주는 방문 국가를 읽어요. 저장되지 않아요. 쿠키 「lang」은 마지막으로 읽은 언어를 기억해 다음에 홈페이지가 그 언어로 열리게 해요.',
     websiteAnalytics:
       'babybookai.com은 방문 수와 읽힌 페이지를 알기 위해 Google이 설정하는 쿠키를 통해 Google 애널리틱스를 사용해요. IP 주소, 브라우저, 방문한 페이지를 받지만, 앱의 정보는 절대 받지 않아요. 브라우저 설정이나 Google의 차단 부가기능(<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>)으로 막을 수 있어요. Google의 정책: <a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.',
-    websiteNoAnalytics: 'babybookai.com은 분석이나 광고 스크립트를 사용하지 않아요.',
+    websiteNoAnalytics: "babybookai.com은 광고 스크립트를 사용하지 않아요. 방문 수는 쿠키를 설정하지 않고 프로필도 만들지 않는 Cloudflare Web Analytics로 집계해요. 광고와 게시물의 링크에는 캠페인 태그가 붙을 수 있으며, 어떤 링크가 설치로 이어졌는지 확인하기 위해 스토어로 전달돼요.",
     websiteContact: '문의 양식으로 연락하시면 이름, 이메일 주소, 제목과 메시지가 이메일 서비스 제공업체인 Cloudflare와 Google을 거쳐 이메일로 저희에게 전달돼요. 답변에만 사용하고 대화에 필요한 기간 동안만 보관해요. 삭제를 요청하실 수도 있어요.',
     childrenTitle: '아동',
     children:

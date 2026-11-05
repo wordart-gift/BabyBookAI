@@ -855,7 +855,7 @@ export const zh: Copy = {
       'babybookai.com 会读取你访问时所在的国家(由我们的托管服务商 Cloudflare 提供),以便用你的货币显示价格,并在首次访问时用你的语言显示页面。该信息不会被保存。一个名为“lang”的 Cookie 会记住你上次阅读本网站时使用的语言,让主页下次以该语言打开。',
     websiteAnalytics:
       'babybookai.com 使用 Google Analytics 统计访问量并了解哪些页面被阅读,通过 Google 设置的 Cookie 实现。它会收到你的 IP 地址、浏览器和你访问的页面,绝不会收到应用里的任何内容。你可以通过浏览器设置或 Google 的退出插件(<a class="lnk" href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>)来阻止它。Google 的政策:<a class="lnk" href="https://policies.google.com/privacy">policies.google.com/privacy</a>。',
-    websiteNoAnalytics: 'babybookai.com 不运行任何分析或广告脚本。',
+    websiteNoAnalytics: "babybookai.com 不运行任何广告脚本。统计访问量使用 Cloudflare Web Analytics，它不设置 Cookie，也不会为你建立个人资料。广告和帖子中的链接可能带有活动标记，并会传给应用商店，以便我们了解哪些链接带来了安装。",
     websiteContact: '如果你通过联系表单写信给我们,你的姓名、邮箱、主题和留言会通过我们的邮件服务商 Cloudflare 和 Google 以邮件形式送达。这些信息仅用于回复你,只在沟通需要的期间保留。你可以要求我们删除。',
     childrenTitle: '儿童',
     children:
