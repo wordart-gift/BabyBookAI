@@ -33,6 +33,16 @@ export const SOCIAL = {
   youtube: 'https://www.youtube.com/@BabyBookAI',
 } as const;
 
+/** The company behind the shop, as its Impressum states it (the same data petsinwords.com publishes). */
+export const LEGAL_ENTITY = {
+  name: 'Photo-to-text Inc.',
+  address: '2711 Centerville Road Suite 400, Wilmington, Delaware 19808, USA',
+  representative: 'Carlos García Martínez',
+  /** Delaware file number and US tax id (EIN). */
+  fileNumber: '6172310',
+  taxId: '38-4015871',
+} as const;
+
 export const PUBLISHER = {
   name: 'Photo-to-Text',
   url: 'https://photo-to-text.com',

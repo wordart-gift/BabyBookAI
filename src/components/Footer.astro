@@ -16,7 +16,11 @@ const f = COPY[lang].ui.footer;
 const link = (id: keyof typeof f.links) => ({ href: path(id, lang), label: f.links[id] });
 const groups = [
   { title: f.book, links: [link('babyPhotoBook'), link('firstYear'), link('boy'), link('girl'), link('ideas'), link('blog')] },
-  { title: f.company, links: [link('about'), link('support'), link('privacy'), link('terms')] },
+  {
+    title: f.company,
+    // German only: the Impressum (§ 5 DDG), one click from every page of the German site.
+    links: [link('about'), link('support'), link('privacy'), link('terms'), ...(lang === 'de' ? [{ href: '/de/impressum/', label: 'Impressum' }] : [])],
+  },
 ];
 const year = new Date().getFullYear();
 ---
