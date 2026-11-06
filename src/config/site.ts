@@ -31,6 +31,7 @@ export const GOOGLE = {
 export const SOCIAL = {
   instagram: 'https://www.instagram.com/baby.bookai/',
   youtube: 'https://www.youtube.com/@BabyBookAI',
+  pinterest: 'https://www.pinterest.com/BabyBookAI/',
 } as const;
 
 /** The company behind the shop, as its Impressum states it (the same data petsinwords.com publishes). */
