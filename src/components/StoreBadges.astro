@@ -37,7 +37,7 @@ const playUrl = STORES.googlePlay
   <li>
     {
       STORES.appStore ? (
-        <a href={`${STORES.appStore}?ct=${source}`} class="block">
+        <a href={`${STORES.appStore}?ct=${source}`} class="block" data-store="ios">
           <Image src={appStoreBadge} alt={b.appStore} height={52} class="h-[52px] w-auto" />
         </a>
       ) : (
@@ -49,8 +49,21 @@ const playUrl = STORES.googlePlay
     }
   </li>
   <li>
-    <a href={playUrl} class="block">
+    <a href={playUrl} class="block" data-store="android">
       <Image src={playBadge} alt={b.googlePlay} height={52} densities={[1, 2]} class="h-[52px] w-auto" />
     </a>
   </li>
 </ul>
+
+<script>
+  // Counts a click on a store badge (anonymous counter, no cookie): /api/event.
+  document.addEventListener('click', (e) => {
+    const a = (e.target as Element | null)?.closest<HTMLAnchorElement>('a[data-store]');
+    if (!a) return;
+    try {
+      navigator.sendBeacon('/api/event', new Blob([JSON.stringify({ e: 'store_click', d: a.dataset.store })], { type: 'application/json' }));
+    } catch {
+      /* ignore */
+    }
+  });
+</script>

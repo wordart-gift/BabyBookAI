@@ -4,8 +4,9 @@
  * Function: a redirect decided on the User-Agent, no page and no JS.
  */
 import { STORES } from '../../src/config/site';
+import { track, type StatsEnv } from '../../src/server-stats';
 
-export const onRequestGet: PagesFunction = ({ request }) => {
+export const onRequestGet: PagesFunction<StatsEnv> = async ({ request, env, waitUntil }) => {
   const ua = request.headers.get('user-agent') ?? '';
   const isApple = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && /Mobile/i.test(ua));
   const isAndroid = /Android/i.test(ua);
@@ -30,6 +31,7 @@ export const onRequestGet: PagesFunction = ({ request }) => {
     // A desktop, or a store not live yet: the page with both buttons.
     new URL('/#download', request.url).href;
 
+  if (target !== new URL('/#download', request.url).href) waitUntil(track(env, request, 'store_click', isApple ? 'ios' : 'android'));
   return new Response(null, {
     status: 302,
     headers: { Location: target, 'Cache-Control': 'private, no-store' },
