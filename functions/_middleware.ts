@@ -24,6 +24,7 @@
 import { COUNTRY_LANGS, DEFAULT_LANG, isLang, LOCALES, type Lang } from '../src/i18n/locales';
 import { path } from '../src/i18n/routes';
 import { priceFor, priceHtmlFor, sizeFor } from '../src/config/pricing';
+import { track, type StatsEnv } from '../src/server-stats';
 
 const COOKIE = 'lang';
 // Search crawlers, link previewers, testing tools, and the AI assistants'
@@ -71,8 +72,8 @@ function homeFor(request: Request, url: URL, country: string): Lang | null {
   return lang === DEFAULT_LANG ? null : lang;
 }
 
-export const onRequest: PagesFunction = async (context) => {
-  const { request } = context;
+export const onRequest: PagesFunction<StatsEnv> = async (context) => {
+  const { request, env } = context;
   if (request.method !== 'GET' && request.method !== 'HEAD') return context.next();
 
   const url = new URL(request.url);
@@ -94,6 +95,11 @@ export const onRequest: PagesFunction = async (context) => {
 
   const response = await context.next();
   if (!(response.headers.get('content-type') ?? '').includes('text/html')) return response;
+
+  // One anonymous count per page view, with the visitor's country (no cookie, no IP kept): the private stats page reads it.
+  if (request.method === 'GET' && response.status === 200 && !BOTS.test(request.headers.get('user-agent') ?? '')) {
+    context.waitUntil(track(env, request, 'page_view', url.pathname));
+  }
 
   const lang = langOf(url.pathname);
   const home = LOCALES[lang].country;
