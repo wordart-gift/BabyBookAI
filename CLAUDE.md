@@ -56,6 +56,13 @@ Pages, GitHub (`wordart-gift/BabyBookAI`).
 | Stock photos are allowed in blog posts that need a picture per idea, with a credit line (`docs/blog-photos.md`). Never presented as customers' or the family's. The product pages keep the real ones | Carlos, Nov 2026 |
 | **Back-to-top link**: `<a href="#top" class="to-top">` in `BaseLayout`, teal circle with a white arrow (amber stays for the next action), no JavaScript: a CSS scroll-driven animation fades it in after the first screen (always visible where unsupported or with reduced motion). `animation-timeline` lives in its own rule (`html .to-top`) because the minifier merged it into the `animation` shorthand and Chrome dropped it. Label `ui.toTop` in the ten languages | Carlos, 24 Oct 2026 (same on madeofnames.com) |
 
+## Ahrefs Site Audit (19 Nov 2026): what its warnings mean
+Crawl of 125 pages: Health Score 100, 0 errors. Thresholds seen: meta description 100-160 characters, title up to 70 (calibrated against its counts).
+Fixed that day: 56 descriptions over 160 and 10 titles over 70 (en, de, es, fr, it, nl, pt) and the Stripe link in `pt` (`stripe.com/pt-pt/privacy`).
+**Left as they are on purpose:** "Page has links to redirect" (121) = the App Store links (`apps.apple.com/app/id...?ct=...`), which Apple redirects to each storefront (no country in the URL: see the stores row above);
+"Meta description too short" (34) = the ja / ko / zh pages: 100 characters would be far too long in those scripts (a search result cuts them near 70);
+"Article / FAQPage schema missing" (5 + 2) = pages Ahrefs classes by guess (blog indexes with CollectionPage, product pages, terms and privacy): adding Article or FAQPage there would be wrong.
+
 ## Blog
 
 `src/content/blog/<lang>/<slug>.md` (`src/content.config.ts`), newest first on the index, followed by the ideas article, which keeps its URL. In the body `[text](page:firstYear)` links to a page in the post's language and {price} and {size} work as in the copy files (`resolvePostHtml` in `src/lib/blog.ts`, applied to the rendered HTML by `PostBody.astro`: Astro 7's Markdown processor does not take remark plugins without an extra package). On a phone a table's rows stack and each cell names its column (`labelCells`), so give every column a header. A repeated keyword or a mistyped `page:` stops the build. Vocabulary per language is the table above. Before adding a post, check the real SERP and add its row to `docs/keywords/blog.md`.

@@ -2,7 +2,7 @@
 title: 'Baby fotoalbum zelf inplakken: zo pak je het aan | BabyBookAI'
 headline: 'Baby fotoalbum zelf inplakken: zo pak je het aan'
 crumb: 'Fotoalbum zelf inplakken'
-description: 'Een baby fotoalbum zelf inplakken: welk album en welke lijm je nodig hebt, hoe je de foto’s kiest, hoeveel tijd het kost en wanneer een fotoboek de betere keuze is.'
+description: 'Een baby fotoalbum zelf inplakken: welk album en welke lijm je nodig hebt, hoe je foto’s kiest, hoeveel tijd het kost en wanneer een fotoboek beter is.'
 lead: 'Een zelf ingeplakt fotoalbum heeft iets wat een scherm niet heeft: je ziet aan elke bladzijde dat iemand er de tijd voor nam. Die tijd is meteen ook de grote vraag. Dit heb je nodig, zo ga je te werk en dit kost het je.'
 keyword: 'baby fotoalbum zelf inplakken'
 date: '2026-11-02'

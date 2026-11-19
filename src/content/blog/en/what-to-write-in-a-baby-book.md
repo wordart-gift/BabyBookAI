@@ -2,7 +2,7 @@
 title: 'What to Write in a Baby Book: 24 Gift Inscriptions | BabyBookAI'
 headline: 'What to write in a baby book: 24 inscriptions for a shower gift'
 crumb: 'What to write in a baby book'
-description: 'What to write in a baby book you are giving at a shower: a simple formula and 24 inscriptions, from friends, grandparents, aunts and uncles, short, funny and heartfelt.'
+description: 'What to write in a baby book you give at a shower: a simple formula and 24 inscriptions from friends, grandparents, aunts and uncles, short and heartfelt.'
 lead: 'You brought a book instead of a card, and now you are holding a pen and an open cover. The good news is that a baby book inscription can be short. It only has to say who it is from, when, and why you picked this book.'
 keyword: 'what to write in a baby book'
 date: '2026-11-02'

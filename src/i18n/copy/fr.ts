@@ -138,7 +138,7 @@ export const fr: Copy = {
   home: {
     title: "BabyBookAI — L'album photo de bébé qui se fait tout seul",
     description:
-      'La première année de votre bébé en album photo imprimé, à couverture rigide, réalisé avec les photos déjà dans votre téléphone. BabyBookAI les choisit, les classe et les met en page pour vous.',
+      'La première année de votre bébé en album photo imprimé à couverture rigide, réalisé avec les photos de votre téléphone. BabyBookAI les choisit, les met en page.',
     eyebrow: 'Album photo de la première année de bébé',
     h1: "L'album photo de votre bébé qui se fait tout seul",
     lead: 'Notre propre IA parcourt la galerie de votre téléphone, choisit pour vous les meilleures photos de chaque mois et met en page un album photo à couverture rigide. Vous le feuilletez, remplacez une photo par une autre du même mois ou la retirez, et il arrive imprimé chez vous.',
@@ -227,7 +227,7 @@ export const fr: Copy = {
 
   babyPhotoBook: {
     title: 'Album photo pour bébé imprimé, fait avec votre téléphone | BabyBookAI',
-    description: `Un album photo bébé livré imprimé et déjà mis en page : BabyBookAI choisit les meilleures photos de votre téléphone et les classe par mois. Couverture rigide, {size}.`,
+    description: `Un album photo bébé livré imprimé et mis en page : BabyBookAI choisit les meilleures photos de votre téléphone, par mois. Couverture rigide, {size}.`,
     crumb: 'Album photo bébé',
     eyebrow: 'Album photo bébé',
     h1: 'Album photo pour bébé, fait avec les photos de votre téléphone',
@@ -356,7 +356,7 @@ export const fr: Copy = {
   firstYear: {
     title: 'Album photo bébé 1ère année, de la naissance à 1 an | BabyBookAI',
     description:
-      "L'album photo de la première année de bébé, mois par mois, de la naissance à 1 an, fait avec les photos de votre téléphone. BabyBookAI choisit, classe et met en page.",
+      "L'album photo de la première année de bébé, mois par mois, de la naissance à 1 an, avec les photos de votre téléphone. BabyBookAI choisit et met en page.",
     crumb: 'Album photo de la première année',
     eyebrow: 'Album photo bébé 1ère année',
     h1: "L'album photo de la 1ère année de bébé, mois par mois et déjà fait",
@@ -438,7 +438,7 @@ export const fr: Copy = {
   girl: {
     title: 'Album photo bébé fille qui se remplit tout seul | BabyBookAI',
     description:
-      'Un album photo rose pour votre bébé fille, réalisé avec les photos de votre téléphone. BabyBookAI choisit ses plus belles photos, les classe mois par mois et met en page un livre à couverture rigide.',
+      'Un album photo rose pour votre bébé fille, réalisé avec les photos de votre téléphone. BabyBookAI choisit les plus belles et les classe par mois dans un livre.',
     crumb: 'Album photo bébé fille',
     eyebrow: 'Album photo bébé fille',
     h1: "L'album photo bébé fille qui se remplit tout seul",
@@ -494,7 +494,7 @@ export const fr: Copy = {
   boy: {
     title: 'Album photo bébé garçon réalisé avec votre téléphone | BabyBookAI',
     description:
-      'Un album photo bébé garçon en bleu doux, réalisé pour vous avec les photos de votre téléphone. BabyBookAI choisit ses plus belles photos, les classe par mois et met en page un livre à couverture rigide.',
+      'Un album photo bébé garçon en bleu doux, réalisé avec les photos de votre téléphone. BabyBookAI choisit les plus belles et les classe par mois dans un livre.',
     crumb: 'Album photo bébé garçon',
     eyebrow: 'Album photo bébé garçon',
     h1: 'Album photo bébé garçon, réalisé avec les photos de votre téléphone',
@@ -552,7 +552,7 @@ export const fr: Copy = {
     title: 'Album photo bébé : 25 idées et exemples de textes | BabyBookAI',
     headline: 'Album photo bébé : 25 idées et exemples de textes',
     description:
-      "Idées d'album photo bébé pour la première année : comment l'organiser, quoi photographier, des mises en page qui marchent, des exemples de textes et combien de photos choisir.",
+      "Idées d'album photo bébé pour la première année : comment l'organiser, quoi photographier, mises en page qui marchent, textes d'exemple, nombre de photos.",
     crumb: "Idées d'album photo bébé",
     eyebrow: 'Idées',
     h1: "Idées d'album photo bébé : 25 façons de raconter la première année",
@@ -723,7 +723,7 @@ export const fr: Copy = {
   about: {
     title: "À propos de BabyBookAI | L'album photo de bébé qui se fait tout seul",
     description:
-      "BabyBookAI est une app de Photo-to-Text qui transforme les photos de votre téléphone en album photo imprimé de la première année de votre bébé. Qui nous sommes et comment nous le faisons.",
+      "BabyBookAI est une app de Photo-to-Text qui transforme les photos de votre téléphone en album photo imprimé de la première année de bébé. Qui nous sommes.",
     crumb: 'À propos',
     eyebrow: 'À propos',
     h1: "Un album de bébé pour les parents qui n'ont pas le temps d'en faire un",
@@ -828,7 +828,7 @@ export const fr: Copy = {
   privacy: {
     title: 'Politique de confidentialité | BabyBookAI',
     description:
-      "Ce que BabyBookAI fait de vos photos et des données de votre commande : votre galerie est lue sur votre téléphone, et seul le livre terminé est envoyé pour être imprimé.",
+      "Ce que BabyBookAI fait de vos photos et des données de commande : votre galerie est lue sur votre téléphone, seul le livre terminé est envoyé pour impression.",
     crumb: 'Confidentialité',
     eyebrow: 'Confidentialité',
     h1: 'Les photos de votre bébé restent sur votre téléphone',
@@ -897,7 +897,7 @@ export const fr: Copy = {
   terms: {
     title: "Conditions d'utilisation et de vente | BabyBookAI",
     description:
-      "Les conditions pour utiliser l'app BabyBookAI et commander un livre photo bébé imprimé : vos photos, commandes et paiement, impression et livraison, et livres abîmés.",
+      "Les conditions d'utilisation de l'app BabyBookAI et de commande d'un livre photo bébé imprimé : vos photos, paiement, impression, livraison, livres abîmés.",
     crumb: 'Conditions',
     eyebrow: 'Conditions',
     h1: "Conditions d'utilisation et de vente",

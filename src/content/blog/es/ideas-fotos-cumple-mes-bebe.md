@@ -1,8 +1,8 @@
 ---
-title: 'Ideas de fotos para el cumple mes del bebé, de 1 a 12 meses | BabyBookAI'
+title: 'Ideas de fotos del cumple mes del bebé, de 1 a 12 meses | BabyBookAI'
 headline: 'Ideas de fotos para el cumple mes del bebé, de 1 a 12 meses'
 crumb: 'Ideas de fotos cumple mes'
-description: 'Doce ideas de fotos para el cumple mes de tu bebé, una por mes, hechas con el móvil y sin atrezo: qué fotografiar cada mes, cómo poner el número y qué hacer luego con la serie.'
+description: 'Doce ideas de fotos para el cumple mes de tu bebé, una por mes, con el móvil y sin atrezo: qué fotografiar, cómo poner el número y qué hacer con la serie.'
 lead: 'La foto del cumple mes no pide una sesión ni un fondo comprado. Pide dos minutos, una ventana y una idea para cada mes. Aquí tienes doce, pensadas para el momento en que está tu bebé en cada una.'
 keyword: 'ideas fotos cumple mes bebe'
 date: '2026-11-02'

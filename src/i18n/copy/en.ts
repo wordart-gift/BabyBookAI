@@ -226,7 +226,7 @@ export const en = {
 
   babyPhotoBook: {
     title: 'Baby Photo Album Made From Your Camera Roll | BabyBookAI',
-    description: `A baby photo album that arrives printed: a hardcover photo book made for you. BabyBookAI picks the best photos on your phone, sorts them by month and lays out every page. {size}.`,
+    description: `A baby photo album that arrives printed: BabyBookAI picks the best photos on your phone, sorts them by month and lays out a hardcover book. {size}.`,
     crumb: 'Baby photo book',
     eyebrow: 'Baby photo book',
     h1: 'Baby photo album, made from your camera roll',
@@ -345,7 +345,7 @@ export const en = {
   firstYear: {
     title: 'Baby’s First Year Photo Book You Don’t Have to Make | BabyBookAI',
     description:
-      'A baby’s first year photo book, month by month, made from the photos already on your phone. No weekly uploads: BabyBookAI picks, sorts and lays out the whole year.',
+      'A baby’s first year photo book, month by month, made from the photos already on your phone. No weekly uploads: BabyBookAI picks, sorts and lays out the year.',
     crumb: 'First year photo book',
     eyebrow: 'Baby’s first year photo book',
     h1: 'Baby’s first year photo book you don’t have to make',
@@ -542,7 +542,7 @@ export const en = {
     title: 'Baby Book Ideas: 25 Ways to Tell the First Year in Photos | BabyBookAI',
     headline: 'Baby Book Ideas: 25 Ways to Tell the First Year in Photos',
     description:
-      'Baby book ideas for a first year told in photos: ways to organize a baby photo book, what to photograph, layouts that work, captions to borrow, and how many photos to pick.',
+      'Baby book ideas for the first year in photos: how to organize it, what to photograph, layouts that work, captions to borrow and how many photos to pick.',
     crumb: 'Baby book ideas',
     eyebrow: 'Ideas',
     h1: 'Baby book ideas: 25 ways to tell the first year in photos',

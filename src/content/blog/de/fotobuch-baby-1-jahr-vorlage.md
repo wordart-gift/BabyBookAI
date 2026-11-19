@@ -1,8 +1,8 @@
 ---
-title: 'Fotobuch Baby 1. Jahr: Vorlage für den Aufbau, Seite für Seite | BabyBookAI'
+title: 'Fotobuch Baby 1. Jahr: Vorlage, Seite für Seite | BabyBookAI'
 headline: 'Fotobuch Baby 1. Jahr: eine Vorlage für den Aufbau, Seite für Seite'
 crumb: 'Fotobuch 1. Jahr: Vorlage'
-description: 'Eine Vorlage fürs Fotobuch vom 1. Babyjahr: was auf welche Seite kommt, Monat für Monat, mit Textbeispielen, und wann die Vorlage einer Druckerei reicht und wann nicht.'
+description: 'Eine Vorlage fürs Fotobuch vom 1. Babyjahr: was auf welche Seite kommt, Monat für Monat, mit Textbeispielen, und wann die Vorlage einer Druckerei reicht.'
 lead: 'Mit „Vorlage“ meinen die meisten Anbieter ein Design in ihrem Editor: Farben, Rahmen, Schriften. Das Schwierigste nimmt dir das nicht ab, nämlich die Entscheidung, welches Foto wohin kommt. Hier ist deshalb ein Plan für das ganze Buch, den du in jedem Editor nachbauen kannst.'
 keyword: 'fotobuch baby 1. jahr vorlage'
 date: '2026-11-02'

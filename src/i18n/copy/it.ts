@@ -137,7 +137,7 @@ export const it: Copy = {
   home: {
     title: 'BabyBookAI — L’album foto del neonato che si fa da solo',
     description:
-      'Il primo anno del tuo bebè in un album foto stampato con copertina rigida, fatto con le foto che hai già sul telefono. BabyBookAI le sceglie, le ordina e le impagina per te.',
+      'Il primo anno del tuo bebè in un album foto stampato con copertina rigida, fatto con le foto che hai sul telefono. BabyBookAI le sceglie e le impagina per te.',
     eyebrow: 'Album del primo anno del neonato',
     h1: 'L’album foto del tuo bambino che si fa da solo',
     lead: 'La nostra IA passa in rassegna la galleria del tuo telefono, sceglie per te le foto migliori di ogni mese e impagina un album con copertina rigida. Tu lo sfogli, cambi una foto con un’altra dello stesso mese o la togli, e ti arriva stampato a casa.',
@@ -226,7 +226,7 @@ export const it: Copy = {
 
   babyPhotoBook: {
     title: 'Album foto neonato stampato, fatto con il tuo telefono | BabyBookAI',
-    description: `Un album foto del neonato che arriva stampato e già impaginato: BabyBookAI sceglie le foto migliori del tuo telefono e le ordina per mese. Copertina rigida, {size}.`,
+    description: `Un album foto del neonato che arriva stampato e impaginato: BabyBookAI sceglie le foto migliori del telefono e le ordina per mese. Copertina rigida, {size}.`,
     crumb: 'Album foto neonato',
     eyebrow: 'Album foto neonato',
     h1: 'Album fotografico del neonato, fatto con le foto del tuo telefono',
@@ -350,7 +350,7 @@ export const it: Copy = {
   firstYear: {
     title: 'Album del primo anno di vita del bambino, mese per mese | BabyBookAI',
     description:
-      'L’album del primo anno di vita del tuo bambino, mese per mese, fatto con le foto che hai già sul telefono. Niente da compilare: BabyBookAI sceglie, ordina e impagina tutto l’anno.',
+      'L’album del primo anno di vita, mese per mese, fatto con le foto che hai già sul telefono. Niente da compilare: BabyBookAI sceglie, ordina e impagina tutto.',
     crumb: 'Album del primo anno',
     eyebrow: 'Album del primo anno di vita',
     h1: 'L’album del primo anno del tuo bambino, mese per mese e già fatto',
@@ -432,7 +432,7 @@ export const it: Copy = {
   girl: {
     title: 'Album foto per neonata che si riempie da solo | BabyBookAI',
     description:
-      'Un album foto per neonata, in rosa, fatto con le foto del tuo telefono. BabyBookAI sceglie le sue foto migliori, le ordina mese per mese e impagina un libro rigido.',
+      'Un album foto per neonata, in rosa, fatto con le foto del telefono. BabyBookAI sceglie le migliori, le ordina mese per mese e impagina un libro rigido.',
     crumb: 'Album foto per neonata',
     eyebrow: 'Album foto per neonata',
     h1: 'L’album foto per neonata che si riempie da solo',
@@ -488,7 +488,7 @@ export const it: Copy = {
   boy: {
     title: 'Album foto per bambino fatto con il tuo telefono | BabyBookAI',
     description:
-      'Un album foto per bambino in azzurro tenue, fatto per te con le foto del tuo telefono. BabyBookAI sceglie le sue foto migliori, le ordina per mese e impagina un libro rigido.',
+      'Un album foto per bambino in azzurro tenue, fatto con le foto del telefono. BabyBookAI sceglie le migliori, le ordina per mese e impagina un libro rigido.',
     crumb: 'Album foto per bambino',
     eyebrow: 'Album foto per bambino',
     h1: 'Album foto per bambino, fatto con le foto del tuo telefono',
@@ -543,10 +543,10 @@ export const it: Copy = {
   },
 
   ideas: {
-    title: 'Idee per il fotolibro del neonato: 25 modi di raccontare il primo anno | BabyBookAI',
+    title: 'Idee per il fotolibro del neonato: 25 modi di raccontarlo | BabyBookAI',
     headline: 'Idee per il fotolibro del neonato: 25 modi di raccontare il primo anno',
     description:
-      'Idee per il fotolibro del neonato sul primo anno: come organizzarlo, cosa fotografare, impaginazioni che funzionano, frasi da prendere in prestito e quante foto scegliere.',
+      'Idee per il fotolibro del neonato sul primo anno: come organizzarlo, cosa fotografare, impaginazioni che funzionano, frasi da usare e quante foto scegliere.',
     crumb: 'Idee per il fotolibro',
     eyebrow: 'Idee',
     h1: 'Idee per il fotolibro del neonato: 25 modi di raccontare il primo anno',

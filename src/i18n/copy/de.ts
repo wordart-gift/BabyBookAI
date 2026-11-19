@@ -138,7 +138,7 @@ export const de: Copy = {
   home: {
     title: 'BabyBookAI — Das Baby-Fotobuch, das sich selbst macht',
     description:
-      'Das erste Jahr deines Babys als gedrucktes Hardcover-Fotobuch, gemacht aus den Fotos, die schon auf deinem Handy sind. BabyBookAI wählt, sortiert und gestaltet sie für dich.',
+      'Das erste Jahr deines Babys als gedrucktes Hardcover-Fotobuch, gemacht aus den Fotos auf deinem Handy. BabyBookAI wählt, sortiert und gestaltet sie für dich.',
     eyebrow: 'Fotobuch vom ersten Babyjahr',
     h1: 'Das Baby-Fotobuch, das sich selbst macht',
     lead: 'Unsere eigene KI geht deine Handy-Galerie durch, wählt für dich die besten Fotos jedes Monats aus und gestaltet ein Hardcover-Buch. Du blätterst durch, tauschst ein Foto gegen ein anderes aus demselben Monat oder nimmst es heraus, und es ist unterwegs.',
@@ -227,7 +227,7 @@ export const de: Copy = {
 
   babyPhotoBook: {
     title: 'Baby-Fotobuch aus den Fotos auf deinem Handy | BabyBookAI',
-    description: `Ein Baby-Fotoalbum, das fertig gedruckt kommt: BabyBookAI wählt die besten Fotos auf deinem Handy, ordnet sie nach Monaten und gestaltet ein Hardcover-Fotobuch. {size}.`,
+    description: `Ein Baby-Fotoalbum, das gedruckt kommt: BabyBookAI wählt die besten Fotos auf deinem Handy, ordnet sie nach Monaten und gestaltet ein Hardcover. {size}.`,
     crumb: 'Baby-Fotobuch',
     eyebrow: 'Baby-Fotobuch',
     h1: 'Baby-Fotobuch, erstellt aus den Fotos auf deinem Handy',
@@ -346,7 +346,7 @@ export const de: Copy = {
   firstYear: {
     title: 'Fotobuch „Mein erstes Jahr“ fürs Baby, ohne Basteln | BabyBookAI',
     description:
-      'Das Baby-Fotobuch fürs 1. Jahr, „Mein erstes Jahr“, Monat für Monat aus den Fotos auf deinem Handy. Nichts zum Ausfüllen: BabyBookAI wählt, ordnet und gestaltet alles.',
+      'Das Baby-Fotobuch fürs 1. Jahr, „Mein erstes Jahr“, Monat für Monat aus den Fotos auf deinem Handy. Nichts auszufüllen: BabyBookAI wählt, ordnet und gestaltet.',
     crumb: 'Fotobuch erstes Jahr',
     eyebrow: 'Baby-Fotobuch fürs 1. Jahr',
     h1: 'Das Fotobuch von Babys erstem Jahr, das du nicht basteln musst',
@@ -428,7 +428,7 @@ export const de: Copy = {
   girl: {
     title: 'Fotoalbum für Mädchen, das sich selbst füllt | BabyBookAI',
     description:
-      'Ein rosa Fotoalbum für dein Baby-Mädchen, aus den Fotos auf deinem Handy. BabyBookAI wählt ihre besten Fotos, ordnet sie Monat für Monat und gestaltet ein Hardcover-Buch.',
+      'Ein rosa Fotoalbum für dein Baby-Mädchen aus den Fotos auf deinem Handy. BabyBookAI wählt die besten, ordnet sie nach Monaten und gestaltet ein Hardcover-Buch.',
     crumb: 'Fotoalbum für Mädchen',
     eyebrow: 'Baby-Fotoalbum für Mädchen',
     h1: 'Das Baby-Fotoalbum für Mädchen, das sich selbst füllt',
@@ -484,7 +484,7 @@ export const de: Copy = {
   boy: {
     title: 'Fotoalbum für Jungen aus deinen Handyfotos | BabyBookAI',
     description:
-      'Ein Baby-Fotoalbum für Jungen in Zartblau, für dich gemacht aus den Fotos auf deinem Handy. BabyBookAI wählt seine besten Bilder, ordnet sie nach Monaten und gestaltet ein Hardcover-Buch.',
+      'Ein Baby-Fotoalbum für Jungen in Zartblau aus den Fotos auf deinem Handy. BabyBookAI wählt die besten, ordnet sie nach Monaten und gestaltet ein Hardcover-Buch.',
     crumb: 'Fotoalbum für Jungen',
     eyebrow: 'Baby-Fotoalbum für Jungen',
     h1: 'Baby-Fotoalbum für Jungen, aus den Fotos auf deinem Handy',
@@ -539,10 +539,10 @@ export const de: Copy = {
   },
 
   ideas: {
-    title: 'Ideen fürs Baby-Fotobuch: 25 Wege, das erste Jahr zu erzählen | BabyBookAI',
+    title: 'Ideen fürs Baby-Fotobuch: 25 Wege fürs erste Jahr | BabyBookAI',
     headline: 'Ideen fürs Baby-Fotobuch: 25 Wege, das erste Jahr zu erzählen',
     description:
-      'Ideen fürs Baby-Fotobuch vom ersten Jahr: wie du es ordnest, was du fotografierst, Layouts, die funktionieren, Sprüche zum Ausleihen und wie viele Fotos du auswählst.',
+      'Ideen fürs Baby-Fotobuch vom ersten Jahr: wie du es ordnest, was du fotografierst, Layouts, die funktionieren, Sprüche zum Ausleihen und wie viele Fotos.',
     crumb: 'Ideen fürs Baby-Fotobuch',
     eyebrow: 'Ideen',
     h1: 'Ideen fürs Baby-Fotobuch: 25 Wege, das erste Jahr zu erzählen',
@@ -713,7 +713,7 @@ export const de: Copy = {
   about: {
     title: 'Über BabyBookAI | Das Baby-Fotobuch, das sich selbst macht',
     description:
-      'BabyBookAI ist eine App von Photo-to-Text, die aus den Fotos auf deinem Handy ein gedrucktes Fotobuch vom ersten Lebensjahr deines Babys macht. Wer wir sind und wie wir es machen.',
+      'BabyBookAI ist eine App von Photo-to-Text, die aus den Fotos auf deinem Handy ein gedrucktes Fotobuch vom ersten Lebensjahr deines Babys macht. Wer wir sind.',
     crumb: 'Über uns',
     eyebrow: 'Über uns',
     h1: 'Ein Babybuch für Eltern ohne Zeit, eins zu basteln',
@@ -818,7 +818,7 @@ export const de: Copy = {
   privacy: {
     title: 'Datenschutzerklärung | BabyBookAI',
     description:
-      'Was BabyBookAI mit deinen Fotos und deinen Bestelldaten macht: Deine Mediathek wird auf deinem Handy gelesen, und nur das fertige Buch wird zum Drucken geschickt.',
+      'Was BabyBookAI mit deinen Fotos und Bestelldaten macht: Deine Mediathek wird auf deinem Handy gelesen, nur das fertige Buch wird zum Drucken geschickt.',
     crumb: 'Datenschutz',
     eyebrow: 'Datenschutz',
     h1: 'Die Fotos deines Babys bleiben auf deinem Handy',
@@ -887,7 +887,7 @@ export const de: Copy = {
   terms: {
     title: 'Nutzungs- und Verkaufsbedingungen (AGB) | BabyBookAI',
     description:
-      'Die Bedingungen für die Nutzung der BabyBookAI-App und die Bestellung eines gedruckten Baby-Fotobuches: deine Fotos, Bestellung und Zahlung, Druck und Lieferung und beschädigte Bücher.',
+      'Die Bedingungen für die BabyBookAI-App und die Bestellung eines gedruckten Baby-Fotobuchs: Fotos, Bestellung und Zahlung, Druck, Lieferung, beschädigte Bücher.',
     crumb: 'AGB',
     eyebrow: 'AGB',
     h1: 'Nutzungs- und Verkaufsbedingungen',

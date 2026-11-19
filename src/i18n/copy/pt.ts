@@ -136,7 +136,7 @@ export const pt: Copy = {
   home: {
     title: 'BabyBookAI — O álbum de fotos do bebé que se faz sozinho',
     description:
-      'O primeiro ano do teu bebé num álbum de fotos impresso de capa dura, feito com as fotografias que já tens no telemóvel. O BabyBookAI escolhe-as, ordena-as e pagina-as por ti.',
+      'O primeiro ano do teu bebé num álbum de fotos impresso de capa dura, feito com as fotografias do teu telemóvel. O BabyBookAI escolhe, ordena e pagina por ti.',
     eyebrow: 'Álbum do primeiro ano do bebé',
     h1: 'O álbum do teu bebé que se faz sozinho',
     lead: 'A nossa própria IA percorre a galeria do teu telemóvel, escolhe por ti as melhores fotografias de cada mês e pagina um álbum de capa dura. Tu folheias, trocas a fotografia de que não gostes por outra do mesmo mês ou tira-la, e ele chega-te impresso a casa.',
@@ -225,7 +225,7 @@ export const pt: Copy = {
 
   babyPhotoBook: {
     title: 'Álbum de fotos do bebé, feito com o teu telemóvel | BabyBookAI',
-    description: `Um álbum de fotos do bebé que chega impresso e já paginado: o BabyBookAI escolhe as melhores fotografias do teu telemóvel e ordena-as por meses. Capa dura, {size}.`,
+    description: `Um álbum de fotos do bebé que chega impresso e paginado: o BabyBookAI escolhe as melhores fotografias do teu telemóvel, por meses. Capa dura, {size}.`,
     crumb: 'Álbum de fotos do bebé',
     eyebrow: 'Álbum de fotos do bebé',
     h1: 'Álbum de fotos do bebé, feito com as fotografias do teu telemóvel',
@@ -344,7 +344,7 @@ export const pt: Copy = {
   firstYear: {
     title: 'Álbum do primeiro ano do bebé, mês a mês e já feito | BabyBookAI',
     description:
-      'Um álbum do primeiro ano do bebé, mês a mês, feito com as fotografias do teu telemóvel. Nada para preencher: o BabyBookAI escolhe, ordena e pagina o ano inteiro.',
+      'Um álbum do primeiro ano do bebé, mês a mês, feito com as fotografias do teu telemóvel. Nada para preencher: o BabyBookAI escolhe, ordena e pagina o ano.',
     crumb: 'Álbum do primeiro ano',
     eyebrow: 'Álbum do primeiro ano do bebé',
     h1: 'O álbum do primeiro ano do teu bebé, mês a mês e já feito',
@@ -426,7 +426,7 @@ export const pt: Copy = {
   girl: {
     title: 'Álbum de fotografias de bebé menina que se enche sozinho | BabyBookAI',
     description:
-      'Um álbum de fotografias cor-de-rosa para a tua bebé, feito com as fotografias do teu telemóvel. O BabyBookAI escolhe as melhores, ordena-as mês a mês e pagina um livro de capa dura.',
+      'Um álbum de fotos cor-de-rosa para a tua bebé, feito com as fotografias do teu telemóvel. O BabyBookAI escolhe as melhores, ordena mês a mês e pagina um livro.',
     crumb: 'Álbum de fotografias de bebé menina',
     eyebrow: 'Álbum de fotografias de bebé menina',
     h1: 'O álbum de fotografias de bebé menina que se enche sozinho',
@@ -480,9 +480,9 @@ export const pt: Copy = {
   },
 
   boy: {
-    title: 'Álbum de fotografias de bebé menino feito com o teu telemóvel | BabyBookAI',
+    title: 'Álbum de fotos de bebé menino feito com o teu telemóvel | BabyBookAI',
     description:
-      'Um álbum de fotografias de bebé menino em azul suave, feito para ti com as fotografias do teu telemóvel. O BabyBookAI escolhe as melhores, ordena-as por meses e pagina um livro de capa dura.',
+      'Um álbum de fotos de bebé menino em azul suave, feito com as fotografias do teu telemóvel. O BabyBookAI escolhe as melhores, ordena por meses e pagina um livro.',
     crumb: 'Álbum de fotografias de bebé menino',
     eyebrow: 'Álbum de fotografias de bebé menino',
     h1: 'Álbum de fotografias de bebé menino, feito com as fotografias do teu telemóvel',
@@ -537,10 +537,10 @@ export const pt: Copy = {
   },
 
   ideas: {
-    title: 'Ideias para o álbum do bebé: 25 maneiras de contar o primeiro ano | BabyBookAI',
+    title: 'Ideias para o álbum do bebé: 25 maneiras de contar o ano | BabyBookAI',
     headline: 'Ideias para o álbum do bebé: 25 maneiras de contar o primeiro ano',
     description:
-      'Ideias para o álbum de fotos do bebé no primeiro ano: como organizá-lo, o que fotografar, paginações que funcionam, legendas para aproveitar e quantas fotografias escolher.',
+      'Ideias para o álbum de fotos do bebé no primeiro ano: como organizá-lo, o que fotografar, paginações que funcionam, legendas para usar e quantas fotografias.',
     crumb: 'Ideias para o álbum do bebé',
     eyebrow: 'Ideias',
     h1: 'Ideias para o álbum do bebé: 25 maneiras de contar o primeiro ano',
@@ -711,7 +711,7 @@ export const pt: Copy = {
   about: {
     title: 'Sobre o BabyBookAI | O álbum de fotos do bebé que se faz sozinho',
     description:
-      'O BabyBookAI é uma app da Photo-to-Text que transforma as fotografias do teu telemóvel num álbum de fotos impresso do primeiro ano do teu bebé. Quem somos e como o fazemos.',
+      'O BabyBookAI é uma app da Photo-to-Text que transforma as fotografias do telemóvel num álbum de fotos impresso do primeiro ano do bebé. Quem somos.',
     crumb: 'Sobre nós',
     eyebrow: 'Sobre nós',
     h1: 'Um livro de bebé para pais sem tempo para o fazer',
@@ -816,7 +816,7 @@ export const pt: Copy = {
   privacy: {
     title: 'Política de privacidade | BabyBookAI',
     description:
-      'O que o BabyBookAI faz com as tuas fotografias e os dados da tua encomenda: a tua biblioteca é lida no teu telemóvel, e só o livro acabado é enviado para ser impresso.',
+      'O que o BabyBookAI faz com as tuas fotografias e os dados da encomenda: a tua biblioteca é lida no telemóvel e só o livro acabado é enviado para impressão.',
     crumb: 'Privacidade',
     eyebrow: 'Privacidade',
     h1: 'As fotografias do teu bebé ficam no teu telemóvel',
@@ -850,7 +850,7 @@ export const pt: Copy = {
       'Usamos esta informação apenas para fazer, enviar e acompanhar a tua encomenda. Não a vendemos, não a usamos para publicidade e não usamos as tuas fotografias para mais nada além de imprimir o teu livro.',
     othersTitle: 'Quem mais a trata',
     others: [
-      '<strong>Stripe</strong> processa os pagamentos (<a class="lnk" href="https://stripe.com/pt/privacy">stripe.com/privacy</a>).',
+      '<strong>Stripe</strong> processa os pagamentos (<a class="lnk" href="https://stripe.com/pt-pt/privacy">stripe.com/privacy</a>).',
       '<strong>Gelato</strong> imprime e envia o livro (<a class="lnk" href="https://www.gelato.com/legal/privacy">gelato.com/legal/privacy</a>).',
       '<strong>Resend</strong> entrega os nossos e-mails de encomenda (<a class="lnk" href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>).',
       'O nosso servidor de encomendas, onde o ficheiro do livro espera até chegar à gráfica.',
@@ -885,7 +885,7 @@ export const pt: Copy = {
   terms: {
     title: 'Termos de utilização e de venda | BabyBookAI',
     description:
-      'Os termos para usar a app BabyBookAI e encomendar um álbum de fotos do bebé impresso: as tuas fotografias, encomendas e pagamento, impressão e entrega, e livros danificados.',
+      'Os termos para usar a app BabyBookAI e encomendar um álbum de fotos do bebé impresso: fotografias, pagamento, impressão, entrega e livros danificados.',
     crumb: 'Termos',
     eyebrow: 'Termos',
     h1: 'Termos de utilização e de venda',

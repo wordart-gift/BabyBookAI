@@ -1,5 +1,5 @@
 ---
-title: 'O meu primeiro álbum do bebé: como escolher e o que lá pôr | BabyBookAI'
+title: 'O meu primeiro álbum do bebé: como escolher e o que pôr | BabyBookAI'
 headline: 'O meu primeiro álbum do bebé: como escolher e o que lá pôr'
 crumb: 'O meu primeiro álbum'
 description: 'Para preencher, para colar, com modelo ou já impresso: como escolher «o meu primeiro álbum» do bebé, o que cada um te pede e o que pôr lá dentro, mês a mês.'

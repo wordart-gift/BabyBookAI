@@ -136,7 +136,7 @@ export const nl: Copy = {
   home: {
     title: 'BabyBookAI — Het baby-fotoboek dat zichzelf maakt',
     description:
-      'Het eerste jaar van je baby als gedrukt hardcover fotoboek, gemaakt van de foto’s die al op je telefoon staan. BabyBookAI kiest, sorteert en maakt ze voor je op.',
+      'Het eerste jaar van je baby als gedrukt hardcover fotoboek, gemaakt van de foto’s op je telefoon. BabyBookAI kiest, sorteert en maakt ze voor je op.',
     eyebrow: 'Fotoboek van het eerste jaar van je baby',
     h1: 'Het baby-fotoboek dat zichzelf maakt',
     lead: 'Onze eigen AI loopt je galerij langs, kiest voor jou de mooiste foto’s van elke maand en maakt een hardcover boek op. Jij bladert erdoorheen, wisselt een foto voor een andere uit dezelfde maand of haalt hem eruit, en het is onderweg.',
@@ -225,7 +225,7 @@ export const nl: Copy = {
 
   babyPhotoBook: {
     title: 'Baby-fotoboek maken van de foto’s op je telefoon | BabyBookAI',
-    description: `Een baby-fotoalbum dat gedrukt bij je aankomt: BabyBookAI kiest de mooiste foto’s op je telefoon, sorteert ze per maand en maakt een hardcover fotoboek op. {size}.`,
+    description: `Een baby-fotoalbum dat gedrukt bij je aankomt: BabyBookAI kiest de mooiste foto’s op je telefoon, sorteert per maand en maakt een hardcover op. {size}.`,
     crumb: 'Baby-fotoboek',
     eyebrow: 'Baby-fotoboek',
     h1: 'Baby-fotoboek maken van de foto’s op je telefoon',
@@ -344,7 +344,7 @@ export const nl: Copy = {
   firstYear: {
     title: 'Fotoboek van baby’s eerste jaar, maand voor maand | BabyBookAI',
     description:
-      'Het baby-fotoboek van het eerste jaar, maand voor maand, gemaakt van de foto’s op je telefoon. Niets om in te vullen: BabyBookAI kiest, sorteert en maakt het hele jaar op.',
+      'Het baby-fotoboek van het eerste jaar, maand voor maand, gemaakt van de foto’s op je telefoon. Niets in te vullen: BabyBookAI kiest, sorteert en maakt het op.',
     crumb: 'Fotoboek eerste jaar',
     eyebrow: 'Fotoboek baby eerste jaar',
     h1: 'Het fotoboek van baby’s eerste jaar dat je niet zelf hoeft te maken',
@@ -426,7 +426,7 @@ export const nl: Copy = {
   girl: {
     title: 'Fotoalbum babymeisje dat zichzelf vult | BabyBookAI',
     description:
-      'Een roze fotoalbum voor je babymeisje, gemaakt van de foto’s op je telefoon. BabyBookAI kiest haar mooiste foto’s, sorteert ze maand voor maand en maakt een hardcover boek op.',
+      'Een roze fotoalbum voor je babymeisje, gemaakt van de foto’s op je telefoon. BabyBookAI kiest de mooiste, sorteert maand voor maand en maakt een boek op.',
     crumb: 'Fotoalbum babymeisje',
     eyebrow: 'Fotoalbum babymeisje',
     h1: 'Het fotoalbum voor een babymeisje dat zichzelf vult',
@@ -482,7 +482,7 @@ export const nl: Copy = {
   boy: {
     title: 'Fotoalbum babyjongen gemaakt van je telefoonfoto’s | BabyBookAI',
     description:
-      'Een fotoalbum voor een babyjongen in zachtblauw, voor je gemaakt van de foto’s op je telefoon. BabyBookAI kiest zijn mooiste foto’s, sorteert ze per maand en maakt een hardcover boek op.',
+      'Een fotoalbum voor een babyjongen in zachtblauw, gemaakt van de foto’s op je telefoon. BabyBookAI kiest de mooiste, sorteert per maand en maakt een boek op.',
     crumb: 'Fotoalbum babyjongen',
     eyebrow: 'Fotoalbum babyjongen',
     h1: 'Fotoalbum babyjongen, gemaakt van de foto’s op je telefoon',
@@ -537,10 +537,10 @@ export const nl: Copy = {
   },
 
   ideas: {
-    title: 'Ideeën voor een baby-fotoboek: 25 manieren om het eerste jaar te vertellen | BabyBookAI',
+    title: 'Ideeën voor een baby-fotoboek: 25 manieren (eerste jaar) | BabyBookAI',
     headline: 'Ideeën voor een baby-fotoboek: 25 manieren om het eerste jaar te vertellen',
     description:
-      'Ideeën voor een baby-fotoboek van het eerste jaar: hoe je het indeelt, wat je fotografeert, lay-outs die werken, onderschriften om te lenen en hoeveel foto’s je kiest.',
+      'Ideeën voor een baby-fotoboek van het eerste jaar: hoe je het indeelt, wat je fotografeert, lay-outs die werken, onderschriften om te lenen en hoeveel foto’s.',
     crumb: 'Ideeën voor een fotoboek',
     eyebrow: 'Ideeën',
     h1: 'Ideeën voor een baby-fotoboek: 25 manieren om het eerste jaar te vertellen',
@@ -711,7 +711,7 @@ export const nl: Copy = {
   about: {
     title: 'Over BabyBookAI | Het baby-fotoboek dat zichzelf maakt',
     description:
-      'BabyBookAI is een app van Photo-to-Text die de foto’s op je telefoon omzet in een gedrukt fotoboek van het eerste jaar van je baby. Wie we zijn en hoe we het maken.',
+      'BabyBookAI is een app van Photo-to-Text die de foto’s op je telefoon omzet in een gedrukt fotoboek van het eerste jaar van je baby. Wie we zijn.',
     crumb: 'Over ons',
     eyebrow: 'Over ons',
     h1: 'Een baby-fotoboek voor ouders die geen tijd hebben om er een te maken',
@@ -816,7 +816,7 @@ export const nl: Copy = {
   privacy: {
     title: 'Privacyverklaring | BabyBookAI',
     description:
-      'Wat BabyBookAI doet met je foto’s en je bestelgegevens: je bibliotheek wordt op je telefoon gelezen, en alleen het afgewerkte boek wordt verstuurd om gedrukt te worden.',
+      'Wat BabyBookAI doet met je foto’s en bestelgegevens: je bibliotheek wordt op je telefoon gelezen, alleen het afgewerkte boek wordt voor het drukken verstuurd.',
     crumb: 'Privacy',
     eyebrow: 'Privacy',
     h1: 'De foto’s van je baby blijven op je telefoon',
@@ -885,7 +885,7 @@ export const nl: Copy = {
   terms: {
     title: 'Gebruiks- en verkoopvoorwaarden | BabyBookAI',
     description:
-      'De voorwaarden voor het gebruik van de BabyBookAI-app en het bestellen van een gedrukt baby-fotoboek: je foto’s, bestellingen en betaling, druk en bezorging, en beschadigde boeken.',
+      'De voorwaarden voor de BabyBookAI-app en het bestellen van een gedrukt baby-fotoboek: je foto’s, bestelling en betaling, druk, bezorging, beschadigde boeken.',
     crumb: 'Voorwaarden',
     eyebrow: 'Voorwaarden',
     h1: 'Gebruiks- en verkoopvoorwaarden',
