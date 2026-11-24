@@ -32,6 +32,9 @@ export const SOCIAL = {
   instagram: 'https://www.instagram.com/baby.bookai/',
   youtube: 'https://www.youtube.com/@BabyBookAI',
   pinterest: 'https://www.pinterest.com/BabyBookAI/',
+  // Profiles without a footer icon: they only go into the Organization's sameAs (created 23 Nov 2026).
+  medium: 'https://medium.com/@babybookai',
+  substack: 'https://substack.com/@babybookai',
 } as const;
 
 /** The company behind the shop, as its Impressum states it (the same data petsinwords.com publishes). */
