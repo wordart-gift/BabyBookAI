@@ -39,6 +39,12 @@ const {
   pageType,
   about,
 } = Astro.props;
+// Ahrefs flags titles over 60 characters: when one is longer, the trailing " | Brand" part goes (the brand still shows in the snippet).
+const shortTitle = (() => {
+  let t = title;
+  while (t.length > 60 && t.includes(' | ')) t = t.slice(0, t.lastIndexOf(' | '));
+  return t;
+})();
 
 const canonical = new URL(page ? path(page, lang) : Astro.url.pathname, SITE.url).href;
 const imageUrl = new URL(image, SITE.url).href;
@@ -61,7 +67,7 @@ const nodes = noindex
     ];
 ---
 
-<title>{title}</title>
+<title>{shortTitle}</title>
 <meta name="description" content={description} />
 {!noindex && <link rel="canonical" href={canonical} />}
 {hreflang.map((alt) => <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />)}
