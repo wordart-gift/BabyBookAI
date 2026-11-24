@@ -32,6 +32,9 @@ export const SOCIAL = {
   instagram: 'https://www.instagram.com/baby.bookai/',
   youtube: 'https://www.youtube.com/@BabyBookAI',
   pinterest: 'https://www.pinterest.com/BabyBookAI/',
+  facebook: 'https://www.facebook.com/profile.php?id=61596878611047',
+  x: 'https://x.com/babybookai_app',
+  tiktok: 'https://www.tiktok.com/@babybookai_app',
   // Profiles without a footer icon: they only go into the Organization's sameAs (created 23 Nov 2026).
   medium: 'https://medium.com/@babybookai',
   substack: 'https://substack.com/@babybookai',
