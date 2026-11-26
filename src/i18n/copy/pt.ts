@@ -290,6 +290,15 @@ export const pt: Copy = {
         { label: 'Impressão', value: 'Impresso por encomenda, enviado para 16 países' },
       ],
     },
+    compare: {
+      eyebrow: 'Impresso ou no telemóvel',
+      title: 'Álbum impresso ou álbum digital?',
+      body: 'As fotografias são as mesmas. O que muda é onde ficam e quem as vê.',
+      book: { title: 'O álbum impresso', items: ['Folheia-se no sofá, fica em cima da mesa e os avós pedem-no emprestado', 'Daqui a vinte anos abre-se na mesma: nada para carregar, nenhuma palavra-passe para lembrar', 'Só tem as melhores fotografias de cada mês, não as milhares que guardas no telemóvel'] },
+      digital: { title: 'Um álbum digital', items: ['Tem todas as fotografias, incluindo as dezenas quase iguais', 'Depende de uma conta ou de um telemóvel que um dia vais trocar', 'Vê-se num ecrã e quase sempre por uma só pessoa'] },
+      note: 'O BabyBookAI faz com o teu telemóvel a parte mais pesada, encontrar e ordenar as fotografias, e envia-te o álbum impresso para casa.',
+      bookAlt: 'Uma página dupla da BabyBookAI impressa no álbum, «Nono mês»',
+    },
     gift: {
       title: 'O presente que os avós pedem',
       body: 'Um telemóvel cheio de fotografias é difícil de passar pela mesa. Um álbum de fotos do bebé não. É o presente para um primeiro aniversário, para o Dia da Mãe ou do Pai, e aquele que os avós deixam na mesa da sala.',

@@ -291,6 +291,15 @@ export const en = {
         { label: 'Printing', value: 'Printed on demand, shipped to 16 countries' },
       ],
     },
+    compare: {
+      eyebrow: 'Printed or on the phone',
+      title: 'A printed album or a digital one?',
+      body: 'The photos are the same. What changes is where they stay and who sees them.',
+      book: { title: 'The printed album', items: ['You flip through it on the sofa, leave it on the table, and the grandparents ask to borrow it', 'In twenty years it still opens, with nothing to charge and no password to remember', 'Only the best photos of each month, not the thousands on your phone'] },
+      digital: { title: 'A digital album', items: ['Every photo, including the dozens that look almost the same', 'It depends on an account or a phone you will replace one day', 'It is seen on a screen, usually by one person at a time'] },
+      note: 'BabyBookAI uses your phone for the heavy part, finding and sorting the photos, and sends the printed album to your door.',
+      bookAlt: 'A BabyBookAI spread printed in the book, “Ninth month”',
+    },
     gift: {
       title: 'The gift grandparents ask for',
       body: 'A phone full of photos is hard to pass around the table. A baby photo book isn’t. It’s the gift for a first birthday, for Mother’s Day or Father’s Day, and the one grandparents keep on the coffee table.',

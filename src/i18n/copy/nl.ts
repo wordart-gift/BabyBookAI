@@ -290,6 +290,15 @@ export const nl: Copy = {
         { label: 'Druk', value: 'Op bestelling gedrukt, bezorgd in 16 landen' },
       ],
     },
+    compare: {
+      eyebrow: 'Gedrukt of op je telefoon',
+      title: 'Gedrukt fotoboek of digitaal album?',
+      body: 'De foto’s zijn hetzelfde. Het verschil is waar ze blijven en wie ze ziet.',
+      book: { title: 'Het gedrukte fotoboek', items: ['Je bladert erin op de bank, het ligt op tafel en opa en oma willen het lenen', 'Over twintig jaar sla je het gewoon open: niets op te laden, geen wachtwoord nodig', 'Alleen de mooiste foto’s van elke maand, niet de duizenden op je telefoon'] },
+      digital: { title: 'Een digitaal album', items: ['Alle foto’s, ook de tientallen die bijna hetzelfde zijn', 'Het hangt af van een account of een telefoon die je ooit vervangt', 'Je bekijkt het op een scherm, meestal in je eentje'] },
+      note: 'BabyBookAI doet met je telefoon het zware werk, foto’s zoeken en ordenen, en stuurt het gedrukte fotoboek naar je huis.',
+      bookAlt: 'Een dubbele pagina van BabyBookAI, gedrukt in het fotoboek, „Negende maand”',
+    },
     gift: {
       title: 'Het cadeau waar opa en oma om vragen',
       body: 'Een telefoon vol foto’s laat zich slecht rond de tafel doorgeven. Een baby-fotoboek wel. Het is het cadeau voor een eerste verjaardag, voor Moederdag of Vaderdag, en dat wat grootouders op de salontafel laten liggen.',

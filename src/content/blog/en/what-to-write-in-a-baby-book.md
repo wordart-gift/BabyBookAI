@@ -49,6 +49,8 @@ Write these four things, in this order, and you are done:
 13. “Bring this book to my house, and I will read it as many times as you like.”
 14. “You made us grandparents. This is the first of many things we plan to spoil you with.”
 
+![A printed first-year book open at the eleventh month: a baby with her parents and grandparents](../../../assets/app/spread-eleventh-month.png)
+
 ## From aunts and uncles
 
 15. “For the days you need someone other than your parents to read to you. Call me.”
@@ -76,6 +78,10 @@ Stick to the book. Say why you picked it, wish them well and sign with your full
 
 Maybe you landed here with a different question: not a gift, but what to put in your baby's own first-year book. In that case, short lines work there too. A date, a nickname or the song that stopped the crying is enough, and you will find more examples in our [baby photo book ideas](page:ideas).
 
+![A first-year baby book open at the seventh month, with one short line on the page: “From the moment you were born, you became our world”](../../../assets/app/spread-seventh-month-en.png)
+
 If the writing is what keeps you from starting, [a first year photo book](page:firstYear) can come first. BabyBookAI lays the book out from the photos on your phone, and you add only the words you want before you order.
 
-<small>Cover photo: Direct Media, CC0 (StockSnap), as an example.</small>
+![A first-year baby book open at the ninth month: a baby sitting on the grass in the garden](../../../assets/app/spread-ninth-month-en.png)
+
+<small>Cover photo: Direct Media, CC0 (StockSnap), as an example. The book spreads are pages laid out by BabyBookAI from the family’s own photos.</small>

@@ -291,6 +291,15 @@ export const it: Copy = {
         { label: 'Stampa', value: 'Stampato su ordinazione, spedito in 16 paesi' },
       ],
     },
+    compare: {
+      eyebrow: 'Stampato o sul telefono',
+      title: 'Album foto stampato o album digitale?',
+      body: 'Le foto sono le stesse. Cambia dove restano e chi le guarda.',
+      book: { title: 'L’album foto stampato', items: ['Lo sfogli sul divano, lo lasci sul tavolo e i nonni te lo chiedono in prestito', 'Tra vent’anni lo aprirai così com’è: niente da ricaricare, nessuna password da ricordare', 'Solo le foto più belle di ogni mese, non le migliaia che hai sul telefono'] },
+      digital: { title: 'Un album digitale', items: ['Tutte le foto, anche le decine quasi uguali', 'Dipende da un account o da un telefono che prima o poi cambierai', 'Si guarda su uno schermo, quasi sempre da soli'] },
+      note: 'BabyBookAI fa con il tuo telefono la parte faticosa, trovare e ordinare le foto, e ti manda a casa l’album stampato.',
+      bookAlt: 'Una doppia pagina di BabyBookAI stampata nell’album, «Nono mese»',
+    },
     gift: {
       title: 'Il regalo che chiedono i nonni',
       body: 'Un telefono pieno di foto è difficile da far girare a tavola. Un album foto del neonato no. È il regalo per un primo compleanno, per la Festa della mamma o del papà, e quello che i nonni tengono sul tavolino del salotto.',

@@ -292,6 +292,15 @@ export const de: Copy = {
         { label: 'Druck', value: 'Auf Bestellung gedruckt, Versand in 16 Länder' },
       ],
     },
+    compare: {
+      eyebrow: 'Gedruckt oder auf dem Handy',
+      title: 'Gedrucktes Fotobuch oder digitales Album?',
+      body: 'Die Fotos sind dieselben. Der Unterschied ist, wo sie bleiben und wer sie sieht.',
+      book: { title: 'Das gedruckte Fotobuch', items: ['Du blätterst auf dem Sofa darin, es liegt auf dem Tisch, und die Großeltern wollen es ausleihen', 'In zwanzig Jahren schlägst du es einfach auf, ohne Akku und ohne Passwort', 'Nur die schönsten Fotos jedes Monats, nicht die Tausenden auf deinem Handy'] },
+      digital: { title: 'Ein digitales Album', items: ['Alle Fotos, auch die vielen, die fast gleich aussehen', 'Es hängt an einem Konto oder an einem Handy, das du irgendwann austauschst', 'Man sieht es auf einem Bildschirm, meistens allein'] },
+      note: 'BabyBookAI erledigt mit deinem Handy den mühsamen Teil, die Fotos finden und ordnen, und schickt dir das gedruckte Fotobuch nach Hause.',
+      bookAlt: 'Eine Doppelseite von BabyBookAI, gedruckt im Fotobuch, „Neunter Monat“',
+    },
     gift: {
       title: 'Das Geschenk, nach dem Großeltern fragen',
       body: 'Ein Handy voller Fotos lässt sich schlecht am Tisch herumreichen. Ein Baby-Fotobuch schon. Es ist das Geschenk zum ersten Geburtstag, zum Mutter- oder Vatertag und das, das Großeltern auf dem Couchtisch liegen lassen.',

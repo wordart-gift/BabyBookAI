@@ -104,7 +104,32 @@ const trail = [
     </div>
   </section>
 
-  <section class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5 py-20" aria-labelledby="personalized">
+  {/* Printed book against a digital album (26 Nov 2026): the real spread on the book's side; the digital side has no picture,
+      since the app's own screens would read as the thing being compared against. */}
+  <section class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5 py-20" aria-labelledby="compare">
+    <p class="font-extrabold uppercase tracking-wider text-teal">{t.compare.eyebrow}</p>
+    <h2 id="compare" class="mt-3 max-w-3xl text-4xl text-teal sm:text-5xl">{t.compare.title}</h2>
+    <p class="mt-5 max-w-2xl text-lg text-ink-soft">{t.compare.body}</p>
+    <div class="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div class="rounded-card bg-paper p-7">
+        <AppSpread {...spreads(lang).ninth} alt={t.compare.bookAlt} />
+        <h3 class="mt-6 text-2xl text-ink">{t.compare.book.title}</h3>
+        <ul class="mt-4 space-y-3">
+          {t.compare.book.items.map((i) => <li class="border-l-4 border-teal pl-4 text-ink-soft">{i}</li>)}
+        </ul>
+      </div>
+      <div class="self-start rounded-card bg-surface p-7 shadow-[0_1px_0_var(--color-hair)]">
+        <h3 class="text-2xl text-ink">{t.compare.digital.title}</h3>
+        <ul class="mt-4 space-y-3">
+          {t.compare.digital.items.map((i) => <li class="border-l-4 border-hair pl-4 text-ink-soft">{i}</li>)}
+        </ul>
+      </div>
+    </div>
+    <p class="mt-8 max-w-2xl text-lg font-bold text-ink">{t.compare.note}</p>
+  </section>
+
+  <section class="band" aria-labelledby="personalized">
+    <div class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5">
     <p class="font-extrabold uppercase tracking-wider text-teal">{t.personal.eyebrow}</p>
     <h2 id="personalized" class="mt-3 max-w-3xl text-4xl text-teal sm:text-5xl">{t.personal.title}</h2>
     <p class="mt-5 max-w-2xl text-lg text-ink-soft">{t.personal.body}</p>
@@ -119,10 +144,11 @@ const trail = [
       }
     </ul>
     <p class="mt-8 text-ink-soft" set:html={rich(t.personal.colors, lang)} />
+    </div>
   </section>
 
-  <section class="band" aria-labelledby="specs">
-    <div class="mx-auto grid max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] gap-12 px-5 lg:grid-cols-2">
+  <section class="mx-auto max-w-6xl xl:max-w-7xl 2xl:max-w-[88rem] px-5 py-20" aria-labelledby="specs">
+    <div class="grid gap-12 lg:grid-cols-2">
       <div>
         <h2 id="specs" class="text-4xl text-teal sm:text-5xl">{t.specs.title}</h2>
         <dl class="mt-8 divide-y divide-hair border-y border-hair">
@@ -139,6 +165,7 @@ const trail = [
       <div>
         <h2 class="text-4xl text-teal sm:text-5xl">{t.gift.title}</h2>
         <p class="mt-5 text-lg text-ink-soft">{t.gift.body}</p>
+        <AppSpread {...spreads(lang).seventh} class="mt-8" />
       </div>
     </div>
   </section>

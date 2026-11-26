@@ -292,6 +292,15 @@ export const fr: Copy = {
         { label: 'Impression', value: 'Imprimé à la demande, livré dans 16 pays' },
       ],
     },
+    compare: {
+      eyebrow: 'Imprimé ou sur le téléphone',
+      title: 'Album photo imprimé ou album numérique ?',
+      body: 'Les photos sont les mêmes. Ce qui change, c’est où elles restent et qui les regarde.',
+      book: { title: 'L’album photo imprimé', items: ['Vous le feuilletez sur le canapé, il reste sur la table et les grands-parents vous l’empruntent', 'Dans vingt ans, il s’ouvrira toujours : rien à recharger, aucun mot de passe à retrouver', 'Seulement les plus belles photos de chaque mois, pas les milliers de votre téléphone'] },
+      digital: { title: 'Un album numérique', items: ['Toutes les photos, y compris les dizaines qui se ressemblent', 'Il dépend d’un compte ou d’un téléphone que vous changerez un jour', 'On le regarde sur un écran, le plus souvent seul'] },
+      note: 'BabyBookAI se charge avec votre téléphone de la partie fastidieuse, trouver et trier les photos, et vous envoie l’album imprimé à la maison.',
+      bookAlt: 'Une double page BabyBookAI imprimée dans l’album, « Neuvième mois »',
+    },
     gift: {
       title: 'Le cadeau que réclament les grands-parents',
       body: "Un téléphone plein de photos, ça ne se fait pas passer autour de la table. Un livre photo bébé, si. C'est le cadeau du premier anniversaire, de la fête des mères ou des pères, et celui que les grands-parents gardent sur la table du salon.",
